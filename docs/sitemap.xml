@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/authors/admin/</loc>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/authors/</loc>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/post/</loc>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/publication_types/</loc>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/publication/</loc>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/talk/</loc>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/</loc>
+  </url>
+  
+</urlset>

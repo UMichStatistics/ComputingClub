@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>University of Michigan Statistics Computing Club</title>
+    <link>https://UMichStatistics.github.io/computingclub/</link>
+      <atom:link href="https://UMichStatistics.github.io/computingclub/index.xml" rel="self" type="application/rss+xml" />
+    <description>University of Michigan Statistics Computing Club</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy 2019</copyright>
+    <image>
+      <url>https://UMichStatistics.github.io/computingclub/img/icon-192.png</url>
+      <title>University of Michigan Statistics Computing Club</title>
+      <link>https://UMichStatistics.github.io/computingclub/</link>
+    </image>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid></guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Posts</title>
+      <link>https://UMichStatistics.github.io/computingclub/post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://UMichStatistics.github.io/computingclub/post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://UMichStatistics.github.io/computingclub/publication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://UMichStatistics.github.io/computingclub/publication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>https://UMichStatistics.github.io/computingclub/talk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://UMichStatistics.github.io/computingclub/talk/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
