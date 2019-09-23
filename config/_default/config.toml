@@ -18,6 +18,8 @@ copyright = "&copy 2019"
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = ""
 
+publishDir = "docs"
+
 ############################
 ## Advanced options below ##
 ############################
