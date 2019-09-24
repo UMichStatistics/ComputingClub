@@ -1,6 +1,6 @@
 ---
 # Display name
-name: Computing Club
+name: Statistics Computing Club
 
 # Username (this should match the folder name)
 authors:

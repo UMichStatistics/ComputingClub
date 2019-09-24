@@ -5,7 +5,8 @@
 # Each configuration section is defined by a name in square brackets (e.g. `[outputs]`).
 
 # Title of your site
-title = "University of Michigan Statistics Computing Club"
+# title = "University of Michigan Statistics Computing Club"
+title = "UM Statictics Computing Club"
 
 # The URL of your site.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
