@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Overview | University of Michigan Statistics Computing Club</title>
-    <link>/computingclub/workshops/edit_site/</link>
-      <atom:link href="/computingclub/workshops/edit_site/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://UMichStatistics.github.io/computingclub/workshops/edit_site/</link>
+      <atom:link href="https://UMichStatistics.github.io/computingclub/workshops/edit_site/index.xml" rel="self" type="application/rss+xml" />
     <description>Overview</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/computingclub/img/icon_512.png</url>
+      <url>https://UMichStatistics.github.io/computingclub/img/icon_512.png</url>
       <title>Overview</title>
-      <link>/computingclub/workshops/edit_site/</link>
+      <link>https://UMichStatistics.github.io/computingclub/workshops/edit_site/</link>
     </image>
     
     <item>
       <title>Update workflow</title>
-      <link>/computingclub/workshops/edit_site/workflow/</link>
+      <link>https://UMichStatistics.github.io/computingclub/workshops/edit_site/workflow/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/computingclub/workshops/edit_site/workflow/</guid>
+      <guid>https://UMichStatistics.github.io/computingclub/workshops/edit_site/workflow/</guid>
       <description>
 
 &lt;h2 id=&#34;the-lazy-way&#34;&gt;The lazy way&lt;/h2&gt;

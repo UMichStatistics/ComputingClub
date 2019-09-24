@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts | University of Michigan Statistics Computing Club</title>
-    <link>/computingclub/post/</link>
-      <atom:link href="/computingclub/post/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://UMichStatistics.github.io/computingclub/post/</link>
+      <atom:link href="https://UMichStatistics.github.io/computingclub/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Mon, 23 Sep 2019 22:06:16 -0400</lastBuildDate>
     <image>
-      <url>/computingclub/img/icon_512.png</url>
+      <url>https://UMichStatistics.github.io/computingclub/img/icon_512.png</url>
       <title>Posts</title>
-      <link>/computingclub/post/</link>
+      <link>https://UMichStatistics.github.io/computingclub/post/</link>
     </image>
     
     <item>
       <title>Welcome to the Computing club&#39;s new website</title>
-      <link>/computingclub/post/welcome/</link>
+      <link>https://UMichStatistics.github.io/computingclub/post/welcome/</link>
       <pubDate>Mon, 23 Sep 2019 22:06:16 -0400</pubDate>
-      <guid>/computingclub/post/welcome/</guid>
+      <guid>https://UMichStatistics.github.io/computingclub/post/welcome/</guid>
       <description>&lt;p&gt;Example post.&lt;/p&gt;
 </description>
     </item>

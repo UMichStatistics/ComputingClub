@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories | University of Michigan Statistics Computing Club</title>
-    <link>/computingclub/categories/</link>
-      <atom:link href="/computingclub/categories/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://UMichStatistics.github.io/computingclub/categories/</link>
+      <atom:link href="https://UMichStatistics.github.io/computingclub/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright>
     <image>
-      <url>/computingclub/img/icon_512.png</url>
+      <url>https://UMichStatistics.github.io/computingclub/img/icon_512.png</url>
       <title>Categories</title>
-      <link>/computingclub/categories/</link>
+      <link>https://UMichStatistics.github.io/computingclub/categories/</link>
     </image>
     
   </channel>
