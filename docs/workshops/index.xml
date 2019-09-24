@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Workshops | University of Michigan Statistics Computing Club</title>
-    <link>https://UMichStatistics.github.io/computingclub/workshops/</link>
-      <atom:link href="https://UMichStatistics.github.io/computingclub/workshops/index.xml" rel="self" type="application/rss+xml" />
+    <link>/computingclub/workshops/</link>
+      <atom:link href="/computingclub/workshops/index.xml" rel="self" type="application/rss+xml" />
     <description>Workshops</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright>
     <image>
-      <url>https://UMichStatistics.github.io/computingclub/img/icon_512.png</url>
+      <url>/computingclub/img/icon_512.png</url>
       <title>Workshops</title>
-      <link>https://UMichStatistics.github.io/computingclub/workshops/</link>
+      <link>/computingclub/workshops/</link>
     </image>
     
     <item>
       <title>Overview</title>
-      <link>https://UMichStatistics.github.io/computingclub/workshops/example/</link>
+      <link>/computingclub/workshops/example/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://UMichStatistics.github.io/computingclub/workshops/example/</guid>
+      <guid>/computingclub/workshops/example/</guid>
       <description>
 
 &lt;h2 id=&#34;flexibility&#34;&gt;Flexibility&lt;/h2&gt;
