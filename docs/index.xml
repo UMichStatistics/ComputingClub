@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>University of Michigan Statistics Computing Club</title>
-    <link>/computingclub/</link>
-      <atom:link href="/computingclub/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://UMichStatistics.github.io/computingclub/</link>
+      <atom:link href="https://UMichStatistics.github.io/computingclub/index.xml" rel="self" type="application/rss+xml" />
     <description>University of Michigan Statistics Computing Club</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Mon, 23 Sep 2019 22:06:16 -0400</lastBuildDate>
     <image>
-      <url>/computingclub/img/icon_512.png</url>
+      <url>https://UMichStatistics.github.io/computingclub/img/icon_512.png</url>
       <title>University of Michigan Statistics Computing Club</title>
-      <link>/computingclub/</link>
+      <link>https://UMichStatistics.github.io/computingclub/</link>
     </image>
     
     <item>
       <title>Example Page 1</title>
-      <link>/computingclub/workshops/example/example1/</link>
+      <link>https://UMichStatistics.github.io/computingclub/workshops/example/example1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/computingclub/workshops/example/example1/</guid>
+      <guid>https://UMichStatistics.github.io/computingclub/workshops/example/example1/</guid>
       <description>
 
 &lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
@@ -49,9 +49,9 @@
     
     <item>
       <title>Example Page 2</title>
-      <link>/computingclub/workshops/example/example2/</link>
+      <link>https://UMichStatistics.github.io/computingclub/workshops/example/example2/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/computingclub/workshops/example/example2/</guid>
+      <guid>https://UMichStatistics.github.io/computingclub/workshops/example/example2/</guid>
       <description>
 
 &lt;p&gt;Here are some more tips for getting started with Academic:&lt;/p&gt;
@@ -84,18 +84,18 @@
     
     <item>
       <title>Welcome to the Computing club&#39;s new website</title>
-      <link>/computingclub/post/welcome/</link>
+      <link>https://UMichStatistics.github.io/computingclub/post/welcome/</link>
       <pubDate>Mon, 23 Sep 2019 22:06:16 -0400</pubDate>
-      <guid>/computingclub/post/welcome/</guid>
+      <guid>https://UMichStatistics.github.io/computingclub/post/welcome/</guid>
       <description>&lt;p&gt;Example post.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Introduction session &amp; presentation of the purrr R package</title>
-      <link>/computingclub/talk/intro_purr/</link>
+      <link>https://UMichStatistics.github.io/computingclub/talk/intro_purr/</link>
       <pubDate>Wed, 18 Sep 2019 14:30:00 -0500</pubDate>
-      <guid>/computingclub/talk/intro_purr/</guid>
+      <guid>https://UMichStatistics.github.io/computingclub/talk/intro_purr/</guid>
       <description>&lt;p&gt;Can I put things here?&lt;/p&gt;
 </description>
     </item>

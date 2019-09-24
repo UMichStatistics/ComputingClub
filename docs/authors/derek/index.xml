@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>University of Michigan Statistics Computing Club</title>
-    <link>/computingclub/authors/derek/</link>
-      <atom:link href="/computingclub/authors/derek/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://UMichStatistics.github.io/computingclub/authors/derek/</link>
+      <atom:link href="https://UMichStatistics.github.io/computingclub/authors/derek/index.xml" rel="self" type="application/rss+xml" />
     <description>University of Michigan Statistics Computing Club</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Wed, 18 Sep 2019 14:30:00 -0500</lastBuildDate>
     <image>
-      <url>/computingclub/img/icon_512.png</url>
+      <url>https://UMichStatistics.github.io/computingclub/img/icon_512.png</url>
       <title>University of Michigan Statistics Computing Club</title>
-      <link>/computingclub/authors/derek/</link>
+      <link>https://UMichStatistics.github.io/computingclub/authors/derek/</link>
     </image>
     
     <item>
       <title>Introduction session &amp; presentation of the purrr R package</title>
-      <link>/computingclub/talk/intro_purr/</link>
+      <link>https://UMichStatistics.github.io/computingclub/talk/intro_purr/</link>
       <pubDate>Wed, 18 Sep 2019 14:30:00 -0500</pubDate>
-      <guid>/computingclub/talk/intro_purr/</guid>
+      <guid>https://UMichStatistics.github.io/computingclub/talk/intro_purr/</guid>
       <description>&lt;p&gt;Can I put things here?&lt;/p&gt;
 </description>
     </item>

@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags | University of Michigan Statistics Computing Club</title>
-    <link>/computingclub/tags/</link>
-      <atom:link href="/computingclub/tags/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://UMichStatistics.github.io/computingclub/tags/</link>
+      <atom:link href="https://UMichStatistics.github.io/computingclub/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Wed, 18 Sep 2019 14:30:00 -0500</lastBuildDate>
     <image>
-      <url>/computingclub/img/icon_512.png</url>
+      <url>https://UMichStatistics.github.io/computingclub/img/icon_512.png</url>
       <title>Tags</title>
-      <link>/computingclub/tags/</link>
+      <link>https://UMichStatistics.github.io/computingclub/tags/</link>
     </image>
     
     <item>
       <title>Functional programming</title>
-      <link>/computingclub/tags/functional-programming/</link>
+      <link>https://UMichStatistics.github.io/computingclub/tags/functional-programming/</link>
       <pubDate>Wed, 18 Sep 2019 14:30:00 -0500</pubDate>
-      <guid>/computingclub/tags/functional-programming/</guid>
+      <guid>https://UMichStatistics.github.io/computingclub/tags/functional-programming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>/computingclub/tags/r/</link>
+      <link>https://UMichStatistics.github.io/computingclub/tags/r/</link>
       <pubDate>Wed, 18 Sep 2019 14:30:00 -0500</pubDate>
-      <guid>/computingclub/tags/r/</guid>
+      <guid>https://UMichStatistics.github.io/computingclub/tags/r/</guid>
       <description></description>
     </item>
     

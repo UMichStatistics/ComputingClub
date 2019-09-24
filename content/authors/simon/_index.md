@@ -29,7 +29,7 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/fontaine618
-- icon: user
+- icon: globe
   icon_pack: fas
   link: https://umich.edu/~simfont
 # Link to a PDF of your resume/CV from the About widget.
