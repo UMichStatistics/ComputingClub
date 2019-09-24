@@ -5,22 +5,54 @@
     <link>https://UMichStatistics.github.io/computingclub/authors/</link>
       <atom:link href="https://UMichStatistics.github.io/computingclub/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Mon, 23 Sep 2019 22:06:16 -0400</lastBuildDate>
     <image>
-      <url>https://UMichStatistics.github.io/computingclub/img/icon-192.png</url>
+      <url>https://UMichStatistics.github.io/computingclub/img/icon_512.png</url>
       <title>Authors</title>
       <link>https://UMichStatistics.github.io/computingclub/authors/</link>
     </image>
     
     <item>
       <title></title>
+      <link>https://UMichStatistics.github.io/computingclub/authors/simon/</link>
+      <pubDate>Mon, 23 Sep 2019 22:06:16 -0400</pubDate>
+      <guid>https://UMichStatistics.github.io/computingclub/authors/simon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://UMichStatistics.github.io/computingclub/authors/admin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://UMichStatistics.github.io/computingclub/authors/admin/</guid>
-      <description>&lt;p&gt;Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.&lt;/p&gt;
+      <description>&lt;p&gt;This page is for the Computing Club overseen by the UM Stats PhD Computing Committee. Information about meeting times and presented topics will be posted here.&lt;/p&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.&lt;/p&gt;
+&lt;p&gt;The only guiding principle is that the topic should have some potential application to a Statistics research workload, which leaves a broad range of topics.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://UMichStatistics.github.io/computingclub/authors/dan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://UMichStatistics.github.io/computingclub/authors/dan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://UMichStatistics.github.io/computingclub/authors/derek/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://UMichStatistics.github.io/computingclub/authors/derek/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://UMichStatistics.github.io/computingclub/authors/rob/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://UMichStatistics.github.io/computingclub/authors/rob/</guid>
+      <description></description>
     </item>
     
   </channel>

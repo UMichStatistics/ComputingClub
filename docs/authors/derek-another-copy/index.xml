@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>University of Michigan Statistics Computing Club</title>
+    <link>/computingclub/authors/derek-another-copy/</link>
+      <atom:link href="/computingclub/authors/derek-another-copy/index.xml" rel="self" type="application/rss+xml" />
+    <description>University of Michigan Statistics Computing Club</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright>
+    <image>
+      <url>/computingclub/img/icon_512</url>
+      <title>University of Michigan Statistics Computing Club</title>
+      <link>/computingclub/authors/derek-another-copy/</link>
+    </image>
+    
+  </channel>
+</rss>

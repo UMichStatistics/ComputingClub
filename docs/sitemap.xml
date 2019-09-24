@@ -3,19 +3,63 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/authors/admin/</loc>
+    <loc>https://UMichStatistics.github.io/computingclub/workshops/example/example1/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/workshops/example/</loc>
+    <lastmod>2018-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/workshops/example/example2/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/authors/simon/</loc>
+    <lastmod>2019-09-23T22:06:16-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://UMichStatistics.github.io/computingclub/authors/</loc>
-  </url>
-  
-  <url>
-    <loc>https://UMichStatistics.github.io/computingclub/categories/</loc>
+    <lastmod>2019-09-23T22:06:16-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://UMichStatistics.github.io/computingclub/post/</loc>
+    <lastmod>2019-09-23T22:06:16-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/</loc>
+    <lastmod>2019-09-23T22:06:16-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/post/welcome/</loc>
+    <lastmod>2019-09-23T22:06:16-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/authors/admin/</loc>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/authors/dan/</loc>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/authors/derek/</loc>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/authors/rob/</loc>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/categories/</loc>
   </url>
   
   <url>
@@ -35,7 +79,7 @@
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/</loc>
+    <loc>https://UMichStatistics.github.io/computingclub/workshops/</loc>
   </url>
   
 </urlset>

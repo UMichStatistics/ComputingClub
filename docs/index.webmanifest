@@ -2,8 +2,8 @@
   "name": "University of Michigan Statistics Computing Club",
   "short_name": "University of Michigan Statistics Computing Club",
   "lang": "en-us",
-  "theme_color": "#2962ff",
-  "background_color": "#2962ff",
+  "theme_color": "hsl(48, 100%, 51%)",
+  "background_color": "hsl(48, 100%, 51%)",
   "icons": [{
     "src": "img/icon-192.png",
     "sizes": "192x192",

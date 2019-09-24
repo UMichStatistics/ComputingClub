@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Functional programming | University of Michigan Statistics Computing Club</title>
+    <link>/computingclub/tags/functional-programming/</link>
+      <atom:link href="/computingclub/tags/functional-programming/index.xml" rel="self" type="application/rss+xml" />
+    <description>Functional programming</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Wed, 18 Sep 2019 14:30:00 -0500</lastBuildDate>
+    <image>
+      <url>/computingclub/img/icon_512.png</url>
+      <title>Functional programming</title>
+      <link>/computingclub/tags/functional-programming/</link>
+    </image>
+    
+    <item>
+      <title>Introduction session &amp; presentation of the purrr R package</title>
+      <link>/computingclub/talk/intro_purr/</link>
+      <pubDate>Wed, 18 Sep 2019 14:30:00 -0500</pubDate>
+      <guid>/computingclub/talk/intro_purr/</guid>
+      <description>&lt;p&gt;Can I put things here?&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
