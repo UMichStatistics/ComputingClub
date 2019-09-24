@@ -3,101 +3,111 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/workshops/example/example1/</loc>
+    <loc>/computingclub/workshops/example/example1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/workshops/example/</loc>
+    <loc>/computingclub/workshops/edit_site/workflow/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/computingclub/workshops/example/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/workshops/example/example2/</loc>
+    <loc>/computingclub/workshops/edit_site/</loc>
+    <lastmod>2018-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/computingclub/workshops/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/authors/simon/</loc>
+    <loc>/computingclub/authors/simon/</loc>
     <lastmod>2019-09-23T22:06:16-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/authors/</loc>
+    <loc>/computingclub/authors/</loc>
     <lastmod>2019-09-23T22:06:16-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/post/</loc>
+    <loc>/computingclub/post/</loc>
     <lastmod>2019-09-23T22:06:16-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/</loc>
+    <loc>/computingclub/</loc>
     <lastmod>2019-09-23T22:06:16-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/post/welcome/</loc>
+    <loc>/computingclub/post/welcome/</loc>
     <lastmod>2019-09-23T22:06:16-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/authors/derek/</loc>
+    <loc>/computingclub/authors/derek/</loc>
     <lastmod>2019-09-18T14:30:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/tags/functional-programming/</loc>
+    <loc>/computingclub/tags/functional-programming/</loc>
     <lastmod>2019-09-18T14:30:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/talk/intro_purr/</loc>
+    <loc>/computingclub/talk/intro_purr/</loc>
     <lastmod>2019-09-18T14:30:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/tags/r/</loc>
+    <loc>/computingclub/tags/r/</loc>
     <lastmod>2019-09-18T14:30:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/talk/</loc>
+    <loc>/computingclub/talk/</loc>
     <lastmod>2019-09-18T14:30:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/tags/</loc>
+    <loc>/computingclub/tags/</loc>
     <lastmod>2019-09-18T14:30:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/authors/admin/</loc>
+    <loc>/computingclub/authors/admin/</loc>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/authors/dan/</loc>
+    <loc>/computingclub/authors/dan/</loc>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/authors/rob/</loc>
+    <loc>/computingclub/authors/rob/</loc>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/categories/</loc>
+    <loc>/computingclub/categories/</loc>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/publication_types/</loc>
+    <loc>/computingclub/publication_types/</loc>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/publication/</loc>
+    <loc>/computingclub/publication/</loc>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/computingclub/workshops/</loc>
+    <loc>/computingclub/workshops/</loc>
   </url>
   
 </urlset>

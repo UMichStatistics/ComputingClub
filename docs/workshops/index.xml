@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Workshops | University of Michigan Statistics Computing Club</title>
-    <link>https://UMichStatistics.github.io/computingclub/workshops/</link>
-      <atom:link href="https://UMichStatistics.github.io/computingclub/workshops/index.xml" rel="self" type="application/rss+xml" />
+    <link>/computingclub/workshops/</link>
+      <atom:link href="/computingclub/workshops/index.xml" rel="self" type="application/rss+xml" />
     <description>Workshops</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright>
     <image>
-      <url>https://UMichStatistics.github.io/computingclub/img/icon_512.png</url>
+      <url>/computingclub/img/icon_512.png</url>
       <title>Workshops</title>
-      <link>https://UMichStatistics.github.io/computingclub/workshops/</link>
+      <link>/computingclub/workshops/</link>
     </image>
     
     <item>
       <title>Overview</title>
-      <link>https://UMichStatistics.github.io/computingclub/workshops/example/</link>
+      <link>/computingclub/workshops/example/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://UMichStatistics.github.io/computingclub/workshops/example/</guid>
+      <guid>/computingclub/workshops/example/</guid>
       <description>
 
 &lt;h2 id=&#34;flexibility&#34;&gt;Flexibility&lt;/h2&gt;
@@ -58,6 +58,42 @@
 &lt;h2 id=&#34;update-the-docs-menu&#34;&gt;Update the docs menu&lt;/h2&gt;
 
 &lt;p&gt;If you use the &lt;em&gt;docs&lt;/em&gt; layout, note that the name of the menu in the front matter should be in the form &lt;code&gt;[menu.X]&lt;/code&gt; where &lt;code&gt;X&lt;/code&gt; is the folder name. Hence, if you rename the &lt;code&gt;courses/example/&lt;/code&gt; folder, you should also rename the menu definitions in the front matter of files within &lt;code&gt;courses/example/&lt;/code&gt; from &lt;code&gt;[menu.example]&lt;/code&gt; to &lt;code&gt;[menu.&amp;lt;NewFolderName&amp;gt;]&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Overview</title>
+      <link>/computingclub/workshops/edit_site/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
+      <guid>/computingclub/workshops/edit_site/</guid>
+      <description>
+
+&lt;p&gt;This website is powered the &lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34;&gt;Academic theme&lt;/a&gt; for &lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;. The &lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;documentation&lt;/a&gt; they provide is quite extensive, so we summarize some of the important features relevant to the current website and present workflow ideas on how to update the website.&lt;/p&gt;
+
+&lt;h2 id=&#34;hugo-and-markdown&#34;&gt;Hugo and Markdown&lt;/h2&gt;
+
+&lt;p&gt;While the website consists of &lt;code&gt;html&lt;/code&gt; source interpreted by the visitor&amp;rsquo;s browser, its content is generated from Markdown. Hugo acts as an interpreter and compiler: it translates the file structure, the Markdown files and some configuration files (&lt;code&gt;yaml&lt;/code&gt; or &lt;code&gt;toml&lt;/code&gt;) into the &lt;code&gt;html&lt;/code&gt; files visible to the visitor.&lt;/p&gt;
+
+&lt;h2 id=&#34;repository-description&#34;&gt;Repository description&lt;/h2&gt;
+
+&lt;p&gt;The website is hosted on GitHub Pages. The static contents of the website appears in the &lt;code&gt;docs&lt;/code&gt; folder of the &lt;a href=&#34;https://github.com/UMichStatistics/&#34; target=&#34;_blank&#34;&gt;UmichStatistics&lt;/a&gt; GitHub organization repository &lt;a href=&#34;https://github.com/UMichStatistics/computingclub/&#34; target=&#34;_blank&#34;&gt;computingclub&lt;/a&gt;. The other folders and files of the repository are used to generate the website: only the &lt;code&gt;docs&lt;/code&gt; folder is necessary for the static website to be operational.&lt;/p&gt;
+
+&lt;h2 id=&#34;deployment&#34;&gt;Deployment&lt;/h2&gt;
+
+&lt;p&gt;Any change in the files outside of the &lt;code&gt;docs&lt;/code&gt; folder will not affect the public website. In order for the changes to become public, it is necessary to deploy the website, i.e. to use Hugo to update the files in &lt;code&gt;docs&lt;/code&gt;. Hence, anyone updating the website needs to run Hugo for the changes to appear. More details in &lt;a href=&#34;workflow/&#34; target=&#34;_blank&#34;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The maintainers are currently considerings ways to automatically deploy the website upon a push to the repository. More to come&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;external-resources&#34;&gt;External resources&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;Academic Hugo Documentation&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/page-builder/&#34; target=&#34;_blank&#34;&gt;Page Builder and widgets description&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://fontawesome.com/icons?d=gallery&amp;amp;m=free&#34; target=&#34;_blank&#34;&gt;Font Awesome Icons&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

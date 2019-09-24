@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>University of Michigan Statistics Computing Club</title>
-    <link>https://UMichStatistics.github.io/computingclub/authors/admin/</link>
-      <atom:link href="https://UMichStatistics.github.io/computingclub/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+    <link>/computingclub/authors/admin/</link>
+      <atom:link href="/computingclub/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     <description>University of Michigan Statistics Computing Club</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright>
     <image>
-      <url>https://UMichStatistics.github.io/computingclub/img/icon_512.png</url>
+      <url>/computingclub/img/icon_512.png</url>
       <title>University of Michigan Statistics Computing Club</title>
-      <link>https://UMichStatistics.github.io/computingclub/authors/admin/</link>
+      <link>/computingclub/authors/admin/</link>
     </image>
     
   </channel>

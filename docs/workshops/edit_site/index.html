@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Lorem Ipsum ">
+  <meta name="description" content="A guide on how to add new content and modify the website.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/computingclub/404.html">
+  <link rel="alternate" hreflang="en-us" href="/computingclub/workshops/edit_site/">
 
   
 
@@ -88,12 +88,14 @@
   
 
   
+  <link rel="alternate" href="/computingclub/workshops/edit_site/index.xml" type="application/rss+xml" title="University of Michigan Statistics Computing Club">
+  
 
   <link rel="manifest" href="/computingclub/index.webmanifest">
   <link rel="icon" type="image/png" href="/computingclub/img/icon-32.png?v=2">
   <link rel="apple-touch-icon" type="image/png" href="/computingclub/img/icon-192.png">
 
-  <link rel="canonical" href="/computingclub/404.html">
+  <link rel="canonical" href="/computingclub/workshops/edit_site/">
 
   
   
@@ -105,12 +107,12 @@
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="University of Michigan Statistics Computing Club">
-  <meta property="og:url" content="/computingclub/404.html">
-  <meta property="og:title" content="404 Page not found | University of Michigan Statistics Computing Club">
-  <meta property="og:description" content="Lorem Ipsum "><meta property="og:image" content="/computingclub/img/icon_512.png">
+  <meta property="og:url" content="/computingclub/workshops/edit_site/">
+  <meta property="og:title" content="Overview | University of Michigan Statistics Computing Club">
+  <meta property="og:description" content="A guide on how to add new content and modify the website."><meta property="og:image" content="/computingclub/img/icon_512.png">
   <meta property="twitter:image" content="/computingclub/img/icon_512.png"><meta property="og:locale" content="en-us">
   
-    
+    <meta property="og:updated_time" content="2018-09-09T00:00:00&#43;00:00">
   
 
   
@@ -127,7 +129,7 @@
 
 
 
-  <title>404 Page not found | University of Michigan Statistics Computing Club</title>
+  <title>Overview | University of Michigan Statistics Computing Club</title>
 
 </head>
 
@@ -251,7 +253,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/computingclub/workshops"><span>Workshops</span></a>
+          <a class="nav-link  active" href="/computingclub/workshops"><span>Workshops</span></a>
         </li>
 
         
@@ -311,41 +313,166 @@
 </nav>
 
 
-  <div class="universal-wrapper pt-3">
-
-  <h1>Page not found</h1>
-
-  
-  
-  <form class="d-flex align-items-center mb-3">
-    <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
-  </form>
   
 
-  
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
 
-  <p>Perhaps you were looking for one of these?</p>
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
 
   
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
   
-  
-  <h2>Latest</h2>
-  <ul>
-    
-      <li><a href="/computingclub/workshops/example/example1/">Example Page 1</a></li>
-    
-      <li><a href="/computingclub/workshops/edit_site/workflow/">Update workflow</a></li>
-    
-      <li><a href="/computingclub/workshops/example/example2/">Example Page 2</a></li>
-    
-      <li><a href="/computingclub/post/welcome/">Welcome to the Computing club&#39;s new website</a></li>
-    
-      <li><a href="/computingclub/talk/intro_purr/">Introduction session &amp; presentation of the purrr R package</a></li>
-    
-  </ul>
-  
+</form>
 
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item active">
+    <a class="docs-toc-link" href="/computingclub/workshops/edit_site/">Overview</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/computingclub/workshops/edit_site/workflow/">Update workflow</a>
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#hugo-and-markdown">Hugo and Markdown</a></li>
+<li><a href="#repository-description">Repository description</a></li>
+<li><a href="#deployment">Deployment</a></li>
+<li><a href="#external-resources">External resources</a></li>
+</ul></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>Overview</h1>
+
+          <div class="article-style">
+            
+
+<p>This website is powered the <a href="https://sourcethemes.com/academic/" target="_blank">Academic theme</a> for <a href="https://gohugo.io/" target="_blank">Hugo</a>. The <a href="https://sourcethemes.com/academic/docs/" target="_blank">documentation</a> they provide is quite extensive, so we summarize some of the important features relevant to the current website and present workflow ideas on how to update the website.</p>
+
+<h2 id="hugo-and-markdown">Hugo and Markdown</h2>
+
+<p>While the website consists of <code>html</code> source interpreted by the visitor&rsquo;s browser, its content is generated from Markdown. Hugo acts as an interpreter and compiler: it translates the file structure, the Markdown files and some configuration files (<code>yaml</code> or <code>toml</code>) into the <code>html</code> files visible to the visitor.</p>
+
+<h2 id="repository-description">Repository description</h2>
+
+<p>The website is hosted on GitHub Pages. The static contents of the website appears in the <code>docs</code> folder of the <a href="https://github.com/UMichStatistics/" target="_blank">UmichStatistics</a> GitHub organization repository <a href="https://github.com/UMichStatistics/computingclub/" target="_blank">computingclub</a>. The other folders and files of the repository are used to generate the website: only the <code>docs</code> folder is necessary for the static website to be operational.</p>
+
+<h2 id="deployment">Deployment</h2>
+
+<p>Any change in the files outside of the <code>docs</code> folder will not affect the public website. In order for the changes to become public, it is necessary to deploy the website, i.e. to use Hugo to update the files in <code>docs</code>. Hence, anyone updating the website needs to run Hugo for the changes to appear. More details in <a href="workflow/" target="_blank">Deployment</a></p>
+
+<p>The maintainers are currently considerings ways to automatically deploy the website upon a push to the repository. More to come&hellip;</p>
+
+<h2 id="external-resources">External resources</h2>
+
+<ul>
+<li><a href="https://sourcethemes.com/academic/docs/" target="_blank">Academic Hugo Documentation</a>
+
+<ul>
+<li><a href="https://sourcethemes.com/academic/docs/page-builder/" target="_blank">Page Builder and widgets description</a></li>
+</ul></li>
+<li><a href="https://fontawesome.com/icons?d=gallery&amp;m=free" target="_blank">Font Awesome Icons</a></li>
+</ul>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
 </div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Sep 9, 2018</p>
+
+          
+<p class="edit-page">
+  <a href="https://github.com/UMichStatistics/computingclub/edit/master/content/workshops/edit_site/_index.md">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+          
+<section id="comments">
+  
+    
+
+  
+</section>
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; 2019 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
 
       
 
@@ -411,6 +538,11 @@
 
     
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
 
     
     
@@ -464,31 +596,6 @@
 
 
 
-  
-  <div class="container">
-    <footer class="site-footer">
-  
-
-  <p class="powered-by">
-    &copy; 2019 &middot; 
-
-    Powered by the
-    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
-
-    
-    <span class="float-right" aria-hidden="true">
-      <a href="#" class="back-to-top">
-        <span class="button_icon">
-          <i class="fas fa-chevron-up fa-2x"></i>
-        </span>
-      </a>
-    </span>
-    
-  </p>
-</footer>
-
-  </div>
   
 
   

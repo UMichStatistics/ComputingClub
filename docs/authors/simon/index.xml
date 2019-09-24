@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>University of Michigan Statistics Computing Club</title>
-    <link>https://UMichStatistics.github.io/computingclub/authors/simon/</link>
-      <atom:link href="https://UMichStatistics.github.io/computingclub/authors/simon/index.xml" rel="self" type="application/rss+xml" />
+    <link>/computingclub/authors/simon/</link>
+      <atom:link href="/computingclub/authors/simon/index.xml" rel="self" type="application/rss+xml" />
     <description>University of Michigan Statistics Computing Club</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Mon, 23 Sep 2019 22:06:16 -0400</lastBuildDate>
     <image>
-      <url>https://UMichStatistics.github.io/computingclub/img/icon_512.png</url>
+      <url>/computingclub/img/icon_512.png</url>
       <title>University of Michigan Statistics Computing Club</title>
-      <link>https://UMichStatistics.github.io/computingclub/authors/simon/</link>
+      <link>/computingclub/authors/simon/</link>
     </image>
     
     <item>
       <title>Welcome to the Computing club&#39;s new website</title>
-      <link>https://UMichStatistics.github.io/computingclub/post/welcome/</link>
+      <link>/computingclub/post/welcome/</link>
       <pubDate>Mon, 23 Sep 2019 22:06:16 -0400</pubDate>
-      <guid>https://UMichStatistics.github.io/computingclub/post/welcome/</guid>
+      <guid>/computingclub/post/welcome/</guid>
       <description>&lt;p&gt;Example post.&lt;/p&gt;
 </description>
     </item>

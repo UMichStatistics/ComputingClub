@@ -28,11 +28,11 @@
   
     
   
-  <meta name="description" content="Here are some more tips for getting started with Academic:
-Tip 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus.">
+  <meta name="description" content="The lazy way If you only need to add some post/meeting/workshop to the website, here is a simple way to deploy your new content to the website without much hassle.
+ Create your content&mdash;The first step is to create your specific content by producing the necessary Markdown files. See Creating content for details on how to do so. Push your content&mdash;You then need to add your content to the website content directory.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/computingclub/workshops/example/example2/">
+  <link rel="alternate" hreflang="en-us" href="/computingclub/workshops/edit_site/workflow/">
 
   
 
@@ -94,7 +94,7 @@ Tip 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tell
   <link rel="icon" type="image/png" href="/computingclub/img/icon-32.png?v=2">
   <link rel="apple-touch-icon" type="image/png" href="/computingclub/img/icon-192.png">
 
-  <link rel="canonical" href="/computingclub/workshops/example/example2/">
+  <link rel="canonical" href="/computingclub/workshops/edit_site/workflow/">
 
   
   
@@ -106,10 +106,10 @@ Tip 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tell
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="University of Michigan Statistics Computing Club">
-  <meta property="og:url" content="/computingclub/workshops/example/example2/">
-  <meta property="og:title" content="Example Page 2 | University of Michigan Statistics Computing Club">
-  <meta property="og:description" content="Here are some more tips for getting started with Academic:
-Tip 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus."><meta property="og:image" content="/computingclub/img/icon_512.png">
+  <meta property="og:url" content="/computingclub/workshops/edit_site/workflow/">
+  <meta property="og:title" content="Update workflow | University of Michigan Statistics Computing Club">
+  <meta property="og:description" content="The lazy way If you only need to add some post/meeting/workshop to the website, here is a simple way to deploy your new content to the website without much hassle.
+ Create your content&mdash;The first step is to create your specific content by producing the necessary Markdown files. See Creating content for details on how to do so. Push your content&mdash;You then need to add your content to the website content directory."><meta property="og:image" content="/computingclub/img/icon_512.png">
   <meta property="twitter:image" content="/computingclub/img/icon_512.png"><meta property="og:locale" content="en-us">
   
     
@@ -134,7 +134,7 @@ Tip 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tell
 
 
 
-  <title>Example Page 2 | University of Michigan Statistics Computing Club</title>
+  <title>Update workflow | University of Michigan Statistics Computing Club</title>
 
 </head>
 
@@ -343,24 +343,12 @@ Tip 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tell
   
   
   <div class="docs-toc-item">
-    <a class="docs-toc-link" href="/computingclub/workshops/example/">Overview</a>
+    <a class="docs-toc-link" href="/computingclub/workshops/edit_site/">Overview</a>
 
   </div>
   
-  <div class="docs-toc-item">
-    <a class="docs-toc-link" href="/computingclub/workshops/example/example1/">Example Topic</a>
-    <ul class="nav docs-sidenav">
-      
-      <li >
-        <a href="/computingclub/workshops/example/example1/">Tips 1-2</a>
-      </li>
-      
-      <li class="active">
-        <a href="/computingclub/workshops/example/example2/">Tips 3-4</a>
-      </li>
-      
-    </ul>
-    
+  <div class="docs-toc-item active">
+    <a class="docs-toc-link" href="/computingclub/workshops/edit_site/workflow/">Update workflow</a>
 
   </div>
   
@@ -379,8 +367,16 @@ Tip 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tell
 <ul>
 <li>
 <ul>
-<li><a href="#tip-3">Tip 3</a></li>
-<li><a href="#tip-4">Tip 4</a></li>
+<li><a href="#the-lazy-way">The lazy way</a></li>
+<li><a href="#the-good-way">The good way</a>
+<ul>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#update-the-local-version">Update the local version</a></li>
+<li><a href="#create-your-content">Create your content</a></li>
+<li><a href="#deploy-your-local-website">Deploy your local website</a></li>
+<li><a href="#push-your-changes">Push your changes</a></li>
+</ul></li>
+<li><a href="#the-good-way-simplified-using-r">The good way simplified using R</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -394,36 +390,125 @@ Tip 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tell
       <article class="article">
 
         <div class="docs-article-container">
-          <h1>Example Page 2</h1>
+          <h1>Update workflow</h1>
 
           <div class="article-style">
             
 
-<p>Here are some more tips for getting started with Academic:</p>
+<h2 id="the-lazy-way">The lazy way</h2>
 
-<h2 id="tip-3">Tip 3</h2>
+<p>If you only need to add some post/meeting/workshop to the website, here is a simple way to deploy your new content to the website without much hassle.</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.</p>
+<ol>
+<li><strong>Create your content</strong>&mdash;The first step is to create your specific content by producing the necessary Markdown files. See <a href="create/" target="_blank">Creating content</a> for details on how to do so.</li>
+<li><strong>Push your content</strong>&mdash;You then need to add your content to the website <code>content</code> directory. If you have access to the <a href="https://github.com/UMichStatistics/" target="_blank">UMichStatistics</a> repository, then you can do it directly using your favorite &lsquo;git&rsquo; workflow. Otherwise, <a href="#contact">contact the maintainers</a> for them to add your content to the site.</li>
+<li><strong>Deploy your content</strong>&mdash;As mentionned, an update of the files outside the <code>docs</code> folder will not affect the public website. The deployment must be done through Hugo and, for now, this must be done manually. <a href="#contact">Contact the maintainers</a> for it to happen.</li>
+</ol>
 
-<p>Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.</p>
+<h2 id="the-good-way">The good way</h2>
 
-<p>Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.</p>
+<p>Hopefully, you will want to deploy your changes yourself. To do this, here is the summary of the procedure:</p>
 
-<p>Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.</p>
+<ol>
+<li>Have a local copy of the website on your machine.</li>
+<li>Update your local version.</li>
+<li>Deploy your local version to your localhost using Hugo in order to update the <code>docs</code> contents.</li>
+<li>Push your changes, including both the source and the updated <code>docs</code> to the site&rsquo;s repository.</li>
+</ol>
 
-<p>Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.</p>
+<p>With the workflow, your changes will instantaneously update the public website. Also, since you first deploy on your local machine, you are able to see the results of your changes before them becoming public. Finally, pushing both the source and the updated <code>docs</code> prevents conflicts in future updates.</p>
 
-<h2 id="tip-4">Tip 4</h2>
+<h3 id="requirements">Requirements</h3>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.</p>
+<p>To use this process, you will need:</p>
 
-<p>Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.</p>
+<ul>
+<li>Access to the <a href="https://github.com/UMichStatistics/" target="_blank">organization</a> repository;</li>
+<li>git installed on your machine (see this <a href="https://www.atlassian.com/git/tutorials/install-git" target="_blank">guide</a>);</li>
+<li>Basic git knowledge (<code>clone</code>, <code>pull</code>, <code>commit</code> and <code>push</code>);</li>
+<li>Hugo installed on your machine (see this <a href="https://gohugo.io/getting-started/installing/" target="_blank">guide</a>. The installation on Windows is tedious and the only way I could make it work was <code>R</code> &gt; install pacakge <code>blogdown</code> &gt; <code>blogdown::install_hugo()</code> and manually add its path to the system environment variables.)</li>
+</ul>
 
-<p>Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.</p>
+<h3 id="update-the-local-version">Update the local version</h3>
 
-<p>Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.</p>
+<p>First, you will need the latest version of the website stored locally on your machine.</p>
 
-<p>Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.</p>
+<p>If you have not cloned the repository yet, do so:</p>
+
+<pre><code class="language-shell">git clone https://github.com/UMichStatistics/computingclub.git &lt;new-folder-name&gt;
+</code></pre>
+
+<p>If you already have cloned the repository, make sure it is up to date. In a command prompt, move to the site local folder</p>
+
+<pre><code class="language-shell">cd &lt;path-to-folder&gt;
+</code></pre>
+
+<p>or simply open a command prompt in that folder. Then, pull the website:</p>
+
+<pre><code class="language-shell">git pull
+</code></pre>
+
+<h3 id="create-your-content">Create your content</h3>
+
+<p>Create your specific content by producing the necessary Markdown files and place them in the correct folders. See <a href="create/" target="_blank">Creating content</a> for details on how to do so.</p>
+
+<h3 id="deploy-your-local-website">Deploy your local website</h3>
+
+<p>Now that your local repository contains updated content, it is time to deploy it to your local <code>docs</code> folder. To do so, open a command prompt and run hugo at the root of the site&rsquo;s local repository:</p>
+
+<pre><code class="language-shell">cd &lt;path-to-folder-root&gt;
+hugo
+</code></pre>
+
+<p>Unless your code does not compile, you should get an output such as (possibly containing warnings)</p>
+
+<pre><code class="language-shell">Building sites … WARN 2019/09/24 17:08:23 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+
+                   | EN
++------------------+----+
+  Pages            | 52
+  Paginator pages  |  0
+  Non-page files   |  6
+  Static files     |  8
+  Processed images |  9
+  Aliases          |  7
+  Sitemaps         |  1
+  Cleaned          |  0
+
+Total in 265 ms
+</code></pre>
+
+<p>This means that Hugo has successfuly deployed your site to the <code>docs</code> folder. If you wish to view the website, you can host it locally using Hugo:</p>
+
+<pre><code class="language-shell">hugo server -D
+</code></pre>
+
+<p>which should yield something like</p>
+
+<pre><code class="language-shell">Watching for changes in /home/simon/git/computingclub/{content,data,static,themes}
+Watching for config changes in /home/simon/git/computingclub/config.toml, /home/simon/git/computingclub/config/_default
+Environment: &quot;development&quot;
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/computingclub/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+</code></pre>
+
+<p>The url <code>http://localhost:1313/computingclub/</code> is where you find your local website (use that in your output as it may differ from mine). Also, as long a you do not close the server (by closing the command prompt or by typing <code>Ctrl+C</code>), Hugo will listen to any changes, meaning that any file saved in the root repository will trigger deployment. This is useful if you want to create your content and see it deployed instantaneously locally without calling Hugo each time.</p>
+
+<h3 id="push-your-changes">Push your changes</h3>
+
+<p>Once your are satisfied with your local version, you need to push your changes to the <code>master</code> branch. First commit your changes:</p>
+
+<pre><code class="language-shell">git commit -a -m 'some description of your changes'
+</code></pre>
+
+<p>and finally push to the online repository</p>
+
+<pre><code class="language-shell">git push
+</code></pre>
+
+<h2 id="the-good-way-simplified-using-r">The good way simplified using R</h2>
 
           </div>
 
@@ -437,13 +522,6 @@ Tip 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tell
 <div class="post-nav">
   
   
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Previous</div>
-    <a href="/computingclub/workshops/example/example1/" rel="next">Example Page 1</a>
-  </div>
-  
-  
 </div>
 
           </div>
@@ -455,7 +533,7 @@ Tip 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tell
 
           
 <p class="edit-page">
-  <a href="https://github.com/UMichStatistics/computingclub/edit/master/content/workshops/example/example2.md">
+  <a href="https://github.com/UMichStatistics/computingclub/edit/master/content/workshops/edit_site/workflow.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>
