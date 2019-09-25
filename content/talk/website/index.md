@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Building your personal website using Hugo"
+title: "TBD"
 event: "Computing club meeting"
 event_url:
 location: "East Quadrangle 1405"
