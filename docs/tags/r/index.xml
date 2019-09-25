@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on University of Michigan Statistics Computing Club</title>
-    <link>https://UMichStatistics.github.io/computingclub/tags/r/</link>
+    <link>https://UMichStatistics.github.io/ComputingClub/tags/r/</link>
     <description>Recent content in R on University of Michigan Statistics Computing Club</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; {year}</copyright>
     <lastBuildDate>Wed, 18 Sep 2019 14:30:00 -0500</lastBuildDate>
     
-	<atom:link href="https://UMichStatistics.github.io/computingclub/tags/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://UMichStatistics.github.io/ComputingClub/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Introduction session &amp; presentation of the purrr R package</title>
-      <link>https://UMichStatistics.github.io/computingclub/talk/intro_purr/</link>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/intro_purr/</link>
       <pubDate>Wed, 18 Sep 2019 14:30:00 -0500</pubDate>
       
-      <guid>https://UMichStatistics.github.io/computingclub/talk/intro_purr/</guid>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/intro_purr/</guid>
       <description>Introduction session &amp;amp; presentation of the purrr R package</description>
     </item>
     

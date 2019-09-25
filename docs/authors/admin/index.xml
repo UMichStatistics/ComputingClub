@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>University of Michigan Statistics Computing Club</title>
-    <link>https://UMichStatistics.github.io/computingclub/authors/admin/</link>
+    <link>https://UMichStatistics.github.io/ComputingClub/authors/admin/</link>
     <description>Recent content on University of Michigan Statistics Computing Club</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; {year}</copyright>
     
-	<atom:link href="https://UMichStatistics.github.io/computingclub/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

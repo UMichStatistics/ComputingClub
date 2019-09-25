@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Editing the Club&#39;s website on University of Michigan Statistics Computing Club</title>
-    <link>https://UMichStatistics.github.io/computingclub/workshops/edit_site/</link>
+    <link>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/</link>
     <description>Recent content in Editing the Club&#39;s website on University of Michigan Statistics Computing Club</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; {year}</copyright>
     <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://UMichStatistics.github.io/computingclub/workshops/edit_site/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Update workflow</title>
-      <link>https://UMichStatistics.github.io/computingclub/workshops/edit_site/workflow/</link>
+      <link>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/workflow/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       
-      <guid>https://UMichStatistics.github.io/computingclub/workshops/edit_site/workflow/</guid>
+      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/workflow/</guid>
       <description>The lazy way If you only need to add some post/meeting/workshop to the website, here is a simple way to deploy your new content to the website without much hassle.
  Create your content&amp;mdash;The first step is to create your specific content by producing the necessary Markdown files. See Creating content for details on how to do so. Push your content&amp;mdash;You then need to add your content to the website content directory.</description>
     </item>

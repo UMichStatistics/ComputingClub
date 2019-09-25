@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on University of Michigan Statistics Computing Club</title>
-    <link>https://UMichStatistics.github.io/computingclub/tags/</link>
+    <link>https://UMichStatistics.github.io/ComputingClub/tags/</link>
     <description>Recent content in Tags on University of Michigan Statistics Computing Club</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; {year}</copyright>
     <lastBuildDate>Mon, 23 Sep 2019 22:06:16 -0400</lastBuildDate>
     
-	<atom:link href="https://UMichStatistics.github.io/computingclub/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://UMichStatistics.github.io/ComputingClub/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Club</title>
-      <link>https://UMichStatistics.github.io/computingclub/tags/club/</link>
+      <link>https://UMichStatistics.github.io/ComputingClub/tags/club/</link>
       <pubDate>Mon, 23 Sep 2019 22:06:16 -0400</pubDate>
       
-      <guid>https://UMichStatistics.github.io/computingclub/tags/club/</guid>
+      <guid>https://UMichStatistics.github.io/ComputingClub/tags/club/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Functional programming</title>
-      <link>https://UMichStatistics.github.io/computingclub/tags/functional-programming/</link>
+      <link>https://UMichStatistics.github.io/ComputingClub/tags/functional-programming/</link>
       <pubDate>Wed, 18 Sep 2019 14:30:00 -0500</pubDate>
       
-      <guid>https://UMichStatistics.github.io/computingclub/tags/functional-programming/</guid>
+      <guid>https://UMichStatistics.github.io/ComputingClub/tags/functional-programming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>https://UMichStatistics.github.io/computingclub/tags/r/</link>
+      <link>https://UMichStatistics.github.io/ComputingClub/tags/r/</link>
       <pubDate>Wed, 18 Sep 2019 14:30:00 -0500</pubDate>
       
-      <guid>https://UMichStatistics.github.io/computingclub/tags/r/</guid>
+      <guid>https://UMichStatistics.github.io/ComputingClub/tags/r/</guid>
       <description></description>
     </item>
     
