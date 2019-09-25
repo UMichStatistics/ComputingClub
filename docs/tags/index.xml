@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on University of Michigan Statistics Computing Club</title>
+    <title>Tags | University of Michigan Statistics Computing Club</title>
     <link>https://UMichStatistics.github.io/ComputingClub/tags/</link>
-    <description>Recent content in Tags on University of Michigan Statistics Computing Club</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; {year}</copyright>
-    <lastBuildDate>Mon, 23 Sep 2019 22:06:16 -0400</lastBuildDate>
-    
-	<atom:link href="https://UMichStatistics.github.io/ComputingClub/tags/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://UMichStatistics.github.io/ComputingClub/tags/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tags</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Mon, 23 Sep 2019 22:06:16 -0400</lastBuildDate>
+    <image>
+      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <title>Tags</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/tags/</link>
+    </image>
     
     <item>
       <title>Club</title>
       <link>https://UMichStatistics.github.io/ComputingClub/tags/club/</link>
       <pubDate>Mon, 23 Sep 2019 22:06:16 -0400</pubDate>
-      
       <guid>https://UMichStatistics.github.io/ComputingClub/tags/club/</guid>
       <description></description>
     </item>
@@ -25,7 +24,6 @@
       <title>Functional programming</title>
       <link>https://UMichStatistics.github.io/ComputingClub/tags/functional-programming/</link>
       <pubDate>Wed, 18 Sep 2019 14:30:00 -0500</pubDate>
-      
       <guid>https://UMichStatistics.github.io/ComputingClub/tags/functional-programming/</guid>
       <description></description>
     </item>
@@ -34,7 +32,6 @@
       <title>R</title>
       <link>https://UMichStatistics.github.io/ComputingClub/tags/r/</link>
       <pubDate>Wed, 18 Sep 2019 14:30:00 -0500</pubDate>
-      
       <guid>https://UMichStatistics.github.io/ComputingClub/tags/r/</guid>
       <description></description>
     </item>

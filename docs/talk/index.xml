@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recent &amp; Upcoming Meetings on University of Michigan Statistics Computing Club</title>
+    <title>Recent &amp; Upcoming Meetings | University of Michigan Statistics Computing Club</title>
     <link>https://UMichStatistics.github.io/ComputingClub/talk/</link>
-    <description>Recent content in Recent &amp; Upcoming Meetings on University of Michigan Statistics Computing Club</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; {year}</copyright>
-    <lastBuildDate>Wed, 18 Sep 2019 14:30:00 -0500</lastBuildDate>
-    
-	<atom:link href="https://UMichStatistics.github.io/ComputingClub/talk/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://UMichStatistics.github.io/ComputingClub/talk/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent &amp; Upcoming Meetings</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Wed, 18 Sep 2019 14:30:00 -0500</lastBuildDate>
+    <image>
+      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <title>Recent &amp; Upcoming Meetings</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/</link>
+    </image>
     
     <item>
       <title>Introduction session &amp; presentation of the purrr R package</title>
       <link>https://UMichStatistics.github.io/ComputingClub/talk/intro_purr/</link>
       <pubDate>Wed, 18 Sep 2019 14:30:00 -0500</pubDate>
-      
       <guid>https://UMichStatistics.github.io/ComputingClub/talk/intro_purr/</guid>
-      <description>Introduction session &amp;amp; presentation of the purrr R package</description>
+      <description>&lt;p&gt;Can I put things here?&lt;/p&gt;
+</description>
     </item>
     
   </channel>

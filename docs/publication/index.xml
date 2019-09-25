@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications on University of Michigan Statistics Computing Club</title>
+    <title>Publications | University of Michigan Statistics Computing Club</title>
     <link>https://UMichStatistics.github.io/ComputingClub/publication/</link>
-    <description>Recent content in Publications on University of Michigan Statistics Computing Club</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; {year}</copyright>
-    
-	<atom:link href="https://UMichStatistics.github.io/ComputingClub/publication/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://UMichStatistics.github.io/ComputingClub/publication/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright>
+    <image>
+      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <title>Publications</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/publication/</link>
+    </image>
     
   </channel>
 </rss>

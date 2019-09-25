@@ -49,7 +49,7 @@ First, you will need the latest version of the website stored locally on your ma
 
 If you have not cloned the repository yet, do so:
 ```shell
-git clone https://github.com/UMichStatistics/computingclub.git <new-folder-name>
+git clone https://github.com/UMichStatistics/ComputingClub.git <new-folder-name>
 ```
 
 If you already have cloned the repository, make sure it is up to date. In a command prompt, move to the site local folder
@@ -77,7 +77,7 @@ Unless your code does not compile, you should get an output such as (possibly co
 Building sites … WARN 2019/09/24 17:08:23 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
 
                    | EN
-+------------------+----+
++------------------|----+
   Pages            | 52
   Paginator pages  |  0
   Non-page files   |  6
@@ -95,15 +95,15 @@ hugo server -D
 ```
 which should yield something like
 ```shell
-Watching for changes in /home/simon/git/computingclub/{content,data,static,themes}
-Watching for config changes in /home/simon/git/computingclub/config.toml, /home/simon/git/computingclub/config/_default
+Watching for changes in /home/simon/git/ComputingClub/{content,data,static,themes}
+Watching for config changes in /home/simon/git/ComputingClub/config.toml, /home/simon/git/ComputingClub/config/_default
 Environment: "development"
 Serving pages from memory
 Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
-Web Server is available at http://localhost:1313/computingclub/ (bind address 127.0.0.1)
+Web Server is available at http://localhost:1313/ComputingClub/ (bind address 127.0.0.1)
 Press Ctrl+C to stop
 ```
-The url `http://localhost:1313/computingclub/` is where you find your local website (use that in your output as it may differ from mine). Also, as long a you do not close the server (by closing the command prompt or by typing `Ctrl+C`), Hugo will listen to any changes, meaning that any file saved in the root repository will trigger deployment. This is useful if you want to create your content and see it deployed instantaneously locally without calling Hugo each time.
+The url `http://localhost:1313/ComputingClub/` is where you find your local website (use that in your output as it may differ from mine). Also, as long a you do not close the server (by closing the command prompt or by typing `Ctrl+C`), Hugo will listen to any changes, meaning that any file saved in the root repository will trigger deployment. This is useful if you want to create your content and see it deployed instantaneously locally without calling Hugo each time.
 
 ### Push your changes
 

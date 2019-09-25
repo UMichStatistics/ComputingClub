@@ -3,52 +3,53 @@
   <channel>
     <title>University of Michigan Statistics Computing Club</title>
     <link>https://UMichStatistics.github.io/ComputingClub/</link>
-    <description>Recent content on University of Michigan Statistics Computing Club</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; {year}</copyright>
-    <lastBuildDate>Mon, 23 Sep 2019 22:06:16 -0400</lastBuildDate>
-    
-	<atom:link href="https://UMichStatistics.github.io/ComputingClub/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>High Performance Computing</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/hpc/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/hpc/</guid>
-      <description>Language, packages Conda integration in GreatLakes by UMich Data Analysis Networking Group</description>
-    </item>
+      <atom:link href="https://UMichStatistics.github.io/ComputingClub/index.xml" rel="self" type="application/rss+xml" />
+    <description>University of Michigan Statistics Computing Club</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Mon, 23 Sep 2019 22:06:16 -0400</lastBuildDate>
+    <image>
+      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <title>University of Michigan Statistics Computing Club</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/</link>
+    </image>
     
     <item>
-      <title>Update workflow</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/workflow/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/workflow/</guid>
-      <description>The lazy way If you only need to add some post/meeting/workshop to the website, here is a simple way to deploy your new content to the website without much hassle.
- Create your content&amp;mdash;The first step is to create your specific content by producing the necessary Markdown files. See Creating content for details on how to do so. Push your content&amp;mdash;You then need to add your content to the website content directory.</description>
-    </item>
-    
-    <item>
-      <title>Welcome to the Computing club&#39;s new website</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/post/welcome/</link>
+      <title>Posts</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/post/</link>
       <pubDate>Mon, 23 Sep 2019 22:06:16 -0400</pubDate>
-      
-      <guid>https://UMichStatistics.github.io/ComputingClub/post/welcome/</guid>
-      <description>With the recent creation of the Statistics Computing Club, having a platform to share news, contents and resources was a priority.
-The site is functionnal but still under construction, so please report issues to the GitHub repository to help us improve the site. Also, your comments and suggestions are more than welcome, so feel free to contact us!
-The Committee is still looking for presenters for this fall&amp;rsquo;s meetings. You don&amp;rsquo;t need to be an expert of the topic you&amp;rsquo;ll present; providing exposure to a tool you find useful, to a package you think may help others or to some research methodology may be relevant to many other members!</description>
+      <guid>https://UMichStatistics.github.io/ComputingClub/post/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>Introduction session &amp; presentation of the purrr R package</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/intro_purr/</link>
+      <title>Recent &amp; Upcoming Meetings</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/</link>
       <pubDate>Wed, 18 Sep 2019 14:30:00 -0500</pubDate>
-      
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/intro_purr/</guid>
-      <description>Introduction session &amp;amp; presentation of the purrr R package</description>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid></guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/publication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/publication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Workshops</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/workshops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/</guid>
+      <description></description>
     </item>
     
   </channel>

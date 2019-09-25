@@ -30,6 +30,6 @@ projects: []
 
 With the recent creation of the Statistics Computing Club, having a platform to share news, contents and resources was a priority. 
 
-The site is functionnal but still under construction, so please [report issues](https://github.com/UMichStatistics/computingclub/issues) to the GitHub repository to help us improve the site. Also, your comments and suggestions are more than welcome, so feel free to [contact](#contact) us!
+The site is functionnal but still under construction, so please [report issues](https://github.com/UMichStatistics/ComputingClub/issues) to the GitHub repository to help us improve the site. Also, your comments and suggestions are more than welcome, so feel free to [contact](#contact) us!
 
 The Committee is still looking for presenters for this fall's meetings. You don't need to be an expert of the topic you'll present; providing exposure to a tool you find useful, to a package you think may help others or to some research methodology may be relevant to many other members! If you feel like presenting, we invite you to complete this [form](https://forms.gle/XMtKfjhJTuaaHdLU7).

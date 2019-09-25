@@ -30,7 +30,7 @@ While the website consists of `html` source interpreted by the visitor's browser
 
 ## Repository description
 
-The website is hosted on GitHub Pages. The static contents of the website appears in the `docs` folder of the [UmichStatistics](https://github.com/UMichStatistics/) GitHub organization repository [computingclub](https://github.com/UMichStatistics/computingclub/). The other folders and files of the repository are used to generate the website: only the `docs` folder is necessary for the static website to be operational. 
+The website is hosted on GitHub Pages. The static contents of the website appears in the `docs` folder of the [UmichStatistics](https://github.com/UMichStatistics/) GitHub organization repository [ComputingClub](https://github.com/UMichStatistics/ComputingClub/). The other folders and files of the repository are used to generate the website: only the `docs` folder is necessary for the static website to be operational. 
 
 ## Deployment
 

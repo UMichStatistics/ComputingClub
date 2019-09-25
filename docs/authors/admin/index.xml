@@ -3,13 +3,14 @@
   <channel>
     <title>University of Michigan Statistics Computing Club</title>
     <link>https://UMichStatistics.github.io/ComputingClub/authors/admin/</link>
-    <description>Recent content on University of Michigan Statistics Computing Club</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; {year}</copyright>
-    
-	<atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/admin/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+    <description>University of Michigan Statistics Computing Club</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright>
+    <image>
+      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <title>University of Michigan Statistics Computing Club</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/authors/admin/</link>
+    </image>
     
   </channel>
 </rss>
