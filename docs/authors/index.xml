@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors | University of Michigan Statistics Computing Club</title>
+    <title>Authors on University of Michigan Statistics Computing Club</title>
     <link>https://UMichStatistics.github.io/computingclub/authors/</link>
-      <atom:link href="https://UMichStatistics.github.io/computingclub/authors/index.xml" rel="self" type="application/rss+xml" />
-    <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Mon, 23 Sep 2019 22:06:16 -0400</lastBuildDate>
-    <image>
-      <url>https://UMichStatistics.github.io/computingclub/img/icon_512.png</url>
-      <title>Authors</title>
-      <link>https://UMichStatistics.github.io/computingclub/authors/</link>
-    </image>
+    <description>Recent content in Authors on University of Michigan Statistics Computing Club</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; {year}</copyright>
+    <lastBuildDate>Mon, 23 Sep 2019 22:06:16 -0400</lastBuildDate>
+    
+	<atom:link href="https://UMichStatistics.github.io/computingclub/authors/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title></title>
       <link>https://UMichStatistics.github.io/computingclub/authors/simon/</link>
       <pubDate>Mon, 23 Sep 2019 22:06:16 -0400</pubDate>
+      
       <guid>https://UMichStatistics.github.io/computingclub/authors/simon/</guid>
       <description></description>
     </item>
@@ -24,6 +25,7 @@
       <title></title>
       <link>https://UMichStatistics.github.io/computingclub/authors/derek/</link>
       <pubDate>Wed, 18 Sep 2019 14:30:00 -0500</pubDate>
+      
       <guid>https://UMichStatistics.github.io/computingclub/authors/derek/</guid>
       <description></description>
     </item>
@@ -32,17 +34,17 @@
       <title></title>
       <link>https://UMichStatistics.github.io/computingclub/authors/admin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
       <guid>https://UMichStatistics.github.io/computingclub/authors/admin/</guid>
-      <description>&lt;p&gt;This page is for the Computing Club overseen by the UM Stats PhD Computing Committee. Information about meeting times and presented topics will be posted here.&lt;/p&gt;
-
-&lt;p&gt;The only guiding principle is that the topic should have some potential application to a Statistics research workload, which leaves a broad range of topics.&lt;/p&gt;
-</description>
+      <description>This page is for the Computing Club overseen by the UM Stats PhD Computing Committee. Information about meeting times and presented topics will be posted here.
+The only guiding principle is that the topic should have some potential application to a Statistics research workload, which leaves a broad range of topics.</description>
     </item>
     
     <item>
       <title></title>
       <link>https://UMichStatistics.github.io/computingclub/authors/dan/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
       <guid>https://UMichStatistics.github.io/computingclub/authors/dan/</guid>
       <description></description>
     </item>
@@ -51,6 +53,7 @@
       <title></title>
       <link>https://UMichStatistics.github.io/computingclub/authors/rob/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
       <guid>https://UMichStatistics.github.io/computingclub/authors/rob/</guid>
       <description></description>
     </item>
