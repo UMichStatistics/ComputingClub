@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Fortran"
+title: "Building your personal website using Hugo"
 event: "Computing club meeting"
 event_url:
 location: "East Quadrangle 1405"
