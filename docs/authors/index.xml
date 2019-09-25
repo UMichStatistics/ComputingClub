@@ -5,7 +5,7 @@
     <link>https://UMichStatistics.github.io/ComputingClub/authors/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Mon, 23 Sep 2019 22:06:16 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Wed, 06 Nov 2019 14:30:00 -0200</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Authors</title>
@@ -13,10 +13,34 @@
     </image>
     
     <item>
+      <title>ziping</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/authors/ziping/</link>
+      <pubDate>Wed, 06 Nov 2019 14:30:00 -0200</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/authors/ziping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jregier</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/authors/jregier/</link>
+      <pubDate>Wed, 23 Oct 2019 14:30:00 -0200</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/authors/jregier/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://UMichStatistics.github.io/ComputingClub/authors/simon/</link>
-      <pubDate>Mon, 23 Sep 2019 22:06:16 -0400</pubDate>
+      <pubDate>Wed, 09 Oct 2019 14:30:00 -0200</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/authors/simon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://UMichStatistics.github.io/ComputingClub/authors/dan/</link>
+      <pubDate>Wed, 02 Oct 2019 14:30:00 -0200</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/authors/dan/</guid>
       <description></description>
     </item>
     
@@ -37,14 +61,6 @@
 
 &lt;p&gt;The only guiding principle is that the topic should have some potential application to a Statistics research workload, which leaves a broad range of topics.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://UMichStatistics.github.io/ComputingClub/authors/dan/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/authors/dan/</guid>
-      <description></description>
     </item>
     
     <item>

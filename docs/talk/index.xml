@@ -5,12 +5,44 @@
     <link>https://UMichStatistics.github.io/ComputingClub/talk/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Meetings</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Wed, 18 Sep 2019 14:30:00 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Wed, 06 Nov 2019 14:30:00 -0200</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Recent &amp; Upcoming Meetings</title>
       <link>https://UMichStatistics.github.io/ComputingClub/talk/</link>
     </image>
+    
+    <item>
+      <title>CPython</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/cpython/</link>
+      <pubDate>Wed, 06 Nov 2019 14:30:00 -0200</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/cpython/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Julia</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/julia/</link>
+      <pubDate>Wed, 23 Oct 2019 14:30:00 -0200</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/julia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fortran</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/fortran/</link>
+      <pubDate>Wed, 09 Oct 2019 14:30:00 -0200</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/fortran/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/git/</link>
+      <pubDate>Wed, 02 Oct 2019 14:30:00 -0200</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/git/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Introduction session &amp; presentation of the purrr R package</title>

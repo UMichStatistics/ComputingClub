@@ -1,30 +1,30 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Introduction session & presentation of the purrr R package"
+title: "CPython"
 event: "Computing club meeting"
 event_url:
-location: "West Hall 470"
+location: "East Quadrangle 1405"
 address:
-  street: 
+  street:
   city:
   region:
   postcode:
   country:
-summary: "Introduction session & presentation of the purrr R package"
-abstract: "Presentation of the Computing commitee, discussion. Presentation of the R package `purrr`."
+summary: ""
+abstract: ""
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: 2019-09-18T14:30:00-05:00
-date_end: 2019-09-23T15:30:00-05:00
+date: 2019-11-06T14:30:00-02:00
+date_end: 2019-11-06T15:30:00-05:00
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: 2019-09-23T21:22:29-05:00
+publishDate: 2019-09-25T15:16:15-04:00
 
-authors: [derek]
-tags: ["R", "Functional programming"]
+authors: [ziping]
+tags: []
 
 # Is this a featured talk? (true/false)
 featured: true
@@ -44,11 +44,7 @@ image:
 #   url: https://twitter.com
 #   icon_pack: fab
 #   icon: twitter
-links:
-- name: Intro slides
-  url: intro_slides.pdf
-- name: purrr slides
-  url: purrr.html
+
 # Optional filename of your slides within your talk's folder or a URL.
 url_slides:
 
@@ -70,5 +66,3 @@ slides: ""
 #   Otherwise, set `projects = []`.
 projects: []
 ---
-
-Can I put things here?

@@ -5,7 +5,7 @@
     <link>https://UMichStatistics.github.io/ComputingClub/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/index.xml" rel="self" type="application/rss+xml" />
     <description>University of Michigan Statistics Computing Club</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Mon, 23 Sep 2019 22:06:16 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Wed, 06 Nov 2019 14:30:00 -0200</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>University of Michigan Statistics Computing Club</title>
@@ -148,6 +148,38 @@ Press Ctrl+C to stop
 
 &lt;h2 id=&#34;the-good-way-simplified-using-r&#34;&gt;The good way simplified using R&lt;/h2&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>CPython</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/cpython/</link>
+      <pubDate>Wed, 06 Nov 2019 14:30:00 -0200</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/cpython/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Julia</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/julia/</link>
+      <pubDate>Wed, 23 Oct 2019 14:30:00 -0200</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/julia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fortran</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/fortran/</link>
+      <pubDate>Wed, 09 Oct 2019 14:30:00 -0200</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/fortran/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/git/</link>
+      <pubDate>Wed, 02 Oct 2019 14:30:00 -0200</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/git/</guid>
+      <description></description>
     </item>
     
     <item>

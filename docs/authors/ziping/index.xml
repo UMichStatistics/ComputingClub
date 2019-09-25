@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ziping | University of Michigan Statistics Computing Club</title>
+    <link>https://UMichStatistics.github.io/ComputingClub/authors/ziping/</link>
+      <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/ziping/index.xml" rel="self" type="application/rss+xml" />
+    <description>ziping</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Wed, 06 Nov 2019 14:30:00 -0200</lastBuildDate>
+    <image>
+      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <title>ziping</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/authors/ziping/</link>
+    </image>
+    
+    <item>
+      <title>CPython</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/cpython/</link>
+      <pubDate>Wed, 06 Nov 2019 14:30:00 -0200</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/cpython/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

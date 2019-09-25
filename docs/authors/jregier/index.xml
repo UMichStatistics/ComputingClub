@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jregier | University of Michigan Statistics Computing Club</title>
+    <link>https://UMichStatistics.github.io/ComputingClub/authors/jregier/</link>
+      <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/jregier/index.xml" rel="self" type="application/rss+xml" />
+    <description>jregier</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Wed, 23 Oct 2019 14:30:00 -0200</lastBuildDate>
+    <image>
+      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <title>jregier</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/authors/jregier/</link>
+    </image>
+    
+    <item>
+      <title>Julia</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/julia/</link>
+      <pubDate>Wed, 23 Oct 2019 14:30:00 -0200</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/julia/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

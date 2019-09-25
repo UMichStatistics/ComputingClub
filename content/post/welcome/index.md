@@ -9,7 +9,7 @@ tags: ["Club"]
 categories: []
 date: 2019-09-23T22:06:16-04:00
 lastmod: 2019-09-23T22:06:16-04:00
-featured: false
+featured: true
 draft: false
 
 # Featured image
