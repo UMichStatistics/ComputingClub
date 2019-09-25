@@ -5,7 +5,7 @@ summary: A guide on how to add new content and modify the website.
 weight: 1
 
 # Page metadata.
-title: Overview
+title: Editing the Club's website
 date: "2018-09-09T00:00:00Z"
 lastmod: "2018-09-09T00:00:00Z"
 draft: false  # Is this a draft? true/false
@@ -18,7 +18,7 @@ author: [simon]
 # - weight: Position of link in menu.
 menu:
   edit_site:
-    name: Overview
+    name: Editing the Club's website
     weight: 1
 ---
 

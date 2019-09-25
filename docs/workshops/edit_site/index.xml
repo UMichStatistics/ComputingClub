@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Overview | University of Michigan Statistics Computing Club</title>
+    <title>Editing the Club&#39;s website | University of Michigan Statistics Computing Club</title>
     <link>https://UMichStatistics.github.io/computingclub/workshops/edit_site/</link>
       <atom:link href="https://UMichStatistics.github.io/computingclub/workshops/edit_site/index.xml" rel="self" type="application/rss+xml" />
-    <description>Overview</description>
+    <description>Editing the Club&#39;s website</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/computingclub/img/icon_512.png</url>
-      <title>Overview</title>
+      <title>Editing the Club&#39;s website</title>
       <link>https://UMichStatistics.github.io/computingclub/workshops/edit_site/</link>
     </image>
     

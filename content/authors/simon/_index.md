@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: 
+role: Computing Committee, Site maintainer
 
 # Organizations/Affiliations
 organizations:
@@ -18,7 +18,7 @@ organizations:
   url: "https://lsa.umich.edu/stats"
 
 # Short bio (displayed in user profile at end of posts)
-bio: 
+bio: PhD Student in Statistics
 
 
 

@@ -5,12 +5,20 @@
     <link>https://UMichStatistics.github.io/computingclub/tags/</link>
       <atom:link href="https://UMichStatistics.github.io/computingclub/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Wed, 18 Sep 2019 14:30:00 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Mon, 23 Sep 2019 22:06:16 -0400</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/computingclub/img/icon_512.png</url>
       <title>Tags</title>
       <link>https://UMichStatistics.github.io/computingclub/tags/</link>
     </image>
+    
+    <item>
+      <title>Club</title>
+      <link>https://UMichStatistics.github.io/computingclub/tags/club/</link>
+      <pubDate>Mon, 23 Sep 2019 22:06:16 -0400</pubDate>
+      <guid>https://UMichStatistics.github.io/computingclub/tags/club/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Functional programming</title>

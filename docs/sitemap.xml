@@ -3,12 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://UMichStatistics.github.io/computingclub/workshops/resources/hpc/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://UMichStatistics.github.io/computingclub/workshops/edit_site/workflow/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://UMichStatistics.github.io/computingclub/workshops/edit_site/</loc>
+    <lastmod>2018-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/workshops/resources/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -23,7 +33,17 @@
   </url>
   
   <url>
+    <loc>https://UMichStatistics.github.io/computingclub/tags/club/</loc>
+    <lastmod>2019-09-23T22:06:16-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://UMichStatistics.github.io/computingclub/post/</loc>
+    <lastmod>2019-09-23T22:06:16-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/computingclub/tags/</loc>
     <lastmod>2019-09-23T22:06:16-04:00</lastmod>
   </url>
   
@@ -59,11 +79,6 @@
   
   <url>
     <loc>https://UMichStatistics.github.io/computingclub/talk/</loc>
-    <lastmod>2019-09-18T14:30:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://UMichStatistics.github.io/computingclub/tags/</loc>
     <lastmod>2019-09-18T14:30:00-05:00</lastmod>
   </url>
   

@@ -22,15 +22,15 @@ title = "UM Statistics Computing Club"
 #   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
 #   Remove a link/note by deleting a cta/note block.
 [cta]
-  url = "talk/"
-  label = "Next meeting"
+  url = "https://mcommunity.umich.edu/#group:Statistics%20Computing%20Club"
+  label = "Join our MCommunity group"
   icon_pack = "fas"
   icon = "users"
   
 [cta_alt]
   url = "https://forms.gle/XMtKfjhJTuaaHdLU7"
   label = "Presentation Sign-up"
-
+  
 +++
 
 This page is for the Computing Club overseen by the UM Stats PhD Computing Committee. Information about meeting times, presented topics and contents will be posted here.
