@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Committee chair
+role: Computing Committee, Chair
 
 # Organizations/Affiliations
 organizations:
@@ -18,7 +18,7 @@ organizations:
   url: "https://lsa.umich.edu/stats"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Derek Hansen the Great.
+bio: 
 
 
 

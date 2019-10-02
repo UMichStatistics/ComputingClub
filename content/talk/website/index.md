@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "TBD"
+title: "Building & Hosting a Simple Academic Website"
 event: "Computing club meeting"
 event_url:
 location: "East Quadrangle 1405"
@@ -11,8 +11,8 @@ address:
   region:
   postcode:
   country:
-summary: ""
-abstract: ""
+summary: "In this workshop you will learn how to build a simple academic personal website based on the Acadmic theme by the Hugo engine as well as hosting it on GitHub Pages or UMich personal space."
+abstract: "In this workshop you will learn how to build a simple academic personal website based on the Acadmic theme by the Hugo engine as well as hosting it on GitHub Pages or UMich personal space."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

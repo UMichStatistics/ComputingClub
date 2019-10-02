@@ -4,7 +4,7 @@ name: Simon Fontaine
 
 # Username (this should match the folder name)
 authors:
-- derek
+- simon
 
 # Is this the primary user of the site?
 superuser: false

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>University of Michigan Statistics Computing Club</title>
+    <title>UM Statictics Computing Club</title>
     <link>https://UMichStatistics.github.io/ComputingClub/authors/derek/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/derek/index.xml" rel="self" type="application/rss+xml" />
-    <description>University of Michigan Statistics Computing Club</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Wed, 18 Sep 2019 14:30:00 -0500</lastBuildDate>
+    <description>UM Statictics Computing Club</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 UM Statistics PhD Student Concil Computing Committee</copyright><lastBuildDate>Wed, 18 Sep 2019 14:30:00 -0500</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
-      <title>University of Michigan Statistics Computing Club</title>
+      <title>UM Statictics Computing Club</title>
       <link>https://UMichStatistics.github.io/ComputingClub/authors/derek/</link>
     </image>
     

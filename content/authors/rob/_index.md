@@ -4,13 +4,13 @@ name: Rob Trangucci
 
 # Username (this should match the folder name)
 authors:
-- derek
+- rob
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: 
+role: Computing Committee
 
 # Organizations/Affiliations
 organizations:
@@ -18,7 +18,7 @@ organizations:
   url: "https://lsa.umich.edu/stats"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Derek Hansen the Great.
+bio: 
 
 
 
