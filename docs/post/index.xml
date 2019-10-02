@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts | UM Statictics Computing Club</title>
+    <title>Posts | UM Statistics Computing Club</title>
     <link>https://UMichStatistics.github.io/ComputingClub/post/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>

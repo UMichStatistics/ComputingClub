@@ -1,207 +1,55 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>UM Statictics Computing Club</title>
+    <title>UM Statistics Computing Club</title>
     <link>https://UMichStatistics.github.io/ComputingClub/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/index.xml" rel="self" type="application/rss+xml" />
-    <description>UM Statictics Computing Club</description>
+    <description>UM Statistics Computing Club</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 UM Statistics PhD Student Concil Computing Committee</copyright><lastBuildDate>Wed, 06 Nov 2019 14:30:00 -0200</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
-      <title>UM Statictics Computing Club</title>
+      <title>UM Statistics Computing Club</title>
       <link>https://UMichStatistics.github.io/ComputingClub/</link>
     </image>
     
     <item>
-      <title>High Performance Computing</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/hpc/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/hpc/</guid>
-      <description>
-
-&lt;h2 id=&#34;language-packages&#34;&gt;Language, packages&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/um-dang/conda_on_the_cluster&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Conda integration in GreatLakes&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;by &lt;a href=&#34;https://um-dang.github.io/&#34; target=&#34;_blank&#34;&gt;UMich Data Analysis Networking Group&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Update workflow</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/workflow/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/workflow/</guid>
-      <description>
-
-&lt;h2 id=&#34;the-lazy-way&#34;&gt;The lazy way&lt;/h2&gt;
-
-&lt;p&gt;If you only need to add some post/meeting/workshop to the website, here is a simple way to deploy your new content to the website without much hassle.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Create your content&lt;/strong&gt;&amp;mdash;The first step is to create your specific content by producing the necessary Markdown files. See &lt;a href=&#34;create/&#34; target=&#34;_blank&#34;&gt;Creating content&lt;/a&gt; for details on how to do so.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Push your content&lt;/strong&gt;&amp;mdash;You then need to add your content to the website &lt;code&gt;content&lt;/code&gt; directory. If you have access to the &lt;a href=&#34;https://github.com/UMichStatistics/&#34; target=&#34;_blank&#34;&gt;UMichStatistics&lt;/a&gt; repository, then you can do it directly using your favorite &amp;lsquo;git&amp;rsquo; workflow. Otherwise, &lt;a href=&#34;#contact&#34;&gt;contact the maintainers&lt;/a&gt; for them to add your content to the site.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Deploy your content&lt;/strong&gt;&amp;mdash;As mentionned, an update of the files outside the &lt;code&gt;docs&lt;/code&gt; folder will not affect the public website. The deployment must be done through Hugo and, for now, this must be done manually. &lt;a href=&#34;#contact&#34;&gt;Contact the maintainers&lt;/a&gt; for it to happen.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;the-good-way&#34;&gt;The good way&lt;/h2&gt;
-
-&lt;p&gt;Hopefully, you will want to deploy your changes yourself. To do this, here is the summary of the procedure:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Have a local copy of the website on your machine.&lt;/li&gt;
-&lt;li&gt;Update your local version.&lt;/li&gt;
-&lt;li&gt;Deploy your local version to your localhost using Hugo in order to update the &lt;code&gt;docs&lt;/code&gt; contents.&lt;/li&gt;
-&lt;li&gt;Push your changes, including both the source and the updated &lt;code&gt;docs&lt;/code&gt; to the site&amp;rsquo;s repository.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;With the workflow, your changes will instantaneously update the public website. Also, since you first deploy on your local machine, you are able to see the results of your changes before them becoming public. Finally, pushing both the source and the updated &lt;code&gt;docs&lt;/code&gt; prevents conflicts in future updates.&lt;/p&gt;
-
-&lt;h3 id=&#34;requirements&#34;&gt;Requirements&lt;/h3&gt;
-
-&lt;p&gt;To use this process, you will need:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Access to the &lt;a href=&#34;https://github.com/UMichStatistics/&#34; target=&#34;_blank&#34;&gt;organization&lt;/a&gt; repository;&lt;/li&gt;
-&lt;li&gt;git installed on your machine (see this &lt;a href=&#34;https://www.atlassian.com/git/tutorials/install-git&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt;);&lt;/li&gt;
-&lt;li&gt;Basic git knowledge (&lt;code&gt;clone&lt;/code&gt;, &lt;code&gt;pull&lt;/code&gt;, &lt;code&gt;commit&lt;/code&gt; and &lt;code&gt;push&lt;/code&gt;);&lt;/li&gt;
-&lt;li&gt;Hugo installed on your machine (see this &lt;a href=&#34;https://gohugo.io/getting-started/installing/&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt;. The installation on Windows is tedious and the only way I could make it work was &lt;code&gt;R&lt;/code&gt; &amp;gt; install pacakge &lt;code&gt;blogdown&lt;/code&gt; &amp;gt; &lt;code&gt;blogdown::install_hugo()&lt;/code&gt; and manually add its path to the system environment variables.)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;update-the-local-version&#34;&gt;Update the local version&lt;/h3&gt;
-
-&lt;p&gt;First, you will need the latest version of the website stored locally on your machine.&lt;/p&gt;
-
-&lt;p&gt;If you have not cloned the repository yet, do so:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git clone https://github.com/UMichStatistics/ComputingClub.git &amp;lt;new-folder-name&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If you already have cloned the repository, make sure it is up to date. In a command prompt, move to the site local folder&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cd &amp;lt;path-to-folder&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or simply open a command prompt in that folder. Then, pull the website:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git pull
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;create-your-content&#34;&gt;Create your content&lt;/h3&gt;
-
-&lt;p&gt;Create your specific content by producing the necessary Markdown files and place them in the correct folders. See &lt;a href=&#34;create/&#34; target=&#34;_blank&#34;&gt;Creating content&lt;/a&gt; for details on how to do so.&lt;/p&gt;
-
-&lt;h3 id=&#34;deploy-your-local-website&#34;&gt;Deploy your local website&lt;/h3&gt;
-
-&lt;p&gt;Now that your local repository contains updated content, it is time to deploy it to your local &lt;code&gt;docs&lt;/code&gt; folder. To do so, open a command prompt and run hugo at the root of the site&amp;rsquo;s local repository:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cd &amp;lt;path-to-folder-root&amp;gt;
-hugo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Unless your code does not compile, you should get an output such as (possibly containing warnings)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;Building sites … WARN 2019/09/24 17:08:23 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
-
-                   | EN
-+------------------|----+
-  Pages            | 52
-  Paginator pages  |  0
-  Non-page files   |  6
-  Static files     |  8
-  Processed images |  9
-  Aliases          |  7
-  Sitemaps         |  1
-  Cleaned          |  0
-
-Total in 265 ms
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This means that Hugo has successfuly deployed your site to the &lt;code&gt;docs&lt;/code&gt; folder. If you wish to view the website, you can host it locally using Hugo:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;hugo server -D
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;which should yield something like&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;Watching for changes in /home/simon/git/ComputingClub/{content,data,static,themes}
-Watching for config changes in /home/simon/git/ComputingClub/config.toml, /home/simon/git/ComputingClub/config/_default
-Environment: &amp;quot;development&amp;quot;
-Serving pages from memory
-Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
-Web Server is available at http://localhost:1313/ComputingClub/ (bind address 127.0.0.1)
-Press Ctrl+C to stop
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The url &lt;code&gt;http://localhost:1313/ComputingClub/&lt;/code&gt; is where you find your local website (use that in your output as it may differ from mine). Also, as long a you do not close the server (by closing the command prompt or by typing &lt;code&gt;Ctrl+C&lt;/code&gt;), Hugo will listen to any changes, meaning that any file saved in the root repository will trigger deployment. This is useful if you want to create your content and see it deployed instantaneously locally without calling Hugo each time.&lt;/p&gt;
-
-&lt;h3 id=&#34;push-your-changes&#34;&gt;Push your changes&lt;/h3&gt;
-
-&lt;p&gt;Once your are satisfied with your local version, you need to push your changes to the &lt;code&gt;master&lt;/code&gt; branch. First commit your changes:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git commit -a -m &#39;some description of your changes&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and finally push to the online repository&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git push
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;the-good-way-simplified-using-r&#34;&gt;The good way simplified using R&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>CPython</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/cpython/</link>
+      <title>Recent &amp; Upcoming Meetings</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/</link>
       <pubDate>Wed, 06 Nov 2019 14:30:00 -0200</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/cpython/</guid>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Julia</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/julia/</link>
-      <pubDate>Wed, 23 Oct 2019 14:30:00 -0200</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/julia/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Building &amp; Hosting a Simple Academic Website</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/website/</link>
-      <pubDate>Wed, 09 Oct 2019 14:30:00 -0200</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/website/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Git</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/git/</link>
-      <pubDate>Wed, 02 Oct 2019 14:30:00 -0200</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Welcome to the Computing club&#39;s new website</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/post/welcome/</link>
+      <title>Posts</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/post/</link>
       <pubDate>Mon, 23 Sep 2019 22:06:16 -0400</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/post/welcome/</guid>
-      <description>&lt;p&gt;With the recent creation of the Statistics Computing Club, having a platform to share news, contents and resources was a priority.&lt;/p&gt;
-
-&lt;p&gt;The site is functionnal but still under construction, so please &lt;a href=&#34;https://github.com/UMichStatistics/ComputingClub/issues&#34; target=&#34;_blank&#34;&gt;report issues&lt;/a&gt; to the GitHub repository to help us improve the site. Also, your comments and suggestions are more than welcome, so feel free to &lt;a href=&#34;#contact&#34;&gt;contact&lt;/a&gt; us!&lt;/p&gt;
-
-&lt;p&gt;The Committee is still looking for presenters for this fall&amp;rsquo;s meetings. You don&amp;rsquo;t need to be an expert of the topic you&amp;rsquo;ll present; providing exposure to a tool you find useful, to a package you think may help others or to some research methodology may be relevant to many other members! If you feel like presenting, we invite you to complete this &lt;a href=&#34;https://forms.gle/XMtKfjhJTuaaHdLU7&#34; target=&#34;_blank&#34;&gt;form&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <guid>https://UMichStatistics.github.io/ComputingClub/post/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>Introduction session &amp; presentation of the purrr R package</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/intro_purr/</link>
-      <pubDate>Wed, 18 Sep 2019 14:30:00 -0500</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/intro_purr/</guid>
-      <description>&lt;p&gt;Can I put things here?&lt;/p&gt;
-</description>
+      <title></title>
+      <link></link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid></guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/publication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/publication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Workshops</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/workshops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/</guid>
+      <description></description>
     </item>
     
   </channel>
