@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "CPython"
+title: "Accelerating Python using Cython"
 event: "Computing club meeting"
 event_url:
 location: "East Quadrangle 1405"
@@ -12,7 +12,7 @@ address:
   postcode:
   country:
 summary: ""
-abstract: ""
+abstract: "''Cython is an optimising static compiler for both the Python programming language and the extended Cython programming language (based on Pyrex). It makes writing C extensions for Python as easy as Python itself.''---[Cython website](https://cython.org/)"
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

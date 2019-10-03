@@ -1,4 +1,5 @@
 ---
+title: Simon Fontaine
 # Display name
 name: Simon Fontaine
 
@@ -47,3 +48,6 @@ user_groups:
 - Computing committee
 ---
 
+# About me 
+
+I currently am a first year Ph.D. Student at the University of Michigan. My research interest are broadly contained in computational statistics. In particular, penalized regression and variable selection problems as well as approximate Bayesian inference and MCMC methods are all of interest to me. Previously, I worked as a Data Science intern at the Ubisoft Montreal User Research Lab on online skill rating using approximate Bayesian inference. I did a Master’s at the University of Montreal and my thesis focused on an adaptive Multiple-Try Metropolis algorithm aimed at sampling from complex distributions.

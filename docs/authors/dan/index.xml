@@ -5,7 +5,7 @@
     <link>https://UMichStatistics.github.io/ComputingClub/authors/dan/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/dan/index.xml" rel="self" type="application/rss+xml" />
     <description>UM Statistics Computing Club</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 UM Statistics PhD Student Concil Computing Committee</copyright><lastBuildDate>Wed, 02 Oct 2019 14:30:00 -0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Wed, 02 Oct 2019 14:30:00 -0200</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>UM Statistics Computing Club</title>
@@ -13,7 +13,7 @@
     </image>
     
     <item>
-      <title>Git</title>
+      <title>Git: a deeper perspective</title>
       <link>https://UMichStatistics.github.io/ComputingClub/talk/git/</link>
       <pubDate>Wed, 02 Oct 2019 14:30:00 -0200</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/talk/git/</guid>

@@ -1,5 +1,5 @@
 ---
-title: Recent & Upcoming Meetings
+title: Meetings
 
 # View.
 #   1 = List

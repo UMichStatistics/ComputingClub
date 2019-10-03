@@ -1,4 +1,5 @@
 ---
+title: Statistics Computing Club
 # Display name
 name: Statistics Computing Club
 
@@ -67,6 +68,7 @@ user_groups:
 - Researchers
 - Visitors
 ---
+# About us
 
 This page is for the Computing Club overseen by the UM Stats PhD Computing Committee. Information about meeting times and presented topics will be posted here.
 

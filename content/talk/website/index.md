@@ -11,8 +11,8 @@ address:
   region:
   postcode:
   country:
-summary: "In this workshop you will learn how to build a simple academic personal website based on the Acadmic theme by the Hugo engine as well as hosting it on GitHub Pages or UMich personal space."
-abstract: "In this workshop you will learn how to build a simple academic personal website based on the Acadmic theme by the Hugo engine as well as hosting it on GitHub Pages or UMich personal space."
+summary: ""
+abstract: "In a workshop-type presentation, you will learn how to build a simple academic personal website based on the Academic theme by the Hugo engine as well as hosting it on GitHub Pages or UMich personal space."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
@@ -24,7 +24,7 @@ all_day: false
 publishDate: 2019-09-25T15:16:15-04:00
 
 authors: [simon]
-tags: []
+tags: ["Website", "Markdown"]
 
 # Is this a featured talk? (true/false)
 featured: true
