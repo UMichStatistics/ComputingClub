@@ -57,7 +57,391 @@
       <link>https://UMichStatistics.github.io/ComputingClub/talk/intro_purr/</link>
       <pubDate>Wed, 18 Sep 2019 14:30:00 -0500</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/talk/intro_purr/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;what-is-functional-programming&#34;&gt;What is Functional Programming?&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&#34;Functional programming is a programming paradigm ... that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data.&#34;
+- Wikipedia
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Functions are like those in mathematics:
+
+&lt;ol&gt;
+&lt;li&gt;They always return the same output for a given input&lt;/li&gt;
+&lt;li&gt;No side-effects (e.g. modification of global variables)&lt;/li&gt;
+&lt;li&gt;Functions that satisfy (1-2) are called &lt;strong&gt;pure&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;Functions are &lt;strong&gt;first-class&lt;/strong&gt; objects which can be passed as arguments to other functions (a.k.a. &lt;strong&gt;functionals&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;There is no changing state as the program runs; values are assigned once as functions of other values and inputs&lt;/li&gt;
+&lt;li&gt;Everyday example: Microsoft Excel (without any VBA scripting!)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;why-use-functional-programming&#34;&gt;Why use functional programming?&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Through avoiding mutable state and composing pure functions, an FP program is also a pure function of its input&lt;/li&gt;
+&lt;li&gt;This makes FP programs...
+
+&lt;ul&gt;
+&lt;li&gt;Modular&lt;/li&gt;
+&lt;li&gt;Predictable&lt;/li&gt;
+&lt;li&gt;Easier to test&lt;/li&gt;
+&lt;li&gt;Avoid common pitfalls involving changing state (e.g. global variables)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;why-use-functional-programming-1&#34;&gt;Why use functional programming?&lt;/h2&gt;
+
+&lt;p&gt;Natural functionals in the FP paradigm include ...&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;map&lt;/strong&gt;: (where $f: X \to Y$)
+&lt;span  class=&#34;math&#34;&gt;\(((x_1, ..., x_n),  f) \to (f(x_1), ..., f(x_n)))\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;filter&lt;/strong&gt;: (where $f$ is a &lt;strong&gt;predicate&lt;/strong&gt; function $f:X \to \{0, 1\}$)
+&lt;span  class=&#34;math&#34;&gt;\(((x_1, ..., x_n), f) \to (x_i : f(x_i) = 1)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;reduce&lt;/strong&gt;: (where $f$ is an &lt;strong&gt;operator&lt;/strong&gt; function $f:X \times X \to X$)
+&lt;span  class=&#34;math&#34;&gt;\(((x_1, ..., x_n), f) \to f(x_1, f(x_2, f(x_3, f(...))))\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;functional-programming-in-r&#34;&gt;Functional Programming in R&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;R is &lt;strong&gt;multi-paradigm&lt;/strong&gt;: it does not strictly adhere to FP principles, but it offers capability to use FP patterns&lt;/li&gt;
+&lt;li&gt;Examples in base R include:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Map&lt;/code&gt;, &lt;code&gt;lapply&lt;/code&gt;, &lt;code&gt;sapply&lt;/code&gt;, &lt;code&gt;apply&lt;/code&gt;, &lt;code&gt;vapply&lt;/code&gt;, &lt;code&gt;mapply&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Reduce&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Filter&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;purrr&lt;/code&gt; package by Hadley Wickham et al improves the the functional programming tools to R which are &lt;strong&gt;syntactically consistent&lt;/strong&gt; and &lt;strong&gt;type-safe&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;mapping&#34;&gt;Mapping&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;map&lt;/code&gt; is pretty much equivalent to &lt;code&gt;lapply&lt;/code&gt;, but has some additional features&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(purrr)
+my_sqrt &amp;lt;- function(x) sqrt(x)
+str(map(c(1,2,3,4,5), my_sqrt))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## List of 5
+##  $ : num 1
+##  $ : num 1.41
+##  $ : num 1.73
+##  $ : num 2
+##  $ : num 2.24
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;str(lapply(c(1,2,3,4,5), my_sqrt))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## List of 5
+##  $ : num 1
+##  $ : num 1.41
+##  $ : num 1.73
+##  $ : num 2
+##  $ : num 2.24
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;mapping-1&#34;&gt;Mapping&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If we want an atomic double vector instead of a list, the &lt;code&gt;map_dbl&lt;/code&gt; ensures we always receive that.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sapply&lt;/code&gt; does the same thing in this particular instance, but we can run into problems...&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;str(map_dbl(c(1,2,3,4,5), my_sqrt))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  num [1:5] 1 1.41 1.73 2 2.24
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;str(sapply(c(1,2,3,4,5), my_sqrt))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  num [1:5] 1 1.41 1.73 2 2.24
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;problem-sapply-is-not-typesafe&#34;&gt;Problem: sapply is not type-safe!&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Example: Our colleague worked hard to make &lt;code&gt;my_sqrt&lt;/code&gt; handle any real number.&lt;/li&gt;
+&lt;li&gt;They even overwrote the function &lt;code&gt;my_sqrt&lt;/code&gt; to make the transition seamless!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sqrt_general &amp;lt;- function(x) {
+  if(x &amp;gt;= 0) sqrt(x)
+  else return(paste0(sqrt(abs(x)), &amp;quot;i&amp;quot;))
+}
+
+my_sqrt &amp;lt;- sqrt_general
+my_sqrt(5)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 2.236068
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;my_sqrt(-5)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;2.23606797749979i&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;problem-sapply-is-not-typesafe-1&#34;&gt;Problem: sapply is not type-safe!&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;str(sapply(c(1,2,3,4,5), my_sqrt))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  num [1:5] 1 1.41 1.73 2 2.24
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;str(sapply(c(-1,2,-3,4,5), my_sqrt))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  chr [1:5] &amp;quot;1i&amp;quot; &amp;quot;1.4142135623731&amp;quot; &amp;quot;1.73205080756888i&amp;quot; &amp;quot;2&amp;quot; ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This is a great way to propogate errors. We have no way to guarentee whether sapply will return a &amp;quot;double&amp;quot; vector or a &amp;quot;string&amp;quot; vector.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;mapdbl-is-typesafe&#34;&gt;map_dbl is type-safe!&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;str(map_dbl(c(1,2,3,4,5), my_sqrt))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  num [1:5] 1 1.41 1.73 2 2.24
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;try(str(map_dbl(c(-1,2,-3,4,5), my_sqrt)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Error : Can&#39;t coerce element 1 from a character to a double
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The &lt;code&gt;map_*&lt;/code&gt; family of functions allows us to explictly impose which type we expect the output vector to be.
+
+&lt;ul&gt;
+&lt;li&gt;They &amp;quot;return an atomic vector of the indicated type (or die trying)&amp;quot; (documentation)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;mapchr-is-typesafe&#34;&gt;map_chr is type-safe!&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;map_chr(c(1,2,3,4,5), my_sqrt)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;1.000000&amp;quot; &amp;quot;1.414214&amp;quot; &amp;quot;1.732051&amp;quot; &amp;quot;2.000000&amp;quot; &amp;quot;2.236068&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;map_chr(c(-1,2,-3,4,5), my_sqrt)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;1i&amp;quot;                &amp;quot;1.414214&amp;quot;          &amp;quot;1.73205080756888i&amp;quot;
+## [4] &amp;quot;2.000000&amp;quot;          &amp;quot;2.236068&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Suppose our colleague convinced our team lead that we should work exclusively with strings to accomodate complex numbers&lt;/li&gt;
+&lt;li&gt;We use &lt;code&gt;map_chr&lt;/code&gt; to reflect that now we want the output to be a character vector.&lt;/li&gt;
+&lt;li&gt;No errors now because both doubles and characters can be coerced to double.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;map-is-typesafe&#34;&gt;map_* is type-safe!&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sapply&lt;/code&gt; implicitly coerces to an atomic vector in the most general unit in the output for &amp;quot;convenience&amp;quot;, but this is very prone to unexpected errors.&lt;/li&gt;
+&lt;li&gt;Most of the time, it is better to be explicit to catch any errors early and keep type stability.&lt;/li&gt;
+&lt;li&gt;Can also use &lt;code&gt;_lgl&lt;/code&gt; for logical, &lt;code&gt;_int&lt;/code&gt; for integer, &lt;code&gt;_raw&lt;/code&gt; for raw type, &lt;code&gt;_dfr&lt;/code&gt; and &lt;code&gt;_dfc&lt;/code&gt; for data-table columns and rows.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;some-more-cool-features-of-map--anonymous-functions&#34;&gt;Some more cool features of map - anonymous functions&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Can construct function in the argument using symbol notation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;map_dbl(c(1,2,3,4,5), ~.x^2 + .x + sin(.x))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1]  2.841471  6.909297 12.141120 19.243198 29.041076
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;some-more-cool-features-of-map--multiple-arguments&#34;&gt;Some more cool features of map - multiple arguments&lt;/h2&gt;
+
+&lt;!-- - Can map multiple arguments.  --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Can use &lt;code&gt;map2_*&lt;/code&gt; for 2 argument functions; &lt;code&gt;pmap_*&lt;/code&gt; for n-argument functions&lt;/li&gt;
+&lt;li&gt;The $i$th positional argument can be referenced with &lt;code&gt;..i&lt;/code&gt; syntax.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;map2_dbl(c(1,2,3,4,5), c(5,6,8,9,11), ~.x^2 + .y^2 + sin(.x))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1]  26.84147  40.90930  73.14112  96.24320 145.04108
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;pmap_dbl(list(1:5, 11:15, 21:25), ~..1 + ..2 + ..3)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 33 36 39 42 45
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;pmap_dbl(list(1:5, 11:15, 21:25), function(x,y,z) x+y+z)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 33 36 39 42 45
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;some-more-cool-features-of-map--imap&#34;&gt;Some more cool features of map - imap&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Can use &lt;code&gt;imap&lt;/code&gt; if the names of the input list/vector are important.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;imap_*(x, f(x,y))&lt;/code&gt; is equivalent to &lt;code&gt;map2_*(x, names(x), f(x,y))&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The type &lt;code&gt;dfr&lt;/code&gt; indicates that we expect the function to output a &lt;strong&gt;D&lt;/strong&gt;ata&lt;strong&gt;F&lt;/strong&gt;rame &lt;strong&gt;R&lt;/strong&gt;ow, which are then bound row-wise into a single dataframe.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(dplyr)
+midterm_grades &amp;lt;- c(Dan = 100, Derek = 20, Rob = 100)
+grade_tbl      &amp;lt;- imap_dfr(midterm_grades, ~tibble(name = .y, grade = .x, pass = .x &amp;gt;= 50))
+grade_tbl
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 3
+##   name  grade pass 
+##   &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;lgl&amp;gt;
+## 1 Dan     100 TRUE 
+## 2 Derek    20 FALSE
+## 3 Rob     100 TRUE
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;some-more-cool-features-of-map--mapif&#34;&gt;Some more cool features of map - map_if&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;map_if&lt;/code&gt; allows for use of a predicate function (or a vector) to only apply to certain values.&lt;/li&gt;
+&lt;li&gt;It always returns a list (since the input and output could be of different types).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;str(map_if(midterm_grades, !grade_tbl$pass, ~NA_real_))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## List of 3
+##  $ Dan  : num 100
+##  $ Derek: num NA
+##  $ Rob  : num 100
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;str(map_if(midterm_grades, ~.x &amp;lt;= 50, ~&amp;quot;FAIL!!&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## List of 3
+##  $ Dan  : num 100
+##  $ Derek: chr &amp;quot;FAIL!!&amp;quot;
+##  $ Rob  : num 100
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;some-more-cool-features-of-map--mapif-1&#34;&gt;Some more cool features of map - map_if&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;modify_if&lt;/code&gt; is the same as &lt;code&gt;map_if&lt;/code&gt;, but enforces that the type is the same as the input&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;str(modify_if(midterm_grades, ~.x &amp;lt;= 50, ~NA_real_))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  Named num [1:3] 100 NA 100
+##  - attr(*, &amp;quot;names&amp;quot;)= chr [1:3] &amp;quot;Dan&amp;quot; &amp;quot;Derek&amp;quot; &amp;quot;Rob&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;try(str(modify_if(midterm_grades, ~.x &amp;lt;= 50, ~&amp;quot;FAIL!!&amp;quot;)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Error : Can&#39;t coerce element 1 from a character to a double
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;keep-and-discard&#34;&gt;keep and discard&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Only keep students who passed
+keep(midterm_grades, ~.x &amp;gt;= 50)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Dan Rob 
+## 100 100
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Remove students who passed to get a list of students on notice
+discard(midterm_grades, grade_tbl$pass)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Derek 
+##    20
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;purrr-in-the-wild--succinctly-extract-results-from-different-models&#34;&gt;purrr in the wild - succinctly extract results from different models&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(dplyr)
+library(magrittr)
+aic_bic_tbl &amp;lt;- list(
+  `Binary Poverty Indicator Interaction` = logis_res_census_binpoor,
+  `Poverty Rate Interaction` = logis_res_census,
+  `Income Interaction` = logis_res_census_inc_interact,
+  `No Income` = logis_res_census_noincome,
+  `No Poverty Rate` = logis_res_census_nopoor
+) %&amp;gt;%
+  map2_dfr(names(.), ~tibble(model = .y, aic = AIC(.x), bic = BIC(.x))) %&amp;gt;% 
+  arrange(aic)
+aic_bic_tbl
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Example directly from my applied qual. (Could have used &lt;code&gt;imap_dfr&lt;/code&gt;!)
+&lt;!-- - ```map2_df``` is equivalent to ```map2_dfr```, but may be deprecated in the future --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;purrr&lt;/code&gt; was designed by the same authors as &lt;code&gt;dplyr&lt;/code&gt; and plays nicely with other &lt;code&gt;tidyverse&lt;/code&gt; functions (including the pipe object &lt;code&gt;%&amp;gt;%&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;purrr-in-the-wild--reduce-to-best-model&#34;&gt;purrr in the wild - reduce to best model&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;best_model &amp;lt;- list(
+  `Binary Poverty Indicator Interaction` = logis_res_census_binpoor,
+  `Poverty Rate Interaction` = logis_res_census,
+  `Income Interaction` = logis_res_census_inc_interact,
+  `No Income` = logis_res_census_noincome,
+  `No Poverty Rate` = logis_res_census_nopoor
+) %&amp;gt;%
+  reduce(~ifelse(BIC(.x) &amp;lt; BIC(.y), .y, .x))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;reduce&lt;/code&gt; function applies an operator function to reduce a vector to one value&lt;/li&gt;
+&lt;li&gt;Illustrating example, but in reality it would be more efficient to use &lt;code&gt;which.max(aic_bic_tbl$bic)&lt;/code&gt; (because it uses C code and more efficient algorithm)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Through the Functional Programming (FP) paradigm, &lt;code&gt;purrr&lt;/code&gt; allows for more concise and error-robust R coding patterns&lt;/li&gt;
+&lt;li&gt;Allows complex operations to be composed from simple building blocks by operating on user-specified functions&lt;/li&gt;
+&lt;li&gt;Many, many more features are contained in &lt;code&gt;purrr&lt;/code&gt; beyond what was shown today&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;further-reading&#34;&gt;Further reading&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://purrr.tidyverse.org/&#34;&gt;Tidyverse website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://r4ds.had.co.nz/iteration.html&#34;&gt;&amp;quot;Iteration&amp;quot; chapter in R for Data Science&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hadley&#39;s &lt;code&gt;plyr&lt;/code&gt; package which handles array and data.frame inputs.
+&lt;!-- -  Functionality-wise, ```plyr &gt;= dplyr + purrr```  --&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;thank-you&#34;&gt;Thank You!&lt;/h1&gt;
+</description>
     </item>
     
   </channel>

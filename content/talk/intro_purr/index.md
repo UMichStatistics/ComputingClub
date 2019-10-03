@@ -45,10 +45,14 @@ image:
 #   icon_pack: fab
 #   icon: twitter
 links:
-- name: Intro slides
+- name: Club slides
   url: intro_slides.pdf
-- name: purrr slides
-  url: https://drive.google.com/open?id=1pVBUim2PG7iw9Oydu9JVg_-3ppAB-C9N
+- name: purrr introduction
+  url: workshops/purrr
+- name: purrr slides (slides)
+  url: slides/functional_programming_R_purrr.pdf
+#  html doeesnt work within drive
+#  url: https://drive.google.com/open?id=1pVBUim2PG7iw9Oydu9JVg_-3ppAB-C9N
 - name: Rmd source
   url: https://drive.google.com/open?id=16n9hf48PgM3Dmj0XnRJPTMC-MivzYYVw
 # Optional filename of your slides within your talk's folder or a URL.
@@ -63,7 +67,7 @@ url_video:
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: ""
+slides: "functional_programming_R_purrr"
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -71,5 +75,12 @@ slides: ""
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
 ---
+
+
+
+
+
+
 

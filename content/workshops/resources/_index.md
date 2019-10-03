@@ -18,7 +18,7 @@ type: docs  # Do not modify.
 menu:
   resources:
     name: Resources
-    weight: 1
+    weight: 10
 ---
 
 
