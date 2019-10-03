@@ -49,7 +49,7 @@ links:
   url: intro_slides.pdf
 - name: purrr introduction
   url: workshops/purrr
-- name: purrr slides (slides)
+- name: purrr slides
   url: slides/functional_programming_R_purrr.pdf
 #  html doeesnt work within drive
 #  url: https://drive.google.com/open?id=1pVBUim2PG7iw9Oydu9JVg_-3ppAB-C9N
