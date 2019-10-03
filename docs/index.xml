@@ -5,7 +5,11 @@
     <link>https://UMichStatistics.github.io/ComputingClub/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/index.xml" rel="self" type="application/rss+xml" />
     <description>UM Statistics Computing Club</description>
+<<<<<<< HEAD
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Wed, 20 Nov 2019 14:30:00 -0200</lastBuildDate>
+=======
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Wed, 06 Nov 2019 14:30:00 -0200</lastBuildDate>
+>>>>>>> 5a17ed08105de983adfebe28a8a0ae41b8d572d1
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>UM Statistics Computing Club</title>
@@ -157,6 +161,7 @@ Press Ctrl+C to stop
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/versioncontrol/</guid>
       <description>
 
+<<<<<<< HEAD
 &lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;The Pro Git book&lt;/strong&gt;&lt;/a&gt; &lt;em&gt;by Scott Chacon and Ben Straub:&lt;/em&gt;&lt;/p&gt;
@@ -166,10 +171,16 @@ Press Ctrl+C to stop
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://ohshitgit.com/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Oh Shit, Git!?!&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;http://www.dangitgit.com/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Dangit, git!&lt;/strong&gt;&lt;/a&gt;: two go-to resources when encountering git problems.&lt;/p&gt;
+=======
+&lt;h2 id=&#34;git&#34;&gt;git&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;The Pro Git book&#34; target=&#34;_blank&#34;&gt;https://git-scm.com/book/en/v2&lt;/a&gt; &lt;em&gt;by Scott Chacon and Ben Straub&lt;/em&gt;&lt;/p&gt;
+>>>>>>> 5a17ed08105de983adfebe28a8a0ae41b8d572d1
 </description>
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>Stan</title>
       <link>https://UMichStatistics.github.io/ComputingClub/talk/stan/</link>
       <pubDate>Wed, 20 Nov 2019 14:30:00 -0200</pubDate>
@@ -179,6 +190,9 @@ Press Ctrl+C to stop
     
     <item>
       <title>Accelerating Python using Cython</title>
+=======
+      <title>CPython</title>
+>>>>>>> 5a17ed08105de983adfebe28a8a0ae41b8d572d1
       <link>https://UMichStatistics.github.io/ComputingClub/talk/cpython/</link>
       <pubDate>Wed, 06 Nov 2019 14:30:00 -0200</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/talk/cpython/</guid>
@@ -186,7 +200,11 @@ Press Ctrl+C to stop
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>The Julia language</title>
+=======
+      <title>Julia</title>
+>>>>>>> 5a17ed08105de983adfebe28a8a0ae41b8d572d1
       <link>https://UMichStatistics.github.io/ComputingClub/talk/julia/</link>
       <pubDate>Wed, 23 Oct 2019 14:30:00 -0200</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/talk/julia/</guid>

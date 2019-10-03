@@ -4,7 +4,11 @@
     <title>Statistics Computing Club | UM Statistics Computing Club</title>
     <link>https://UMichStatistics.github.io/ComputingClub/authors/admin/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+<<<<<<< HEAD
     <description>Statistics Computing Club</description>
+=======
+    <description>UM Statistics Computing Club</description>
+>>>>>>> 5a17ed08105de983adfebe28a8a0ae41b8d572d1
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 UM Statistics PhD Student Council Computing Committee</copyright>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>

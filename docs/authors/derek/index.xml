@@ -4,7 +4,11 @@
     <title>Derek Hansen | UM Statistics Computing Club</title>
     <link>https://UMichStatistics.github.io/ComputingClub/authors/derek/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/derek/index.xml" rel="self" type="application/rss+xml" />
+<<<<<<< HEAD
     <description>Derek Hansen</description>
+=======
+    <description>UM Statistics Computing Club</description>
+>>>>>>> 5a17ed08105de983adfebe28a8a0ae41b8d572d1
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Wed, 18 Sep 2019 14:30:00 -0500</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>

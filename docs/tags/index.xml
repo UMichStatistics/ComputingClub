@@ -5,7 +5,11 @@
     <link>https://UMichStatistics.github.io/ComputingClub/tags/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
+<<<<<<< HEAD
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Wed, 09 Oct 2019 14:30:00 -0200</lastBuildDate>
+=======
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Mon, 23 Sep 2019 22:06:16 -0400</lastBuildDate>
+>>>>>>> 5a17ed08105de983adfebe28a8a0ae41b8d572d1
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Tags</title>
