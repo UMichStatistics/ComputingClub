@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>UM Statistics Computing Club</title>
+    <title>Rob Trangucci | UM Statistics Computing Club</title>
     <link>https://UMichStatistics.github.io/ComputingClub/authors/rob/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/rob/index.xml" rel="self" type="application/rss+xml" />
-    <description>UM Statistics Computing Club</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 UM Statistics PhD Student Concil Computing Committee</copyright>
+    <description>Rob Trangucci</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Wed, 20 Nov 2019 14:30:00 -0200</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
-      <title>UM Statistics Computing Club</title>
+      <title>Rob Trangucci</title>
       <link>https://UMichStatistics.github.io/ComputingClub/authors/rob/</link>
     </image>
+    
+    <item>
+      <title>Stan</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/stan/</link>
+      <pubDate>Wed, 20 Nov 2019 14:30:00 -0200</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/stan/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

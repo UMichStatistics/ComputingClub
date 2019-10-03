@@ -1,4 +1,5 @@
 ---
+title: Dan Kessler
 # Display name
 name: Dan Kessler
 
@@ -50,3 +51,4 @@ user_groups:
 - Computing committee
 ---
 
+# About me

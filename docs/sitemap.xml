@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/workshops/resources/versioncontrol/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
@@ -24,21 +29,31 @@
   
   <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/authors/</loc>
-    <lastmod>2019-11-06T14:30:00-02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/talk/cpython/</loc>
-    <lastmod>2019-11-06T14:30:00-02:00</lastmod>
+    <lastmod>2019-11-20T14:30:00-02:00</lastmod>
   </url>
   
   <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/talk/</loc>
-    <lastmod>2019-11-06T14:30:00-02:00</lastmod>
+    <lastmod>2019-11-20T14:30:00-02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/authors/rob/</loc>
+    <lastmod>2019-11-20T14:30:00-02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/talk/stan/</loc>
+    <lastmod>2019-11-20T14:30:00-02:00</lastmod>
   </url>
   
   <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/</loc>
+    <lastmod>2019-11-20T14:30:00-02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/talk/cpython/</loc>
     <lastmod>2019-11-06T14:30:00-02:00</lastmod>
   </url>
   
@@ -58,12 +73,27 @@
   </url>
   
   <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/talk/website/</loc>
+    <lastmod>2019-10-09T14:30:00-02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/tags/markdown/</loc>
+    <lastmod>2019-10-09T14:30:00-02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/authors/simon/</loc>
     <lastmod>2019-10-09T14:30:00-02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/talk/website/</loc>
+    <loc>https://UMichStatistics.github.io/ComputingClub/tags/</loc>
+    <lastmod>2019-10-09T14:30:00-02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/tags/website/</loc>
     <lastmod>2019-10-09T14:30:00-02:00</lastmod>
   </url>
   
@@ -84,11 +114,6 @@
   
   <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/post/</loc>
-    <lastmod>2019-09-23T22:06:16-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/tags/</loc>
     <lastmod>2019-09-23T22:06:16-04:00</lastmod>
   </url>
   
@@ -118,14 +143,6 @@
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/authors/admin/</loc>
-  </url>
-  
-  <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/authors/rob/</loc>
-  </url>
-  
-  <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/categories/</loc>
   </url>
   
@@ -135,6 +152,10 @@
   
   <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/publication/</loc>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/authors/admin/</loc>
   </url>
   
   <url>

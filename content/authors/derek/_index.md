@@ -1,4 +1,5 @@
 ---
+title: Derek Hansen
 # Display name
 name: Derek Hansen
 
@@ -50,3 +51,4 @@ user_groups:
 - Computing committee
 ---
 
+# About me

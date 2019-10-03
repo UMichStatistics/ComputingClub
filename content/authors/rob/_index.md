@@ -1,4 +1,5 @@
 ---
+title: Rob Trangucci
 # Display name
 name: Rob Trangucci
 
@@ -49,4 +50,4 @@ email: ""
 user_groups:
 - Computing committee
 ---
-
+# About me

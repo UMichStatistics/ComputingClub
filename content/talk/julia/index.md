@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Julia"
+title: "The Julia language"
 event: "Computing club meeting"
 event_url:
 location: "East Quadrangle 1405"
@@ -12,7 +12,30 @@ address:
   postcode:
   country:
 summary: ""
-abstract: ""
+abstract: "''Julia in a Nutshell---**Julia is fast!**
+
+Julia was designed from the beginning for high performance. Julia programs compile to efficient native code for multiple platforms via LLVM.
+
+**Dynamic.**
+
+Julia is dynamically-typed, feels like a scripting language, and has good support for interactive use.
+
+**Optionally typed.**
+
+Julia has a rich language of descriptive datatypes, and type declarations can be used to clarify and solidify programs.
+
+**General.**
+
+Julia uses multiple dispatch as a paradigm, making it easy to express many object-oriented and functional programming patterns. The standard library provides asynchronous I/O, process control, logging, profiling, a package manager, and more.
+
+**Easy to use.**
+
+Julia has high level syntax, making it an accessible language for programmers from any background or experience level.
+
+**Open source.**
+
+Julia is free for everyone to use, and all source code is publicly viewable on GitHub.
+''---[Julia website](https://julialang.org/)"
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

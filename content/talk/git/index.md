@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Git"
+title: "Git: a deeper perspective"
 event: "Computing club meeting"
 event_url:
 location: "East Quadrangle 1405"
@@ -12,7 +12,7 @@ address:
   postcode:
   country:
 summary: ""
-abstract: ""
+abstract: "While there are many online tutorials on how to use git, few attemp to teach what really happens behind the common commands. Understanding the differences and interactions between commited, staged and working file status as well as between local and remote repositories is essential to any git user in order to engage in adequate and pleasant version control."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
@@ -44,13 +44,14 @@ image:
 #   url: https://twitter.com
 #   icon_pack: fab
 #   icon: twitter
-
 # Optional filename of your slides within your talk's folder or a URL.
-url_slides:
+url_slides: https://docs.google.com/presentation/d/1vAzhEJax5f7j53EqqLT4lWx1I8xGPyAvoW6-p7nj_JE/edit?usp=sharing
 
 url_code:
 url_pdf:
 url_video:
+
+
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.

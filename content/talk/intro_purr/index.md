@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Introduction session & presentation of the purrr R package"
+title: "Informational meeting & Functional Programming in R with purrr"
 event: "Computing club meeting"
 event_url:
 location: "West Hall 470"
@@ -11,8 +11,8 @@ address:
   region:
   postcode:
   country:
-summary: "Introduction session & presentation of the purrr R package"
-abstract: "Presentation of the Computing commitee, discussion. Presentation of the R package `purrr`."
+summary: ""
+abstract: "Presentation of the Computing club and discussion of its purpose and means. Presentation of the R package `purrr` for functional programming."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
@@ -24,7 +24,7 @@ all_day: false
 publishDate: 2019-09-23T21:22:29-05:00
 
 authors: [derek]
-tags: ["R", "Functional programming"]
+tags: ["Club", "R", "Functional programming"]
 
 # Is this a featured talk? (true/false)
 featured: true
@@ -48,7 +48,9 @@ links:
 - name: Intro slides
   url: intro_slides.pdf
 - name: purrr slides
-  url: purrr.html
+  url: https://drive.google.com/open?id=1pVBUim2PG7iw9Oydu9JVg_-3ppAB-C9N
+- name: Rmd source
+  url: https://drive.google.com/open?id=16n9hf48PgM3Dmj0XnRJPTMC-MivzYYVw
 # Optional filename of your slides within your talk's folder or a URL.
 url_slides:
 
@@ -71,4 +73,3 @@ slides: ""
 projects: []
 ---
 
-Can I put things here?
