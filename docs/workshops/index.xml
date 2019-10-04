@@ -17,7 +17,121 @@
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/</guid>
-      <description></description>
+      <description>
+
+&lt;p&gt;In this tutorial, we will go through one way of setting up your personal academic website.&lt;/p&gt;
+
+&lt;h2 id=&#34;why-have-a-personal-academic-website&#34;&gt;Why have a personal academic website&lt;/h2&gt;
+
+&lt;p&gt;Having a personal website serves multipe goals:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Professional goals
+
+&lt;ul&gt;
+&lt;li&gt;Host a public resume&lt;/li&gt;
+&lt;li&gt;List your publications, research interests, experience, etc.&lt;/li&gt;
+&lt;li&gt;Allows people to find you and contact you&lt;/li&gt;
+&lt;li&gt;Have an easy way to point to you&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Exposure for your work &amp;amp; research
+
+&lt;ul&gt;
+&lt;li&gt;Build workshops, courses and tutorials for everyone to access&lt;/li&gt;
+&lt;li&gt;Present your research in different ways than the classical way (articles, talks, posters, etc.)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Host content for courses
+
+&lt;ul&gt;
+&lt;li&gt;e.g. Canvas may have some limitations that a website might not have&lt;/li&gt;
+&lt;li&gt;Make your teaching content public
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Other uses for simple website&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Research group page&lt;/li&gt;
+&lt;li&gt;Student organization&lt;/li&gt;
+&lt;li&gt;Documenting a software or package you developped&lt;/li&gt;
+&lt;li&gt;Online book&lt;/li&gt;
+&lt;li&gt;Artist portfolio&lt;/li&gt;
+&lt;li&gt;Blogging
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;a-quick-primer-on-static-websites&#34;&gt;A quick primer on (static) websites&lt;/h2&gt;
+
+&lt;p&gt;Most websites you encounter consits of &lt;code&gt;html&lt;/code&gt; (HyperText Markup Language) code and embed other languages to allow more interaction (&lt;code&gt;javascript&lt;/code&gt;, &lt;code&gt;Perl&lt;/code&gt;, etc.). A website contains multiples pages, often arranged into different subdirectories, just like regular file management. Each page you access is a generally a &lt;code&gt;.html&lt;/code&gt; file, but in general no one actually write &lt;code&gt;html&lt;/code&gt; directly&amp;mdash;developpers use programming languages that generate the &lt;code&gt;html&lt;/code&gt; for themselves.&lt;/p&gt;
+
+&lt;p&gt;The style of a page&amp;mdash;colors, font, placement, etc.&amp;mdash;are generally contained in &lt;code&gt;css&lt;/code&gt; (Cascading Style Sheets) files.&lt;/p&gt;
+
+&lt;h2 id=&#34;about-hugo&#34;&gt;About Hugo&lt;/h2&gt;
+
+&lt;p&gt;Hugo is a framework for developping websites. In particular, it generates the desired &lt;code&gt;html&lt;/code&gt; pages given some developper input in &lt;code&gt;Markdown&lt;/code&gt; files. The engine uses the &lt;code&gt;Go&lt;/code&gt; language to interpret the &lt;code&gt;Markdown&lt;/code&gt; and produce the corresponding &lt;code&gt;html&lt;/code&gt; files.&lt;/p&gt;
+
+&lt;p&gt;In addition to &lt;code&gt;Markdown&lt;/code&gt; files, the developper also modify configuration files, in simple &lt;code&gt;toml&lt;/code&gt; format, to determine meta-information about the website and control visual aspects. Both &lt;code&gt;Markdown&lt;/code&gt; and &lt;code&gt;toml&lt;/code&gt; languages have simple and intuitive syntax so the learning curve is very steep. Once the base website is setup, editing and adding content is only a matter of creating folder, creating and editing &lt;code&gt;Markdown&lt;/code&gt; files and editing &lt;code&gt;toml&lt;/code&gt; files.&lt;/p&gt;
+
+&lt;h2 id=&#34;markdown-file-headers&#34;&gt;Markdown file headers&lt;/h2&gt;
+
+&lt;p&gt;An important concept to understand about &lt;code&gt;Markdown&lt;/code&gt; files is the file layout. Each &lt;code&gt;.Md&lt;/code&gt; file must contain a header part which describe some meta information about the content of the file and is then follow by the content itself. In the present context, the header will contain&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a high-level description of the page,&lt;/li&gt;
+&lt;li&gt;the type of page to specify to the Hugo compiler,&lt;/li&gt;
+&lt;li&gt;some details about index and references across pages,&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;among other things.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-academic-theme-for-hugo&#34;&gt;The Academic theme for Hugo&lt;/h2&gt;
+
+&lt;p&gt;Other relevent themes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Resume-type themes
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://themes.gohugo.io/hugo-resume/&#34; target=&#34;_blank&#34;&gt;Resume&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;alternatives&#34;&gt;Alternatives&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTML from scratch
+
+&lt;ul&gt;
+&lt;li&gt;Highly not recommended&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Jekyll
+
+&lt;ul&gt;
+&lt;li&gt;Very similar to Hugo (all content is &lt;code&gt;Markdown&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Slighty more complicated, but has slightly more features&lt;/li&gt;
+&lt;li&gt;Uses &lt;code&gt;Ruby&lt;/code&gt; instead of &lt;code&gt;Go&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;WYSIWYG editor
+
+&lt;ul&gt;
+&lt;li&gt;WordPress&lt;/li&gt;
+&lt;li&gt;Google Sites&lt;/li&gt;
+&lt;li&gt;WiX&lt;/li&gt;
+&lt;li&gt;and many others&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;More advanced alternatives
+
+&lt;ul&gt;
+&lt;li&gt;Grav&lt;/li&gt;
+&lt;li&gt;Drupal&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;main-takeaways&#34;&gt;Main takeaways&lt;/h2&gt;
+
+&lt;p&gt;People have made it easy for you to display your work; make use of all the tools available!&lt;/p&gt;
+</description>
     </item>
     
     <item>

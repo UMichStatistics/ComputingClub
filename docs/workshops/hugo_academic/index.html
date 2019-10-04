@@ -351,7 +351,15 @@
   
   
   <div class="docs-toc-item active">
-    <a class="docs-toc-link" href="/ComputingClub/workshops/hugo_academic/">Building &amp; Hosting a Personal Academic Website Using Hugo</a>
+    <a class="docs-toc-link" href="/ComputingClub/workshops/hugo_academic/">Personal Academic Website Using Hugo</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/ComputingClub/workshops/hugo_academic/prerequisite/">Prerequisites</a>
+      </li>
+      
+    </ul>
+    
 
   </div>
   
@@ -366,7 +374,20 @@
         <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
       </ul>
 
-      
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#why-have-a-personal-academic-website">Why have a personal academic website</a></li>
+<li><a href="#a-quick-primer-on-static-websites">A quick primer on (static) websites</a></li>
+<li><a href="#about-hugo">About Hugo</a></li>
+<li><a href="#markdown-file-headers">Markdown file headers</a></li>
+<li><a href="#the-academic-theme-for-hugo">The Academic theme for Hugo</a></li>
+<li><a href="#alternatives">Alternatives</a></li>
+<li><a href="#main-takeaways">Main takeaways</a></li>
+</ul></li>
+</ul>
+</nav>
 
       
     </div>
@@ -381,6 +402,120 @@
 
           <div class="article-style">
             
+
+<p>In this tutorial, we will go through one way of setting up your personal academic website.</p>
+
+<h2 id="why-have-a-personal-academic-website">Why have a personal academic website</h2>
+
+<p>Having a personal website serves multipe goals:</p>
+
+<ul>
+<li>Professional goals
+
+<ul>
+<li>Host a public resume</li>
+<li>List your publications, research interests, experience, etc.</li>
+<li>Allows people to find you and contact you</li>
+<li>Have an easy way to point to you</li>
+</ul></li>
+<li>Exposure for your work &amp; research
+
+<ul>
+<li>Build workshops, courses and tutorials for everyone to access</li>
+<li>Present your research in different ways than the classical way (articles, talks, posters, etc.)</li>
+</ul></li>
+<li>Host content for courses
+
+<ul>
+<li>e.g. Canvas may have some limitations that a website might not have</li>
+<li>Make your teaching content public
+<br /></li>
+</ul></li>
+</ul>
+
+<p>Other uses for simple website</p>
+
+<ul>
+<li>Research group page</li>
+<li>Student organization</li>
+<li>Documenting a software or package you developped</li>
+<li>Online book</li>
+<li>Artist portfolio</li>
+<li>Blogging
+<br /></li>
+</ul>
+
+<h2 id="a-quick-primer-on-static-websites">A quick primer on (static) websites</h2>
+
+<p>Most websites you encounter consits of <code>html</code> (HyperText Markup Language) code and embed other languages to allow more interaction (<code>javascript</code>, <code>Perl</code>, etc.). A website contains multiples pages, often arranged into different subdirectories, just like regular file management. Each page you access is a generally a <code>.html</code> file, but in general no one actually write <code>html</code> directly&mdash;developpers use programming languages that generate the <code>html</code> for themselves.</p>
+
+<p>The style of a page&mdash;colors, font, placement, etc.&mdash;are generally contained in <code>css</code> (Cascading Style Sheets) files.</p>
+
+<h2 id="about-hugo">About Hugo</h2>
+
+<p>Hugo is a framework for developping websites. In particular, it generates the desired <code>html</code> pages given some developper input in <code>Markdown</code> files. The engine uses the <code>Go</code> language to interpret the <code>Markdown</code> and produce the corresponding <code>html</code> files.</p>
+
+<p>In addition to <code>Markdown</code> files, the developper also modify configuration files, in simple <code>toml</code> format, to determine meta-information about the website and control visual aspects. Both <code>Markdown</code> and <code>toml</code> languages have simple and intuitive syntax so the learning curve is very steep. Once the base website is setup, editing and adding content is only a matter of creating folder, creating and editing <code>Markdown</code> files and editing <code>toml</code> files.</p>
+
+<h2 id="markdown-file-headers">Markdown file headers</h2>
+
+<p>An important concept to understand about <code>Markdown</code> files is the file layout. Each <code>.Md</code> file must contain a header part which describe some meta information about the content of the file and is then follow by the content itself. In the present context, the header will contain</p>
+
+<ul>
+<li>a high-level description of the page,</li>
+<li>the type of page to specify to the Hugo compiler,</li>
+<li>some details about index and references across pages,</li>
+</ul>
+
+<p>among other things.</p>
+
+<h2 id="the-academic-theme-for-hugo">The Academic theme for Hugo</h2>
+
+<p>Other relevent themes:</p>
+
+<ul>
+<li>Resume-type themes
+
+<ul>
+<li><a href="https://themes.gohugo.io/hugo-resume/" target="_blank">Resume</a></li>
+</ul></li>
+</ul>
+
+<h2 id="alternatives">Alternatives</h2>
+
+<ul>
+<li>HTML from scratch
+
+<ul>
+<li>Highly not recommended</li>
+</ul></li>
+<li>Jekyll
+
+<ul>
+<li>Very similar to Hugo (all content is <code>Markdown</code>)</li>
+<li>Slighty more complicated, but has slightly more features</li>
+<li>Uses <code>Ruby</code> instead of <code>Go</code></li>
+</ul></li>
+<li>WYSIWYG editor
+
+<ul>
+<li>WordPress</li>
+<li>Google Sites</li>
+<li>WiX</li>
+<li>and many others</li>
+</ul></li>
+<li>More advanced alternatives
+
+<ul>
+<li>Grav</li>
+<li>Drupal</li>
+</ul></li>
+</ul>
+
+<h2 id="main-takeaways">Main takeaways</h2>
+
+<p>People have made it easy for you to display your work; make use of all the tools available!</p>
+
           </div>
 
           
@@ -400,21 +535,36 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Sep 9, 2018</p>
+          <p>Last updated on Oct 4, 2019</p>
 
           
-<p class="edit-page">
-  <a href="https://github.com/UMichStatistics/ComputingClub/edit/master/content/workshops/hugo_academic/_index.md">
-    <i class="fas fa-pen pr-2"></i>Edit this page
-  </a>
-</p>
-
 
 
           
 <section id="comments">
   
     
+<div id="disqus_thread"></div>
+<script>
+  let disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "disqus_6nkzkswcpG" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
 
   
 </section>
@@ -544,7 +694,7 @@
 
     
     
-    <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+    <script id="dsq-count-scr" src="https://disqus_6nkzkswcpG.disqus.com/count.js" async></script>
     
 
     
