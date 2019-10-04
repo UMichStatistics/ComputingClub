@@ -54,7 +54,7 @@ git clone https://github.com/UMichStatistics/ComputingClub.git <new-folder-name>
 
 The website relies on the Academic theme for Hugo, so you will to clone that as well. Fortunately, it is included as a submodule of the repository, so you only need to update all submodules (there is only one):
 ```shell
-git submodule update --init --recursive
+git submodule update [--init] [--recursive]
 ```
 
 If you already have cloned the repository, make sure your local version is up to date with the current online version to avoid merge conflicts when pushing. In a command prompt, move to the site local folder and `pull` the website (or `fetch` and `merge`).
@@ -88,7 +88,7 @@ Total in 265 ms
 ```
 This means that Hugo has successfuly deployed your site to the `docs` folder. If you wish to view the website, you can host it locally using Hugo:
 ```shell
-hugo server -D
+hugo server
 ```
 which should yield something like
 ```shell
@@ -104,13 +104,15 @@ The url `http://localhost:1313/ComputingClub/` is where you find your local webs
 
 ### Push your changes
 
-Once your are satisfied with your local version, you need to push your changes to the `master` branch. First stage and commit your changes:
+Once your are satisfied with your local version, you need to push your changes to the `master` branch. In the case your Hugo server is still on, close it and run `hugo` one last time to redo the `docs` file for the online version, not the local version.
+
+Stage and commit your changes:
 ```shell
-git commit -a -m 'some description of your changes'
+git add --all
+git commit -m 'some description of your changes'
 ```
 and finally push to the online repository
 ```shell
 git push
 ```
 
-## The good way simplified using R

@@ -115,7 +115,7 @@
     
       <meta property="article:published_time" content="2019-05-05T00:00:00&#43;01:00">
     
-    <meta property="article:modified_time" content="2019-09-25T14:34:13-04:00">
+    <meta property="article:modified_time" content="2019-10-04T12:45:12-04:00">
   
 
   
@@ -392,7 +392,6 @@
 <li><a href="#deploy-your-local-website">Deploy your local website</a></li>
 <li><a href="#push-your-changes">Push your changes</a></li>
 </ul></li>
-<li><a href="#the-good-way-simplified-using-r">The good way simplified using R</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -456,7 +455,7 @@
 
 <p>The website relies on the Academic theme for Hugo, so you will to clone that as well. Fortunately, it is included as a submodule of the repository, so you only need to update all submodules (there is only one):</p>
 
-<pre><code class="language-shell">git submodule update --init --recursive
+<pre><code class="language-shell">git submodule update [--init] [--recursive]
 </code></pre>
 
 <p>If you already have cloned the repository, make sure your local version is up to date with the current online version to avoid merge conflicts when pushing. In a command prompt, move to the site local folder and <code>pull</code> the website (or <code>fetch</code> and <code>merge</code>).</p>
@@ -492,7 +491,7 @@ Total in 265 ms
 
 <p>This means that Hugo has successfuly deployed your site to the <code>docs</code> folder. If you wish to view the website, you can host it locally using Hugo:</p>
 
-<pre><code class="language-shell">hugo server -D
+<pre><code class="language-shell">hugo server
 </code></pre>
 
 <p>which should yield something like</p>
@@ -510,17 +509,18 @@ Press Ctrl+C to stop
 
 <h3 id="push-your-changes">Push your changes</h3>
 
-<p>Once your are satisfied with your local version, you need to push your changes to the <code>master</code> branch. First stage and commit your changes:</p>
+<p>Once your are satisfied with your local version, you need to push your changes to the <code>master</code> branch. In the case your Hugo server is still on, close it and run <code>hugo</code> one last time to redo the <code>docs</code> file for the online version, not the local version.</p>
 
-<pre><code class="language-shell">git commit -a -m 'some description of your changes'
+<p>Stage and commit your changes:</p>
+
+<pre><code class="language-shell">git add --all
+git commit -m 'some description of your changes'
 </code></pre>
 
 <p>and finally push to the online repository</p>
 
 <pre><code class="language-shell">git push
 </code></pre>
-
-<h2 id="the-good-way-simplified-using-r">The good way simplified using R</h2>
 
           </div>
 
@@ -541,7 +541,7 @@ Press Ctrl+C to stop
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Sep 25, 2019</p>
+          <p>Last updated on Oct 4, 2019</p>
 
           
 

@@ -86,7 +86,7 @@
 
 &lt;p&gt;The website relies on the Academic theme for Hugo, so you will to clone that as well. Fortunately, it is included as a submodule of the repository, so you only need to update all submodules (there is only one):&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git submodule update --init --recursive
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git submodule update [--init] [--recursive]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;If you already have cloned the repository, make sure your local version is up to date with the current online version to avoid merge conflicts when pushing. In a command prompt, move to the site local folder and &lt;code&gt;pull&lt;/code&gt; the website (or &lt;code&gt;fetch&lt;/code&gt; and &lt;code&gt;merge&lt;/code&gt;).&lt;/p&gt;
@@ -122,7 +122,7 @@ Total in 265 ms
 
 &lt;p&gt;This means that Hugo has successfuly deployed your site to the &lt;code&gt;docs&lt;/code&gt; folder. If you wish to view the website, you can host it locally using Hugo:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;hugo server -D
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;hugo server
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;which should yield something like&lt;/p&gt;
@@ -140,17 +140,18 @@ Press Ctrl+C to stop
 
 &lt;h3 id=&#34;push-your-changes&#34;&gt;Push your changes&lt;/h3&gt;
 
-&lt;p&gt;Once your are satisfied with your local version, you need to push your changes to the &lt;code&gt;master&lt;/code&gt; branch. First stage and commit your changes:&lt;/p&gt;
+&lt;p&gt;Once your are satisfied with your local version, you need to push your changes to the &lt;code&gt;master&lt;/code&gt; branch. In the case your Hugo server is still on, close it and run &lt;code&gt;hugo&lt;/code&gt; one last time to redo the &lt;code&gt;docs&lt;/code&gt; file for the online version, not the local version.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git commit -a -m &#39;some description of your changes&#39;
+&lt;p&gt;Stage and commit your changes:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git add --all
+git commit -m &#39;some description of your changes&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;and finally push to the online repository&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git push
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;the-good-way-simplified-using-r&#34;&gt;The good way simplified using R&lt;/h2&gt;
 </description>
     </item>
     
