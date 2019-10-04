@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Building &amp; Hosting a Personal Academic Website Using Hugo | UM Statistics Computing Club</title>
+    <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/</link>
+      <atom:link href="https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/index.xml" rel="self" type="application/rss+xml" />
+    <description>Building &amp; Hosting a Personal Academic Website Using Hugo</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <title>Building &amp; Hosting a Personal Academic Website Using Hugo</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/</link>
+    </image>
+    
+  </channel>
+</rss>
