@@ -12,14 +12,14 @@ menu:
     weight: 2
 
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
-weight: 1
+weight: 2
 ---
 
 ## The lazy way
 
 If you only need to add some post/meeting/workshop to the website, here is a simple way to deploy your new content to the website without much hassle.
 
-1. **Create your content**---The first step is to create your specific content by producing the necessary Markdown files. See [Creating content](create/) for details on how to do so.
+1. **Create your content**---The first step is to create your specific content by producing the necessary Markdown files. See [Creating content](../createcontent/) for details on how to do so.
 2. **Push your content**---You then need to add your content to the website `content` directory. If you have access to the [UMichStatistics](https://github.com/UMichStatistics/) repository, then you can do it directly using your favorite 'git' workflow. Otherwise, [contact the maintainers](#contact) for them to add your content to the site.
 3. **Deploy your content**---As mentionned, an update of the files outside the `docs` folder will not affect the public website. The deployment must be done through Hugo and, for now, this must be done manually. [Contact the maintainers](#contact) for it to happen.
 

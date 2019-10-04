@@ -13,6 +13,51 @@
     </image>
     
     <item>
+      <title>Creating content</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/createcontent/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/createcontent/</guid>
+      <description>
+
+&lt;h2 id=&#34;overview-of-the-academic-theme-layouts&#34;&gt;Overview of the Academic theme layouts&lt;/h2&gt;
+
+&lt;p&gt;The content of this website rely on three different &lt;code&gt;layouts&lt;/code&gt; defined by the Academic theme. Each &lt;code&gt;.Md&lt;/code&gt; must specify, in its header, what &lt;code&gt;layouts&lt;/code&gt; it is based on in order for Hugo to produce the correct &lt;code&gt;html&lt;/code&gt; page.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;talk&lt;/strong&gt; (for meetings) and &lt;strong&gt;post&lt;/strong&gt; (for, you guessed it, posts!)
+
+&lt;ul&gt;
+&lt;li&gt;Single page output;&lt;/li&gt;
+&lt;li&gt;The page contains a header block describing the post/meeting and that information is taken from the &lt;code&gt;Markdown&lt;/code&gt; header;&lt;/li&gt;
+&lt;li&gt;Followed by a body for regular &lt;code&gt;Markdown&lt;/code&gt; for the post or if you want to add more details to a meeting.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;docs&lt;/strong&gt; (for workshops and resources)
+
+&lt;ul&gt;
+&lt;li&gt;Each &lt;code&gt;docs&lt;/code&gt; file is associated with a single &lt;code&gt;html&lt;/code&gt; page, but multiple &lt;code&gt;docs&lt;/code&gt; can be associted together within a folder to form different pages of a single workshop;&lt;/li&gt;
+&lt;li&gt;Consists of a simple &lt;code&gt;Markdown&lt;/code&gt; body;&lt;/li&gt;
+&lt;li&gt;A within-workshop table of content is added to the left;&lt;/li&gt;
+&lt;li&gt;A within-pasge table of content on the right.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;create-your-author-profile&#34;&gt;Create your author profile&lt;/h2&gt;
+
+&lt;p&gt;First things first, you need to create an &lt;code&gt;authors&lt;/code&gt; profile in order to associate multiple content to the same author. Unfortunately, Hugo does not provide a command to create a new author from command line, so the fastest way to go is to copy the &lt;code&gt;blank&lt;/code&gt; author folder and give it a name representing your&amp;rsquo;s (say &lt;code&gt;username&lt;/code&gt; from now on). Then, edit the &lt;code&gt;_index.md&lt;/code&gt; contained in the new &lt;code&gt;username&lt;/code&gt; folder and edit its content. It should be documented well enough for you to complete.&lt;/p&gt;
+
+&lt;p&gt;If you want to add a picture of yourself, place it in the &lt;code&gt;username&lt;/code&gt; folder with the name &lt;code&gt;avatar.jpg/.png&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;create-a-meeting&#34;&gt;Create a meeting&lt;/h2&gt;
+
+&lt;h2 id=&#34;create-a-workshop&#34;&gt;Create a workshop&lt;/h2&gt;
+
+&lt;h2 id=&#34;add-resources&#34;&gt;Add resources&lt;/h2&gt;
+
+&lt;h2 id=&#34;create-a-post&#34;&gt;Create a post&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
       <title>High Performance Computing</title>
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/hpc/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
@@ -35,6 +80,25 @@
     </item>
     
     <item>
+      <title>Version Control</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/versioncontrol/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/versioncontrol/</guid>
+      <description>
+
+&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;The Pro Git book&lt;/strong&gt;&lt;/a&gt; &lt;em&gt;by Scott Chacon and Ben Straub:&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain&#34; target=&#34;_blank&#34;&gt;10. Git Internals&lt;/a&gt;: a deep understanding of git.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://ohshitgit.com/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Oh Shit, Git!?!&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;http://www.dangitgit.com/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Dangit, git!&lt;/strong&gt;&lt;/a&gt;: two go-to resources when encountering git problems.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Update workflow</title>
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/workflow/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
@@ -46,7 +110,7 @@
 &lt;p&gt;If you only need to add some post/meeting/workshop to the website, here is a simple way to deploy your new content to the website without much hassle.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Create your content&lt;/strong&gt;&amp;mdash;The first step is to create your specific content by producing the necessary Markdown files. See &lt;a href=&#34;create/&#34; target=&#34;_blank&#34;&gt;Creating content&lt;/a&gt; for details on how to do so.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create your content&lt;/strong&gt;&amp;mdash;The first step is to create your specific content by producing the necessary Markdown files. See &lt;a href=&#34;../createcontent/&#34;&gt;Creating content&lt;/a&gt; for details on how to do so.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Push your content&lt;/strong&gt;&amp;mdash;You then need to add your content to the website &lt;code&gt;content&lt;/code&gt; directory. If you have access to the &lt;a href=&#34;https://github.com/UMichStatistics/&#34; target=&#34;_blank&#34;&gt;UMichStatistics&lt;/a&gt; repository, then you can do it directly using your favorite &amp;lsquo;git&amp;rsquo; workflow. Otherwise, &lt;a href=&#34;#contact&#34;&gt;contact the maintainers&lt;/a&gt; for them to add your content to the site.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Deploy your content&lt;/strong&gt;&amp;mdash;As mentionned, an update of the files outside the &lt;code&gt;docs&lt;/code&gt; folder will not affect the public website. The deployment must be done through Hugo and, for now, this must be done manually. &lt;a href=&#34;#contact&#34;&gt;Contact the maintainers&lt;/a&gt; for it to happen.&lt;/li&gt;
 &lt;/ol&gt;
@@ -152,25 +216,6 @@ git commit -m &#39;some description of your changes&#39;
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git push
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Version Control</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/versioncontrol/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/versioncontrol/</guid>
-      <description>
-
-&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;The Pro Git book&lt;/strong&gt;&lt;/a&gt; &lt;em&gt;by Scott Chacon and Ben Straub:&lt;/em&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain&#34; target=&#34;_blank&#34;&gt;10. Git Internals&lt;/a&gt;: a deep understanding of git.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://ohshitgit.com/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Oh Shit, Git!?!&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;http://www.dangitgit.com/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Dangit, git!&lt;/strong&gt;&lt;/a&gt;: two go-to resources when encountering git problems.&lt;/p&gt;
 </description>
     </item>
     

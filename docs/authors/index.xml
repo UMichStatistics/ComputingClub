@@ -99,5 +99,18 @@
 </description>
     </item>
     
+    <item>
+      <title>YOUR-NAME-HERE</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/authors/blank/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/authors/blank/</guid>
+      <description>
+
+&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
+
+&lt;!-- Write a short bio here if you want. --&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
