@@ -40,8 +40,8 @@ To use this process, you will need:
 
 - Access to the [organization](https://github.com/UMichStatistics/) repository;
 - git installed on your machine (see this [guide](https://www.atlassian.com/git/tutorials/install-git));
-- Basic git knowledge (`clone`, `pull`, `commit` and `push`);
-- Hugo installed on your machine (see this [guide](https://gohugo.io/getting-started/installing/). The installation on Windows is tedious and the only way I could make it work was `R` > install pacakge `blogdown` > `blogdown::install_hugo()` and manually add its path to the system environment variables.)
+- Basic git knowledge (`clone`, `pull`, `add`, `commit` and `push`). Note that most modern IDEs offer git support so you may execute all those steps using your interface;
+- Hugo installed on your machine (see this [guide](https://gohugo.io/getting-started/installing/). The installation on Windows is tedious and the only way I could make it work was `R` > install package `blogdown` > `blogdown::install_hugo()` and manually add its path to the system environment variables.)
 
 ### Update the local version
 
@@ -52,14 +52,12 @@ If you have not cloned the repository yet, do so:
 git clone https://github.com/UMichStatistics/ComputingClub.git <new-folder-name>
 ```
 
-If you already have cloned the repository, make sure it is up to date. In a command prompt, move to the site local folder
+The website relies on the Academic theme for Hugo, so you will to clone that as well. Fortunately, it is included as a submodule of the repository, so you only need to update all submodules (there is only one):
 ```shell
-cd <path-to-folder>
+git submodule update --init --recursive
 ```
-or simply open a command prompt in that folder. Then, pull the website:
-```shell
-git pull
-```
+
+If you already have cloned the repository, make sure your local version is up to date with the current online version to avoid merge conflicts when pushing. In a command prompt, move to the site local folder and `pull` the website (or `fetch` and `merge`).
 
 ### Create your content
 
@@ -67,12 +65,11 @@ Create your specific content by producing the necessary Markdown files and place
 
 ### Deploy your local website
 
-Now that your local repository contains updated content, it is time to deploy it to your local `docs` folder. To do so, open a command prompt and run hugo at the root of the site's local repository:
+Now that your local repository contains updated content, it is time to deploy it to your local `docs` folder. To do so, open a command prompt and run hugo at the root of the site's local repository and type in:
 ```shell
-cd <path-to-folder-root>
 hugo
 ```
-Unless your code does not compile, you should get an output such as (possibly containing warnings)
+which will compile the content into the static `html` pages. Unless your code does not compile, you should get an output such as (possibly containing warnings)
 ```shell
 Building sites … WARN 2019/09/24 17:08:23 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
 
@@ -103,11 +100,11 @@ Running in Fast Render Mode. For full rebuilds on change: hugo server --disableF
 Web Server is available at http://localhost:1313/ComputingClub/ (bind address 127.0.0.1)
 Press Ctrl+C to stop
 ```
-The url `http://localhost:1313/ComputingClub/` is where you find your local website (use that in your output as it may differ from mine). Also, as long a you do not close the server (by closing the command prompt or by typing `Ctrl+C`), Hugo will listen to any changes, meaning that any file saved in the root repository will trigger deployment. This is useful if you want to create your content and see it deployed instantaneously locally without calling Hugo each time.
+The url `http://localhost:1313/ComputingClub/` is where you find your local website (use the one in your output as it may differ from mine). Also, as long a you do not close the server (by closing the command prompt or by typing `Ctrl+C`), Hugo will listen to any changes, meaning that any file saved in the root repository will trigger deployment. This is useful if you want to create your content and see it deployed instantaneously locally without calling Hugo each time. Note that creating new pages or making large changes may not appear in this "Fast Render Mode", so you may need to exit and re-host. 
 
 ### Push your changes
 
-Once your are satisfied with your local version, you need to push your changes to the `master` branch. First commit your changes:
+Once your are satisfied with your local version, you need to push your changes to the `master` branch. First stage and commit your changes:
 ```shell
 git commit -a -m 'some description of your changes'
 ```
