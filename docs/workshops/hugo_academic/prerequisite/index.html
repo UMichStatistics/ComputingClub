@@ -28,7 +28,8 @@
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="Here are a few things you will need before starting the tutorial.
+Building your website  Hugo installed on your machine (see this guide. The installation on Windows is tedious and the only way I could make it work was R &gt; install package blogdown &gt; blogdown::install_hugo() and manually add its path to the system environment variables.) [optional] git installed on your machine (see this guide).  Hosting your website on GitHub  A GitHub account; git installed on your machine (see this guide); Basic git knowledge (clone, pull, add, commit and push).">
 
   
   <link rel="alternate" hreflang="en-us" href="https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/prerequisite/">
@@ -107,7 +108,8 @@
   <meta property="og:site_name" content="UM Statistics Computing Club">
   <meta property="og:url" content="https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/prerequisite/">
   <meta property="og:title" content="Prerequisites | UM Statistics Computing Club">
-  <meta property="og:description" content=""><meta property="og:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png">
+  <meta property="og:description" content="Here are a few things you will need before starting the tutorial.
+Building your website  Hugo installed on your machine (see this guide. The installation on Windows is tedious and the only way I could make it work was R &gt; install package blogdown &gt; blogdown::install_hugo() and manually add its path to the system environment variables.) [optional] git installed on your machine (see this guide).  Hosting your website on GitHub  A GitHub account; git installed on your machine (see this guide); Basic git knowledge (clone, pull, add, commit and push)."><meta property="og:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png">
   <meta property="twitter:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png"><meta property="og:locale" content="en-us">
   
     
@@ -361,6 +363,18 @@
         <a href="/ComputingClub/workshops/hugo_academic/prerequisite/">Prerequisites</a>
       </li>
       
+      <li >
+        <a href="/ComputingClub/workshops/hugo_academic/initialize/">Initialize the website</a>
+      </li>
+      
+      <li >
+        <a href="/ComputingClub/workshops/hugo_academic/deploy_github/">GitHub Deployment</a>
+      </li>
+      
+      <li >
+        <a href="/ComputingClub/workshops/hugo_academic/deploy_umich/">UMich Space Deployment</a>
+      </li>
+      
     </ul>
     
 
@@ -377,7 +391,16 @@
         <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
       </ul>
 
-      
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#building-your-website">Building your website</a></li>
+<li><a href="#hosting-your-website-on-github">Hosting your website on GitHub</a></li>
+<li><a href="#hosting-your-website-on-umich-space">Hosting your website on UMich space</a></li>
+</ul></li>
+</ul>
+</nav>
 
       
     </div>
@@ -392,6 +415,55 @@
 
           <div class="article-style">
             
+
+<p>Here are a few things you will need before starting the tutorial.</p>
+
+<h2 id="building-your-website">Building your website</h2>
+
+<ul>
+<li>Hugo installed on your machine (see this <a href="https://gohugo.io/getting-started/installing/" target="_blank">guide</a>. The installation on Windows is tedious and the only way I could make it work was <code>R</code> &gt; install package <code>blogdown</code> &gt; <code>blogdown::install_hugo()</code> and manually add its path to the system environment variables.)</li>
+<li>[optional] git installed on your machine (see this <a href="https://www.atlassian.com/git/tutorials/install-git" target="_blank">guide</a>).</li>
+</ul>
+
+<h2 id="hosting-your-website-on-github">Hosting your website on GitHub</h2>
+
+<ul>
+<li>A <a href="https://github.com/" target="_blank">GitHub account</a>;</li>
+<li>git installed on your machine (see this <a href="https://www.atlassian.com/git/tutorials/install-git" target="_blank">guide</a>);</li>
+<li>Basic git knowledge (<code>clone</code>, <code>pull</code>, <code>add</code>, <code>commit</code> and <code>push</code>). Note that most modern IDEs offer git support (or even git GUIs) so you may execute all those steps using an interface.</li>
+</ul>
+
+<h2 id="hosting-your-website-on-umich-space">Hosting your website on UMich space</h2>
+
+<ul>
+<li>Access to the <a href="http://www.umich.edu/~gpcc/login/" target="_blank">ITS Login Service</a></li>
+<li>An <a href="http://www.itd.umich.edu/itcsdocs/r1070/" target="_blank">IFS home</a> directory</li>
+<li><a href="http://www.itd.umich.edu/help/faq/ifs/groupifs.php" target="_blank">Request a directory</a></li>
+<li>SSH command line or SFTP client (WinSCP for Windows)</li>
+</ul>
+
+<p><a href="https://mfile.umich.edu/" target="_blank">MFile</a>
+<a href="http://www.umich.edu/~umweb/how-to/homepage.html" target="_blank">Web Hosting Tutorial from ITS</a></p>
+
+<p>&ldquo;<a href="http://www-personal.umich.edu/~youruniqname/&quot;" target="_blank">http://www-personal.umich.edu/~youruniqname/&quot;</a></p>
+
+<p>WinSCP</p>
+
+<pre><code>login.itd.umich.edu
+</code></pre>
+
+<p>uniqname+password
+Check you have <code>Public/html</code></p>
+
+<p>Linux:
+simon@simon-pc:~/git/simfont$ scp -r simfont@login.itd.umich.edu:Public/html .
+Prompts Password. Then copy from server to you</p>
+
+<p>other way around
+simon@simon-pc:~/git/simfont/html$ scp -r . simfont@login.itd.umich.edu:Public/html</p>
+
+<p>&ldquo;<a href="http://www.umich.edu/~groupname/&quot;" target="_blank">http://www.umich.edu/~groupname/&quot;</a></p>
+
           </div>
 
           
@@ -403,6 +475,12 @@
             
 <div class="post-nav">
   
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/ComputingClub/workshops/hugo_academic/deploy_github/" rel="prev">GitHub Deployment</a>
+  </div>
   
 </div>
 

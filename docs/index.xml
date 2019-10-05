@@ -21,10 +21,10 @@
 
 &lt;h2 id=&#34;overview-of-the-academic-theme-layouts&#34;&gt;Overview of the Academic theme layouts&lt;/h2&gt;
 
-&lt;p&gt;The content of this website rely on three different &lt;code&gt;layouts&lt;/code&gt; defined by the Academic theme. Each &lt;code&gt;.Md&lt;/code&gt; must specify, in its header, what &lt;code&gt;layouts&lt;/code&gt; it is based on in order for Hugo to produce the correct &lt;code&gt;html&lt;/code&gt; page.&lt;/p&gt;
+&lt;p&gt;The content of this website rely on two different &lt;code&gt;type&lt;/code&gt; defined by the Academic theme. Each &lt;code&gt;.Md&lt;/code&gt; must specify, in its header, what &lt;code&gt;type&lt;/code&gt; it is based on in order for Hugo to produce the correct &lt;code&gt;html&lt;/code&gt; page.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;talk&lt;/strong&gt; (for meetings) and &lt;strong&gt;post&lt;/strong&gt; (for, you guessed it, posts!)
+&lt;li&gt;&lt;strong&gt;page&lt;/strong&gt; (for meetings and post)
 
 &lt;ul&gt;
 &lt;li&gt;Single page output;&lt;/li&gt;
@@ -72,14 +72,6 @@
     </item>
     
     <item>
-      <title>Prerequisites</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/prerequisite/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/prerequisite/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Version Control</title>
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/versioncontrol/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
@@ -95,6 +87,63 @@
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://ohshitgit.com/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Oh Shit, Git!?!&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;http://www.dangitgit.com/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Dangit, git!&lt;/strong&gt;&lt;/a&gt;: two go-to resources when encountering git problems.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Prerequisites</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/prerequisite/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/prerequisite/</guid>
+      <description>
+
+&lt;p&gt;Here are a few things you will need before starting the tutorial.&lt;/p&gt;
+
+&lt;h2 id=&#34;building-your-website&#34;&gt;Building your website&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hugo installed on your machine (see this &lt;a href=&#34;https://gohugo.io/getting-started/installing/&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt;. The installation on Windows is tedious and the only way I could make it work was &lt;code&gt;R&lt;/code&gt; &amp;gt; install package &lt;code&gt;blogdown&lt;/code&gt; &amp;gt; &lt;code&gt;blogdown::install_hugo()&lt;/code&gt; and manually add its path to the system environment variables.)&lt;/li&gt;
+&lt;li&gt;[optional] git installed on your machine (see this &lt;a href=&#34;https://www.atlassian.com/git/tutorials/install-git&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;hosting-your-website-on-github&#34;&gt;Hosting your website on GitHub&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A &lt;a href=&#34;https://github.com/&#34; target=&#34;_blank&#34;&gt;GitHub account&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;git installed on your machine (see this &lt;a href=&#34;https://www.atlassian.com/git/tutorials/install-git&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt;);&lt;/li&gt;
+&lt;li&gt;Basic git knowledge (&lt;code&gt;clone&lt;/code&gt;, &lt;code&gt;pull&lt;/code&gt;, &lt;code&gt;add&lt;/code&gt;, &lt;code&gt;commit&lt;/code&gt; and &lt;code&gt;push&lt;/code&gt;). Note that most modern IDEs offer git support (or even git GUIs) so you may execute all those steps using an interface.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;hosting-your-website-on-umich-space&#34;&gt;Hosting your website on UMich space&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Access to the &lt;a href=&#34;http://www.umich.edu/~gpcc/login/&#34; target=&#34;_blank&#34;&gt;ITS Login Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;An &lt;a href=&#34;http://www.itd.umich.edu/itcsdocs/r1070/&#34; target=&#34;_blank&#34;&gt;IFS home&lt;/a&gt; directory&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.itd.umich.edu/help/faq/ifs/groupifs.php&#34; target=&#34;_blank&#34;&gt;Request a directory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SSH command line or SFTP client (WinSCP for Windows)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://mfile.umich.edu/&#34; target=&#34;_blank&#34;&gt;MFile&lt;/a&gt;
+&lt;a href=&#34;http://www.umich.edu/~umweb/how-to/homepage.html&#34; target=&#34;_blank&#34;&gt;Web Hosting Tutorial from ITS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;&lt;a href=&#34;http://www-personal.umich.edu/~youruniqname/&amp;quot;&#34; target=&#34;_blank&#34;&gt;http://www-personal.umich.edu/~youruniqname/&amp;quot;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;WinSCP&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;login.itd.umich.edu
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;uniqname+password
+Check you have &lt;code&gt;Public/html&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Linux:
+simon@simon-pc:~/git/simfont$ scp -r simfont@login.itd.umich.edu:Public/html .
+Prompts Password. Then copy from server to you&lt;/p&gt;
+
+&lt;p&gt;other way around
+simon@simon-pc:~/git/simfont/html$ scp -r . simfont@login.itd.umich.edu:Public/html&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;&lt;a href=&#34;http://www.umich.edu/~groupname/&amp;quot;&#34; target=&#34;_blank&#34;&gt;http://www.umich.edu/~groupname/&amp;quot;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -215,6 +264,177 @@ git commit -m &#39;some description of your changes&#39;
 &lt;p&gt;and finally push to the online repository&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git push
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>GitHub Deployment</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_github/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_github/</guid>
+      <description>&lt;p&gt;change public to docs in config&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;publishDir = &amp;quot;docs&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;change base url&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;baseurl = &amp;quot;https://your-github-account.github.io/academic-kickstart/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;git add -all
+git commit -m &amp;lsquo;First deploy&amp;rsquo;
+git push&lt;/p&gt;
+
+&lt;p&gt;go to github
+go to academic kickstart
+settings
+scroll down to github pages
+source to master/docs&lt;/p&gt;
+
+&lt;p&gt;should be up in a few seconds!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Initialize the website</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/initialize/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/initialize/</guid>
+      <description>
+
+&lt;h2 id=&#34;prereq&#34;&gt;Prereq&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hugo installed on your machine (see this &lt;a href=&#34;https://gohugo.io/getting-started/installing/&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt;. The installation on Windows is tedious and the only way I could make it work was &lt;code&gt;R&lt;/code&gt; &amp;gt; install package &lt;code&gt;blogdown&lt;/code&gt; &amp;gt; &lt;code&gt;blogdown::install_hugo()&lt;/code&gt; and manually add its path to the system environment variables.)&lt;/li&gt;
+&lt;li&gt;git installed on your machine (see this &lt;a href=&#34;https://www.atlassian.com/git/tutorials/install-git&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;initialize-and-first-deploy&#34;&gt;Initialize and first deploy&lt;/h2&gt;
+
+&lt;p&gt;say it is exactly what hugo academic suggests&lt;/p&gt;
+
+&lt;p&gt;fork to your github account (put link)&lt;/p&gt;
+
+&lt;p&gt;clone your own repo locally&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/fontaine618/academic-kickstart.git DemoWebsite
+cd DemoWebsite
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;import the academic theme&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git submodule update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;produce html files&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd ../..
+hugo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;serve locally to see ythe basic site provided&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;description-of-the-repository-and-first-edits&#34;&gt;Description of the repository and first edits&lt;/h2&gt;
+
+&lt;p&gt;First focus on contents&lt;/p&gt;
+
+&lt;p&gt;Authors&lt;/p&gt;
+
+&lt;p&gt;Home&lt;/p&gt;
+
+&lt;p&gt;Post/Pubs/Talks&lt;/p&gt;
+
+&lt;p&gt;Heres where youd put courses&lt;/p&gt;
+
+&lt;p&gt;Go Home
+prune things by deleting folders
+- demo
+- hero
+- people
+- slider
+prune things by deactivating them
+- tags
+Comment here is our first Markdown file. Only a header&lt;/p&gt;
+
+&lt;p&gt;Since we deleted files server dit not catch it so restart&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ctrl+c&amp;gt;
+hugo server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;author&#34;&gt;Author&lt;/h2&gt;
+
+&lt;p&gt;Open about
+explain
+go to admin
+change a few things&lt;/p&gt;
+
+&lt;h2 id=&#34;adding-content&#34;&gt;Adding content&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo new --kind post post/MyFirstPost
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;look at what happened&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo new --kind talk talk/MyFirsTalk
+hugo new --kind publication publication/MyFirstPublication
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;point out the filtering publications alert and click&lt;/p&gt;
+
+&lt;h2 id=&#34;playing-with-the-menu&#34;&gt;Playing with the menu&lt;/h2&gt;
+
+&lt;p&gt;Light mode
+search site
+links point to home page
+try making it point to search publication instead&lt;/p&gt;
+
+&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
+
+&lt;p&gt;second folder we see : config&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;config very important contains high-level description of the site&lt;/li&gt;
+&lt;li&gt;languages is not imporatnat unless you want to ttransalte your site in multiple languages&lt;/li&gt;
+&lt;li&gt;menus :&lt;/li&gt;
+&lt;li&gt;params: mostly display settings, color theme offers a few choices, but you can hvae more control than the one they propose&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;rest-of-repository&#34;&gt;Rest of repository&lt;/h2&gt;
+
+&lt;p&gt;maybe just say that statis is where you would put a new site icon&lt;/p&gt;
+
+&lt;h2 id=&#34;create-a-course-page&#34;&gt;Create a course page&lt;/h2&gt;
+
+&lt;p&gt;new folder &lt;code&gt;content/course&lt;/code&gt;
+new &lt;code&gt;_index.md&lt;/code&gt;
+new course &lt;code&gt;content/course/MyFirstCourse&lt;/code&gt;
+new &lt;code&gt;_index.md&lt;/code&gt;
+new &lt;code&gt;FirstPage&lt;/code&gt;
+add menu&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>UMich Space Deployment</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_umich/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_umich/</guid>
+      <description>&lt;p&gt;need to set up mfile first&lt;/p&gt;
+
+&lt;p&gt;change base url&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;baseurl = &amp;quot;http://www-personal.umich.edu/~uniqname/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;copy the content of the &lt;code&gt;public&lt;/code&gt; to the &lt;code&gt;Public/html&lt;/code&gt; folder :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scp -r &amp;lt;path-to-local-website&amp;gt;/public/. uniqname@login.itd.umich.edu:Public/html/
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>

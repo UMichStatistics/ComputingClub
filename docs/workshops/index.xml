@@ -75,19 +75,30 @@
 
 &lt;h2 id=&#34;markdown-file-headers&#34;&gt;Markdown file headers&lt;/h2&gt;
 
-&lt;p&gt;An important concept to understand about &lt;code&gt;Markdown&lt;/code&gt; files is the file layout. Each &lt;code&gt;.Md&lt;/code&gt; file must contain a header part which describe some meta information about the content of the file and is then follow by the content itself. In the present context, the header will contain&lt;/p&gt;
+&lt;p&gt;An important concept to understand about &lt;code&gt;Markdown&lt;/code&gt; files is the file layout. Each &lt;code&gt;.Md&lt;/code&gt; file must contain a header part which describe some meta information about the content of the file and is then follow by the content itself. In the present context, the header will contain, among other things,&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;a high-level description of the page,&lt;/li&gt;
 &lt;li&gt;the type of page to specify to the Hugo compiler,&lt;/li&gt;
-&lt;li&gt;some details about index and references across pages,&lt;/li&gt;
+&lt;li&gt;some details about index and references across pages.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;among other things.&lt;/p&gt;
 
 &lt;h2 id=&#34;the-academic-theme-for-hugo&#34;&gt;The Academic theme for Hugo&lt;/h2&gt;
 
-&lt;p&gt;Other relevent themes:&lt;/p&gt;
+&lt;p&gt;Hugo has many themes which can be used as templates for your website. Different themes implement different type of contents and are therefore suited for different purpose. In this tutorial we will consider the Academic theme which is one of the more complete theme and is particularly well-suited for an academic website. Here are some of the things Academic allows:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Blog posts&lt;/li&gt;
+&lt;li&gt;Documentation&lt;/li&gt;
+&lt;li&gt;Publications&lt;/li&gt;
+&lt;li&gt;Talks&lt;/li&gt;
+&lt;li&gt;Projects&lt;/li&gt;
+&lt;li&gt;Multiple authors&lt;/li&gt;
+&lt;li&gt;General pages&lt;/li&gt;
+&lt;li&gt;Landing page &amp;amp; widgets&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;other-simpler-themes&#34;&gt;Other simpler themes&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Resume-type themes
@@ -95,9 +106,12 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://themes.gohugo.io/hugo-resume/&#34; target=&#34;_blank&#34;&gt;Resume&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Documentation-type themes&lt;/li&gt;
+&lt;li&gt;Portofolio-type themes&lt;/li&gt;
+&lt;li&gt;Blog-type themes&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;alternatives&#34;&gt;Alternatives&lt;/h2&gt;
+&lt;h2 id=&#34;alternatives-to-hugo&#34;&gt;Alternatives to Hugo&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;HTML from scratch
@@ -111,6 +125,7 @@
 &lt;li&gt;Very similar to Hugo (all content is &lt;code&gt;Markdown&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;Slighty more complicated, but has slightly more features&lt;/li&gt;
 &lt;li&gt;Uses &lt;code&gt;Ruby&lt;/code&gt; instead of &lt;code&gt;Go&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;I have not found a theme that matches the capabilities of Academic for Hugo&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;WYSIWYG editor
 
@@ -130,7 +145,7 @@
 
 &lt;h2 id=&#34;main-takeaways&#34;&gt;Main takeaways&lt;/h2&gt;
 
-&lt;p&gt;People have made it easy for you to display your work; make use of all the tools available!&lt;/p&gt;
+&lt;p&gt;People have made it easy for you to display your work; make use of all the tools available! Creating the content for your website, not building and deploying it, should consist most of the work you have to do.&lt;/p&gt;
 </description>
     </item>
     

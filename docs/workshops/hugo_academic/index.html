@@ -358,6 +358,18 @@
         <a href="/ComputingClub/workshops/hugo_academic/prerequisite/">Prerequisites</a>
       </li>
       
+      <li >
+        <a href="/ComputingClub/workshops/hugo_academic/initialize/">Initialize the website</a>
+      </li>
+      
+      <li >
+        <a href="/ComputingClub/workshops/hugo_academic/deploy_github/">GitHub Deployment</a>
+      </li>
+      
+      <li >
+        <a href="/ComputingClub/workshops/hugo_academic/deploy_umich/">UMich Space Deployment</a>
+      </li>
+      
     </ul>
     
 
@@ -382,8 +394,11 @@
 <li><a href="#a-quick-primer-on-static-websites">A quick primer on (static) websites</a></li>
 <li><a href="#about-hugo">About Hugo</a></li>
 <li><a href="#markdown-file-headers">Markdown file headers</a></li>
-<li><a href="#the-academic-theme-for-hugo">The Academic theme for Hugo</a></li>
-<li><a href="#alternatives">Alternatives</a></li>
+<li><a href="#the-academic-theme-for-hugo">The Academic theme for Hugo</a>
+<ul>
+<li><a href="#other-simpler-themes">Other simpler themes</a></li>
+</ul></li>
+<li><a href="#alternatives-to-hugo">Alternatives to Hugo</a></li>
 <li><a href="#main-takeaways">Main takeaways</a></li>
 </ul></li>
 </ul>
@@ -459,19 +474,30 @@
 
 <h2 id="markdown-file-headers">Markdown file headers</h2>
 
-<p>An important concept to understand about <code>Markdown</code> files is the file layout. Each <code>.Md</code> file must contain a header part which describe some meta information about the content of the file and is then follow by the content itself. In the present context, the header will contain</p>
+<p>An important concept to understand about <code>Markdown</code> files is the file layout. Each <code>.Md</code> file must contain a header part which describe some meta information about the content of the file and is then follow by the content itself. In the present context, the header will contain, among other things,</p>
 
 <ul>
 <li>a high-level description of the page,</li>
 <li>the type of page to specify to the Hugo compiler,</li>
-<li>some details about index and references across pages,</li>
+<li>some details about index and references across pages.</li>
 </ul>
-
-<p>among other things.</p>
 
 <h2 id="the-academic-theme-for-hugo">The Academic theme for Hugo</h2>
 
-<p>Other relevent themes:</p>
+<p>Hugo has many themes which can be used as templates for your website. Different themes implement different type of contents and are therefore suited for different purpose. In this tutorial we will consider the Academic theme which is one of the more complete theme and is particularly well-suited for an academic website. Here are some of the things Academic allows:</p>
+
+<ul>
+<li>Blog posts</li>
+<li>Documentation</li>
+<li>Publications</li>
+<li>Talks</li>
+<li>Projects</li>
+<li>Multiple authors</li>
+<li>General pages</li>
+<li>Landing page &amp; widgets</li>
+</ul>
+
+<h3 id="other-simpler-themes">Other simpler themes</h3>
 
 <ul>
 <li>Resume-type themes
@@ -479,9 +505,12 @@
 <ul>
 <li><a href="https://themes.gohugo.io/hugo-resume/" target="_blank">Resume</a></li>
 </ul></li>
+<li>Documentation-type themes</li>
+<li>Portofolio-type themes</li>
+<li>Blog-type themes</li>
 </ul>
 
-<h2 id="alternatives">Alternatives</h2>
+<h2 id="alternatives-to-hugo">Alternatives to Hugo</h2>
 
 <ul>
 <li>HTML from scratch
@@ -495,6 +524,7 @@
 <li>Very similar to Hugo (all content is <code>Markdown</code>)</li>
 <li>Slighty more complicated, but has slightly more features</li>
 <li>Uses <code>Ruby</code> instead of <code>Go</code></li>
+<li>I have not found a theme that matches the capabilities of Academic for Hugo</li>
 </ul></li>
 <li>WYSIWYG editor
 
@@ -514,7 +544,7 @@
 
 <h2 id="main-takeaways">Main takeaways</h2>
 
-<p>People have made it easy for you to display your work; make use of all the tools available!</p>
+<p>People have made it easy for you to display your work; make use of all the tools available! Creating the content for your website, not building and deploying it, should consist most of the work you have to do.</p>
 
           </div>
 

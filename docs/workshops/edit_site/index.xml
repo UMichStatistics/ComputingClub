@@ -21,10 +21,10 @@
 
 &lt;h2 id=&#34;overview-of-the-academic-theme-layouts&#34;&gt;Overview of the Academic theme layouts&lt;/h2&gt;
 
-&lt;p&gt;The content of this website rely on three different &lt;code&gt;layouts&lt;/code&gt; defined by the Academic theme. Each &lt;code&gt;.Md&lt;/code&gt; must specify, in its header, what &lt;code&gt;layouts&lt;/code&gt; it is based on in order for Hugo to produce the correct &lt;code&gt;html&lt;/code&gt; page.&lt;/p&gt;
+&lt;p&gt;The content of this website rely on two different &lt;code&gt;type&lt;/code&gt; defined by the Academic theme. Each &lt;code&gt;.Md&lt;/code&gt; must specify, in its header, what &lt;code&gt;type&lt;/code&gt; it is based on in order for Hugo to produce the correct &lt;code&gt;html&lt;/code&gt; page.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;talk&lt;/strong&gt; (for meetings) and &lt;strong&gt;post&lt;/strong&gt; (for, you guessed it, posts!)
+&lt;li&gt;&lt;strong&gt;page&lt;/strong&gt; (for meetings and post)
 
 &lt;ul&gt;
 &lt;li&gt;Single page output;&lt;/li&gt;

@@ -17,9 +17,9 @@ weight: 1
 
 ## Overview of the Academic theme layouts
 
-The content of this website rely on three different `layouts` defined by the Academic theme. Each `.Md` must specify, in its header, what `layouts` it is based on in order for Hugo to produce the correct `html` page.
+The content of this website rely on two different `type` defined by the Academic theme. Each `.Md` must specify, in its header, what `type` it is based on in order for Hugo to produce the correct `html` page.
 
-- **talk** (for meetings) and **post** (for, you guessed it, posts!)
+- **page** (for meetings and post)
   - Single page output;
   - The page contains a header block describing the post/meeting and that information is taken from the `Markdown` header;
   - Followed by a body for regular `Markdown` for the post or if you want to add more details to a meeting.
