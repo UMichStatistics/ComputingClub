@@ -4,7 +4,7 @@
 title: "Stan"
 event: "Computing club meeting"
 event_url:
-location: "East Quadrangle 1405"
+location: "West Hall 411"
 address:
   street:
   city:

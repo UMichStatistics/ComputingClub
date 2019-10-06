@@ -28,11 +28,9 @@
   
     
   
-  <meta name="description" content="change public to docs in config
-publishDir = &quot;docs&quot;  change base url
-baseurl = &quot;https://your-github-account.github.io/academic-kickstart/&quot;  git add -all git commit -m &lsquo;First deploy&rsquo; git push
-go to github go to academic kickstart settings scroll down to github pages source to master/docs
-should be up in a few seconds!">
+  <meta name="description" content="Now that you are happy with your local website, it is time to deploy it on the internet. Here is the methodology for GitHub Pages hosting.
+A note on the Academic theme If you build your website using Hugo and the Acadmic theme, here&rsquo;s how to ensure the static website falls in the correct folder. In the config/_default/config.toml file change the following line:
+publishDir = &quot;docs&quot;  To ensure links consistency within your website you need to tell Hugo what will be your base URL.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_github/">
@@ -110,18 +108,16 @@ should be up in a few seconds!">
   
   <meta property="og:site_name" content="UM Statistics Computing Club">
   <meta property="og:url" content="https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_github/">
-  <meta property="og:title" content="GitHub Deployment | UM Statistics Computing Club">
-  <meta property="og:description" content="change public to docs in config
-publishDir = &quot;docs&quot;  change base url
-baseurl = &quot;https://your-github-account.github.io/academic-kickstart/&quot;  git add -all git commit -m &lsquo;First deploy&rsquo; git push
-go to github go to academic kickstart settings scroll down to github pages source to master/docs
-should be up in a few seconds!"><meta property="og:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png">
+  <meta property="og:title" content="Deployment on GitHub | UM Statistics Computing Club">
+  <meta property="og:description" content="Now that you are happy with your local website, it is time to deploy it on the internet. Here is the methodology for GitHub Pages hosting.
+A note on the Academic theme If you build your website using Hugo and the Acadmic theme, here&rsquo;s how to ensure the static website falls in the correct folder. In the config/_default/config.toml file change the following line:
+publishDir = &quot;docs&quot;  To ensure links consistency within your website you need to tell Hugo what will be your base URL."><meta property="og:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png">
   <meta property="twitter:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2019-05-05T00:00:00&#43;01:00">
     
-    <meta property="article:modified_time" content="2019-05-05T00:00:00&#43;01:00">
+    <meta property="article:modified_time" content="2019-10-04T23:24:03-04:00">
   
 
   
@@ -140,7 +136,7 @@ should be up in a few seconds!"><meta property="og:image" content="https://UMich
 
 
 
-  <title>GitHub Deployment | UM Statistics Computing Club</title>
+  <title>Deployment on GitHub | UM Statistics Computing Club</title>
 
 </head>
 
@@ -366,19 +362,19 @@ should be up in a few seconds!"><meta property="og:image" content="https://UMich
     <ul class="nav docs-sidenav">
       
       <li >
-        <a href="/ComputingClub/workshops/hugo_academic/prerequisite/">Prerequisites</a>
-      </li>
-      
-      <li >
         <a href="/ComputingClub/workshops/hugo_academic/initialize/">Initialize the website</a>
       </li>
       
       <li class="active">
-        <a href="/ComputingClub/workshops/hugo_academic/deploy_github/">GitHub Deployment</a>
+        <a href="/ComputingClub/workshops/hugo_academic/deploy_github/">Deployment on GitHub</a>
       </li>
       
       <li >
-        <a href="/ComputingClub/workshops/hugo_academic/deploy_umich/">UMich Space Deployment</a>
+        <a href="/ComputingClub/workshops/hugo_academic/deploy_umich/">Deployment on UMich Space</a>
+      </li>
+      
+      <li >
+        <a href="/ComputingClub/workshops/hugo_academic/custom/">Customization</a>
       </li>
       
     </ul>
@@ -397,7 +393,18 @@ should be up in a few seconds!"><meta property="og:image" content="https://UMich
         <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
       </ul>
 
-      
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#a-note-on-the-academic-theme">A note on the Academic theme</a></li>
+<li><a href="#local-version-control">Local version control</a></li>
+<li><a href="#push-your-files-to-your-repository">Push your files to your repository</a></li>
+<li><a href="#hosting">Hosting</a></li>
+<li><a href="#modifying-your-website">Modifying your website</a></li>
+</ul></li>
+</ul>
+</nav>
 
       
     </div>
@@ -408,30 +415,53 @@ should be up in a few seconds!"><meta property="og:image" content="https://UMich
       <article class="article">
 
         <div class="docs-article-container">
-          <h1>GitHub Deployment</h1>
+          <h1>Deployment on GitHub</h1>
 
           <div class="article-style">
-            <p>change public to docs in config</p>
+            
+
+<p>Now that you are happy with your local website, it is time to deploy it on the internet. Here is the methodology for GitHub Pages hosting.</p>
+
+<h2 id="a-note-on-the-academic-theme">A note on the Academic theme</h2>
+
+<p>If you build your website using Hugo and the Acadmic theme, here&rsquo;s how to ensure the static website falls in the correct folder. In the <code>config/_default/config.toml</code> file change the following line:</p>
 
 <pre><code>publishDir = &quot;docs&quot;
 </code></pre>
 
-<p>change base url</p>
+<p>To ensure links consistency within your website you need to tell Hugo what will be your base URL. In the case of GitHub hosting, change the following line in <code>config/_default/config.toml</code>:</p>
 
 <pre><code>baseurl = &quot;https://your-github-account.github.io/academic-kickstart/&quot;
 </code></pre>
 
-<p>git add -all
-git commit -m &lsquo;First deploy&rsquo;
-git push</p>
+<p>Run <code>hugo</code> to make your changes effective.</p>
 
-<p>go to github
-go to academic kickstart
-settings
-scroll down to github pages
-source to master/docs</p>
+<h2 id="local-version-control">Local version control</h2>
 
-<p>should be up in a few seconds!</p>
+<p>In order to eventually push your website to your GitHub repository, your local files should be staged and committed:</p>
+
+<pre><code class="language-git">git add -all
+git commit -m 'First deploy'
+</code></pre>
+
+<h2 id="push-your-files-to-your-repository">Push your files to your repository</h2>
+
+<p>Then, you need to send your files to your GitHub repository.</p>
+
+<pre><code class="language-git">git push
+</code></pre>
+
+<p>While GitHub only requires the <code>docs</code> folder to display your website, it is best to push all the content of your website if you want to make changes from other machines.</p>
+
+<h2 id="hosting">Hosting</h2>
+
+<p>At this point, the <code>docs</code> folder of your repository contains the necessary files to have a functionning website. However, you need to activate the hosting feature of your repository for GitHub to start hosting the contents of <code>docs</code>. In the <em>Settings</em> tabs of your repository, scroll down to the <em>GitHub Pages</em> section. There, use the drop-down menu under <em>Source</em> to <code>master branch /docs folder</code>.</p>
+
+<p>Wait a few seconds and check out your awesome website!</p>
+
+<h2 id="modifying-your-website">Modifying your website</h2>
+
+<p>You will most likely want to add or edit content to your website. To do this, you only need to alter the <code>docs</code> folder accordingly. Each update may not be instantaneous, so don&rsquo;t worry if it takes a few seconds before your changes to become effective.</p>
 
           </div>
 
@@ -448,14 +478,14 @@ source to master/docs</p>
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/ComputingClub/workshops/hugo_academic/prerequisite/" rel="next">Prerequisites</a>
+    <a href="/ComputingClub/workshops/hugo_academic/initialize/" rel="next">Initialize the website</a>
   </div>
   
   
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/ComputingClub/workshops/hugo_academic/initialize/" rel="prev">Initialize the website</a>
+    <a href="/ComputingClub/workshops/hugo_academic/deploy_umich/" rel="prev">Deployment on UMich Space</a>
   </div>
   
 </div>
@@ -465,7 +495,7 @@ source to master/docs</p>
         </div>
 
         <div class="body-footer">
-          <p>Last updated on May 5, 2019</p>
+          <p>Last updated on Oct 4, 2019</p>
 
           
 

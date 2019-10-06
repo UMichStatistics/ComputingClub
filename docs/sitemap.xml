@@ -4,12 +4,17 @@
   
   <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/createcontent/</loc>
-    <lastmod>2019-10-04T13:25:32-04:00</lastmod>
+    <lastmod>2019-10-04T23:24:03-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/workshops/resources/hpc/</loc>
     <lastmod>2019-09-24T20:04:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/initialize/</loc>
+    <lastmod>2019-10-04T23:24:03-04:00</lastmod>
   </url>
   
   <url>
@@ -19,7 +24,7 @@
   
   <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/</loc>
-    <lastmod>2019-10-04T07:59:46-04:00</lastmod>
+    <lastmod>2019-10-04T23:24:03-04:00</lastmod>
   </url>
   
   <url>
@@ -38,8 +43,8 @@
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/prerequisite/</loc>
-    <lastmod>2019-10-04T07:59:46-04:00</lastmod>
+    <loc>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_github/</loc>
+    <lastmod>2019-10-04T23:24:03-04:00</lastmod>
   </url>
   
   <url>
@@ -48,18 +53,13 @@
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_github/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/initialize/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_umich/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <lastmod>2019-10-04T23:24:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/custom/</loc>
+    <lastmod>2019-10-04T23:24:03-04:00</lastmod>
   </url>
   
   <url>
@@ -79,7 +79,7 @@
   
   <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/</loc>
-    <lastmod>2019-10-04T13:25:32-04:00</lastmod>
+    <lastmod>2019-10-04T23:24:03-04:00</lastmod>
   </url>
   
   <url>
@@ -197,7 +197,7 @@
   
   <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/workshops/</loc>
-    <lastmod>2019-09-24T20:04:37-04:00</lastmod>
+    <lastmod>2019-10-04T23:24:03-04:00</lastmod>
   </url>
   
   <url>

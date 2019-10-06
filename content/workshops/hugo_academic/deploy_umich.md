@@ -15,29 +15,50 @@ menu:
 weight: 3
 ---
 
-need to set up mfile first
 
-should do local version control, but dont need to for the manip
 
-change base url
+
+Now that you are happy with your local website, it is time to deploy it on the internet. Here is the methodology for UMich personal space hosting.
+
+See [Web Hosting Tutorial from ITS](http://www.umich.edu/~umweb/how-to/homepage.html) for more details.
+
+## A note on the Academic theme
+
+To ensure links consistency within your website you need to tell Hugo what will be your base URL. In the case of GitHub hosting, change the following line in `config/_default/config.toml`:
 ```
 baseurl = "http://www-personal.umich.edu/~uniqname/"
 ```
 
-copy the content of the `public` to the `Public/html` folder :
+Run `hugo` to make your changes effective.
+
+## Prerequisites
+
+First, you will need access to the [MFile](https://mfile.umich.edu/) system. There, ensure you have access to your `Public/html/` folder which is where we will dump our website.
+
+## Local version control
+
+While version control is not necessary for this type of hosting, I highly recommand you do it locally:
+```git
+git add -all
+git commit -m 'First deploy'
+```
+
+## Deployment
+
+The deployment to your personal space can be done in one command line (should work on any platform after installing `ssh/scp` tools):
 ```
 scp -r <path-to-local-website>/public/. uniqname@login.itd.umich.edu:Public/html/
 ```
+You should be promted to enter your password. 
 
-or use a FTP client: 
-WinSCP 
+This line basically copies everything from `<path-to-local-website>/public/` (recursively with the `-r` option) to your personal space `uniqname@login.itd.umich.edu:Public/html/` which is where websites are hosted.
+
+### With a GUI
+
+The same can be done using a FTP client (e.g. WinSCP or FileZilla). The server is called
 ```
 login.itd.umich.edu
 ```
-port 22
-uniqname+password
+with port 22. You should need need to input your username and password at some point. 
 
-- Access to the [ITS Login Service](http://www.umich.edu/~gpcc/login/)
-- An [IFS home](http://www.itd.umich.edu/itcsdocs/r1070/) directory
-[MFile](https://mfile.umich.edu/)
-[Web Hosting Tutorial from ITS](http://www.umich.edu/~umweb/how-to/homepage.html)
+
