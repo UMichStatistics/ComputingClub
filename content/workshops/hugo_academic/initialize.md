@@ -41,9 +41,9 @@ git clone https://github.com/<your-github-account>/academic-kickstart.git DemoWe
 cd DemoWebsite
 ```
 
-As mentionned, your GitHub repository only contains the link to the Academic theme, so you need to clone recursively:
+As mentioned, your GitHub repository only contains the link to the Academic theme, so you need to clone recursively:
 ```shell
-git submodule update
+git submodule update --init --recursive
 ```
 
 Now, your `DemoWebsite` folder contains all the neccessary to deploy the Academic kickstart website locally. First, we produce the `html` files from the `Markdown` source: in the `DemoWebsite` folder, run
@@ -60,11 +60,11 @@ Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 ```
 which means that your new website is now accessible at the local address http://localhost:1313/.
 
-Something interesting about `hugo server` is that it will rebuild your website anytime you make a change to the `DemoWebsite` directory. That is, it runs a `FastRender` version of the `hugo` command. So, if you make changes to a file, then you can see its effect directly (most web browser have some sort of auto-refresh so you don't have to refresh the page yourselves!) Note that deeper changes (e.g. new pages) won't appear in that `FastRender` mode so you will need to exit the server (`Ctrl+C`) and restart it (alternativley, you can deactivate the `FastRender` mode using `hugo server --disableFastRender`). 
+Something interesting about `hugo server` is that it will rebuild your website anytime you make a change to the `DemoWebsite` directory. That is, it runs a `FastRender` version of the `hugo` command. So, if you make changes to a file, then you can see its effect directly (most web browser have some sort of auto-refresh so you don't have to refresh the page yourselves!) Note that deeper changes (e.g. new pages) won't appear in that `FastRender` mode so you will need to exit the server (`Ctrl+C`) and restart it (alternatively, you can deactivate the `FastRender` mode using `hugo server --disableFastRender`). 
 
 ## Content and first edits
 
-Now that we have successfully deployed the Academic kickstart site, it is time to take a look at the specefics of it. Your `DemoWebsite` directory should now contain numerous files and folders. The one of interest to us is the `content` folder which, as the name indicates, contains all the content of the website. 
+Now that we have successfully deployed the Academic kickstart site, it is time to take a look at the specifics of it. Your `DemoWebsite` directory should now contain numerous files and folders. The one of interest to us is the `content` folder which, as the name indicates, contains all the content of the website. 
 
 ```shell
 content
@@ -79,17 +79,17 @@ content
 
 The `authors` subdirectory is used to store the different authors for your website. For now, it should only contains one author named `admin`. The `index.md` file contained in the `admin` folder controls the information about that author. In particular, it controls:
 
-- The profile on the homepage if that author is chosen to apprea there;
+- The profile on the homepage if that author is chosen to appear there;
 - The profile appearing with talks, posts and publications of that author.
 
 To change the information about the `admin` author, simply go through the `index.md` file and edit it to your needs. It is well documented so it should be clear what everything does. 
 
-The folder name, here `admin`, will be the index used to identify posts, publications and talks to the corresponding auythor. If you need to add additional authors to your website, simply copy the `admin` folder and change its content. The photo associated to the author should lie in the same folder and have name `avatar.jpg/.png`.
+The folder name, here `admin`, will be the index used to identify posts, publications and talks to the corresponding author. If you need to add additional authors to your website, simply copy the `admin` folder and change its content. The photo associated to the author should lie in the same folder and have name `avatar.jpg/.png`.
 
 
 ### Home
 
-The `home` folder controls what appreas on the home page, that is, the first page a user will land on. The way the home page is structures is through *page sections* as known as *widgets*. On the home page you will see alternating backgroud; each page section is denoted by these alternating background. Thus each file in the `home` folder determines one of those page sections.
+The `home` folder controls what appears on the home page, that is, the first page a user will land on. The way the home page is structures is through *page sections* as known as *widgets*. On the home page you will see alternating background; each page section is denoted by these alternating background. Thus each file in the `home` folder determines one of those page sections.
 
 To remove some sections, there are two ways:
 
@@ -127,7 +127,7 @@ To create new content, use the following command:
 hugo new --kind <post/publication/talk> <folder>/<name-of-content>
 ```
 
-For example, to create a new publication with identifyer `Publication1`, type
+For example, to create a new publication with identifier `Publication1`, type
 ```shell
 hugo new --kind publication publication/Publication1
 ```

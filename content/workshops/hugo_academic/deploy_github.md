@@ -19,7 +19,7 @@ Now that you are happy with your local website, it is time to deploy it on the i
 
 ## A note on the Academic theme
 
-If you build your website using Hugo and the Acadmic theme, here's how to ensure the static website falls in the correct folder. In the `config/_default/config.toml` file change the following line:
+If you build your website using Hugo and the Academic theme, here's how to ensure the static website falls in the correct folder. In the `config/_default/config.toml` file change the following line:
 ```
 publishDir = "docs"
 ```
@@ -34,7 +34,7 @@ Run `hugo` to make your changes effective.
 
 In order to eventually push your website to your GitHub repository, your local files should be staged and committed:
 ```git
-git add -all
+git add --all
 git commit -m 'First deploy'
 ```
 
@@ -48,7 +48,7 @@ While GitHub only requires the `docs` folder to display your website, it is best
 
 ## Hosting
 
-At this point, the `docs` folder of your repository contains the necessary files to have a functionning website. However, you need to activate the hosting feature of your repository for GitHub to start hosting the contents of `docs`. In the *Settings* tabs of your repository, scroll down to the *GitHub Pages* section. There, use the drop-down menu under *Source* to `master branch /docs folder`.
+At this point, the `docs` folder of your repository contains the necessary files to have a functioning website. However, you need to activate the hosting feature of your repository for GitHub to start hosting the contents of `docs`. In the *Settings* tabs of your repository, scroll down to the *GitHub Pages* section. There, use the drop-down menu under *Source* to `master branch /docs folder`.
 
 Wait a few seconds and check out your awesome website!
 

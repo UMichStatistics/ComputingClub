@@ -35,9 +35,11 @@ Run `hugo` to make your changes effective.
 
 First, you will need access to the [MFile](https://mfile.umich.edu/) system. There, ensure you have access to your `Public/html/` folder which is where we will dump our website.
 
+You may need to go to [here](https://mfile.umich.edu/make-webspace/)
+
 ## Local version control
 
-While version control is not necessary for this type of hosting, I highly recommand you do it locally:
+While version control is not necessary for this type of hosting, I highly recommend you do it locally:
 ```git
 git add -all
 git commit -m 'First deploy'
@@ -45,20 +47,20 @@ git commit -m 'First deploy'
 
 ## Deployment
 
-The deployment to your personal space can be done in one command line (should work on any platform after installing `ssh/scp` tools):
+The deployment to your personal space can be done in one command line (should work on any platform, Windows users may require [PuTTY](https://putty.org/)):
 ```
 scp -r <path-to-local-website>/public/. uniqname@login.itd.umich.edu:Public/html/
 ```
-You should be promted to enter your password. 
+You should be prompted to enter your password. 
 
 This line basically copies everything from `<path-to-local-website>/public/` (recursively with the `-r` option) to your personal space `uniqname@login.itd.umich.edu:Public/html/` which is where websites are hosted.
 
 ### With a GUI
 
 The same can be done using a FTP client (e.g. WinSCP or FileZilla). The server is called
+```shell
+sftp.itd.umich.edu
 ```
-login.itd.umich.edu
-```
-with port 22. You should need need to input your username and password at some point. 
+with port 22. You should need to input your username and password at some point. 
 
 

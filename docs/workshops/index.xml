@@ -191,7 +191,7 @@ The content of the post goes here
 &lt;ul&gt;
 &lt;li&gt;Highly not recommended&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;[Jekyll]()
+&lt;li&gt;&lt;a href=&#34;https://jekyllrb.com/&#34; target=&#34;_blank&#34;&gt;Jekyll&lt;/a&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Very similar to Hugo (all content is &lt;code&gt;Markdown&lt;/code&gt;, similar &lt;code&gt;shell&lt;/code&gt; commands)&lt;/li&gt;

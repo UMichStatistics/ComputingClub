@@ -155,7 +155,7 @@ In this tutorial we will consider the [Academic theme](https://themes.gohugo.io/
 ## Alternatives to Hugo
 - HTML from scratch
   - Highly not recommended
-- [Jekyll]()
+- [Jekyll](https://jekyllrb.com/)
   - Very similar to Hugo (all content is `Markdown`, similar `shell` commands)
   - Slightly more complicated, but has slightly more features
   - I have not found a theme that matches the capabilities of Academic for Hugo (see e.g. [Jekyll Academic](https://ncsu-libraries.github.io/jekyll-academic-docs/) and its [demo site](http://ncsu-libraries.github.io/jekyll-academic/))
