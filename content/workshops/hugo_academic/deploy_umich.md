@@ -25,7 +25,7 @@ See [Web Hosting Tutorial from ITS](http://www.umich.edu/~umweb/how-to/homepage.
 ## A note on the Academic theme
 
 To ensure links consistency within your website you need to tell Hugo what will be your base URL. In the case of GitHub hosting, change the following line in `config/_default/config.toml`:
-```
+```shell
 baseurl = "http://www-personal.umich.edu/~uniqname/"
 ```
 
@@ -35,7 +35,7 @@ Run `hugo` to make your changes effective.
 
 First, you will need access to the [MFile](https://mfile.umich.edu/) system. There, ensure you have access to your `Public/html/` folder which is where we will dump our website.
 
-You may need to go to [here](https://mfile.umich.edu/make-webspace/)
+You may need to [use the make-website tool](https://mfile.umich.edu/make-webspace/).
 
 ## Local version control
 
@@ -45,22 +45,35 @@ git add -all
 git commit -m 'First deploy'
 ```
 
-## Deployment
+## Deployment with SCP
 
 The deployment to your personal space can be done in one command line (should work on any platform, Windows users may require [PuTTY](https://putty.org/)):
-```
+```shell
 scp -r <path-to-local-website>/public/. uniqname@login.itd.umich.edu:Public/html/
 ```
-You should be prompted to enter your password. 
+You should be prompted to enter your password. SCP (Secure Copy Protocol) can only copy files to and from a remote server. It is sufficient to push your website, but you cannot remove files using that protocol. This line basically copies everything from `<path-to-local-website>/public/` (recursively with the `-r` option) to your personal space `uniqname@login.itd.umich.edu:Public/html/` which is where websites are hosted.
 
-This line basically copies everything from `<path-to-local-website>/public/` (recursively with the `-r` option) to your personal space `uniqname@login.itd.umich.edu:Public/html/` which is where websites are hosted.
 
-### With a GUI
 
-The same can be done using a FTP client (e.g. WinSCP or FileZilla). The server is called
+
+### SFTP and SFTP With a GUI
+
+`sftp` (Secure File Transfer Protocol) offer an interactive session and is therefore more flexible than SCP (see thig [guide](https://www.jscape.com/blog/using-sftp-on-command-line)). 
+
+Open a terminal in the `public` folder of your website (or the one where Hugo produces the `html` files). Connection to the remote server is done via
+```shell
+sftp uniqname@sftp.itd.umich.edu
+```
+You should be prompted to enter your password. You can navigate your personal space usin `ls` and `cd` as usual. Move to `Public/html` and push all the files of `public`:
+```shell
+sftp> cd Public/html/
+sftp> put -r *
+```
+
+The same can be done using a FTP client GUI (e.g. WinSCP or FileZilla). The server is called
 ```shell
 sftp.itd.umich.edu
 ```
-with port 22. You should need to input your username and password at some point. 
+with port 22. You should need to input your username and password at some point.
 
 

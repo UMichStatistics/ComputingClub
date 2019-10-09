@@ -20,11 +20,11 @@ Now that you are happy with your local website, it is time to deploy it on the i
 ## A note on the Academic theme
 
 If you build your website using Hugo and the Academic theme, here's how to ensure the static website falls in the correct folder. In the `config/_default/config.toml` file change the following line:
-```
+```shell
 publishDir = "docs"
 ```
 To ensure links consistency within your website you need to tell Hugo what will be your base URL. In the case of GitHub hosting, change the following line in `config/_default/config.toml`:
-```
+```shell
 baseurl = "https://your-github-account.github.io/academic-kickstart/"
 ```
 
@@ -54,5 +54,5 @@ Wait a few seconds and check out your awesome website!
 
 ## Modifying your website
 
-You will most likely want to add or edit content to your website. To do this, you only need to alter the `docs` folder accordingly. Each update may not be instantaneous, so don't worry if it takes a few seconds before your changes to become effective.
+You will most likely want to add or edit content to your website. To do this, you only need to alter the `docs` folder accordingly to trigger redeployment. Each update may not be instantaneous, so don't worry if it takes a few seconds before your changes become effective.
 

@@ -31,9 +31,7 @@ In this tutorial, we will go through one way of setting up your personal academi
 Today's talk is sad in the following sense:
 
 - You won't learn anything that will make you a better statistician or researcher
-- It is all based on **looks**
-
-It is still relevant professionally. 
+- It is still relevant professionally. 
 {{% /alert %}}
 
 
@@ -48,6 +46,7 @@ Having a personal website serves multiple goals:
   - List your publications, research interests, experience, etc.
   - Allows people to find you and contact you
   - Have an easy way to point to you
+  - "Online presence"
 - Exposure for your work & research
   - Build workshops, courses and tutorials for everyone to access
   - Present your research in alternative ways (other than articles, talks, posters, etc.)
@@ -64,8 +63,8 @@ Have a website before you need one:
 It is also a humbling experience:
 
 - The first time you set up your own website, you will most likely have very few things to put on it;
-- Additional pressure and incentive to building your image and career.
-- "Online presence"
+- Additional motivation and incentive to building your image and career.
+
 {{% /alert %}}
 
 
@@ -168,6 +167,12 @@ In this tutorial we will consider the [Academic theme](https://themes.gohugo.io/
 - More advanced alternatives
   - [Grav](https://grav.com/)
   - [Drupal](https://www.drupal.org/)
+  
+## Alternative hosting
+
+- [Netlify](https://www.netlify.com/)
+- [WordPress](https://wordpress.com/) and [WiX](https://www.wix.com/) offers free hosting options
+- Any other web host ($, e.g. [AWS](https://aws.amazon.com/websites/))
 
 ## Main takeaways
 

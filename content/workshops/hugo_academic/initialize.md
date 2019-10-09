@@ -26,6 +26,7 @@ In order to perform the following manipulations, you will need:
 - Hugo installed on your machine: see this [guide](https://gohugo.io/getting-started/installing/); ( Windows users: I highly recommend [installing Chocolatey](https://chocolatey.org/install) and installing Hugo from command line.)
 - git installed on your machine (see this [guide](https://www.atlassian.com/git/tutorials/install-git));
 - a [GitHub](http://github.com) account.
+- `Markdown` knowledge (see this [guide](https://sourcethemes.com/academic/docs/writing-markdown-latex/) on writing content in the context of Academic & Hugo).
 
 ## Initialize and first deploy
 
@@ -134,6 +135,8 @@ hugo new --kind publication publication/Publication1
 
 Create a few posts, publications and talks and restart the server since you have now added new pages to the site (`Ctrl+c` and `hugo server`).
 
+For more details and additional features, see [Managing content](https://sourcethemes.com/academic/docs/managing-content/).
+
 
 ### Courses, workshops, documentation
 
@@ -150,6 +153,8 @@ The Academic theme also implements a `--kind docs` argument to automatically cre
 hugo new --kind docs course/FirstCourse
 ```
 
+
+For more details and additional features, see [Managing content](https://sourcethemes.com/academic/docs/managing-content/).
 
 
 
@@ -182,7 +187,18 @@ The rest of the `DemoWebsite` repository mostly contains file used to generate t
 - `data`: if you want custom color theme and fonts, you will place them here;
 - `static`: you can place site-wide files here, such as a custom site icon.
 
+## Alternative workflows
 
+Using an IDE (e.g., RStudio), everything can be done using the interface with limited command line usage:
+
+- Fork the `academic-kickstart` repo as above;
+- New Project > Version Control > Git > URL to your GitHub repo > Open in New Session;
+- still need to run `git submodule update --init --recursive` in the built-in terminal;
+- `git` action can be done with the `Git` Tab;
+- `hugo` command need to be run in the terminal;
+- Look for the `R` package `blogdown` to do everything in `R` console:
+  - [Install with RStudio](https://sourcethemes.com/academic/docs/install/#install-with-rstudio)
+  - `blogdown:::serve_site()` acts as `hugo server`;
 
 
 

@@ -119,7 +119,7 @@ Prerequsites In order to perform the following manipulations, you will need:
     
       <meta property="article:published_time" content="2019-05-05T00:00:00&#43;01:00">
     
-    <meta property="article:modified_time" content="2019-10-06T19:12:57-04:00">
+    <meta property="article:modified_time" content="2019-10-07T20:26:37-04:00">
   
 
   
@@ -410,6 +410,7 @@ Prerequsites In order to perform the following manipulations, you will need:
 </ul></li>
 <li><a href="#configuration">Configuration</a></li>
 <li><a href="#rest-of-repository">Rest of repository</a></li>
+<li><a href="#alternative-workflows">Alternative workflows</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -440,6 +441,7 @@ Prerequsites In order to perform the following manipulations, you will need:
 <li>Hugo installed on your machine: see this <a href="https://gohugo.io/getting-started/installing/" target="_blank">guide</a>; ( Windows users: I highly recommend <a href="https://chocolatey.org/install" target="_blank">installing Chocolatey</a> and installing Hugo from command line.)</li>
 <li>git installed on your machine (see this <a href="https://www.atlassian.com/git/tutorials/install-git" target="_blank">guide</a>);</li>
 <li>a <a href="http://github.com" target="_blank">GitHub</a> account.</li>
+<li><code>Markdown</code> knowledge (see this <a href="https://sourcethemes.com/academic/docs/writing-markdown-latex/" target="_blank">guide</a> on writing content in the context of Academic &amp; Hugo).</li>
 </ul>
 
 <h2 id="initialize-and-first-deploy">Initialize and first deploy</h2>
@@ -554,6 +556,8 @@ cd DemoWebsite
 
 <p>Create a few posts, publications and talks and restart the server since you have now added new pages to the site (<code>Ctrl+c</code> and <code>hugo server</code>).</p>
 
+<p>For more details and additional features, see <a href="https://sourcethemes.com/academic/docs/managing-content/" target="_blank">Managing content</a>.</p>
+
 <h3 id="courses-workshops-documentation">Courses, workshops, documentation</h3>
 
 <p>If you wish to have space for courses, documentation or workshops, the best way to go is to use the <code>docs</code> layout defined by the Academic theme. For example, let us create a <code>course</code> folder in the <code>content</code> folder and place a <code>_index.md</code> file at its root. This file should only contains the following front matter</p>
@@ -568,6 +572,8 @@ layout: docs
 
 <pre><code class="language-shell">hugo new --kind docs course/FirstCourse
 </code></pre>
+
+<p>For more details and additional features, see <a href="https://sourcethemes.com/academic/docs/managing-content/" target="_blank">Managing content</a>.</p>
 
 <h2 id="configuration">Configuration</h2>
 
@@ -598,6 +604,24 @@ layout: docs
 <li><code>static</code>: you can place site-wide files here, such as a custom site icon.</li>
 </ul>
 
+<h2 id="alternative-workflows">Alternative workflows</h2>
+
+<p>Using an IDE (e.g., RStudio), everything can be done using the interface with limited command line usage:</p>
+
+<ul>
+<li>Fork the <code>academic-kickstart</code> repo as above;</li>
+<li>New Project &gt; Version Control &gt; Git &gt; URL to your GitHub repo &gt; Open in New Session;</li>
+<li>still need to run <code>git submodule update --init --recursive</code> in the built-in terminal;</li>
+<li><code>git</code> action can be done with the <code>Git</code> Tab;</li>
+<li><code>hugo</code> command need to be run in the terminal;</li>
+<li>Look for the <code>R</code> package <code>blogdown</code> to do everything in <code>R</code> console:
+
+<ul>
+<li><a href="https://sourcethemes.com/academic/docs/install/#install-with-rstudio" target="_blank">Install with RStudio</a></li>
+<li><code>blogdown:::serve_site()</code> acts as <code>hugo server</code>;</li>
+</ul></li>
+</ul>
+
           </div>
 
           
@@ -623,7 +647,7 @@ layout: docs
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Oct 6, 2019</p>
+          <p>Last updated on Oct 7, 2019</p>
 
           
 

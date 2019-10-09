@@ -31,6 +31,7 @@
 &lt;li&gt;Hugo installed on your machine: see this &lt;a href=&#34;https://gohugo.io/getting-started/installing/&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt;; ( Windows users: I highly recommend &lt;a href=&#34;https://chocolatey.org/install&#34; target=&#34;_blank&#34;&gt;installing Chocolatey&lt;/a&gt; and installing Hugo from command line.)&lt;/li&gt;
 &lt;li&gt;git installed on your machine (see this &lt;a href=&#34;https://www.atlassian.com/git/tutorials/install-git&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt;);&lt;/li&gt;
 &lt;li&gt;a &lt;a href=&#34;http://github.com&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt; account.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Markdown&lt;/code&gt; knowledge (see this &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt; on writing content in the context of Academic &amp;amp; Hugo).&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;initialize-and-first-deploy&#34;&gt;Initialize and first deploy&lt;/h2&gt;
@@ -145,6 +146,8 @@ cd DemoWebsite
 
 &lt;p&gt;Create a few posts, publications and talks and restart the server since you have now added new pages to the site (&lt;code&gt;Ctrl+c&lt;/code&gt; and &lt;code&gt;hugo server&lt;/code&gt;).&lt;/p&gt;
 
+&lt;p&gt;For more details and additional features, see &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/&#34; target=&#34;_blank&#34;&gt;Managing content&lt;/a&gt;.&lt;/p&gt;
+
 &lt;h3 id=&#34;courses-workshops-documentation&#34;&gt;Courses, workshops, documentation&lt;/h3&gt;
 
 &lt;p&gt;If you wish to have space for courses, documentation or workshops, the best way to go is to use the &lt;code&gt;docs&lt;/code&gt; layout defined by the Academic theme. For example, let us create a &lt;code&gt;course&lt;/code&gt; folder in the &lt;code&gt;content&lt;/code&gt; folder and place a &lt;code&gt;_index.md&lt;/code&gt; file at its root. This file should only contains the following front matter&lt;/p&gt;
@@ -159,6 +162,8 @@ layout: docs
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;hugo new --kind docs course/FirstCourse
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For more details and additional features, see &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/&#34; target=&#34;_blank&#34;&gt;Managing content&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
 
@@ -188,6 +193,24 @@ layout: docs
 &lt;li&gt;&lt;code&gt;data&lt;/code&gt;: if you want custom color theme and fonts, you will place them here;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;static&lt;/code&gt;: you can place site-wide files here, such as a custom site icon.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&#34;alternative-workflows&#34;&gt;Alternative workflows&lt;/h2&gt;
+
+&lt;p&gt;Using an IDE (e.g., RStudio), everything can be done using the interface with limited command line usage:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fork the &lt;code&gt;academic-kickstart&lt;/code&gt; repo as above;&lt;/li&gt;
+&lt;li&gt;New Project &amp;gt; Version Control &amp;gt; Git &amp;gt; URL to your GitHub repo &amp;gt; Open in New Session;&lt;/li&gt;
+&lt;li&gt;still need to run &lt;code&gt;git submodule update --init --recursive&lt;/code&gt; in the built-in terminal;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git&lt;/code&gt; action can be done with the &lt;code&gt;Git&lt;/code&gt; Tab;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hugo&lt;/code&gt; command need to be run in the terminal;&lt;/li&gt;
+&lt;li&gt;Look for the &lt;code&gt;R&lt;/code&gt; package &lt;code&gt;blogdown&lt;/code&gt; to do everything in &lt;code&gt;R&lt;/code&gt; console:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34; target=&#34;_blank&#34;&gt;Install with RStudio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;blogdown:::serve_site()&lt;/code&gt; acts as &lt;code&gt;hugo server&lt;/code&gt;;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -204,12 +227,12 @@ layout: docs
 
 &lt;p&gt;If you build your website using Hugo and the Academic theme, here&amp;rsquo;s how to ensure the static website falls in the correct folder. In the &lt;code&gt;config/_default/config.toml&lt;/code&gt; file change the following line:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;publishDir = &amp;quot;docs&amp;quot;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;publishDir = &amp;quot;docs&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;To ensure links consistency within your website you need to tell Hugo what will be your base URL. In the case of GitHub hosting, change the following line in &lt;code&gt;config/_default/config.toml&lt;/code&gt;:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;baseurl = &amp;quot;https://your-github-account.github.io/academic-kickstart/&amp;quot;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;baseurl = &amp;quot;https://your-github-account.github.io/academic-kickstart/&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Run &lt;code&gt;hugo&lt;/code&gt; to make your changes effective.&lt;/p&gt;
@@ -239,7 +262,7 @@ git commit -m &#39;First deploy&#39;
 
 &lt;h2 id=&#34;modifying-your-website&#34;&gt;Modifying your website&lt;/h2&gt;
 
-&lt;p&gt;You will most likely want to add or edit content to your website. To do this, you only need to alter the &lt;code&gt;docs&lt;/code&gt; folder accordingly. Each update may not be instantaneous, so don&amp;rsquo;t worry if it takes a few seconds before your changes to become effective.&lt;/p&gt;
+&lt;p&gt;You will most likely want to add or edit content to your website. To do this, you only need to alter the &lt;code&gt;docs&lt;/code&gt; folder accordingly to trigger redeployment. Each update may not be instantaneous, so don&amp;rsquo;t worry if it takes a few seconds before your changes become effective.&lt;/p&gt;
 </description>
     </item>
     
@@ -258,7 +281,7 @@ git commit -m &#39;First deploy&#39;
 
 &lt;p&gt;To ensure links consistency within your website you need to tell Hugo what will be your base URL. In the case of GitHub hosting, change the following line in &lt;code&gt;config/_default/config.toml&lt;/code&gt;:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;baseurl = &amp;quot;http://www-personal.umich.edu/~uniqname/&amp;quot;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;baseurl = &amp;quot;http://www-personal.umich.edu/~uniqname/&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Run &lt;code&gt;hugo&lt;/code&gt; to make your changes effective.&lt;/p&gt;
@@ -267,7 +290,7 @@ git commit -m &#39;First deploy&#39;
 
 &lt;p&gt;First, you will need access to the &lt;a href=&#34;https://mfile.umich.edu/&#34; target=&#34;_blank&#34;&gt;MFile&lt;/a&gt; system. There, ensure you have access to your &lt;code&gt;Public/html/&lt;/code&gt; folder which is where we will dump our website.&lt;/p&gt;
 
-&lt;p&gt;You may need to go to &lt;a href=&#34;https://mfile.umich.edu/make-webspace/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You may need to &lt;a href=&#34;https://mfile.umich.edu/make-webspace/&#34; target=&#34;_blank&#34;&gt;use the make-website tool&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;local-version-control&#34;&gt;Local version control&lt;/h2&gt;
 
@@ -277,20 +300,31 @@ git commit -m &#39;First deploy&#39;
 git commit -m &#39;First deploy&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;deployment&#34;&gt;Deployment&lt;/h2&gt;
+&lt;h2 id=&#34;deployment-with-scp&#34;&gt;Deployment with SCP&lt;/h2&gt;
 
 &lt;p&gt;The deployment to your personal space can be done in one command line (should work on any platform, Windows users may require &lt;a href=&#34;https://putty.org/&#34; target=&#34;_blank&#34;&gt;PuTTY&lt;/a&gt;):&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;scp -r &amp;lt;path-to-local-website&amp;gt;/public/. uniqname@login.itd.umich.edu:Public/html/
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;scp -r &amp;lt;path-to-local-website&amp;gt;/public/. uniqname@login.itd.umich.edu:Public/html/
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;You should be prompted to enter your password.&lt;/p&gt;
+&lt;p&gt;You should be prompted to enter your password. SCP (Secure Copy Protocol) can only copy files to and from a remote server. It is sufficient to push your website, but you cannot remove files using that protocol. This line basically copies everything from &lt;code&gt;&amp;lt;path-to-local-website&amp;gt;/public/&lt;/code&gt; (recursively with the &lt;code&gt;-r&lt;/code&gt; option) to your personal space &lt;code&gt;uniqname@login.itd.umich.edu:Public/html/&lt;/code&gt; which is where websites are hosted.&lt;/p&gt;
 
-&lt;p&gt;This line basically copies everything from &lt;code&gt;&amp;lt;path-to-local-website&amp;gt;/public/&lt;/code&gt; (recursively with the &lt;code&gt;-r&lt;/code&gt; option) to your personal space &lt;code&gt;uniqname@login.itd.umich.edu:Public/html/&lt;/code&gt; which is where websites are hosted.&lt;/p&gt;
+&lt;h3 id=&#34;sftp-and-sftp-with-a-gui&#34;&gt;SFTP and SFTP With a GUI&lt;/h3&gt;
 
-&lt;h3 id=&#34;with-a-gui&#34;&gt;With a GUI&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;sftp&lt;/code&gt; (Secure File Transfer Protocol) offer an interactive session and is therefore more flexible than SCP (see thig &lt;a href=&#34;https://www.jscape.com/blog/using-sftp-on-command-line&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt;).&lt;/p&gt;
 
-&lt;p&gt;The same can be done using a FTP client (e.g. WinSCP or FileZilla). The server is called&lt;/p&gt;
+&lt;p&gt;Open a terminal in the &lt;code&gt;public&lt;/code&gt; folder of your website (or the one where Hugo produces the &lt;code&gt;html&lt;/code&gt; files). Connection to the remote server is done via&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sftp uniqname@sftp.itd.umich.edu
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You should be prompted to enter your password. You can navigate your personal space usin &lt;code&gt;ls&lt;/code&gt; and &lt;code&gt;cd&lt;/code&gt; as usual. Move to &lt;code&gt;Public/html&lt;/code&gt; and push all the files of &lt;code&gt;public&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sftp&amp;gt; cd Public/html/
+sftp&amp;gt; put -r *
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The same can be done using a FTP client GUI (e.g. WinSCP or FileZilla). The server is called&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sftp.itd.umich.edu
 &lt;/code&gt;&lt;/pre&gt;

@@ -117,7 +117,7 @@ publishDir = &quot;docs&quot;  To ensure links consistency within your website y
     
       <meta property="article:published_time" content="2019-05-05T00:00:00&#43;01:00">
     
-    <meta property="article:modified_time" content="2019-10-06T19:12:57-04:00">
+    <meta property="article:modified_time" content="2019-10-07T20:26:37-04:00">
   
 
   
@@ -426,12 +426,12 @@ publishDir = &quot;docs&quot;  To ensure links consistency within your website y
 
 <p>If you build your website using Hugo and the Academic theme, here&rsquo;s how to ensure the static website falls in the correct folder. In the <code>config/_default/config.toml</code> file change the following line:</p>
 
-<pre><code>publishDir = &quot;docs&quot;
+<pre><code class="language-shell">publishDir = &quot;docs&quot;
 </code></pre>
 
 <p>To ensure links consistency within your website you need to tell Hugo what will be your base URL. In the case of GitHub hosting, change the following line in <code>config/_default/config.toml</code>:</p>
 
-<pre><code>baseurl = &quot;https://your-github-account.github.io/academic-kickstart/&quot;
+<pre><code class="language-shell">baseurl = &quot;https://your-github-account.github.io/academic-kickstart/&quot;
 </code></pre>
 
 <p>Run <code>hugo</code> to make your changes effective.</p>
@@ -461,7 +461,7 @@ git commit -m 'First deploy'
 
 <h2 id="modifying-your-website">Modifying your website</h2>
 
-<p>You will most likely want to add or edit content to your website. To do this, you only need to alter the <code>docs</code> folder accordingly. Each update may not be instantaneous, so don&rsquo;t worry if it takes a few seconds before your changes to become effective.</p>
+<p>You will most likely want to add or edit content to your website. To do this, you only need to alter the <code>docs</code> folder accordingly to trigger redeployment. Each update may not be instantaneous, so don&rsquo;t worry if it takes a few seconds before your changes become effective.</p>
 
           </div>
 
@@ -495,7 +495,7 @@ git commit -m 'First deploy'
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Oct 6, 2019</p>
+          <p>Last updated on Oct 7, 2019</p>
 
           
 
