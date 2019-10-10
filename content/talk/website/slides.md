@@ -21,26 +21,29 @@ output:
     - GitHub Pages;
     - UMich personal space.
 
-**Disclaimer**
+**Disclaimer:**
 
-- You won't learn anything that will make you a better statistician and researcher;
-- It is still relevant professionally. 
+- You won't learn anything that will make you a better statistician and researcher.
 
 
 
 ## Why have a personal academic website
 
-- **Professional goals**
-  - Host a public resume
-  - List your publications, research interests, experience, etc.
-  - Allows people to find you and contact you
-  - Have an easy way to point to you
-- **Exposure for your work & research**
-  - Build workshops, courses and tutorials for everyone to access
-  - Present your research in alternative ways (other than articles, talks, posters, etc.)
-- **Host content for courses**
-  - e.g. Canvas may have some limitations that a website might not have
-  - Make your teaching content public
+**Professional goals**
+
+- Host a public resume; list your publications, research interests, experience, etc.
+- Allows people to find you and contact you; easy way to point to you
+- Build your "online presence"
+
+**Exposure for your work & research**
+
+- Build workshops, courses and tutorials for everyone to access
+- Present your research in alternative ways
+
+**Host content for courses**
+
+- e.g. Canvas may have some limitations that a website might not have
+- Make your teaching content public
   
 
 
@@ -54,7 +57,7 @@ Have a website **before** you need one:
 It is also a **humbling experience**:
 
 - The first time you set up your own website, you will most likely have very few things to put on it;
-- Additional pressure and incentive to building your image and career.
+- Additional motivation and incentive to build your image and career.
 
 
 
@@ -66,6 +69,7 @@ It is also a **humbling experience**:
 - Online book
 - Artist portfolio
 - Blogging
+- Event/symposium/conference landing page
   
 
 
@@ -98,7 +102,7 @@ The top part of any `.md` file contains a **front matter** defining:
 
 
 
-## Example:
+## Example: blog post
 
 ```yaml
 ---
@@ -114,7 +118,7 @@ lastmod: 2019-10-04T18:18:52-04:00
 featured: false
 draft: false
 ---
-<!-- Body of the file -->
+
 The content of the post goes here
 ...
 ```
@@ -122,12 +126,11 @@ The content of the post goes here
 
 ## The Academic theme for Hugo
 
-The [Academic theme](https://themes.gohugo.io/academic/) which is one of the **more complete theme** and is particularly **well-suited for an academic website** (as the name suggests!) Here are some of the things Academic allows:
+The [Academic theme](https://themes.gohugo.io/academic/) which is one of the **more complete themes** and is particularly **well-suited for an academic website** (as the name suggests!) Here are some of the things Academic allows:
 
+- Publications and talks 
+- Documentation (courses, workshops, documentation)
 - Blog posts
-- Documentation
-- Publications
-- Talks
 - Projects
 - Multiple authors
 - General pages
@@ -135,10 +138,10 @@ The [Academic theme](https://themes.gohugo.io/academic/) which is one of the **m
 
 
 
-## [More Hugo themes](https://themes.gohugo.io/)
-
-- Resume-type themes
-  - [Resume theme](https://themes.gohugo.io/hugo-resume/) is another slick theme I found.
+## More Hugo themes
+- [Hugo website](https://themes.gohugo.io/) and [THEMEFISHER](https://themefisher.com/hugo-themes/): other themes;
+- [Academia](https://gethugothemes.com/products/academia/): 30$, very similar to Academic, slightly different visuals;
+- Resume-type themes: [Resume](https://themes.gohugo.io/hugo-resume/),  [Orbit](https://hugothemesfree.com/my-cv-resume-using-a-free-hugo-theme/);
 - Documentation-type themes (many equivalent options)
 - Portofolio-type themes (many equivalent options)
 - Blog-type themes (many equivalent options)
@@ -146,24 +149,31 @@ The [Academic theme](https://themes.gohugo.io/academic/) which is one of the **m
 
 
 ## Alternatives to Hugo
-- HTML from scratch
-  - Highly not recommended
-- [Jekyll](https://jekyllrb.com/)
-  - Very similar to Hugo (all content is `Markdown`, similar `shell` commands)
-  - Slightly more complicated, but has slightly more features
-  - I have not found a theme that matches the capabilities of Academic for Hugo (see e.g. [Jekyll Academic](https://ncsu-libraries.github.io/jekyll-academic-docs/) and its [demo site](http://ncsu-libraries.github.io/jekyll-academic/))
-  - GitHub Pages built-in themes (using Jekyll) can be up in a few clicks
+HTML from scratch
+
+- Highly not recommended
+
+[Jekyll](https://jekyllrb.com/)
+
+- Very similar to Hugo (all content is `Markdown`, similar `shell` commands)
+- Slightly more complicated, but has slightly more features
+- I have not found a theme that matches the capabilities of Academic for Hugo (see e.g. [Jekyll Academic](https://ncsu-libraries.github.io/jekyll-academic-docs/) and its [demo site](http://ncsu-libraries.github.io/jekyll-academic/))
+- GitHub Pages built-in themes (using Jekyll) can be up in a few clicks
 
 
 ## Alternatives to Hugo (cont'ed)
-- WYSIWYG editor
-  - [WordPress](https://wordpress.com/)
-  - [Google Sites](https://sites.google.com/site/sites/)
-  - [WiX](https://www.wix.com/)
-  - and many others
-- More advanced alternatives
-  - [Grav](https://grav.com/)
-  - [Drupal](https://www.drupal.org/)
+
+WYSIWYG editor
+
+- [WordPress](https://wordpress.com/)
+- [Google Sites](https://sites.google.com/site/sites/)
+- [WiX](https://www.wix.com/)
+- and many others
+
+More advanced alternatives
+
+- [Grav](https://grav.com/)
+- [Drupal](https://www.drupal.org/)
 
 
 
