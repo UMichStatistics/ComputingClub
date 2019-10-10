@@ -76,4 +76,16 @@ sftp.itd.umich.edu
 ```
 with port 22. You should need to input your username and password at some point.
 
+### Viewing your website
+
+Your new website will be available at
+```shell
+http://www-personal.umich.edu/~uniqname/
+```
+which is also available by symply typing
+```shell
+umich.edu/~uniqname/
+```
+
+If you are creating a website for some organization, consider getting some space for your organization instead of using your own space: check [this tutorial (Special services section)](http://www.umich.edu/~umweb/how-to/homepage.html).
 

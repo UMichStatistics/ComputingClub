@@ -119,7 +119,7 @@ Prerequsites In order to perform the following manipulations, you will need:
     
       <meta property="article:published_time" content="2019-05-05T00:00:00&#43;01:00">
     
-    <meta property="article:modified_time" content="2019-10-07T20:26:37-04:00">
+    <meta property="article:modified_time" content="2019-10-09T08:27:36-04:00">
   
 
   
@@ -379,6 +379,10 @@ Prerequsites In order to perform the following manipulations, you will need:
         <a href="/ComputingClub/workshops/hugo_academic/custom/">Customization and Resources</a>
       </li>
       
+      <li >
+        <a href="/ComputingClub/workshops/hugo_academic/troubleshoot/">Troubleshooting</a>
+      </li>
+      
     </ul>
     
 
@@ -438,7 +442,12 @@ Prerequsites In order to perform the following manipulations, you will need:
 <p>In order to perform the following manipulations, you will need:</p>
 
 <ul>
-<li>Hugo installed on your machine: see this <a href="https://gohugo.io/getting-started/installing/" target="_blank">guide</a>; ( Windows users: I highly recommend <a href="https://chocolatey.org/install" target="_blank">installing Chocolatey</a> and installing Hugo from command line.)</li>
+<li>Hugo installed on your machine: see this <a href="https://gohugo.io/getting-started/installing/" target="_blank">guide</a>; ( Windows users: I highly recommend <a href="https://chocolatey.org/install" target="_blank">installing Chocolatey</a> and installing Hugo from command line.)
+
+<ul>
+<li>Make sure you install the <strong>Extended</strong> version. In many case the default installation default to the Extended version, but some do not. To verify which one you have, just type <code>hugo version</code> in a terminal and you should see <code>extended</code> somewhere in the output.</li>
+<li>For Windows users, use Chocolatey and install with <code>choco install hugo-extended -force -confirm</code>.</li>
+</ul></li>
 <li>git installed on your machine (see this <a href="https://www.atlassian.com/git/tutorials/install-git" target="_blank">guide</a>);</li>
 <li>a <a href="http://github.com" target="_blank">GitHub</a> account.</li>
 <li><code>Markdown</code> knowledge (see this <a href="https://sourcethemes.com/academic/docs/writing-markdown-latex/" target="_blank">guide</a> on writing content in the context of Academic &amp; Hugo).</li>
@@ -560,20 +569,7 @@ cd DemoWebsite
 
 <h3 id="courses-workshops-documentation">Courses, workshops, documentation</h3>
 
-<p>If you wish to have space for courses, documentation or workshops, the best way to go is to use the <code>docs</code> layout defined by the Academic theme. For example, let us create a <code>course</code> folder in the <code>content</code> folder and place a <code>_index.md</code> file at its root. This file should only contains the following front matter</p>
-
-<pre><code class="language-shell">title: Courses
-layout: docs
-</code></pre>
-
-<p>Just like posts, publications and talks, this file will define a page listing all courses contained in the directory. The <code>layout: docs</code> parameter means that this landing page will list pages of type <code>docs</code> only.</p>
-
-<p>The Academic theme also implements a <code>--kind docs</code> argument to automatically create new <code>docs</code> files:</p>
-
-<pre><code class="language-shell">hugo new --kind docs course/FirstCourse
-</code></pre>
-
-<p>For more details and additional features, see <a href="https://sourcethemes.com/academic/docs/managing-content/" target="_blank">Managing content</a>.</p>
+<p>The methodology described in <a href="https://sourcethemes.com/academic/docs/managing-content/#create-a-course-or-documentation" target="_blank">Managing content | Create a course or documentation </a> is the best way to proceed.</p>
 
 <h2 id="configuration">Configuration</h2>
 
@@ -647,7 +643,7 @@ layout: docs
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Oct 7, 2019</p>
+          <p>Last updated on Oct 9, 2019</p>
 
           
 

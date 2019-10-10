@@ -87,7 +87,12 @@
 &lt;p&gt;In order to perform the following manipulations, you will need:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Hugo installed on your machine: see this &lt;a href=&#34;https://gohugo.io/getting-started/installing/&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt;; ( Windows users: I highly recommend &lt;a href=&#34;https://chocolatey.org/install&#34; target=&#34;_blank&#34;&gt;installing Chocolatey&lt;/a&gt; and installing Hugo from command line.)&lt;/li&gt;
+&lt;li&gt;Hugo installed on your machine: see this &lt;a href=&#34;https://gohugo.io/getting-started/installing/&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt;; ( Windows users: I highly recommend &lt;a href=&#34;https://chocolatey.org/install&#34; target=&#34;_blank&#34;&gt;installing Chocolatey&lt;/a&gt; and installing Hugo from command line.)
+
+&lt;ul&gt;
+&lt;li&gt;Make sure you install the &lt;strong&gt;Extended&lt;/strong&gt; version. In many case the default installation default to the Extended version, but some do not. To verify which one you have, just type &lt;code&gt;hugo version&lt;/code&gt; in a terminal and you should see &lt;code&gt;extended&lt;/code&gt; somewhere in the output.&lt;/li&gt;
+&lt;li&gt;For Windows users, use Chocolatey and install with &lt;code&gt;choco install hugo-extended -force -confirm&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;git installed on your machine (see this &lt;a href=&#34;https://www.atlassian.com/git/tutorials/install-git&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt;);&lt;/li&gt;
 &lt;li&gt;a &lt;a href=&#34;http://github.com&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt; account.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Markdown&lt;/code&gt; knowledge (see this &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt; on writing content in the context of Academic &amp;amp; Hugo).&lt;/li&gt;
@@ -209,20 +214,7 @@ cd DemoWebsite
 
 &lt;h3 id=&#34;courses-workshops-documentation&#34;&gt;Courses, workshops, documentation&lt;/h3&gt;
 
-&lt;p&gt;If you wish to have space for courses, documentation or workshops, the best way to go is to use the &lt;code&gt;docs&lt;/code&gt; layout defined by the Academic theme. For example, let us create a &lt;code&gt;course&lt;/code&gt; folder in the &lt;code&gt;content&lt;/code&gt; folder and place a &lt;code&gt;_index.md&lt;/code&gt; file at its root. This file should only contains the following front matter&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;title: Courses
-layout: docs
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Just like posts, publications and talks, this file will define a page listing all courses contained in the directory. The &lt;code&gt;layout: docs&lt;/code&gt; parameter means that this landing page will list pages of type &lt;code&gt;docs&lt;/code&gt; only.&lt;/p&gt;
-
-&lt;p&gt;The Academic theme also implements a &lt;code&gt;--kind docs&lt;/code&gt; argument to automatically create new &lt;code&gt;docs&lt;/code&gt; files:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;hugo new --kind docs course/FirstCourse
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For more details and additional features, see &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/&#34; target=&#34;_blank&#34;&gt;Managing content&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The methodology described in &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-a-course-or-documentation&#34; target=&#34;_blank&#34;&gt;Managing content | Create a course or documentation &lt;/a&gt; is the best way to proceed.&lt;/p&gt;
 
 &lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
 
@@ -529,6 +521,20 @@ sftp&amp;gt; put -r *
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;with port 22. You should need to input your username and password at some point.&lt;/p&gt;
+
+&lt;h3 id=&#34;viewing-your-website&#34;&gt;Viewing your website&lt;/h3&gt;
+
+&lt;p&gt;Your new website will be available at&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;http://www-personal.umich.edu/~uniqname/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;which is also available by symply typing&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;umich.edu/~uniqname/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you are creating a website for some organization, consider getting some space for your organization instead of using your own space: check &lt;a href=&#34;http://www.umich.edu/~umweb/how-to/homepage.html&#34; target=&#34;_blank&#34;&gt;this tutorial (Special services section)&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -544,6 +550,29 @@ sftp&amp;gt; put -r *
 &lt;li&gt;Custom color theme&lt;/li&gt;
 &lt;li&gt;Custom fonts&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Troubleshooting</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/troubleshoot/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/troubleshoot/</guid>
+      <description>
+
+&lt;h2 id=&#34;hugo-errors&#34;&gt;Hugo errors&lt;/h2&gt;
+
+&lt;p&gt;If you encounter the following error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;Error: &amp;quot;...\DemoWebsite\config.toml:1:1&amp;quot;: unmarshal failed: Near line 0 (last key parsed &#39;&#39;): bare keys cannot contain &#39;.&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or any other error the first time you call a &lt;code&gt;hugo&lt;/code&gt; comment, make sure you have the &lt;strong&gt;Extended&lt;/strong&gt; version of Hugo installed. You can check by typing&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;hugo version
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The output should contain the &lt;code&gt;extended&lt;/code&gt; word somewhere (depends on the OS).&lt;/p&gt;
 </description>
     </item>
     

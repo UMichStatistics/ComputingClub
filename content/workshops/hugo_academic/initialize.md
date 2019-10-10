@@ -24,6 +24,8 @@ For more details about Hugo itself, see [Hugo Getting Started](https://gohugo.io
 In order to perform the following manipulations, you will need:
 
 - Hugo installed on your machine: see this [guide](https://gohugo.io/getting-started/installing/); ( Windows users: I highly recommend [installing Chocolatey](https://chocolatey.org/install) and installing Hugo from command line.)
+  - Make sure you install the **Extended** version. In many case the default installation default to the Extended version, but some do not. To verify which one you have, just type `hugo version` in a terminal and you should see `extended` somewhere in the output. 
+  - For Windows users, use Chocolatey and install with `choco install hugo-extended -force -confirm`.
 - git installed on your machine (see this [guide](https://www.atlassian.com/git/tutorials/install-git));
 - a [GitHub](http://github.com) account.
 - `Markdown` knowledge (see this [guide](https://sourcethemes.com/academic/docs/writing-markdown-latex/) on writing content in the context of Academic & Hugo).
@@ -140,23 +142,7 @@ For more details and additional features, see [Managing content](https://sourcet
 
 ### Courses, workshops, documentation
 
-If you wish to have space for courses, documentation or workshops, the best way to go is to use the `docs` layout defined by the Academic theme. For example, let us create a `course` folder in the `content` folder and place a `_index.md` file at its root. This file should only contains the following front matter
-```shell
-title: Courses
-layout: docs
-```
-Just like posts, publications and talks, this file will define a page listing all courses contained in the directory. The `layout: docs` parameter means that this landing page will list pages of type `docs` only.
-
-The Academic theme also implements a `--kind docs` argument to automatically create new `docs` files:
-
-```shell
-hugo new --kind docs course/FirstCourse
-```
-
-
-For more details and additional features, see [Managing content](https://sourcethemes.com/academic/docs/managing-content/).
-
-
+The methodology described in [Managing content | Create a course or documentation ](https://sourcethemes.com/academic/docs/managing-content/#create-a-course-or-documentation) is the best way to proceed.
 
 ## Configuration
 
