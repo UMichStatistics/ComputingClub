@@ -39,14 +39,12 @@ image:
 
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
-# links:
-# - name: Follow
-#   url: https://twitter.com
-#   icon_pack: fab
-#   icon: twitter
+links:
+- name: Workshop
+  url: workshops/hugo_academic
 
 # Optional filename of your slides within your talk's folder or a URL.
-url_slides:
+url_slides: slides.pdf
 
 url_code:
 url_pdf:
