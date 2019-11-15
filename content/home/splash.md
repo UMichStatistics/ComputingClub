@@ -8,7 +8,7 @@ weight = 1  # Order that this section will appear.
 title = "UM Statistics Computing Club"
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
-# hero_media = "icon-192.png"
+hero_media = "Logo_UMSCC_Web_Yellow.png"
 
 [design.background]
   # Background image.
@@ -27,9 +27,9 @@ title = "UM Statistics Computing Club"
   icon_pack = "fas"
   icon = "users"
   
-[cta_alt]
-  url = "https://forms.gle/XMtKfjhJTuaaHdLU7"
-  label = "Presentation Sign-up"
+# [cta_alt]
+#   url = "https://forms.gle/XMtKfjhJTuaaHdLU7"
+#   label = "Presentation Sign-up"
   
 +++
 
