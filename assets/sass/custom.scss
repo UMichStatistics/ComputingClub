@@ -1,0 +1,15 @@
+/*************************************************
+ *  Dark themed components
+ **************************************************/
+
+body.dark,
+.dark .docs-toc-link,
+.dark .docs-sidebar .nav > li:not(.active) > a,
+.dark .modal button.close,
+.dark input,
+.dark .form-control,
+.dark .form-control:focus {
+  color: rgb(248, 248, 242);
+  background: hsl(209, 100%, 15%);// footer color is here
+}
+
