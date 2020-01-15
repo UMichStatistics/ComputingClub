@@ -409,22 +409,20 @@
       </ul>
 
       <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#why-have-a-personal-academic-website">Why have a personal academic website</a></li>
-<li><a href="#a-quick-primer-on-static-websites">A quick primer on (static) websites</a></li>
-<li><a href="#about-hugo">About Hugo</a></li>
-<li><a href="#markdown-file-front-matters">Markdown file front matters</a></li>
-<li><a href="#the-academic-theme-for-hugo">The Academic theme for Hugo</a>
-<ul>
-<li><a href="#more-hugo-themes-https-themes-gohugo-io"><a href="https://themes.gohugo.io/" target="_blank">More Hugo themes</a></a></li>
-</ul></li>
-<li><a href="#alternatives-to-hugo">Alternatives to Hugo</a></li>
-<li><a href="#alternative-hosting">Alternative hosting</a></li>
-<li><a href="#main-takeaways">Main takeaways</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#why-have-a-personal-academic-website">Why have a personal academic website</a></li>
+    <li><a href="#a-quick-primer-on-static-websites">A quick primer on (static) websites</a></li>
+    <li><a href="#about-hugo">About Hugo</a></li>
+    <li><a href="#markdown-file-front-matters">Markdown file front matters</a></li>
+    <li><a href="#the-academic-theme-for-hugo">The Academic theme for Hugo</a>
+      <ul>
+        <li><a href="#more-hugo-themeshttpsthemesgohugoio">More Hugo themes</a></li>
+      </ul>
+    </li>
+    <li><a href="#alternatives-to-hugo">Alternatives to Hugo</a></li>
+    <li><a href="#alternative-hosting">Alternative hosting</a></li>
+    <li><a href="#main-takeaways">Main takeaways</a></li>
+  </ul>
 </nav>
 
       
@@ -439,145 +437,84 @@
           <h1>Building &amp; Hosting a Personal Academic Website Using Hugo</h1>
 
           <div class="article-style">
-            
-
-<p>In this tutorial, we will go through one way of setting up your personal academic website. We will cover</p>
-
+            <p>In this tutorial, we will go through one way of setting up your personal academic website. We will cover</p>
 <ul>
 <li>how to <strong>create a website</strong>,</li>
 <li>two ways to <strong>host your website</strong> for everyone to see!</li>
 </ul>
-
-<div class="alert alert-note">
-  <div>
-    Today&rsquo;s talk is sad in the following sense:</p>
-
-<ul>
-<li>You won&rsquo;t learn anything that will make you a better statistician or researcher</li>
-<li>It is still relevant professionally.</li>
-</ul>
-  </div>
-</div>
-
+<!-- raw HTML omitted -->
 <h2 id="why-have-a-personal-academic-website">Why have a personal academic website</h2>
-
 <p>Having a personal website serves multiple goals:</p>
-
 <ul>
 <li>Professional goals
-
 <ul>
 <li>Host a public resume</li>
 <li>List your publications, research interests, experience, etc.</li>
 <li>Allows people to find you and contact you</li>
 <li>Have an easy way to point to you</li>
 <li>&ldquo;Online presence&rdquo;</li>
-</ul></li>
+</ul>
+</li>
 <li>Exposure for your work &amp; research
-
 <ul>
 <li>Build workshops, courses and tutorials for everyone to access</li>
 <li>Present your research in alternative ways (other than articles, talks, posters, etc.)</li>
-</ul></li>
+</ul>
+</li>
 <li>Host content for courses
-
 <ul>
 <li>e.g. Canvas may have some limitations that a website might not have</li>
-<li>Make your teaching content public
-<br /></li>
-</ul></li>
+<li>Make your teaching content public</li>
 </ul>
-
-<div class="alert alert-note">
-  <div>
-    <p>Have a website before you need one:</p>
-
-<ul>
-<li>It is a tidy place to keep track of your publications, talks, accomplishments, etc.</li>
-<li>You don&rsquo;t want to spend time building a website when you&rsquo;re looking for internships/jobs/grants/contributors/etc.</li>
+</li>
 </ul>
-
-<p>It is also a humbling experience:</p>
-
-<ul>
-<li>The first time you set up your own website, you will most likely have very few things to put on it;</li>
-<li>Additional motivation and incentive to building your image and career.</li>
-</ul>
-
-  </div>
-</div>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>Other uses for simple website</p>
-
 <ul>
 <li>Research group page</li>
 <li>Student organization</li>
 <li>Documenting a software or package you developed</li>
 <li>Online book</li>
 <li>Artist portfolio</li>
-<li>Blogging
-<br /></li>
+<li>Blogging</li>
 </ul>
-
 <h2 id="a-quick-primer-on-static-websites">A quick primer on (static) websites</h2>
-
 <p>Most websites you encounter consist of <code>html</code> (HyperText Markup Language) code and embed other languages to allow more interaction (<code>javascript</code>, <code>Perl</code>, etc.). A website contains multiples pages, often arranged into different subdirectories, just like regular file management. In particular, you can see a website as a tree where the accessible leaves are the <code>.html</code> pages.</p>
-
 <p>Each page you access is a generally a <code>.html</code> file, but in general no one actually write <code>html</code> directly&mdash;developers use programming languages that generate the <code>html</code> for themselves. The style of a page&mdash;colors, font, placement, etc.&mdash;are generally contained in <code>css</code> (Cascading Style Sheets) files. One goal of this workshop is to build a website without ever writing <code>html</code> or <code>css</code>.</p>
-
 <p><code>index.html</code> has a special status within a directory. Accessing <code>site/subdir/</code> automatically loads <code>site/subdir/index.html</code>.</p>
-
 <h2 id="about-hugo">About Hugo</h2>
-
 <p>Hugo is a framework for developing websites. In particular, it generates the desired <code>html</code> pages given some developer input in <code>Markdown</code> files. The engine uses the <code>Go</code> language to interpret the <code>Markdown</code> and produce the corresponding <code>html</code> files.</p>
-
 <p>In addition to <code>Markdown</code> files, the developer also modify configuration files and <code>Markdown</code> front matters, in simple <code>toml</code> format, to determine meta-information about the website and control visual aspects. Both <code>Markdown</code> and <code>toml</code> languages have simple and intuitive syntax so the learning curve is very steep. Once the base website is set up, editing and adding content is only a matter of creating folder, creating and editing <code>Markdown</code> files and editing <code>toml</code> files.</p>
-
-<div class="alert alert-note">
-  <div>
-    <p>I will be using Hugo throughout the tutorial, but only to create the website.</p>
-
-<p>Hosting the website is completely independent of Hugo.</p>
-
-  </div>
-</div>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h2 id="markdown-file-front-matters">Markdown file front matters</h2>
-
 <p>An important concept to understand about <code>Markdown</code> files is the file layout. Each <code>.md</code> file must contain a front matter part which describe some meta information about the content of the file; the front matter is then followed by the content itself in the body of the file. In the present context, the front matters will contain, among other things,</p>
-
 <ul>
 <li>a high-level description of the page,</li>
 <li>the type of page to specify to the Hugo compiler,</li>
 <li>some details about indexing and referencing across pages.</li>
 </ul>
-
 <p>Example:</p>
-
-<pre><code class="language-yaml">---
-# Front matter
-title: &quot;MyFirstPost&quot;
-subtitle: &quot;&quot;
-summary: &quot;&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+<span style="color:#75715e"># Front matter</span>
+title: <span style="color:#e6db74">&#34;MyFirstPost&#34;</span>
+subtitle: <span style="color:#e6db74">&#34;&#34;</span>
+summary: <span style="color:#e6db74">&#34;&#34;</span>
 authors: []
 tags: []
 categories: []
-date: 2019-10-04T18:18:52-04:00
-lastmod: 2019-10-04T18:18:52-04:00
-featured: false
-draft: false
+date: <span style="color:#e6db74">2019-10-04T18:18:52</span><span style="color:#ae81ff">-04</span>:<span style="color:#ae81ff">00</span>
+lastmod: <span style="color:#e6db74">2019-10-04T18:18:52</span><span style="color:#ae81ff">-04</span>:<span style="color:#ae81ff">00</span>
+featured: <span style="color:#66d9ef">false</span>
+draft: <span style="color:#66d9ef">false</span>
 ---
 &lt;!-- Body of the file --&gt;
 The content of the post goes here
 ...
-</code></pre>
-
-<h2 id="the-academic-theme-for-hugo">The Academic theme for Hugo</h2>
-
+</code></pre></div><h2 id="the-academic-theme-for-hugo">The Academic theme for Hugo</h2>
 <p>The way to use Hugo is to start from a template (or theme) and adapt it to your personal needs. Different themes implement different type of contents and are therefore suited for different purpose.</p>
-
-<p>In this tutorial we will consider the <a href="https://themes.gohugo.io/academic/" target="_blank">Academic theme</a> which is one of the more complete theme and is particularly well-suited for an academic website (as the name suggests!) Here are some of the things Academic allows:</p>
-
+<p>In this tutorial we will consider the <a href="https://themes.gohugo.io/academic/">Academic theme</a> which is one of the more complete theme and is particularly well-suited for an academic website (as the name suggests!) Here are some of the things Academic allows:</p>
 <ul>
 <li>Blog posts</li>
 <li>Documentation</li>
@@ -588,63 +525,54 @@ The content of the post goes here
 <li>General pages</li>
 <li>Home page with widgets structure</li>
 </ul>
-
-<h3 id="more-hugo-themes-https-themes-gohugo-io"><a href="https://themes.gohugo.io/" target="_blank">More Hugo themes</a></h3>
-
+<h3 id="more-hugo-themeshttpsthemesgohugoio"><a href="https://themes.gohugo.io/">More Hugo themes</a></h3>
 <ul>
 <li>Resume-type themes
-
 <ul>
-<li><a href="https://themes.gohugo.io/hugo-resume/" target="_blank">Resume theme</a> is another slick theme I found.</li>
-</ul></li>
+<li><a href="https://themes.gohugo.io/hugo-resume/">Resume theme</a> is another slick theme I found.</li>
+</ul>
+</li>
 <li>Documentation-type themes (many equivalent options)</li>
 <li>Portofolio-type themes (many equivalent options)</li>
 <li>Blog-type themes (many equivalent options)</li>
 </ul>
-
 <h2 id="alternatives-to-hugo">Alternatives to Hugo</h2>
-
 <ul>
 <li>HTML from scratch
-
 <ul>
 <li>Highly not recommended</li>
-</ul></li>
-<li><a href="https://jekyllrb.com/" target="_blank">Jekyll</a>
-
+</ul>
+</li>
+<li><a href="https://jekyllrb.com/">Jekyll</a>
 <ul>
 <li>Very similar to Hugo (all content is <code>Markdown</code>, similar <code>shell</code> commands)</li>
 <li>Slightly more complicated, but has slightly more features</li>
-<li>I have not found a theme that matches the capabilities of Academic for Hugo (see e.g. <a href="https://ncsu-libraries.github.io/jekyll-academic-docs/" target="_blank">Jekyll Academic</a> and its <a href="http://ncsu-libraries.github.io/jekyll-academic/" target="_blank">demo site</a>)</li>
+<li>I have not found a theme that matches the capabilities of Academic for Hugo (see e.g. <a href="https://ncsu-libraries.github.io/jekyll-academic-docs/">Jekyll Academic</a> and its <a href="http://ncsu-libraries.github.io/jekyll-academic/">demo site</a>)</li>
 <li>GitHub Pages built-in themes (using Jekyll) can be up in a few clicks</li>
-</ul></li>
+</ul>
+</li>
 <li>WYSIWYG editor
-
 <ul>
-<li><a href="https://wordpress.com/" target="_blank">WordPress</a></li>
-<li><a href="https://sites.google.com/site/sites/" target="_blank">Google Sites</a></li>
-<li><a href="https://www.wix.com/" target="_blank">WiX</a></li>
+<li><a href="https://wordpress.com/">WordPress</a></li>
+<li><a href="https://sites.google.com/site/sites/">Google Sites</a></li>
+<li><a href="https://www.wix.com/">WiX</a></li>
 <li>and many others</li>
-</ul></li>
+</ul>
+</li>
 <li>More advanced alternatives
-
 <ul>
-<li><a href="https://grav.com/" target="_blank">Grav</a></li>
-<li><a href="https://www.drupal.org/" target="_blank">Drupal</a>
-<br /></li>
-</ul></li>
+<li><a href="https://grav.com/">Grav</a></li>
+<li><a href="https://www.drupal.org/">Drupal</a></li>
 </ul>
-
+</li>
+</ul>
 <h2 id="alternative-hosting">Alternative hosting</h2>
-
 <ul>
-<li><a href="https://www.netlify.com/" target="_blank">Netlify</a></li>
-<li><a href="https://wordpress.com/" target="_blank">WordPress</a> and <a href="https://www.wix.com/" target="_blank">WiX</a> offers free hosting options</li>
-<li>Any other web host ($, e.g. <a href="https://aws.amazon.com/websites/" target="_blank">AWS</a>)</li>
+<li><a href="https://www.netlify.com/">Netlify</a></li>
+<li><a href="https://wordpress.com/">WordPress</a> and <a href="https://www.wix.com/">WiX</a> offers free hosting options</li>
+<li>Any other web host ($, e.g. <a href="https://aws.amazon.com/websites/">AWS</a>)</li>
 </ul>
-
 <h2 id="main-takeaways">Main takeaways</h2>
-
 <ul>
 <li>Creating your own website is easy and you should definitely do it soon.</li>
 <li>People have made it easy for you to display your work; make use of all the tools available!</li>
@@ -715,7 +643,7 @@ The content of the post goes here
   
 
   <p class="powered-by">
-    &copy; 2019 UM Statistics PhD Student Council Computing Committee &middot; 
+    © 2020 UM Statistics PhD Student Council Computing Committee &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for

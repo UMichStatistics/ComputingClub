@@ -5,7 +5,7 @@
     <link>https://UMichStatistics.github.io/ComputingClub/authors/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Wed, 20 Nov 2019 14:30:00 -0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Wed, 20 Nov 2019 14:30:00 -0200</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Authors</title>
@@ -17,9 +17,7 @@
       <link>https://UMichStatistics.github.io/ComputingClub/authors/rob/</link>
       <pubDate>Wed, 20 Nov 2019 14:30:00 -0200</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/authors/rob/</guid>
-      <description>
-
-&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
 </description>
     </item>
     
@@ -28,12 +26,8 @@
       <link>https://UMichStatistics.github.io/ComputingClub/authors/admin/</link>
       <pubDate>Thu, 14 Nov 2019 13:00:00 -0500</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/authors/admin/</guid>
-      <description>
-
-&lt;h1 id=&#34;about-us&#34;&gt;About us&lt;/h1&gt;
-
+      <description>&lt;h1 id=&#34;about-us&#34;&gt;About us&lt;/h1&gt;
 &lt;p&gt;This page is for the Computing Club overseen by the UM Stats PhD Computing Committee. Information about meeting times and presented topics will be posted here.&lt;/p&gt;
-
 &lt;p&gt;The only guiding principle is that the topic should have some potential application to a Statistics research workload, which leaves a broad range of topics.&lt;/p&gt;
 </description>
     </item>
@@ -43,9 +37,7 @@
       <link>https://UMichStatistics.github.io/ComputingClub/authors/ziping/</link>
       <pubDate>Wed, 06 Nov 2019 14:30:00 -0200</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/authors/ziping/</guid>
-      <description>
-
-&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
 </description>
     </item>
     
@@ -54,13 +46,9 @@
       <link>https://UMichStatistics.github.io/ComputingClub/authors/jregier/</link>
       <pubDate>Wed, 23 Oct 2019 14:30:00 -0200</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/authors/jregier/</guid>
-      <description>
-
-&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
-
+      <description>&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
 &lt;p&gt;I’m an applied statistician working on problems in astronomy and genomics. Graphical models, variational inference, and deep learning are some of the statistical tools I use.&lt;/p&gt;
-
-&lt;p&gt;Previously, I was a statistics PhD student at UC Berkeley and a postdoc in Michael Jordan’s research group. For more about me, please see my &lt;a href=&#34;https://regier.stat.lsa.umich.edu/publications&#34; target=&#34;_blank&#34;&gt;publications&lt;/a&gt; and my &lt;a href=&#34;https://regier.stat.lsa.umich.edu/assets/pdf/jcr-cv.pdf&#34; target=&#34;_blank&#34;&gt;CV&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Previously, I was a statistics PhD student at UC Berkeley and a postdoc in Michael Jordan’s research group. For more about me, please see my &lt;a href=&#34;https://regier.stat.lsa.umich.edu/publications&#34;&gt;publications&lt;/a&gt; and my &lt;a href=&#34;https://regier.stat.lsa.umich.edu/assets/pdf/jcr-cv.pdf&#34;&gt;CV&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -69,10 +57,7 @@
       <link>https://UMichStatistics.github.io/ComputingClub/authors/simon/</link>
       <pubDate>Wed, 09 Oct 2019 14:30:00 -0200</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/authors/simon/</guid>
-      <description>
-
-&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
-
+      <description>&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
 &lt;p&gt;I currently am a first year Ph.D. Student at the University of Michigan. My research interest are broadly contained in computational statistics. In particular, penalized regression and variable selection problems as well as approximate Bayesian inference and MCMC methods are all of interest to me. Previously, I worked as a Data Science intern at the Ubisoft Montreal User Research Lab on online skill rating using approximate Bayesian inference. I did a Master’s at the University of Montreal and my thesis focused on an adaptive Multiple-Try Metropolis algorithm aimed at sampling from complex distributions.&lt;/p&gt;
 </description>
     </item>
@@ -82,9 +67,7 @@
       <link>https://UMichStatistics.github.io/ComputingClub/authors/dan/</link>
       <pubDate>Wed, 02 Oct 2019 14:30:00 -0200</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/authors/dan/</guid>
-      <description>
-
-&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
 </description>
     </item>
     
@@ -93,9 +76,16 @@
       <link>https://UMichStatistics.github.io/ComputingClub/authors/derek/</link>
       <pubDate>Wed, 18 Sep 2019 14:30:00 -0500</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/authors/derek/</guid>
-      <description>
-
-&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Michael Law</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/authors/michael/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/authors/michael/</guid>
+      <description>&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
 </description>
     </item>
     
@@ -104,11 +94,8 @@
       <link>https://UMichStatistics.github.io/ComputingClub/authors/blank/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/authors/blank/</guid>
-      <description>
-
-&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
-
-&lt;!-- Write a short bio here if you want. --&gt;
+      <description>&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
 </description>
     </item>
     
