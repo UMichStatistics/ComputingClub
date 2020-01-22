@@ -402,14 +402,17 @@
       </ul>
 
       <nav id="TableOfContents">
-  <ul>
-    <li><a href="#overview-of-the-academic-theme-layouts">Overview of the Academic theme layouts</a></li>
-    <li><a href="#create-your-author-profile">Create your author profile</a></li>
-    <li><a href="#create-a-meeting">Create a meeting</a></li>
-    <li><a href="#create-a-workshop">Create a workshop</a></li>
-    <li><a href="#add-resources">Add resources</a></li>
-    <li><a href="#create-a-post">Create a post</a></li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#overview-of-the-academic-theme-layouts">Overview of the Academic theme layouts</a></li>
+<li><a href="#create-your-author-profile">Create your author profile</a></li>
+<li><a href="#create-a-meeting">Create a meeting</a></li>
+<li><a href="#create-a-workshop">Create a workshop</a></li>
+<li><a href="#add-resources">Add resources</a></li>
+<li><a href="#create-a-post">Create a post</a></li>
+</ul></li>
+</ul>
 </nav>
 
       
@@ -424,31 +427,42 @@
           <h1>Creating content</h1>
 
           <div class="article-style">
-            <h2 id="overview-of-the-academic-theme-layouts">Overview of the Academic theme layouts</h2>
+            
+
+<h2 id="overview-of-the-academic-theme-layouts">Overview of the Academic theme layouts</h2>
+
 <p>The content of this website rely on two different <code>type</code> defined by the Academic theme. Each <code>.Md</code> must specify, in its header, what <code>type</code> it is based on in order for Hugo to produce the correct <code>html</code> page.</p>
+
 <ul>
 <li><strong>page</strong> (for meetings and post)
+
 <ul>
 <li>Single page output;</li>
 <li>The page contains a header block describing the post/meeting and that information is taken from the <code>Markdown</code> header;</li>
 <li>Followed by a body for regular <code>Markdown</code> for the post or if you want to add more details to a meeting.</li>
-</ul>
-</li>
+</ul></li>
 <li><strong>docs</strong> (for workshops and resources)
+
 <ul>
 <li>Each <code>docs</code> file is associated with a single <code>html</code> page, but multiple <code>docs</code> can be associted together within a folder to form different pages of a single workshop;</li>
 <li>Consists of a simple <code>Markdown</code> body;</li>
 <li>A within-workshop table of content is added to the left;</li>
 <li>A within-pasge table of content on the right.</li>
+</ul></li>
 </ul>
-</li>
-</ul>
+
 <h2 id="create-your-author-profile">Create your author profile</h2>
-<p>First things first, you need to create an <code>authors</code> profile in order to associate multiple content to the same author. Unfortunately, Hugo does not provide a command to create a new author from command line, so the fastest way to go is to copy the <code>blank</code> author folder and give it a name representing your's (say <code>username</code> from now on). Then, edit the <code>_index.md</code> contained in the new <code>username</code> folder and edit its content. It should be documented well enough for you to complete.</p>
+
+<p>First things first, you need to create an <code>authors</code> profile in order to associate multiple content to the same author. Unfortunately, Hugo does not provide a command to create a new author from command line, so the fastest way to go is to copy the <code>blank</code> author folder and give it a name representing your&rsquo;s (say <code>username</code> from now on). Then, edit the <code>_index.md</code> contained in the new <code>username</code> folder and edit its content. It should be documented well enough for you to complete.</p>
+
 <p>If you want to add a picture of yourself, place it in the <code>username</code> folder with the name <code>avatar.jpg/.png</code>.</p>
+
 <h2 id="create-a-meeting">Create a meeting</h2>
+
 <h2 id="create-a-workshop">Create a workshop</h2>
+
 <h2 id="add-resources">Add resources</h2>
+
 <h2 id="create-a-post">Create a post</h2>
 
           </div>
@@ -521,7 +535,7 @@
   
 
   <p class="powered-by">
-    © 2020 UM Statistics PhD Student Council Computing Committee &middot; 
+    &copy; 2020 UM Statistics PhD Student Council Computing Committee &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for

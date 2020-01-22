@@ -11,5 +11,5 @@ subtitle = ""
 # List user groups to display.
 #   Edit each user's `user_groups` to add them to one or more of these groups.
 [content]
-user_groups = ["Computing committee"]
+user_groups = ["Computing club"]
 +++
