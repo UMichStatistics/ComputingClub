@@ -47,8 +47,4 @@ weight: 1
 
 - [`todonotes` package](https://www.ctan.org/pkg/todonotes) to add todo notes and comments to LaTeX files and pdf output.
 
-- Use `\left( ... \right)` for scalable delimiters in math mode;
-
-- Use `\Cref{...}` to get references with formatted names automatically such as "Figure 1" instead of just "1" and writing "Figure" yourself.
-
 - Une `include` or `input` to insert the content of another `.tex` file where you want it: e.g., you can maintain a math macro file that you use often. Also, read [When should I use \input vs. \include?](https://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include)
