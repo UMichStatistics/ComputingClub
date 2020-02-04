@@ -38,7 +38,7 @@ weight: 1
     
 ## Referencing equations/figures
 
-- The ```\cref``` command will automatically determine what is being referenced based on the type of the object that was labelled. For example, ```\ref{mylabel}``` will display as "Equation (1)" if ```\label{mylabel}``` is next an equation and "Figure (1)" if ```\label{mylabel}``` is close to a figure.
+- The ```\Cref``` command will automatically determine what is being referenced based on the type of the object that was labelled. For example, ```\ref{mylabel}``` will display as "Equation (1)" if ```\label{mylabel}``` is next an equation and "Figure (1)" if ```\label{mylabel}``` is close to a figure.
 - ```\autoref``` does something similar, but depends on a specific convention within the label. For example, you need to prepend an "eq::" so  ```\autoref{eq:mylabel}``` will show up as "Equation (1)".
 
 ## Some tips and tricks
