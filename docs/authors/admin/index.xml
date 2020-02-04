@@ -5,12 +5,20 @@
     <link>https://UMichStatistics.github.io/ComputingClub/authors/admin/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     <description>Statistics Computing Club</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Thu, 14 Nov 2019 13:00:00 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Tue, 04 Feb 2020 13:00:00 -0500</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Statistics Computing Club</title>
       <link>https://UMichStatistics.github.io/ComputingClub/authors/admin/</link>
     </image>
+    
+    <item>
+      <title>LaTeX discussion</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/latex/</link>
+      <pubDate>Tue, 04 Feb 2020 13:00:00 -0500</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/latex/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Navigating the Transition from Flux to Great Lakes: New tools and policy town hall</title>

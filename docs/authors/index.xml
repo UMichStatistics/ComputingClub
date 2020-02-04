@@ -5,12 +5,27 @@
     <link>https://UMichStatistics.github.io/ComputingClub/authors/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Wed, 20 Nov 2019 14:30:00 -0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Tue, 04 Feb 2020 13:00:00 -0500</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Authors</title>
       <link>https://UMichStatistics.github.io/ComputingClub/authors/</link>
     </image>
+    
+    <item>
+      <title>Statistics Computing Club</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/authors/admin/</link>
+      <pubDate>Tue, 04 Feb 2020 13:00:00 -0500</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/authors/admin/</guid>
+      <description>
+
+&lt;h1 id=&#34;about-us&#34;&gt;About us&lt;/h1&gt;
+
+&lt;p&gt;This page is for the Computing Club overseen by the UM Stats PhD Computing Committee. Information about meeting times and presented topics will be posted here.&lt;/p&gt;
+
+&lt;p&gt;The only guiding principle is that the topic should have some potential application to a Statistics research workload, which leaves a broad range of topics.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Rob Trangucci</title>
@@ -20,21 +35,6 @@
       <description>
 
 &lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Statistics Computing Club</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/authors/admin/</link>
-      <pubDate>Thu, 14 Nov 2019 13:00:00 -0500</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/authors/admin/</guid>
-      <description>
-
-&lt;h1 id=&#34;about-us&#34;&gt;About us&lt;/h1&gt;
-
-&lt;p&gt;This page is for the Computing Club overseen by the UM Stats PhD Computing Committee. Information about meeting times and presented topics will be posted here.&lt;/p&gt;
-
-&lt;p&gt;The only guiding principle is that the topic should have some potential application to a Statistics research workload, which leaves a broad range of topics.&lt;/p&gt;
 </description>
     </item>
     
