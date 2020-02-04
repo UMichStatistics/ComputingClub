@@ -5,12 +5,6 @@ title: "Informational meeting & Functional Programming in R with purrr"
 event: "Computing club meeting"
 event_url:
 location: "West Hall 470"
-address:
-  street: 
-  city:
-  region:
-  postcode:
-  country:
 summary: ""
 abstract: "Presentation of the Computing club and discussion of its purpose and means. Presentation of the R package `purrr` for functional programming."
 

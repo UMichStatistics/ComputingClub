@@ -5,12 +5,6 @@ title: "Accelerating Python using Cython"
 event: "Computing club meeting"
 event_url:
 location: "West Hall 411"
-address:
-  street:
-  city:
-  region:
-  postcode:
-  country:
 summary: ""
 abstract: "''Cython is an optimising static compiler for both the Python programming language and the extended Cython programming language (based on Pyrex). It makes writing C extensions for Python as easy as Python itself.''---[Cython website](https://cython.org/)"
 

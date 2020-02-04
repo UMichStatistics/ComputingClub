@@ -5,12 +5,6 @@ title: "LaTeX discussion"
 event: "Computing club meeting"
 event_url:
 location: "West Hall 411"
-address:
-  street:
-  city:
-  region:
-  postcode:
-  country:
 summary: ""
 abstract: "The topic of the first meeting will be a collaborative discussion about LaTeX, so we encourage you to come and share any interesting tips and tricks you’ve picked up. On the other side, if you are unsure of the “best way” to do something in LaTeX, we encourage you to bring it up for discussion."
 

@@ -5,12 +5,6 @@ title: "Building & Hosting a Simple Academic Website"
 event: "Computing club meeting"
 event_url:
 location: "West Hall 411"
-address:
-  street:
-  city:
-  region:
-  postcode:
-  country:
 summary: ""
 abstract: "In a workshop-type presentation, you will learn how to build a simple academic personal website based on the Academic theme by the Hugo engine as well as hosting it on GitHub Pages or UMich personal space."
 

@@ -5,12 +5,6 @@ title: "The Julia language"
 event: "Computing club meeting"
 event_url:
 location: "East Quadrangle 1405"
-address:
-  street:
-  city:
-  region:
-  postcode:
-  country:
 summary: ""
 abstract: "''Julia in a Nutshell---**Julia is fast!**
 

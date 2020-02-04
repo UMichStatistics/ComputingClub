@@ -5,12 +5,6 @@ title: "Git: a deeper perspective"
 event: "Computing club meeting"
 event_url:
 location: "East Quadrangle 1405"
-address:
-  street:
-  city:
-  region:
-  postcode:
-  country:
 summary: ""
 abstract: "While there are many online tutorials on how to use git, few attemp to teach what really happens behind the common commands. Understanding the differences and interactions between commited, staged and working file status as well as between local and remote repositories is essential to any git user in order to engage in adequate and pleasant version control."
 

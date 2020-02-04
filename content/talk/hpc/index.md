@@ -5,12 +5,6 @@ title: "Navigating the Transition from Flux to Great Lakes: New tools and policy
 event: "Student Seminar in Data Science"
 event_url:
 location: "West Hall 411"
-address:
-  street:
-  city:
-  region:
-  postcode:
-  country:
 summary: ""
 abstract: "Effective computing is a key component of many statistics workflows. The statistics department offers its graduate students access to a UMich HPC (high performance computing) resource. However, that resource will be changing as Flux retires at the end of November and we
 transition to Great Lakes. One important change is that rather than having access to a fixed
