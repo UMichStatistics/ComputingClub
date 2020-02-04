@@ -27,6 +27,20 @@ weight: 1
 
 - [bibtex vs biblatex vs biber vs natbib](https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib) to understand the differences.
 
+## Editing equations
+
+- Use the ```\left``` and ```\right``` commands near brackets and parens to automatically size them (i.e. outer brackets will be made larger than inner brackets).
+- The align environment will add a tag to each line as a separate equation. Using ```split``` within an ```equation``` or ```align``` will assign one label to all lines.
+- You can use the ```\tag``` command to edit the number next to an equation 
+    -  ```\tag{Hi Rob}``` will change an equation label from "(1)" to "(Hi Rob)"
+    -  This can be a useful, if somewhat hacky, way to add commentary to multiline equations
+- The ```\label``` command assigns an internal keyword which is used in referencing via ```\ref``` or ```\cref```, whereas ```\tag``` will change the actual label that appears in the output. 
+    
+## Referencing equations/figures
+
+- The ```\cref``` command will automatically determine what is being referenced based on the type of the object that was labelled. For example, ```\ref{mylabel}``` will display as "Equation (1)" if ```\label{mylabel}``` is next an equation and "Figure (1)" if ```\label{mylabel}``` is close to a figure.
+- ```\autoref``` does something similar, but depends on a specific convention within the label. For example, you need to prepend an "eq::" so  ```\autoref{eq:mylabel}``` will show up as "Equation (1)".
+
 ## Other
 
 - [Detexify](http://detexify.kirelabs.org/classify.html) to find the correct math symbol by drawing it.
