@@ -186,7 +186,7 @@ cd DemoWebsite
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/latex/</guid>
       <description>&lt;h2 id=&#34;editors&#34;&gt;Editors&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.lyx.org/&#34;&gt;LyX&lt;/a&gt;, a WYSIWYG LaTeX editor.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.lyx.org/&#34;&gt;LyX&lt;/a&gt;, a WYSIWYG LaTeX editor useful for quick math writing.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;citation-management&#34;&gt;Citation management&lt;/h2&gt;
 &lt;ul&gt;
@@ -200,6 +200,7 @@ cd DemoWebsite
 &lt;p&gt;&lt;a href=&#34;https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib&#34;&gt;bibtex vs biblatex vs biber vs natbib&lt;/a&gt; to understand the differences.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&amp;laquo;&amp;laquo;&amp;laquo;&amp;lt;&lt;/p&gt;
 &lt;h2 id=&#34;editing-equations&#34;&gt;Editing equations&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Use the &lt;code&gt;\left&lt;/code&gt; and &lt;code&gt;\right&lt;/code&gt; commands near brackets and parens to automatically size them (i.e. outer brackets will be made larger than inner brackets).&lt;/li&gt;
@@ -217,13 +218,22 @@ cd DemoWebsite
 &lt;li&gt;The &lt;code&gt;\cref&lt;/code&gt; command will automatically determine what is being referenced based on the type of the object that was labelled. For example, &lt;code&gt;\ref{mylabel}&lt;/code&gt; will display as &amp;ldquo;Equation (1)&amp;rdquo; if &lt;code&gt;\label{mylabel}&lt;/code&gt; is next an equation and &amp;ldquo;Figure (1)&amp;rdquo; if &lt;code&gt;\label{mylabel}&lt;/code&gt; is close to a figure.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;\autoref&lt;/code&gt; does something similar, but depends on a specific convention within the label. For example, you need to prepend an &amp;ldquo;eq::&amp;rdquo; so  &lt;code&gt;\autoref{eq:mylabel}&lt;/code&gt; will show up as &amp;ldquo;Equation (1)&amp;quot;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;other&#34;&gt;Other&lt;/h2&gt;
+&lt;h2 id=&#34;some-tips-and-tricks&#34;&gt;Some tips and tricks&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;http://detexify.kirelabs.org/classify.html&#34;&gt;Detexify&lt;/a&gt; to find the correct math symbol by drawing it.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.ctan.org/pkg/todonotes&#34;&gt;&lt;code&gt;todonotes&lt;/code&gt; package&lt;/a&gt; to add todo notes and comments to LaTeX files and pdf output.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use &lt;code&gt;\left( ... \right)&lt;/code&gt; for scalable delimiters in math mode;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use &lt;code&gt;\Cref{...}&lt;/code&gt; to get references with formatted names automatically such as &amp;ldquo;Figure 1&amp;rdquo; instead of just &amp;ldquo;1&amp;rdquo; and writing &amp;ldquo;Figure&amp;rdquo; yourself.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Une &lt;code&gt;include&lt;/code&gt; or &lt;code&gt;input&lt;/code&gt; to insert the content of another &lt;code&gt;.tex&lt;/code&gt; file where you want it: e.g., you can maintain a math macro file that you use often. Also, read &lt;a href=&#34;https://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include&#34;&gt;When should I use \input vs. \include?&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>

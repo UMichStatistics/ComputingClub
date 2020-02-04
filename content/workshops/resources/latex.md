@@ -17,7 +17,7 @@ weight: 1
 
 ## Editors
 
-- [LyX](https://www.lyx.org/), a WYSIWYG LaTeX editor.
+- [LyX](https://www.lyx.org/), a WYSIWYG LaTeX editor useful for quick math writing.
 
 ## Citation management
 
@@ -41,8 +41,14 @@ weight: 1
 - The ```\cref``` command will automatically determine what is being referenced based on the type of the object that was labelled. For example, ```\ref{mylabel}``` will display as "Equation (1)" if ```\label{mylabel}``` is next an equation and "Figure (1)" if ```\label{mylabel}``` is close to a figure.
 - ```\autoref``` does something similar, but depends on a specific convention within the label. For example, you need to prepend an "eq::" so  ```\autoref{eq:mylabel}``` will show up as "Equation (1)".
 
-## Other
+## Some tips and tricks
 
 - [Detexify](http://detexify.kirelabs.org/classify.html) to find the correct math symbol by drawing it.
 
 - [`todonotes` package](https://www.ctan.org/pkg/todonotes) to add todo notes and comments to LaTeX files and pdf output.
+
+- Use `\left( ... \right)` for scalable delimiters in math mode;
+
+- Use `\Cref{...}` to get references with formatted names automatically such as "Figure 1" instead of just "1" and writing "Figure" yourself.
+
+- Une `include` or `input` to insert the content of another `.tex` file where you want it: e.g., you can maintain a math macro file that you use often. Also, read [When should I use \input vs. \include?](https://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include)
