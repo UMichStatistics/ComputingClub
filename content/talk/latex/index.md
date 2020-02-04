@@ -6,7 +6,9 @@ event: "Computing club meeting"
 event_url:
 location: "West Hall 411"
 summary: ""
-abstract: "The topic of the first meeting will be a collaborative discussion about LaTeX, so we encourage you to come and share any interesting tips and tricks you’ve picked up. On the other side, if you are unsure of the “best way” to do something in LaTeX, we encourage you to bring it up for discussion."
+abstract: "The topic of the first meeting will be a collaborative discussion about LaTeX, so we encourage you to come and share any interesting tips and tricks you’ve picked up. On the other side, if you are unsure of the “best way” to do something in LaTeX, we encourage you to bring it up for discussion.
+
+Links, resources and topics will be listed in [Resources/LaTeX](../../workshops/resources/latex)"
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
@@ -60,3 +62,6 @@ slides: ""
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
+
+

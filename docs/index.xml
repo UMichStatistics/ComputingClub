@@ -17,42 +17,31 @@
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/createcontent/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/createcontent/</guid>
-      <description>
-
-&lt;h2 id=&#34;overview-of-the-academic-theme-layouts&#34;&gt;Overview of the Academic theme layouts&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;overview-of-the-academic-theme-layouts&#34;&gt;Overview of the Academic theme layouts&lt;/h2&gt;
 &lt;p&gt;The content of this website rely on two different &lt;code&gt;type&lt;/code&gt; defined by the Academic theme. Each &lt;code&gt;.Md&lt;/code&gt; must specify, in its header, what &lt;code&gt;type&lt;/code&gt; it is based on in order for Hugo to produce the correct &lt;code&gt;html&lt;/code&gt; page.&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;page&lt;/strong&gt; (for meetings and post)
-
 &lt;ul&gt;
 &lt;li&gt;Single page output;&lt;/li&gt;
 &lt;li&gt;The page contains a header block describing the post/meeting and that information is taken from the &lt;code&gt;Markdown&lt;/code&gt; header;&lt;/li&gt;
 &lt;li&gt;Followed by a body for regular &lt;code&gt;Markdown&lt;/code&gt; for the post or if you want to add more details to a meeting.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;docs&lt;/strong&gt; (for workshops and resources)
-
 &lt;ul&gt;
 &lt;li&gt;Each &lt;code&gt;docs&lt;/code&gt; file is associated with a single &lt;code&gt;html&lt;/code&gt; page, but multiple &lt;code&gt;docs&lt;/code&gt; can be associted together within a folder to form different pages of a single workshop;&lt;/li&gt;
 &lt;li&gt;Consists of a simple &lt;code&gt;Markdown&lt;/code&gt; body;&lt;/li&gt;
 &lt;li&gt;A within-workshop table of content is added to the left;&lt;/li&gt;
 &lt;li&gt;A within-pasge table of content on the right.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;create-your-author-profile&#34;&gt;Create your author profile&lt;/h2&gt;
-
-&lt;p&gt;First things first, you need to create an &lt;code&gt;authors&lt;/code&gt; profile in order to associate multiple content to the same author. Unfortunately, Hugo does not provide a command to create a new author from command line, so the fastest way to go is to copy the &lt;code&gt;blank&lt;/code&gt; author folder and give it a name representing your&amp;rsquo;s (say &lt;code&gt;username&lt;/code&gt; from now on). Then, edit the &lt;code&gt;_index.md&lt;/code&gt; contained in the new &lt;code&gt;username&lt;/code&gt; folder and edit its content. It should be documented well enough for you to complete.&lt;/p&gt;
-
+&lt;p&gt;First things first, you need to create an &lt;code&gt;authors&lt;/code&gt; profile in order to associate multiple content to the same author. Unfortunately, Hugo does not provide a command to create a new author from command line, so the fastest way to go is to copy the &lt;code&gt;blank&lt;/code&gt; author folder and give it a name representing your&#39;s (say &lt;code&gt;username&lt;/code&gt; from now on). Then, edit the &lt;code&gt;_index.md&lt;/code&gt; contained in the new &lt;code&gt;username&lt;/code&gt; folder and edit its content. It should be documented well enough for you to complete.&lt;/p&gt;
 &lt;p&gt;If you want to add a picture of yourself, place it in the &lt;code&gt;username&lt;/code&gt; folder with the name &lt;code&gt;avatar.jpg/.png&lt;/code&gt;.&lt;/p&gt;
-
 &lt;h2 id=&#34;create-a-meeting&#34;&gt;Create a meeting&lt;/h2&gt;
-
 &lt;h2 id=&#34;create-a-workshop&#34;&gt;Create a workshop&lt;/h2&gt;
-
 &lt;h2 id=&#34;add-resources&#34;&gt;Add resources&lt;/h2&gt;
-
 &lt;h2 id=&#34;create-a-post&#34;&gt;Create a post&lt;/h2&gt;
 </description>
     </item>
@@ -62,12 +51,9 @@
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/hpc/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/hpc/</guid>
-      <description>
-
-&lt;h2 id=&#34;language-packages&#34;&gt;Language, packages&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/um-dang/conda_on_the_cluster&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Conda integration in GreatLakes&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;by &lt;a href=&#34;https://um-dang.github.io/&#34; target=&#34;_blank&#34;&gt;UMich Data Analysis Networking Group&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+      <description>&lt;h2 id=&#34;language-packages&#34;&gt;Language, packages&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/um-dang/conda_on_the_cluster&#34;&gt;&lt;strong&gt;Conda integration in GreatLakes&lt;/strong&gt;&lt;/a&gt;
+&lt;em&gt;by &lt;a href=&#34;https://um-dang.github.io/&#34;&gt;UMich Data Analysis Networking Group&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -76,104 +62,62 @@
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/initialize/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/initialize/</guid>
-      <description>
-
-&lt;p&gt;This part of the workshop is about creating your website using the Hugo engine and the Academic theme. Most of the following is a summary or reinterpretation of the &lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;Academic theme documentation&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;For more details about Hugo itself, see &lt;a href=&#34;https://gohugo.io/getting-started&#34; target=&#34;_blank&#34;&gt;Hugo Getting Started&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;This part of the workshop is about creating your website using the Hugo engine and the Academic theme. Most of the following is a summary or reinterpretation of the &lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34;&gt;Academic theme documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For more details about Hugo itself, see &lt;a href=&#34;https://gohugo.io/getting-started&#34;&gt;Hugo Getting Started&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;prerequsites&#34;&gt;Prerequsites&lt;/h2&gt;
-
 &lt;p&gt;In order to perform the following manipulations, you will need:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Hugo installed on your machine: see this &lt;a href=&#34;https://gohugo.io/getting-started/installing/&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt;; ( Windows users: I highly recommend &lt;a href=&#34;https://chocolatey.org/install&#34; target=&#34;_blank&#34;&gt;installing Chocolatey&lt;/a&gt; and installing Hugo from command line.)
-
+&lt;li&gt;Hugo installed on your machine: see this &lt;a href=&#34;https://gohugo.io/getting-started/installing/&#34;&gt;guide&lt;/a&gt;; ( Windows users: I highly recommend &lt;a href=&#34;https://chocolatey.org/install&#34;&gt;installing Chocolatey&lt;/a&gt; and installing Hugo from command line.)
 &lt;ul&gt;
 &lt;li&gt;Make sure you install the &lt;strong&gt;Extended&lt;/strong&gt; version. In many case the default installation default to the Extended version, but some do not. To verify which one you have, just type &lt;code&gt;hugo version&lt;/code&gt; in a terminal and you should see &lt;code&gt;extended&lt;/code&gt; somewhere in the output.&lt;/li&gt;
 &lt;li&gt;For Windows users, use Chocolatey and install with &lt;code&gt;choco install hugo-extended -force -confirm&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;git installed on your machine (see this &lt;a href=&#34;https://www.atlassian.com/git/tutorials/install-git&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt;);&lt;/li&gt;
-&lt;li&gt;a &lt;a href=&#34;http://github.com&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt; account.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Markdown&lt;/code&gt; knowledge (see this &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt; on writing content in the context of Academic &amp;amp; Hugo).&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;li&gt;git installed on your machine (see this &lt;a href=&#34;https://www.atlassian.com/git/tutorials/install-git&#34;&gt;guide&lt;/a&gt;);&lt;/li&gt;
+&lt;li&gt;a &lt;a href=&#34;http://github.com&#34;&gt;GitHub&lt;/a&gt; account.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Markdown&lt;/code&gt; knowledge (see this &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;guide&lt;/a&gt; on writing content in the context of Academic &amp;amp; Hugo).&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;initialize-and-first-deploy&#34;&gt;Initialize and first deploy&lt;/h2&gt;
-
-&lt;p&gt;(Based on &lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-git&#34; target=&#34;_blank&#34;&gt;Academic theme documentation: Install with Git&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;The Academic theme is hosted in a &lt;a href=&#34;https://github.com/gcushen/hugo-academic&#34; target=&#34;_blank&#34;&gt;GitHub repository&lt;/a&gt;, but we don&amp;rsquo;t want to build the website from scratch.&lt;/p&gt;
-
-&lt;p&gt;In order to initialize the website with some things already done for us, we&amp;rsquo;ll use the &lt;a href=&#34;https://github.com/sourcethemes/academic-kickstart#fork-destination-box&#34; target=&#34;_blank&#34;&gt;Academic kickstart website&lt;/a&gt;. You need to &lt;strong&gt;fork the  repository&lt;/strong&gt; into a repository in your own account. Then, the Academic theme is only linked to the kickstart site we are cloning and we need to keep the dependencies alive.&lt;/p&gt;
-
+&lt;p&gt;(Based on &lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-git&#34;&gt;Academic theme documentation: Install with Git&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;The Academic theme is hosted in a &lt;a href=&#34;https://github.com/gcushen/hugo-academic&#34;&gt;GitHub repository&lt;/a&gt;, but we don&#39;t want to build the website from scratch.&lt;/p&gt;
+&lt;p&gt;In order to initialize the website with some things already done for us, we&#39;ll use the &lt;a href=&#34;https://github.com/sourcethemes/academic-kickstart#fork-destination-box&#34;&gt;Academic kickstart website&lt;/a&gt;. You need to &lt;strong&gt;fork the  repository&lt;/strong&gt; into a repository in your own account. Then, the Academic theme is only linked to the kickstart site we are cloning and we need to keep the dependencies alive.&lt;/p&gt;
 &lt;p&gt;Now that your GitHub account contains the Academic kickstart clone, clone that repository on your local machine:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git clone https://github.com/&amp;lt;your-github-account&amp;gt;/academic-kickstart.git DemoWebsite
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git clone https://github.com/&amp;lt;your-github-account&amp;gt;/academic-kickstart.git DemoWebsite
 cd DemoWebsite
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As mentioned, your GitHub repository only contains the link to the Academic theme, so you need to clone recursively:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git submodule update --init --recursive
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now, your &lt;code&gt;DemoWebsite&lt;/code&gt; folder contains all the neccessary to deploy the Academic kickstart website locally. First, we produce the &lt;code&gt;html&lt;/code&gt; files from the &lt;code&gt;Markdown&lt;/code&gt; source: in the &lt;code&gt;DemoWebsite&lt;/code&gt; folder, run&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;hugo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;At this point, Hugo should have produced the &lt;code&gt;html&lt;/code&gt; files in a new &lt;code&gt;public&lt;/code&gt; subdirectory. Then, in order to view yhte new content as a proper website, you will need to serve the website locally. Fortunately, Hugo has a built-in feature to do that: simply run&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;hugo server
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The output should contain a line like&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;which means that your new website is now accessible at the local address &lt;a href=&#34;http://localhost:1313/&#34; target=&#34;_blank&#34;&gt;http://localhost:1313/&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Something interesting about &lt;code&gt;hugo server&lt;/code&gt; is that it will rebuild your website anytime you make a change to the &lt;code&gt;DemoWebsite&lt;/code&gt; directory. That is, it runs a &lt;code&gt;FastRender&lt;/code&gt; version of the &lt;code&gt;hugo&lt;/code&gt; command. So, if you make changes to a file, then you can see its effect directly (most web browser have some sort of auto-refresh so you don&amp;rsquo;t have to refresh the page yourselves!) Note that deeper changes (e.g. new pages) won&amp;rsquo;t appear in that &lt;code&gt;FastRender&lt;/code&gt; mode so you will need to exit the server (&lt;code&gt;Ctrl+C&lt;/code&gt;) and restart it (alternatively, you can deactivate the &lt;code&gt;FastRender&lt;/code&gt; mode using &lt;code&gt;hugo server --disableFastRender&lt;/code&gt;).&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;As mentioned, your GitHub repository only contains the link to the Academic theme, so you need to clone recursively:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git submodule update --init --recursive
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now, your &lt;code&gt;DemoWebsite&lt;/code&gt; folder contains all the neccessary to deploy the Academic kickstart website locally. First, we produce the &lt;code&gt;html&lt;/code&gt; files from the &lt;code&gt;Markdown&lt;/code&gt; source: in the &lt;code&gt;DemoWebsite&lt;/code&gt; folder, run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;At this point, Hugo should have produced the &lt;code&gt;html&lt;/code&gt; files in a new &lt;code&gt;public&lt;/code&gt; subdirectory. Then, in order to view yhte new content as a proper website, you will need to serve the website locally. Fortunately, Hugo has a built-in feature to do that: simply run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The output should contain a line like&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;Web Server is available at http://localhost:1313/ &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;bind address 127.0.0.1&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;which means that your new website is now accessible at the local address http://localhost:1313/.&lt;/p&gt;
+&lt;p&gt;Something interesting about &lt;code&gt;hugo server&lt;/code&gt; is that it will rebuild your website anytime you make a change to the &lt;code&gt;DemoWebsite&lt;/code&gt; directory. That is, it runs a &lt;code&gt;FastRender&lt;/code&gt; version of the &lt;code&gt;hugo&lt;/code&gt; command. So, if you make changes to a file, then you can see its effect directly (most web browser have some sort of auto-refresh so you don&#39;t have to refresh the page yourselves!) Note that deeper changes (e.g. new pages) won&#39;t appear in that &lt;code&gt;FastRender&lt;/code&gt; mode so you will need to exit the server (&lt;code&gt;Ctrl+C&lt;/code&gt;) and restart it (alternatively, you can deactivate the &lt;code&gt;FastRender&lt;/code&gt; mode using &lt;code&gt;hugo server --disableFastRender&lt;/code&gt;).&lt;/p&gt;
 &lt;h2 id=&#34;content-and-first-edits&#34;&gt;Content and first edits&lt;/h2&gt;
-
 &lt;p&gt;Now that we have successfully deployed the Academic kickstart site, it is time to take a look at the specifics of it. Your &lt;code&gt;DemoWebsite&lt;/code&gt; directory should now contain numerous files and folders. The one of interest to us is the &lt;code&gt;content&lt;/code&gt; folder which, as the name indicates, contains all the content of the website.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;content
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;content
 ├── authors
 ├── home
 ├── post
 ├── publication
 └── talk
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;authors&#34;&gt;Authors&lt;/h3&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;authors&#34;&gt;Authors&lt;/h3&gt;
 &lt;p&gt;The &lt;code&gt;authors&lt;/code&gt; subdirectory is used to store the different authors for your website. For now, it should only contains one author named &lt;code&gt;admin&lt;/code&gt;. The &lt;code&gt;index.md&lt;/code&gt; file contained in the &lt;code&gt;admin&lt;/code&gt; folder controls the information about that author. In particular, it controls:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;The profile on the homepage if that author is chosen to appear there;&lt;/li&gt;
 &lt;li&gt;The profile appearing with talks, posts and publications of that author.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;To change the information about the &lt;code&gt;admin&lt;/code&gt; author, simply go through the &lt;code&gt;index.md&lt;/code&gt; file and edit it to your needs. It is well documented so it should be clear what everything does.&lt;/p&gt;
-
 &lt;p&gt;The folder name, here &lt;code&gt;admin&lt;/code&gt;, will be the index used to identify posts, publications and talks to the corresponding author. If you need to add additional authors to your website, simply copy the &lt;code&gt;admin&lt;/code&gt; folder and change its content. The photo associated to the author should lie in the same folder and have name &lt;code&gt;avatar.jpg/.png&lt;/code&gt;.&lt;/p&gt;
-
 &lt;h3 id=&#34;home&#34;&gt;Home&lt;/h3&gt;
-
 &lt;p&gt;The &lt;code&gt;home&lt;/code&gt; folder controls what appears on the home page, that is, the first page a user will land on. The way the home page is structures is through &lt;em&gt;page sections&lt;/em&gt; as known as &lt;em&gt;widgets&lt;/em&gt;. On the home page you will see alternating background; each page section is denoted by these alternating background. Thus each file in the &lt;code&gt;home&lt;/code&gt; folder determines one of those page sections.&lt;/p&gt;
-
 &lt;p&gt;To remove some sections, there are two ways:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Delete the corresponding &lt;code&gt;.md&lt;/code&gt; file;&lt;/li&gt;
 &lt;li&gt;Deactivate the section by setting &lt;code&gt;active = false&lt;/code&gt; in the front matter.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Let us delete the following sections to clean the current home page:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;demo&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;hero&lt;/code&gt;&lt;/li&gt;
@@ -181,74 +125,44 @@ cd DemoWebsite
 &lt;li&gt;&lt;code&gt;slider&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;tags&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;For more details on what each section does, please refer to &lt;a href=&#34;https://sourcethemes.com/academic/docs/page-builder/&#34; target=&#34;_blank&#34;&gt;Getting Started with the Page Builder&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;For more details on what each section does, please refer to &lt;a href=&#34;https://sourcethemes.com/academic/docs/page-builder/&#34;&gt;Getting Started with the Page Builder&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;One thing to note is how the section are ordered in the home page. It is done through the &lt;code&gt;weight&lt;/code&gt; parameter in the front matter where the lowest &lt;code&gt;weight&lt;/code&gt; value will appear first.&lt;/p&gt;
-
 &lt;h3 id=&#34;post-publications-and-talks&#34;&gt;Post, Publications and Talks&lt;/h3&gt;
-
 &lt;p&gt;Each of these folder will eventually the corresponding content. These folders are structured as follows (here we consider &lt;code&gt;post&lt;/code&gt;) :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;post
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;post
 ├── _index.md
 └── MyFirstPost
     └── index.md
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The root &lt;code&gt;_index.md&lt;/code&gt; defines a landing page are posts are listed. Each subdirectory then defines one post and contains a &lt;code&gt;index.md&lt;/code&gt; which defines the corresponding post.&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The root &lt;code&gt;_index.md&lt;/code&gt; defines a landing page are posts are listed. Each subdirectory then defines one post and contains a &lt;code&gt;index.md&lt;/code&gt; which defines the corresponding post.&lt;/p&gt;
 &lt;p&gt;To create new content, use the following command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;hugo new --kind &amp;lt;post/publication/talk&amp;gt; &amp;lt;folder&amp;gt;/&amp;lt;name-of-content&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For example, to create a new publication with identifier &lt;code&gt;Publication1&lt;/code&gt;, type&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;hugo new --kind publication publication/Publication1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Create a few posts, publications and talks and restart the server since you have now added new pages to the site (&lt;code&gt;Ctrl+c&lt;/code&gt; and &lt;code&gt;hugo server&lt;/code&gt;).&lt;/p&gt;
-
-&lt;p&gt;For more details and additional features, see &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/&#34; target=&#34;_blank&#34;&gt;Managing content&lt;/a&gt;.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo new --kind &amp;lt;post/publication/talk&amp;gt; &amp;lt;folder&amp;gt;/&amp;lt;name-of-content&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For example, to create a new publication with identifier &lt;code&gt;Publication1&lt;/code&gt;, type&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo new --kind publication publication/Publication1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Create a few posts, publications and talks and restart the server since you have now added new pages to the site (&lt;code&gt;Ctrl+c&lt;/code&gt; and &lt;code&gt;hugo server&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;For more details and additional features, see &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/&#34;&gt;Managing content&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;courses-workshops-documentation&#34;&gt;Courses, workshops, documentation&lt;/h3&gt;
-
-&lt;p&gt;The methodology described in &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-a-course-or-documentation&#34; target=&#34;_blank&#34;&gt;Managing content | Create a course or documentation &lt;/a&gt; is the best way to proceed.&lt;/p&gt;
-
+&lt;p&gt;The methodology described in &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-a-course-or-documentation&#34;&gt;Managing content | Create a course or documentation &lt;/a&gt; is the best way to proceed.&lt;/p&gt;
 &lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
-
 &lt;p&gt;The &lt;code&gt;config&lt;/code&gt; folder contains various &lt;code&gt;.toml&lt;/code&gt; files which define site-wide information and parameters.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;config
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;config
 └── _default
     ├── config.toml
     ├── languages.toml
     ├── menus.toml
     └── params.toml
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;All these files are fairly well-documented, so there is no reason to go over them here. One thing I would like to point out is the &lt;code&gt;menus.toml&lt;/code&gt; file. The navigation bar presently links only toward page sections of the home page. If you would like them to point toward, say, &lt;code&gt;post/_index.md&lt;/code&gt; instead of the post section, change the menu entry related to posts :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[[main]]
-  name = &amp;quot;Posts&amp;quot;
-  url = &amp;quot;post&amp;quot; # was &amp;quot;#posts&amp;quot; before
-  weight = 20
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;rest-of-repository&#34;&gt;Rest of repository&lt;/h2&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;All these files are fairly well-documented, so there is no reason to go over them here. One thing I would like to point out is the &lt;code&gt;menus.toml&lt;/code&gt; file. The navigation bar presently links only toward page sections of the home page. If you would like them to point toward, say, &lt;code&gt;post/_index.md&lt;/code&gt; instead of the post section, change the menu entry related to posts :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;[[&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Posts&amp;#34;&lt;/span&gt;
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;post&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# was &amp;#34;#posts&amp;#34; before&lt;/span&gt;
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;weight&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;rest-of-repository&#34;&gt;Rest of repository&lt;/h2&gt;
 &lt;p&gt;The rest of the &lt;code&gt;DemoWebsite&lt;/code&gt; repository mostly contains file used to generate the website. You should most likely not have to touch them except:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;data&lt;/code&gt;: if you want custom color theme and fonts, you will place them here;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;static&lt;/code&gt;: you can place site-wide files here, such as a custom site icon.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;alternative-workflows&#34;&gt;Alternative workflows&lt;/h2&gt;
-
 &lt;p&gt;Using an IDE (e.g., RStudio), everything can be done using the interface with limited command line usage:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Fork the &lt;code&gt;academic-kickstart&lt;/code&gt; repo as above;&lt;/li&gt;
 &lt;li&gt;New Project &amp;gt; Version Control &amp;gt; Git &amp;gt; URL to your GitHub repo &amp;gt; Open in New Session;&lt;/li&gt;
@@ -256,11 +170,44 @@ cd DemoWebsite
 &lt;li&gt;&lt;code&gt;git&lt;/code&gt; action can be done with the &lt;code&gt;Git&lt;/code&gt; Tab;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;hugo&lt;/code&gt; command need to be run in the terminal;&lt;/li&gt;
 &lt;li&gt;Look for the &lt;code&gt;R&lt;/code&gt; package &lt;code&gt;blogdown&lt;/code&gt; to do everything in &lt;code&gt;R&lt;/code&gt; console:
-
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34; target=&#34;_blank&#34;&gt;Install with RStudio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34;&gt;Install with RStudio&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;blogdown:::serve_site()&lt;/code&gt; acts as &lt;code&gt;hugo server&lt;/code&gt;;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LaTeX</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/latex/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/latex/</guid>
+      <description>&lt;h2 id=&#34;editors&#34;&gt;Editors&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.lyx.org/&#34;&gt;LyX&lt;/a&gt;, a WYSIWYG LaTeX editor.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;citation-management&#34;&gt;Citation management&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; for local and remote bibliography management.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.zotero.org/download/connectors&#34;&gt;Zotero connector&lt;/a&gt; for Zotero integration in browsers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib&#34;&gt;bibtex vs biblatex vs biber vs natbib&lt;/a&gt; to understand the differences.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;other&#34;&gt;Other&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://detexify.kirelabs.org/classify.html&#34;&gt;Detexify&lt;/a&gt; to find the correct math symbol by drawing it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ctan.org/pkg/todonotes&#34;&gt;&lt;code&gt;todonotes&lt;/code&gt; package&lt;/a&gt; to add todo notes and comments to LaTeX files and pdf output.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -270,17 +217,12 @@ cd DemoWebsite
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/versioncontrol/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/versioncontrol/</guid>
-      <description>
-
-&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;The Pro Git book&lt;/strong&gt;&lt;/a&gt; &lt;em&gt;by Scott Chacon and Ben Straub:&lt;/em&gt;&lt;/p&gt;
-
+      <description>&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2&#34;&gt;&lt;strong&gt;The Pro Git book&lt;/strong&gt;&lt;/a&gt; &lt;em&gt;by Scott Chacon and Ben Straub:&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain&#34; target=&#34;_blank&#34;&gt;10. Git Internals&lt;/a&gt;: a deep understanding of git.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain&#34;&gt;10. Git Internals&lt;/a&gt;: a deep understanding of git.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://ohshitgit.com/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Oh Shit, Git!?!&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;http://www.dangitgit.com/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Dangit, git!&lt;/strong&gt;&lt;/a&gt;: two go-to resources when encountering git problems.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ohshitgit.com/&#34;&gt;&lt;strong&gt;Oh Shit, Git!?!&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;http://www.dangitgit.com/&#34;&gt;&lt;strong&gt;Dangit, git!&lt;/strong&gt;&lt;/a&gt;: two go-to resources when encountering git problems.&lt;/p&gt;
 </description>
     </item>
     
@@ -289,50 +231,26 @@ cd DemoWebsite
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_github/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_github/</guid>
-      <description>
-
-&lt;p&gt;Now that you are happy with your local website, it is time to deploy it on the internet. Here is the methodology for GitHub Pages hosting.&lt;/p&gt;
-
+      <description>&lt;p&gt;Now that you are happy with your local website, it is time to deploy it on the internet. Here is the methodology for GitHub Pages hosting.&lt;/p&gt;
 &lt;h2 id=&#34;a-note-on-the-academic-theme&#34;&gt;A note on the Academic theme&lt;/h2&gt;
-
-&lt;p&gt;If you build your website using Hugo and the Academic theme, here&amp;rsquo;s how to ensure the static website falls in the correct folder. In the &lt;code&gt;config/_default/config.toml&lt;/code&gt; file change the following line:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;publishDir = &amp;quot;docs&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;To ensure links consistency within your website you need to tell Hugo what will be your base URL. In the case of GitHub hosting, change the following line in &lt;code&gt;config/_default/config.toml&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;baseurl = &amp;quot;https://your-github-account.github.io/academic-kickstart/&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Run &lt;code&gt;hugo&lt;/code&gt; to make your changes effective.&lt;/p&gt;
-
+&lt;p&gt;If you build your website using Hugo and the Academic theme, here&#39;s how to ensure the static website falls in the correct folder. In the &lt;code&gt;config/_default/config.toml&lt;/code&gt; file change the following line:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;publishDir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;docs&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To ensure links consistency within your website you need to tell Hugo what will be your base URL. In the case of GitHub hosting, change the following line in &lt;code&gt;config/_default/config.toml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;baseurl &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://your-github-account.github.io/academic-kickstart/&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run &lt;code&gt;hugo&lt;/code&gt; to make your changes effective.&lt;/p&gt;
 &lt;h2 id=&#34;local-version-control&#34;&gt;Local version control&lt;/h2&gt;
-
 &lt;p&gt;In order to eventually push your website to your GitHub repository, your local files should be staged and committed:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-git&#34;&gt;git add --all
+&lt;pre&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;git add --all
 git commit -m &#39;First deploy&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;push-your-files-to-your-repository&#34;&gt;Push your files to your repository&lt;/h2&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;push-your-files-to-your-repository&#34;&gt;Push your files to your repository&lt;/h2&gt;
 &lt;p&gt;Then, you need to send your files to your GitHub repository.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-git&#34;&gt;git push
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;While GitHub only requires the &lt;code&gt;docs&lt;/code&gt; folder to display your website, it is best to push all the content of your website if you want to make changes from other machines.&lt;/p&gt;
-
+&lt;pre&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;git push
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;While GitHub only requires the &lt;code&gt;docs&lt;/code&gt; folder to display your website, it is best to push all the content of your website if you want to make changes from other machines.&lt;/p&gt;
 &lt;h2 id=&#34;hosting&#34;&gt;Hosting&lt;/h2&gt;
-
 &lt;p&gt;At this point, the &lt;code&gt;docs&lt;/code&gt; folder of your repository contains the necessary files to have a functioning website. However, you need to activate the hosting feature of your repository for GitHub to start hosting the contents of &lt;code&gt;docs&lt;/code&gt;. In the &lt;em&gt;Settings&lt;/em&gt; tabs of your repository, scroll down to the &lt;em&gt;GitHub Pages&lt;/em&gt; section. There, use the drop-down menu under &lt;em&gt;Source&lt;/em&gt; to &lt;code&gt;master branch /docs folder&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;Wait a few seconds and check out your awesome website!&lt;/p&gt;
-
 &lt;h2 id=&#34;modifying-your-website&#34;&gt;Modifying your website&lt;/h2&gt;
-
-&lt;p&gt;You will most likely want to add or edit content to your website. To do this, you only need to alter the &lt;code&gt;docs&lt;/code&gt; folder accordingly to trigger redeployment. Each update may not be instantaneous, so don&amp;rsquo;t worry if it takes a few seconds before your changes become effective.&lt;/p&gt;
+&lt;p&gt;You will most likely want to add or edit content to your website. To do this, you only need to alter the &lt;code&gt;docs&lt;/code&gt; folder accordingly to trigger redeployment. Each update may not be instantaneous, so don&#39;t worry if it takes a few seconds before your changes become effective.&lt;/p&gt;
 </description>
     </item>
     
@@ -341,120 +259,76 @@ git commit -m &#39;First deploy&#39;
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/workflow/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/workflow/</guid>
-      <description>
-
-&lt;h2 id=&#34;the-lazy-way&#34;&gt;The lazy way&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;the-lazy-way&#34;&gt;The lazy way&lt;/h2&gt;
 &lt;p&gt;If you only need to add some post/meeting/workshop to the website, here is a simple way to deploy your new content to the website without much hassle.&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Create your content&lt;/strong&gt;&amp;mdash;The first step is to create your specific content by producing the necessary Markdown files. See &lt;a href=&#34;../createcontent/&#34;&gt;Creating content&lt;/a&gt; for details on how to do so.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Push your content&lt;/strong&gt;&amp;mdash;You then need to add your content to the website &lt;code&gt;content&lt;/code&gt; directory. If you have access to the &lt;a href=&#34;https://github.com/UMichStatistics/&#34; target=&#34;_blank&#34;&gt;UMichStatistics&lt;/a&gt; repository, then you can do it directly using your favorite &amp;lsquo;git&amp;rsquo; workflow. Otherwise, &lt;a href=&#34;#contact&#34;&gt;contact the maintainers&lt;/a&gt; for them to add your content to the site.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Push your content&lt;/strong&gt;&amp;mdash;You then need to add your content to the website &lt;code&gt;content&lt;/code&gt; directory. If you have access to the &lt;a href=&#34;https://github.com/UMichStatistics/&#34;&gt;UMichStatistics&lt;/a&gt; repository, then you can do it directly using your favorite &amp;lsquo;git&amp;rsquo; workflow. Otherwise, &lt;a href=&#34;#contact&#34;&gt;contact the maintainers&lt;/a&gt; for them to add your content to the site.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Deploy your content&lt;/strong&gt;&amp;mdash;As mentionned, an update of the files outside the &lt;code&gt;docs&lt;/code&gt; folder will not affect the public website. The deployment must be done through Hugo and, for now, this must be done manually. &lt;a href=&#34;#contact&#34;&gt;Contact the maintainers&lt;/a&gt; for it to happen.&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;h2 id=&#34;the-good-way&#34;&gt;The good way&lt;/h2&gt;
-
 &lt;p&gt;Hopefully, you will want to deploy your changes yourself. To do this, here is the summary of the procedure:&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Have a local copy of the website on your machine.&lt;/li&gt;
 &lt;li&gt;Update your local version.&lt;/li&gt;
 &lt;li&gt;Deploy your local version to your localhost using Hugo in order to update the &lt;code&gt;docs&lt;/code&gt; contents.&lt;/li&gt;
-&lt;li&gt;Push your changes, including both the source and the updated &lt;code&gt;docs&lt;/code&gt; to the site&amp;rsquo;s repository.&lt;/li&gt;
+&lt;li&gt;Push your changes, including both the source and the updated &lt;code&gt;docs&lt;/code&gt; to the site&#39;s repository.&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;With the workflow, your changes will instantaneously update the public website. Also, since you first deploy on your local machine, you are able to see the results of your changes before them becoming public. Finally, pushing both the source and the updated &lt;code&gt;docs&lt;/code&gt; prevents conflicts in future updates.&lt;/p&gt;
-
 &lt;h3 id=&#34;requirements&#34;&gt;Requirements&lt;/h3&gt;
-
 &lt;p&gt;To use this process, you will need:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Access to the &lt;a href=&#34;https://github.com/UMichStatistics/&#34; target=&#34;_blank&#34;&gt;organization&lt;/a&gt; repository;&lt;/li&gt;
-&lt;li&gt;git installed on your machine (see this &lt;a href=&#34;https://www.atlassian.com/git/tutorials/install-git&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt;);&lt;/li&gt;
+&lt;li&gt;Access to the &lt;a href=&#34;https://github.com/UMichStatistics/&#34;&gt;organization&lt;/a&gt; repository;&lt;/li&gt;
+&lt;li&gt;git installed on your machine (see this &lt;a href=&#34;https://www.atlassian.com/git/tutorials/install-git&#34;&gt;guide&lt;/a&gt;);&lt;/li&gt;
 &lt;li&gt;Basic git knowledge (&lt;code&gt;clone&lt;/code&gt;, &lt;code&gt;pull&lt;/code&gt;, &lt;code&gt;add&lt;/code&gt;, &lt;code&gt;commit&lt;/code&gt; and &lt;code&gt;push&lt;/code&gt;). Note that most modern IDEs offer git support so you may execute all those steps using your interface;&lt;/li&gt;
-&lt;li&gt;Hugo installed on your machine (see this &lt;a href=&#34;https://gohugo.io/getting-started/installing/&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt;. The installation on Windows is tedious and the only way I could make it work was &lt;code&gt;R&lt;/code&gt; &amp;gt; install package &lt;code&gt;blogdown&lt;/code&gt; &amp;gt; &lt;code&gt;blogdown::install_hugo()&lt;/code&gt; and manually add its path to the system environment variables.)&lt;/li&gt;
+&lt;li&gt;Hugo installed on your machine (see this &lt;a href=&#34;https://gohugo.io/getting-started/installing/&#34;&gt;guide&lt;/a&gt;. The installation on Windows is tedious and the only way I could make it work was &lt;code&gt;R&lt;/code&gt; &amp;gt; install package &lt;code&gt;blogdown&lt;/code&gt; &amp;gt; &lt;code&gt;blogdown::install_hugo()&lt;/code&gt; and manually add its path to the system environment variables.)&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h3 id=&#34;update-the-local-version&#34;&gt;Update the local version&lt;/h3&gt;
-
 &lt;p&gt;First, you will need the latest version of the website stored locally on your machine.&lt;/p&gt;
-
 &lt;p&gt;If you have not cloned the repository yet, do so:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git clone https://github.com/UMichStatistics/ComputingClub.git &amp;lt;new-folder-name&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The website relies on the Academic theme for Hugo, so you will to clone that as well. Fortunately, it is included as a submodule of the repository, so you only need to update all submodules (there is only one):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git submodule update [--init] [--recursive]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If you already have cloned the repository, make sure your local version is up to date with the current online version to avoid merge conflicts when pushing. In a command prompt, move to the site local folder and &lt;code&gt;pull&lt;/code&gt; the website (or &lt;code&gt;fetch&lt;/code&gt; and &lt;code&gt;merge&lt;/code&gt;).&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git clone https://github.com/UMichStatistics/ComputingClub.git &amp;lt;new-folder-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The website relies on the Academic theme for Hugo, so you will to clone that as well. Fortunately, it is included as a submodule of the repository, so you only need to update all submodules (there is only one):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git submodule update &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;--init&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;--recursive&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you already have cloned the repository, make sure your local version is up to date with the current online version to avoid merge conflicts when pushing. In a command prompt, move to the site local folder and &lt;code&gt;pull&lt;/code&gt; the website (or &lt;code&gt;fetch&lt;/code&gt; and &lt;code&gt;merge&lt;/code&gt;).&lt;/p&gt;
 &lt;h3 id=&#34;create-your-content&#34;&gt;Create your content&lt;/h3&gt;
-
-&lt;p&gt;Create your specific content by producing the necessary Markdown files and place them in the correct folders. See &lt;a href=&#34;create/&#34; target=&#34;_blank&#34;&gt;Creating content&lt;/a&gt; for details on how to do so.&lt;/p&gt;
-
+&lt;p&gt;Create your specific content by producing the necessary Markdown files and place them in the correct folders. See &lt;a href=&#34;create/&#34;&gt;Creating content&lt;/a&gt; for details on how to do so.&lt;/p&gt;
 &lt;h3 id=&#34;deploy-your-local-website&#34;&gt;Deploy your local website&lt;/h3&gt;
-
-&lt;p&gt;Now that your local repository contains updated content, it is time to deploy it to your local &lt;code&gt;docs&lt;/code&gt; folder. To do so, open a command prompt and run hugo at the root of the site&amp;rsquo;s local repository and type in:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;hugo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;which will compile the content into the static &lt;code&gt;html&lt;/code&gt; pages. Unless your code does not compile, you should get an output such as (possibly containing warnings)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;Building sites … WARN 2019/09/24 17:08:23 In the next Hugo version (0.58.0) we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+&lt;p&gt;Now that your local repository contains updated content, it is time to deploy it to your local &lt;code&gt;docs&lt;/code&gt; folder. To do so, open a command prompt and run hugo at the root of the site&#39;s local repository and type in:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;which will compile the content into the static &lt;code&gt;html&lt;/code&gt; pages. Unless your code does not compile, you should get an output such as (possibly containing warnings)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;Building sites … WARN 2019/09/24 17:08:23 In the next Hugo version &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;0.58.0&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
 
                    | EN
 +------------------|----+
-  Pages            | 52
-  Paginator pages  |  0
-  Non-page files   |  6
-  Static files     |  8
-  Processed images |  9
-  Aliases          |  7
-  Sitemaps         |  1
-  Cleaned          |  0
+  Pages            | &lt;span style=&#34;color:#ae81ff&#34;&gt;52&lt;/span&gt;
+  Paginator pages  |  &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+  Non-page files   |  &lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;
+  Static files     |  &lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;
+  Processed images |  &lt;span style=&#34;color:#ae81ff&#34;&gt;9&lt;/span&gt;
+  Aliases          |  &lt;span style=&#34;color:#ae81ff&#34;&gt;7&lt;/span&gt;
+  Sitemaps         |  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+  Cleaned          |  &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
 
-Total in 265 ms
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This means that Hugo has successfuly deployed your site to the &lt;code&gt;docs&lt;/code&gt; folder. If you wish to view the website, you can host it locally using Hugo:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;hugo server
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;which should yield something like&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;Watching for changes in /home/simon/git/ComputingClub/{content,data,static,themes}
-Watching for config changes in /home/simon/git/ComputingClub/config.toml, /home/simon/git/ComputingClub/config/_default
-Environment: &amp;quot;development&amp;quot;
+Total in &lt;span style=&#34;color:#ae81ff&#34;&gt;265&lt;/span&gt; ms
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This means that Hugo has successfuly deployed your site to the &lt;code&gt;docs&lt;/code&gt; folder. If you wish to view the website, you can host it locally using Hugo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;which should yield something like&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;Watching &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; changes in /home/simon/git/ComputingClub/&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;content,data,static,themes&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+Watching &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; config changes in /home/simon/git/ComputingClub/config.toml, /home/simon/git/ComputingClub/config/_default
+Environment: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;development&amp;#34;&lt;/span&gt;
 Serving pages from memory
 Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
-Web Server is available at http://localhost:1313/ComputingClub/ (bind address 127.0.0.1)
+Web Server is available at http://localhost:1313/ComputingClub/ &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;bind address 127.0.0.1&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
 Press Ctrl+C to stop
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The url &lt;code&gt;http://localhost:1313/ComputingClub/&lt;/code&gt; is where you find your local website (use the one in your output as it may differ from mine). Also, as long a you do not close the server (by closing the command prompt or by typing &lt;code&gt;Ctrl+C&lt;/code&gt;), Hugo will listen to any changes, meaning that any file saved in the root repository will trigger deployment. This is useful if you want to create your content and see it deployed instantaneously locally without calling Hugo each time. Note that creating new pages or making large changes may not appear in this &amp;ldquo;Fast Render Mode&amp;rdquo;, so you may need to exit and re-host.&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The url &lt;code&gt;http://localhost:1313/ComputingClub/&lt;/code&gt; is where you find your local website (use the one in your output as it may differ from mine). Also, as long a you do not close the server (by closing the command prompt or by typing &lt;code&gt;Ctrl+C&lt;/code&gt;), Hugo will listen to any changes, meaning that any file saved in the root repository will trigger deployment. This is useful if you want to create your content and see it deployed instantaneously locally without calling Hugo each time. Note that creating new pages or making large changes may not appear in this &amp;ldquo;Fast Render Mode&amp;rdquo;, so you may need to exit and re-host.&lt;/p&gt;
 &lt;h3 id=&#34;push-your-changes&#34;&gt;Push your changes&lt;/h3&gt;
-
 &lt;p&gt;Once your are satisfied with your local version, you need to push your changes to the &lt;code&gt;master&lt;/code&gt; branch. In the case your Hugo server is still on, close it and run &lt;code&gt;hugo&lt;/code&gt; one last time to redo the &lt;code&gt;docs&lt;/code&gt; file for the online version, not the local version.&lt;/p&gt;
-
 &lt;p&gt;Stage and commit your changes:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git add --all
-git commit -m &#39;some description of your changes&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and finally push to the online repository&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git push
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git add --all
+git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;some description of your changes&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;and finally push to the online repository&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git push
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -462,79 +336,39 @@ git commit -m &#39;some description of your changes&#39;
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_umich/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_umich/</guid>
-      <description>
-
-&lt;p&gt;Now that you are happy with your local website, it is time to deploy it on the internet. Here is the methodology for UMich personal space hosting.&lt;/p&gt;
-
-&lt;p&gt;See &lt;a href=&#34;http://www.umich.edu/~umweb/how-to/homepage.html&#34; target=&#34;_blank&#34;&gt;Web Hosting Tutorial from ITS&lt;/a&gt; for more details.&lt;/p&gt;
-
+      <description>&lt;p&gt;Now that you are happy with your local website, it is time to deploy it on the internet. Here is the methodology for UMich personal space hosting.&lt;/p&gt;
+&lt;p&gt;See &lt;a href=&#34;http://www.umich.edu/~umweb/how-to/homepage.html&#34;&gt;Web Hosting Tutorial from ITS&lt;/a&gt; for more details.&lt;/p&gt;
 &lt;h2 id=&#34;a-note-on-the-academic-theme&#34;&gt;A note on the Academic theme&lt;/h2&gt;
-
 &lt;p&gt;To ensure links consistency within your website you need to tell Hugo what will be your base URL. In the case of GitHub hosting, change the following line in &lt;code&gt;config/_default/config.toml&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;baseurl = &amp;quot;http://www-personal.umich.edu/~uniqname/&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Run &lt;code&gt;hugo&lt;/code&gt; to make your changes effective.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;baseurl &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://www-personal.umich.edu/~uniqname/&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run &lt;code&gt;hugo&lt;/code&gt; to make your changes effective.&lt;/p&gt;
 &lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
-
-&lt;p&gt;First, you will need access to the &lt;a href=&#34;https://mfile.umich.edu/&#34; target=&#34;_blank&#34;&gt;MFile&lt;/a&gt; system. There, ensure you have access to your &lt;code&gt;Public/html/&lt;/code&gt; folder which is where we will dump our website.&lt;/p&gt;
-
-&lt;p&gt;You may need to &lt;a href=&#34;https://mfile.umich.edu/make-webspace/&#34; target=&#34;_blank&#34;&gt;use the make-website tool&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;First, you will need access to the &lt;a href=&#34;https://mfile.umich.edu/&#34;&gt;MFile&lt;/a&gt; system. There, ensure you have access to your &lt;code&gt;Public/html/&lt;/code&gt; folder which is where we will dump our website.&lt;/p&gt;
+&lt;p&gt;You may need to &lt;a href=&#34;https://mfile.umich.edu/make-webspace/&#34;&gt;use the make-website tool&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;local-version-control&#34;&gt;Local version control&lt;/h2&gt;
-
 &lt;p&gt;While version control is not necessary for this type of hosting, I highly recommend you do it locally:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-git&#34;&gt;git add -all
+&lt;pre&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;git add -all
 git commit -m &#39;First deploy&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;deployment-with-scp&#34;&gt;Deployment with SCP&lt;/h2&gt;
-
-&lt;p&gt;The deployment to your personal space can be done in one command line (should work on any platform, Windows users may require &lt;a href=&#34;https://putty.org/&#34; target=&#34;_blank&#34;&gt;PuTTY&lt;/a&gt;):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;scp -r &amp;lt;path-to-local-website&amp;gt;/public/. uniqname@login.itd.umich.edu:Public/html/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You should be prompted to enter your password. SCP (Secure Copy Protocol) can only copy files to and from a remote server. It is sufficient to push your website, but you cannot remove files using that protocol. This line basically copies everything from &lt;code&gt;&amp;lt;path-to-local-website&amp;gt;/public/&lt;/code&gt; (recursively with the &lt;code&gt;-r&lt;/code&gt; option) to your personal space &lt;code&gt;uniqname@login.itd.umich.edu:Public/html/&lt;/code&gt; which is where websites are hosted.&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;deployment-with-scp&#34;&gt;Deployment with SCP&lt;/h2&gt;
+&lt;p&gt;The deployment to your personal space can be done in one command line (should work on any platform, Windows users may require &lt;a href=&#34;https://putty.org/&#34;&gt;PuTTY&lt;/a&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;scp -r &amp;lt;path-to-local-website&amp;gt;/public/. uniqname@login.itd.umich.edu:Public/html/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You should be prompted to enter your password. SCP (Secure Copy Protocol) can only copy files to and from a remote server. It is sufficient to push your website, but you cannot remove files using that protocol. This line basically copies everything from &lt;code&gt;&amp;lt;path-to-local-website&amp;gt;/public/&lt;/code&gt; (recursively with the &lt;code&gt;-r&lt;/code&gt; option) to your personal space &lt;code&gt;uniqname@login.itd.umich.edu:Public/html/&lt;/code&gt; which is where websites are hosted.&lt;/p&gt;
 &lt;h3 id=&#34;sftp-and-sftp-with-a-gui&#34;&gt;SFTP and SFTP With a GUI&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;sftp&lt;/code&gt; (Secure File Transfer Protocol) offer an interactive session and is therefore more flexible than SCP (see thig &lt;a href=&#34;https://www.jscape.com/blog/using-sftp-on-command-line&#34; target=&#34;_blank&#34;&gt;guide&lt;/a&gt;).&lt;/p&gt;
-
+&lt;p&gt;&lt;code&gt;sftp&lt;/code&gt; (Secure File Transfer Protocol) offer an interactive session and is therefore more flexible than SCP (see thig &lt;a href=&#34;https://www.jscape.com/blog/using-sftp-on-command-line&#34;&gt;guide&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Open a terminal in the &lt;code&gt;public&lt;/code&gt; folder of your website (or the one where Hugo produces the &lt;code&gt;html&lt;/code&gt; files). Connection to the remote server is done via&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sftp uniqname@sftp.itd.umich.edu
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You should be prompted to enter your password. You can navigate your personal space usin &lt;code&gt;ls&lt;/code&gt; and &lt;code&gt;cd&lt;/code&gt; as usual. Move to &lt;code&gt;Public/html&lt;/code&gt; and push all the files of &lt;code&gt;public&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sftp&amp;gt; cd Public/html/
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sftp uniqname@sftp.itd.umich.edu
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You should be prompted to enter your password. You can navigate your personal space usin &lt;code&gt;ls&lt;/code&gt; and &lt;code&gt;cd&lt;/code&gt; as usual. Move to &lt;code&gt;Public/html&lt;/code&gt; and push all the files of &lt;code&gt;public&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sftp&amp;gt; cd Public/html/
 sftp&amp;gt; put -r *
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The same can be done using a FTP client GUI (e.g. WinSCP or FileZilla). The server is called&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sftp.itd.umich.edu
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;with port 22. You should need to input your username and password at some point.&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The same can be done using a FTP client GUI (e.g. WinSCP or FileZilla). The server is called&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sftp.itd.umich.edu
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;with port 22. You should need to input your username and password at some point.&lt;/p&gt;
 &lt;h3 id=&#34;viewing-your-website&#34;&gt;Viewing your website&lt;/h3&gt;
-
 &lt;p&gt;Your new website will be available at&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;http://www-personal.umich.edu/~uniqname/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;which is also available by symply typing&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;umich.edu/~uniqname/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If you are creating a website for some organization, consider getting some space for your organization instead of using your own space: check &lt;a href=&#34;http://www.umich.edu/~umweb/how-to/homepage.html&#34; target=&#34;_blank&#34;&gt;this tutorial (Special services section)&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;http://www-personal.umich.edu/~uniqname/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;which is also available by symply typing&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;umich.edu/~uniqname/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you are creating a website for some organization, consider getting some space for your organization instead of using your own space: check &lt;a href=&#34;http://www.umich.edu/~umweb/how-to/homepage.html&#34;&gt;this tutorial (Special services section)&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -543,8 +377,7 @@ sftp&amp;gt; put -r *
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/custom/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/custom/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/&#34; target=&#34;_blank&#34;&gt;Academic documentation - Customization&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/&#34;&gt;Academic documentation - Customization&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Website icon&lt;/li&gt;
 &lt;li&gt;Custom color theme&lt;/li&gt;
@@ -558,21 +391,12 @@ sftp&amp;gt; put -r *
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/troubleshoot/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/troubleshoot/</guid>
-      <description>
-
-&lt;h2 id=&#34;hugo-errors&#34;&gt;Hugo errors&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;hugo-errors&#34;&gt;Hugo errors&lt;/h2&gt;
 &lt;p&gt;If you encounter the following error:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;Error: &amp;quot;...\DemoWebsite\config.toml:1:1&amp;quot;: unmarshal failed: Near line 0 (last key parsed &#39;&#39;): bare keys cannot contain &#39;.&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or any other error the first time you call a &lt;code&gt;hugo&lt;/code&gt; comment, make sure you have the &lt;strong&gt;Extended&lt;/strong&gt; version of Hugo installed. You can check by typing&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;hugo version
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The output should contain the &lt;code&gt;extended&lt;/code&gt; word somewhere (depends on the OS).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;Error: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;...\DemoWebsite\config.toml:1:1&amp;#34;&lt;/span&gt;: unmarshal failed: Near line &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;last key parsed &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;: bare keys cannot contain &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or any other error the first time you call a &lt;code&gt;hugo&lt;/code&gt; comment, make sure you have the &lt;strong&gt;Extended&lt;/strong&gt; version of Hugo installed. You can check by typing&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The output should contain the &lt;code&gt;extended&lt;/code&gt; word somewhere (depends on the OS).&lt;/p&gt;
 </description>
     </item>
     
@@ -638,10 +462,8 @@ sftp&amp;gt; put -r *
       <pubDate>Mon, 23 Sep 2019 22:06:16 -0400</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/post/welcome/</guid>
       <description>&lt;p&gt;With the recent creation of the Statistics Computing Club, having a platform to share news, contents and resources was a priority.&lt;/p&gt;
-
-&lt;p&gt;The site is functionnal but still under construction, so please &lt;a href=&#34;https://github.com/UMichStatistics/ComputingClub/issues&#34; target=&#34;_blank&#34;&gt;report issues&lt;/a&gt; to the GitHub repository to help us improve the site. Also, your comments and suggestions are more than welcome, so feel free to &lt;a href=&#34;#contact&#34;&gt;contact&lt;/a&gt; us!&lt;/p&gt;
-
-&lt;p&gt;The Committee is still looking for presenters for this fall&amp;rsquo;s meetings. You don&amp;rsquo;t need to be an expert of the topic you&amp;rsquo;ll present; providing exposure to a tool you find useful, to a package you think may help others or to some research methodology may be relevant to many other members! If you feel like presenting, we invite you to complete this &lt;a href=&#34;https://forms.gle/XMtKfjhJTuaaHdLU7&#34; target=&#34;_blank&#34;&gt;form&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The site is functionnal but still under construction, so please &lt;a href=&#34;https://github.com/UMichStatistics/ComputingClub/issues&#34;&gt;report issues&lt;/a&gt; to the GitHub repository to help us improve the site. Also, your comments and suggestions are more than welcome, so feel free to &lt;a href=&#34;#contact&#34;&gt;contact&lt;/a&gt; us!&lt;/p&gt;
+&lt;p&gt;The Committee is still looking for presenters for this fall&#39;s meetings. You don&#39;t need to be an expert of the topic you&#39;ll present; providing exposure to a tool you find useful, to a package you think may help others or to some research methodology may be relevant to many other members! If you feel like presenting, we invite you to complete this &lt;a href=&#34;https://forms.gle/XMtKfjhJTuaaHdLU7&#34;&gt;form&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

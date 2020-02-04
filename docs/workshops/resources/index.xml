@@ -17,12 +17,42 @@
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/hpc/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/hpc/</guid>
-      <description>
-
-&lt;h2 id=&#34;language-packages&#34;&gt;Language, packages&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/um-dang/conda_on_the_cluster&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Conda integration in GreatLakes&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;by &lt;a href=&#34;https://um-dang.github.io/&#34; target=&#34;_blank&#34;&gt;UMich Data Analysis Networking Group&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+      <description>&lt;h2 id=&#34;language-packages&#34;&gt;Language, packages&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/um-dang/conda_on_the_cluster&#34;&gt;&lt;strong&gt;Conda integration in GreatLakes&lt;/strong&gt;&lt;/a&gt;
+&lt;em&gt;by &lt;a href=&#34;https://um-dang.github.io/&#34;&gt;UMich Data Analysis Networking Group&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LaTeX</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/latex/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/latex/</guid>
+      <description>&lt;h2 id=&#34;editors&#34;&gt;Editors&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.lyx.org/&#34;&gt;LyX&lt;/a&gt;, a WYSIWYG LaTeX editor.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;citation-management&#34;&gt;Citation management&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; for local and remote bibliography management.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.zotero.org/download/connectors&#34;&gt;Zotero connector&lt;/a&gt; for Zotero integration in browsers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib&#34;&gt;bibtex vs biblatex vs biber vs natbib&lt;/a&gt; to understand the differences.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;other&#34;&gt;Other&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://detexify.kirelabs.org/classify.html&#34;&gt;Detexify&lt;/a&gt; to find the correct math symbol by drawing it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ctan.org/pkg/todonotes&#34;&gt;&lt;code&gt;todonotes&lt;/code&gt; package&lt;/a&gt; to add todo notes and comments to LaTeX files and pdf output.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -31,17 +61,12 @@
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/versioncontrol/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/versioncontrol/</guid>
-      <description>
-
-&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;The Pro Git book&lt;/strong&gt;&lt;/a&gt; &lt;em&gt;by Scott Chacon and Ben Straub:&lt;/em&gt;&lt;/p&gt;
-
+      <description>&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2&#34;&gt;&lt;strong&gt;The Pro Git book&lt;/strong&gt;&lt;/a&gt; &lt;em&gt;by Scott Chacon and Ben Straub:&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain&#34; target=&#34;_blank&#34;&gt;10. Git Internals&lt;/a&gt;: a deep understanding of git.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain&#34;&gt;10. Git Internals&lt;/a&gt;: a deep understanding of git.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://ohshitgit.com/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Oh Shit, Git!?!&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;http://www.dangitgit.com/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Dangit, git!&lt;/strong&gt;&lt;/a&gt;: two go-to resources when encountering git problems.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ohshitgit.com/&#34;&gt;&lt;strong&gt;Oh Shit, Git!?!&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;http://www.dangitgit.com/&#34;&gt;&lt;strong&gt;Dangit, git!&lt;/strong&gt;&lt;/a&gt;: two go-to resources when encountering git problems.&lt;/p&gt;
 </description>
     </item>
     
