@@ -226,12 +226,6 @@ cd DemoWebsite
 &lt;p&gt;&lt;a href=&#34;https://www.ctan.org/pkg/todonotes&#34;&gt;&lt;code&gt;todonotes&lt;/code&gt; package&lt;/a&gt; to add todo notes and comments to LaTeX files and pdf output.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Use &lt;code&gt;\left( ... \right)&lt;/code&gt; for scalable delimiters in math mode;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Use &lt;code&gt;\Cref{...}&lt;/code&gt; to get references with formatted names automatically such as &amp;ldquo;Figure 1&amp;rdquo; instead of just &amp;ldquo;1&amp;rdquo; and writing &amp;ldquo;Figure&amp;rdquo; yourself.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
 &lt;p&gt;Une &lt;code&gt;include&lt;/code&gt; or &lt;code&gt;input&lt;/code&gt; to insert the content of another &lt;code&gt;.tex&lt;/code&gt; file where you want it: e.g., you can maintain a math macro file that you use often. Also, read &lt;a href=&#34;https://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include&#34;&gt;When should I use \input vs. \include?&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
