@@ -5,12 +5,21 @@
     <link>https://UMichStatistics.github.io/ComputingClub/authors/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Tue, 04 Feb 2020 13:00:00 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Tue, 18 Feb 2020 13:00:00 -0500</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Authors</title>
       <link>https://UMichStatistics.github.io/ComputingClub/authors/</link>
     </image>
+    
+    <item>
+      <title>Derek Hansen</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/authors/derek/</link>
+      <pubDate>Tue, 18 Feb 2020 13:00:00 -0500</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/authors/derek/</guid>
+      <description>&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
+</description>
+    </item>
     
     <item>
       <title>Statistics Computing Club</title>
@@ -67,15 +76,6 @@
       <link>https://UMichStatistics.github.io/ComputingClub/authors/dan/</link>
       <pubDate>Wed, 02 Oct 2019 14:30:00 -0200</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/authors/dan/</guid>
-      <description>&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Derek Hansen</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/authors/derek/</link>
-      <pubDate>Wed, 18 Sep 2019 14:30:00 -0500</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/authors/derek/</guid>
       <description>&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
 </description>
     </item>

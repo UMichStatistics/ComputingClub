@@ -48,6 +48,11 @@
   </url>
   
   <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/workshops/tutorials/</loc>
+    <lastmod>2018-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_github/</loc>
     <lastmod>2019-10-09T08:27:36-04:00</lastmod>
   </url>
@@ -74,7 +79,22 @@
   
   <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/authors/</loc>
-    <lastmod>2020-02-04T15:11:11-05:00</lastmod>
+    <lastmod>2020-02-18T13:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/authors/derek/</loc>
+    <lastmod>2020-02-18T13:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/talk/macos/</loc>
+    <lastmod>2020-02-18T13:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/</loc>
+    <lastmod>2020-02-18T13:00:00-05:00</lastmod>
   </url>
   
   <url>
@@ -85,11 +105,6 @@
   <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/authors/admin/</loc>
     <lastmod>2020-02-04T15:11:11-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/</loc>
-    <lastmod>2020-02-04T16:03:47-05:00</lastmod>
   </url>
   
   <url>
@@ -170,11 +185,6 @@
   <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/post/welcome/</loc>
     <lastmod>2019-09-25T15:26:41-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/authors/derek/</loc>
-    <lastmod>2020-02-04T11:17:46-05:00</lastmod>
   </url>
   
   <url>
