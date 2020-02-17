@@ -77,6 +77,19 @@
     </item>
     
     <item>
+      <title>MacOS</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/macos/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/macos/</guid>
+      <description>&lt;h2 id=&#34;list-of-software&#34;&gt;List of Software&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Homebrew (&lt;a href=&#34;https://brew.sh/&#34;&gt;https://brew.sh/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Magnet window manager (&lt;a href=&#34;https://apps.apple.com/us/app/magnet/id441258766?mt=12&#34;&gt;App Store&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Version Control</title>
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/versioncontrol/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>

@@ -8,7 +8,7 @@ location: "West Hall 411"
 summary: ""
 abstract: "This meetings is focused on statistical computing on MacOS. Potential topics include setting up Homebrew, LaTeX, R, the terminal, and other essential components in a statistician's workflow.
 
-Links, resources and topics will be listed in [Resources/MacOS](../../workshops/resources/macos)"
+Links, resources and topics will be listed in [Resources/MacOS](../../workshops/resources/macos). "
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
 date: 2020-02-18T13:00:00-05:00
