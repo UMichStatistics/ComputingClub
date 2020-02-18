@@ -533,6 +533,23 @@ git commit -m &#39;some description of your changes&#39;
     </item>
     
     <item>
+      <title>All things R</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/r/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/r/</guid>
+      <description>
+
+&lt;h2 id=&#34;cheat-sheets&#34;&gt;Cheat sheets&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A very handy &lt;a href=&#34;https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;ggplot&lt;/code&gt; cheat sheet&lt;/a&gt; containing most functionalities and their syntax! (&lt;em&gt;Suggested by Vincenzo Loffredo&lt;/em&gt;)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;A bunch of very useful &lt;a href=&#34;https://rstudio.com/resources/cheatsheets/&#34; target=&#34;_blank&#34;&gt;R and RStudio cheat sheets&lt;/a&gt;. (&lt;em&gt;Suggested by Drew Yarger&lt;/em&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Deployment on UMich Space</title>
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_umich/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
