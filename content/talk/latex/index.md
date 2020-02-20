@@ -40,7 +40,9 @@ image:
 #   url: https://twitter.com
 #   icon_pack: fab
 #   icon: twitter
-
+links:
+- name: Resources
+  url: workshops/resources/macos
 # Optional filename of your slides within your talk's folder or a URL.
 url_slides:
 
