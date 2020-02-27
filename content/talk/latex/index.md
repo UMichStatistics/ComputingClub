@@ -42,7 +42,7 @@ image:
 #   icon: twitter
 links:
 - name: Resources
-  url: workshops/resources/macos
+  url: workshops/resources/latex
 # Optional filename of your slides within your talk's folder or a URL.
 url_slides:
 
