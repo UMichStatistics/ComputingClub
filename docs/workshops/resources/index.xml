@@ -17,12 +17,9 @@
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/hpc/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/hpc/</guid>
-      <description>
-
-&lt;h2 id=&#34;language-packages&#34;&gt;Language, packages&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/um-dang/conda_on_the_cluster&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Conda integration in GreatLakes&lt;/strong&gt;&lt;/a&gt;
-&lt;em&gt;by &lt;a href=&#34;https://um-dang.github.io/&#34; target=&#34;_blank&#34;&gt;UMich Data Analysis Networking Group&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+      <description>&lt;h2 id=&#34;language-packages&#34;&gt;Language, packages&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/um-dang/conda_on_the_cluster&#34;&gt;&lt;strong&gt;Conda integration in GreatLakes&lt;/strong&gt;&lt;/a&gt;
+&lt;em&gt;by &lt;a href=&#34;https://um-dang.github.io/&#34;&gt;UMich Data Analysis Networking Group&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -31,56 +28,53 @@
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/latex/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/latex/</guid>
-      <description>
-
-&lt;h2 id=&#34;editors&#34;&gt;Editors&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;editors&#34;&gt;Editors&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.lyx.org/&#34; target=&#34;_blank&#34;&gt;LyX&lt;/a&gt;, a WYSIWYG LaTeX editor useful for quick math writing.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.lyx.org/&#34;&gt;LyX&lt;/a&gt;, a WYSIWYG LaTeX editor useful for quick math writing.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;citation-management&#34;&gt;Citation management&lt;/h2&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.zotero.org/&#34; target=&#34;_blank&#34;&gt;Zotero&lt;/a&gt; for local and remote bibliography management.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.zotero.org/download/connectors&#34; target=&#34;_blank&#34;&gt;Zotero connector&lt;/a&gt; for Zotero integration in browsers.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib&#34; target=&#34;_blank&#34;&gt;bibtex vs biblatex vs biber vs natbib&lt;/a&gt; to understand the differences.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://mathscinet-ams-org.proxy.lib.umich.edu/mrlookup&#34; target=&#34;_blank&#34;&gt;MRLookup&lt;/a&gt; has a nice search engine to get &lt;em&gt;verified&lt;/em&gt; citations for many peer-reviewed publications. You can get &lt;code&gt;BibTeX&lt;/code&gt; formatted exports. Many journals require the MR number, so you can find them using that tool. Also, check out &lt;a href=&#34;https://mathscinet.ams.org/msnhtml/serials.pdf&#34; target=&#34;_blank&#34;&gt;Abbreviations of Names of Serials&lt;/a&gt; if you want the abbreviated version of journal names.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; for local and remote bibliography management.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.zotero.org/download/connectors&#34;&gt;Zotero connector&lt;/a&gt; for Zotero integration in browsers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib&#34;&gt;bibtex vs biblatex vs biber vs natbib&lt;/a&gt; to understand the differences.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://mathscinet-ams-org.proxy.lib.umich.edu/mrlookup&#34;&gt;MRLookup&lt;/a&gt; has a nice search engine to get &lt;em&gt;verified&lt;/em&gt; citations for many peer-reviewed publications. You can get &lt;code&gt;BibTeX&lt;/code&gt; formatted exports. Many journals require the MR number, so you can find them using that tool. Also, check out &lt;a href=&#34;https://mathscinet.ams.org/msnhtml/serials.pdf&#34;&gt;Abbreviations of Names of Serials&lt;/a&gt; if you want the abbreviated version of journal names.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;editing-equations&#34;&gt;Editing equations&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Use the &lt;code&gt;\left&lt;/code&gt; and &lt;code&gt;\right&lt;/code&gt; commands near brackets and parens to automatically size them (i.e. outer brackets will be made larger than inner brackets).&lt;/li&gt;
 &lt;li&gt;The align environment will add a tag to each line as a separate equation. Using &lt;code&gt;split&lt;/code&gt; within an &lt;code&gt;equation&lt;/code&gt; or &lt;code&gt;align&lt;/code&gt; will assign one label to all lines.&lt;/li&gt;
 &lt;li&gt;You can use the &lt;code&gt;\tag&lt;/code&gt; command to edit the number next to an equation
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;\tag{Hi Rob}&lt;/code&gt; will change an equation label from &amp;ldquo;(1)&amp;rdquo; to &amp;ldquo;(Hi Rob)&amp;rdquo;&lt;/li&gt;
 &lt;li&gt;This can be a useful, if somewhat hacky, way to add commentary to multiline equations&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;The &lt;code&gt;\label&lt;/code&gt; command assigns an internal keyword which is used in referencing via &lt;code&gt;\ref&lt;/code&gt; or &lt;code&gt;\cref&lt;/code&gt;, whereas &lt;code&gt;\tag&lt;/code&gt; will change the actual label that appears in the output.
-&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;referencing-equations-figures&#34;&gt;Referencing equations/figures&lt;/h2&gt;
-
+&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;\label&lt;/code&gt; command assigns an internal keyword which is used in referencing via &lt;code&gt;\ref&lt;/code&gt; or &lt;code&gt;\cref&lt;/code&gt;, whereas &lt;code&gt;\tag&lt;/code&gt; will change the actual label that appears in the output.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;referencing-equationsfigures&#34;&gt;Referencing equations/figures&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;The &lt;code&gt;\Cref&lt;/code&gt; command will automatically determine what is being referenced based on the type of the object that was labelled. For example, &lt;code&gt;\ref{mylabel}&lt;/code&gt; will display as &amp;ldquo;Equation (1)&amp;rdquo; if &lt;code&gt;\label{mylabel}&lt;/code&gt; is next an equation and &amp;ldquo;Figure (1)&amp;rdquo; if &lt;code&gt;\label{mylabel}&lt;/code&gt; is close to a figure.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\autoref&lt;/code&gt; does something similar, but depends on a specific convention within the label. For example, you need to prepend an &lt;code&gt;eq:&lt;/code&gt; so  &lt;code&gt;\autoref{eq:mylabel}&lt;/code&gt; will show up as &amp;ldquo;Equation (1)&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\autoref&lt;/code&gt; does something similar, but depends on a specific convention within the label. For example, you need to prepend an &lt;code&gt;eq:&lt;/code&gt; so  &lt;code&gt;\autoref{eq:mylabel}&lt;/code&gt; will show up as &amp;ldquo;Equation (1)&amp;quot;.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;some-tips-and-tricks&#34;&gt;Some tips and tricks&lt;/h2&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Check out &lt;a href=&#34;http://detexify.kirelabs.org/classify.html&#34; target=&#34;_blank&#34;&gt;Detexify&lt;/a&gt; to find the correct math symbol by drawing it.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Check out the &lt;a href=&#34;https://www.ctan.org/pkg/todonotes&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;todonotes&lt;/code&gt; package&lt;/a&gt; to add todo notes and comments to LaTeX files and pdf output.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Use &lt;code&gt;include&lt;/code&gt; or &lt;code&gt;input&lt;/code&gt; to insert the content of another &lt;code&gt;.tex&lt;/code&gt; file where you want it. For example, you can maintain a math macro file that you use often or organize your sections/chapters in different files. Also, read &lt;a href=&#34;https://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include&#34; target=&#34;_blank&#34;&gt;When should I use \input vs. \include?&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Check out &lt;a href=&#34;http://detexify.kirelabs.org/classify.html&#34;&gt;Detexify&lt;/a&gt; to find the correct math symbol by drawing it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Check out the &lt;a href=&#34;https://www.ctan.org/pkg/todonotes&#34;&gt;&lt;code&gt;todonotes&lt;/code&gt; package&lt;/a&gt; to add todo notes and comments to LaTeX files and pdf output.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use &lt;code&gt;include&lt;/code&gt; or &lt;code&gt;input&lt;/code&gt; to insert the content of another &lt;code&gt;.tex&lt;/code&gt; file where you want it. For example, you can maintain a math macro file that you use often or organize your sections/chapters in different files. Also, read &lt;a href=&#34;https://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include&#34;&gt;When should I use \input vs. \include?&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -90,33 +84,69 @@
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/macos/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/macos/</guid>
-      <description>
-
-&lt;h2 id=&#34;package-and-application-manager-homebrew-https-brew-sh&#34;&gt;Package and application manager (&lt;a href=&#34;https://brew.sh/&#34; target=&#34;_blank&#34;&gt;Homebrew&lt;/a&gt;)&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;package-and-application-manager-homebrewhttpsbrewsh&#34;&gt;Package and application manager (&lt;a href=&#34;https://brew.sh/&#34;&gt;Homebrew&lt;/a&gt;)&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Installation: follow the instructions on the &lt;a href=&#34;https://brew.sh/&#34; target=&#34;_blank&#34;&gt;website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Installation: follow the instructions on the &lt;a href=&#34;https://brew.sh/&#34;&gt;website&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Basic commands:
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;brew install &amp;lt;package&amp;gt;&lt;/code&gt; to install a particular package;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;brew cask install &amp;lt;application&amp;gt;&lt;/code&gt; to install an application (will appear in the &lt;code&gt;Applications&lt;/code&gt; folder);&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;brew search &amp;lt;name&amp;gt;&lt;/code&gt; to list available formulae containing &lt;code&gt;name&lt;/code&gt;;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Useful to export some (all) packages to another environment (&lt;code&gt;brew bundle&lt;/code&gt; command) resolving all dependencies.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;terminal-customization&#34;&gt;Terminal customization&lt;/h2&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://ohmyz.sh/&#34; target=&#34;_blank&#34;&gt;Oh My ZSH!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ohmyz.sh/&#34;&gt;Oh My ZSH!&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;cool-apps&#34;&gt;Cool Apps&lt;/h2&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://apps.apple.com/us/app/magnet/id441258766?mt=12&#34; target=&#34;_blank&#34;&gt;Magnet window manager (App Store)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://apps.apple.com/us/app/magnet/id441258766?mt=12&#34;&gt;Magnet window manager (App Store)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Package Development</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/packages/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/packages/</guid>
+      <description>&lt;h2 id=&#34;smoke-testing&#34;&gt;Smoke Testing&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Smoke_testing_(software)&#34;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Smoke testing is a quick and easy way to check if code works.
+If your program can&amp;rsquo;t even run without crashing, there&amp;rsquo;s no point to performing more fine-grained testing procedures.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sqrt_1 &amp;lt;- function(x) {
+    if (x &amp;gt;= 0) {
+        ret &amp;lt;- x^(0.5)
+    } else {
+        ret &amp;lt;- (-x)^(0.5) + &amp;quot;i&amp;quot;
+    }
+    return(ret)
+}
+
+sqrt_2 &amp;lt;- function(x) {
+    if (x &amp;gt;= 0) {
+        ret &amp;lt;- x^(0.5)
+    } else {
+        ret &amp;lt;- paste0((-x)^(0.5), &amp;quot;i&amp;quot;)
+    }
+    return(ret)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here is the smoke-test we might right.
+Notice that the output is not checked; we just want to check if there are any errors.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;smoke_test &amp;lt;- function(test_input) {
+    sqrt_1(test_input) # will raise an error
+    sqrt_2(test_input) # will not raise an error, but is problematic
+}
+
+smoke_test(2)
+smoke_test(3.14)
+smoke_test(-2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;unit-testing&#34;&gt;Unit Testing&lt;/h2&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
 </description>
     </item>
     
@@ -125,17 +155,12 @@
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/versioncontrol/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/versioncontrol/</guid>
-      <description>
-
-&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;The Pro Git book&lt;/strong&gt;&lt;/a&gt; &lt;em&gt;by Scott Chacon and Ben Straub:&lt;/em&gt;&lt;/p&gt;
-
+      <description>&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2&#34;&gt;&lt;strong&gt;The Pro Git book&lt;/strong&gt;&lt;/a&gt; &lt;em&gt;by Scott Chacon and Ben Straub:&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain&#34; target=&#34;_blank&#34;&gt;10. Git Internals&lt;/a&gt;: a deep understanding of git.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain&#34;&gt;10. Git Internals&lt;/a&gt;: a deep understanding of git.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://ohshitgit.com/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Oh Shit, Git!?!&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;http://www.dangitgit.com/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Dangit, git!&lt;/strong&gt;&lt;/a&gt;: two go-to resources when encountering git problems.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ohshitgit.com/&#34;&gt;&lt;strong&gt;Oh Shit, Git!?!&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;http://www.dangitgit.com/&#34;&gt;&lt;strong&gt;Dangit, git!&lt;/strong&gt;&lt;/a&gt;: two go-to resources when encountering git problems.&lt;/p&gt;
 </description>
     </item>
     
@@ -144,14 +169,14 @@
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/r/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/r/</guid>
-      <description>
-
-&lt;h2 id=&#34;cheat-sheets&#34;&gt;Cheat sheets&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;cheat-sheets&#34;&gt;Cheat sheets&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;A very handy &lt;a href=&#34;https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;ggplot&lt;/code&gt; cheat sheet&lt;/a&gt; containing most functionalities and their syntax! (&lt;em&gt;Suggested by Vincenzo Loffredo&lt;/em&gt;)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;A bunch of very useful &lt;a href=&#34;https://rstudio.com/resources/cheatsheets/&#34; target=&#34;_blank&#34;&gt;R and RStudio cheat sheets&lt;/a&gt;. (&lt;em&gt;Suggested by Drew Yarger&lt;/em&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A very handy &lt;a href=&#34;https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf&#34;&gt;&lt;code&gt;ggplot&lt;/code&gt; cheat sheet&lt;/a&gt; containing most functionalities and their syntax! (&lt;em&gt;Suggested by Vincenzo Loffredo&lt;/em&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A bunch of very useful &lt;a href=&#34;https://rstudio.com/resources/cheatsheets/&#34;&gt;R and RStudio cheat sheets&lt;/a&gt;. (&lt;em&gt;Suggested by Drew Yarger&lt;/em&gt;)&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

@@ -28,6 +28,11 @@
   </url>
   
   <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/workshops/resources/packages/</loc>
+    <lastmod>2020-03-09T15:27:58-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/workshops/resources/versioncontrol/</loc>
     <lastmod>2019-10-03T00:53:55-04:00</lastmod>
   </url>
@@ -89,7 +94,22 @@
   
   <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/authors/</loc>
-    <lastmod>2020-02-20T00:10:36-05:00</lastmod>
+    <lastmod>2020-03-09T15:27:58-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/talk/packages/</loc>
+    <lastmod>2020-03-09T15:27:58-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/authors/admin/</loc>
+    <lastmod>2020-03-09T15:27:58-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/</loc>
+    <lastmod>2020-03-09T15:27:58-04:00</lastmod>
   </url>
   
   <url>
@@ -98,18 +118,8 @@
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/authors/admin/</loc>
-    <lastmod>2020-02-20T00:10:36-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/</loc>
-    <lastmod>2020-02-20T00:10:36-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/talk/latex/</loc>
-    <lastmod>2020-02-20T00:10:36-05:00</lastmod>
+    <lastmod>2020-02-26T20:36:24-05:00</lastmod>
   </url>
   
   <url>
