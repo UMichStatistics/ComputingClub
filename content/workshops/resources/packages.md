@@ -216,5 +216,45 @@ In PyCharm, you can set up automatic testing as follows:
 - In the `Run` pane, click on `Toggle auto-test`
 - Now, any changes to files automatically triggers all tests to be run!
 
+## Unit Testing in Julia
+
+This [guide](https://julia.quantecon.org/more_julia/testing.html) gives a nice, detailed walkthrough on how to set up a package in Julia with tests and integrate it with Travis and Codecov.
+
+Julia comes with the 'Test' module built-in which offers basic unit tests.
+```Julia
+sqrt_im(x::Real) = sqrt(complex(x))
+
+using Test
+# Unit tests (check for right value in both cases)
+@test sqrt_im(2.0)  ≈ 1.4142135623730951
+@test sqrt_im(5.0)  ≈ 1.4142135623730951
+@test sqrt_im(-2.0) ≈ 1.4142135623730951im
+
+# Random input
+using Random
+Z = randn(MersenneTwister(555), 10)
+@test (sqrt_im.(Z)).^2 ≈ Z
+
+@test sqrt(2.0) ≈ 1.4142135623730951
+@test sqrt(-2.0) ≈ 1.414213562373095im
+# "test_broken" lets us mark tests we know give the wrong answer or raise an error
+@test_broken sqrt(-2.0) ≈ 1.414213562373095im
+# "test_broken" will return an Error testing value if the expression passes
+@test_broken sqrt(2.0) ≈ 1.4142135623730951
+
+# Julia requires a boolean result to pass; for smoke testing this can be alleviated
+# by just always returning true
+@test begin
+  sqrt_im(-2.0)
+  true
+end
+
+@test begin
+  sqrt(-2.0)
+  true
+end
+
+```
+
 ## Resources
 

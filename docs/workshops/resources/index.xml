@@ -120,7 +120,7 @@ If your program can&amp;rsquo;t even run without crashing, there&amp;rsquo;s no 
     &lt;span style=&#34;color:#a6e22e&#34;&gt;if &lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) {
         ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; x&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;)
     } else {
-        ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; (&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;x)&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;i&amp;#34;&lt;/span&gt;
+        ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; (&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;x)&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;i&amp;#34;&lt;/span&gt;
     }
     &lt;span style=&#34;color:#a6e22e&#34;&gt;return&lt;/span&gt;(ret)
 }
@@ -129,7 +129,7 @@ sqrt_2 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span
     &lt;span style=&#34;color:#a6e22e&#34;&gt;if &lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) {
         ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; x&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;)
     } else {
-        ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;paste0&lt;/span&gt;((&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;x)&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;i&amp;#34;&lt;/span&gt;)
+        ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;paste0&lt;/span&gt;((&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;x)&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;i&amp;#34;&lt;/span&gt;)
     }
     &lt;span style=&#34;color:#a6e22e&#34;&gt;return&lt;/span&gt;(ret)
 }
@@ -199,7 +199,7 @@ Notice that the output is not checked; we just want to check if there are any er
 &lt;li&gt;Add a first test (note the near-grammarly syntax: the first argument is what we are &lt;em&gt;testing that &lt;code&gt;sqrt_1()&lt;/code&gt; works on positive input&lt;/em&gt;):&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
-    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sqrt_1() works on positive input&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#75715e&#34;&gt;# what we are testing&lt;/span&gt;
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;sqrt_1() works on positive input&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#75715e&#34;&gt;# what we are testing&lt;/span&gt;
     { &lt;span style=&#34;color:#75715e&#34;&gt;# the test itself, using expect statements&lt;/span&gt;
         &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_equal&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;)
         &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_equal&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.0&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0&lt;/span&gt;)
@@ -210,9 +210,9 @@ Notice that the output is not checked; we just want to check if there are any er
 &lt;li&gt;Let&amp;rsquo;s add another succeding test, but on an expected non-successfull call:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
-    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sqrt_1 raises an error with negative inputs&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;sqrt_1 raises an error with negative inputs&amp;#34;&lt;/span&gt;,
     {
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_error&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;-1.0&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;non-numeric argument&amp;#34;&lt;/span&gt;)
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_error&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;-1.0&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;non-numeric argument&amp;#34;&lt;/span&gt;)
     }
 )
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
@@ -220,9 +220,9 @@ Notice that the output is not checked; we just want to check if there are any er
 &lt;li&gt;Now, let&amp;rsquo;s add a test which fails:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
-    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sqrt_1 returns imaginary numbers for negative inputs&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;sqrt_1 returns imaginary numbers for negative inputs&amp;#34;&lt;/span&gt;,
     {
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_match&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;-1.0&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1i&amp;#34;&lt;/span&gt;)
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_match&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;-1.0&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;1i&amp;#34;&lt;/span&gt;)
     }
 )
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;unit-testing-in-python-using-the-unittests-package&#34;&gt;Unit Testing in &lt;code&gt;Python&lt;/code&gt; using the &lt;code&gt;unittests&lt;/code&gt; package&lt;/h2&gt;
@@ -249,11 +249,11 @@ Notice that the output is not checked; we just want to check if there are any er
 		  self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;assertEqual(
 		      sqrt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sqrt(&lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;), 
 		      &lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;,
-		      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;what happened if the test failed&amp;#34;&lt;/span&gt;
+		      &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;what happened if the test failed&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
 		  )
 
 
-&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;:
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;__main__&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;:
 	  unittest&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;main()
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run tests using&lt;/p&gt;
@@ -274,7 +274,7 @@ python -m unittest discover tests
             result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; True
         &lt;span style=&#34;color:#66d9ef&#34;&gt;except&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;AssertionError&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; error:
             result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; False
-        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;assertTrue(res, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;what happened if the test failed&amp;#34;&lt;/span&gt;)
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;assertTrue(res, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;what happened if the test failed&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In PyCharm, you can set up automatic testing as follows:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;File&lt;/code&gt; &amp;gt; &lt;code&gt;Settings&lt;/code&gt; &amp;gt; &lt;code&gt;Tools&lt;/code&gt; &amp;gt; &lt;code&gt;Python Integrated Tools&lt;/code&gt;&lt;/li&gt;
@@ -284,7 +284,42 @@ python -m unittest discover tests
 &lt;li&gt;In the &lt;code&gt;Run&lt;/code&gt; pane, click on &lt;code&gt;Toggle auto-test&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Now, any changes to files automatically triggers all tests to be run!&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;h2 id=&#34;unit-testing-in-julia&#34;&gt;Unit Testing in Julia&lt;/h2&gt;
+&lt;p&gt;This &lt;a href=&#34;https://julia.quantecon.org/more_julia/testing.html&#34;&gt;guide&lt;/a&gt; gives a nice, detailed walkthrough on how to set up a package in Julia with tests and integrate it with Travis and Codecov.&lt;/p&gt;
+&lt;p&gt;Julia comes with the &amp;lsquo;Test&amp;rsquo; module built-in which offers basic unit tests.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Julia&#34; data-lang=&#34;Julia&#34;&gt;sqrt_im&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Real&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sqrt&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;(complex&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;))
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; Test&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# Unit tests (check for right value in both cases)&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; sqrt_im&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;)  ≈&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; sqrt_im&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;5.0&lt;/span&gt;)  ≈&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; sqrt_im&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) ≈&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;im
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Random input&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; Random&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;
+Z&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; randn&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;MersenneTwister&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;555&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; (sqrt_im&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;(Z&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;))&lt;span style=&#34;color:#f92672&#34;&gt;.^&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; ≈&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; Z&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;
+
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; sqrt&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) ≈&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; sqrt&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) ≈&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.414213562373095&lt;/span&gt;im
+&lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#34;test_broken&amp;#34; lets us mark tests we know give the wrong answer or raise an error&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@test_broken&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; sqrt&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) ≈&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.414213562373095&lt;/span&gt;im
+&lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#34;test_broken&amp;#34; will return an Error testing value if the expression passes&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@test_broken&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; sqrt&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) ≈&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Julia requires a boolean result to pass; for smoke testing this can be alleviated&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# by just always returning true&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;begin&lt;/span&gt;
+  sqrt_im&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;)
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;begin&lt;/span&gt;
+  sqrt&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;)
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
 </description>
     </item>
     
