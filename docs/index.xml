@@ -272,33 +272,33 @@ cd DemoWebsite
 &lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Smoke_testing_(software)&#34;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Smoke testing is a quick and easy way to check if code works.
 If your program can&amp;rsquo;t even run without crashing, there&amp;rsquo;s no point to performing more fine-grained testing procedures.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;    sqrt_1 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(x) {
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;if &lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) {
-            ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; x&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;)
-        } else {
-            ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; (&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;x)&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;i&amp;#34;&lt;/span&gt;
-        }
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;return&lt;/span&gt;(ret)
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;sqrt_1 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(x) {
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;if &lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) {
+        ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; x&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;)
+    } else {
+        ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; (&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;x)&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;i&amp;#34;&lt;/span&gt;
     }
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;return&lt;/span&gt;(ret)
+}
 
-    sqrt_2 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(x) {
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;if &lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) {
-            ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; x&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;)
-        } else {
-            ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;paste0&lt;/span&gt;((&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;x)&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;i&amp;#34;&lt;/span&gt;)
-        }
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;return&lt;/span&gt;(ret)
+sqrt_2 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(x) {
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;if &lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) {
+        ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; x&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;)
+    } else {
+        ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;paste0&lt;/span&gt;((&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;x)&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;i&amp;#34;&lt;/span&gt;)
     }
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;return&lt;/span&gt;(ret)
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here is the smoke-test we might right.
 Notice that the output is not checked; we just want to check if there are any errors.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;    smoke_test &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(test_input) {
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(test_input) &lt;span style=&#34;color:#75715e&#34;&gt;# will raise an error&lt;/span&gt;
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_2&lt;/span&gt;(test_input) &lt;span style=&#34;color:#75715e&#34;&gt;# will not raise an error, but is problematic&lt;/span&gt;
-    }
-    
-    &lt;span style=&#34;color:#a6e22e&#34;&gt;smoke_test&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
-    &lt;span style=&#34;color:#a6e22e&#34;&gt;smoke_test&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;3.14&lt;/span&gt;)
-    &lt;span style=&#34;color:#a6e22e&#34;&gt;smoke_test&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;-2&lt;/span&gt;)
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;smoke_test &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(test_input) {
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(test_input) &lt;span style=&#34;color:#75715e&#34;&gt;# will raise an error&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_2&lt;/span&gt;(test_input) &lt;span style=&#34;color:#75715e&#34;&gt;# will not raise an error, but is problematic&lt;/span&gt;
+}
+
+&lt;span style=&#34;color:#a6e22e&#34;&gt;smoke_test&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;smoke_test&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;3.14&lt;/span&gt;)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;smoke_test&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;-2&lt;/span&gt;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;the-unit-testing-paradigm&#34;&gt;The Unit Testing paradigm&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Test-driven_development&#34;&gt;Test-driven development&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;optimal-workflow-with-an-example&#34;&gt;Optimal workflow with an example&lt;/h3&gt;
