@@ -149,6 +149,72 @@ test_that(
 
 ## Unit Testing in `Python` using the `unittests` package
 
+[`unittest` documentation](https://docs.python.org/3/library/unittest.html)
+
+Create a simple module:
+```
+TestModule/
+  sqrt.py
+  test/
+    test_sqrt.py
+```
+where
+```Python
+# sqrt.py
+import math
+
+
+def sqrt(x):
+	  return math.sqrt(x)
+# test_sqrt.py
+import unittest
+import sqrt
+
+
+class MyTestCase(unittest.TestCase):
+	  def test_something(self):
+		  self.assertEqual(
+		      sqrt.sqrt(1.0), 
+		      1.0,
+		      "what happened if the test failed"
+		  )
+
+
+if __name__ == '__main__':
+	  unittest.main()
+
+```
+Run tests using
+```
+python -m unittest tests/test_sqrt.py
+python -m unittest discover tests
+```
+The `discover tests` implies that the `unittest` package will search the `tests` directory for all tests in there.
+
+The basic `unittest` package is not well suited to check equality of `numpy` arrays. Here's a way to do it:
+```Python
+import numpy as np
+
+
+class MyTest(unittest.TestCase):
+    def numpy_test_case(self):
+        try:
+            np.testing.asser_array_almost_equal(
+                array1,
+                array2
+            )
+            result = True
+        except AssertionError as error:
+            result = False
+        self.assertTrue(res, "what happened if the test failed")
+```
+In PyCharm, you can set up automatic testing as follows:
+- `File` > `Settings` > `Tools` > `Python Integrated Tools`
+- Select `Unittests` under `Testing`
+- In the `Project` pane (the directory), left click on the `tests` directory and select `Craete unittest in tests` and click `OK`
+- Run tests once `Run` > `Run Unittests in tests`
+- In the `Run` pane, click on `Toggle auto-test`
+- Now, any changes to files automatically triggers all tests to be run!
 
 ## Resources
 

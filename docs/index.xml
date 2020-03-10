@@ -382,6 +382,64 @@ Notice that the output is not checked; we just want to check if there are any er
     }
 )
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;unit-testing-in-python-using-the-unittests-package&#34;&gt;Unit Testing in &lt;code&gt;Python&lt;/code&gt; using the &lt;code&gt;unittests&lt;/code&gt; package&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.python.org/3/library/unittest.html&#34;&gt;&lt;code&gt;unittest&lt;/code&gt; documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Create a simple module:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;TestModule/
+  sqrt.py
+  test/
+    test_sqrt.py
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;where&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# sqrt.py&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; math
+
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt&lt;/span&gt;(x):
+	  &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; math&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sqrt(x)
+&lt;span style=&#34;color:#75715e&#34;&gt;# test_sqrt.py&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; unittest
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; sqrt
+
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MyTestCase&lt;/span&gt;(unittest&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;TestCase):
+	  &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test_something&lt;/span&gt;(self):
+		  self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;assertEqual(
+		      sqrt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sqrt(&lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;), 
+		      &lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;,
+		      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;what happened if the test failed&amp;#34;&lt;/span&gt;
+		  )
+
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;:
+	  unittest&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;main()
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run tests using&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;python -m unittest tests/test_sqrt.py
+python -m unittest discover tests
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;discover tests&lt;/code&gt; implies that the &lt;code&gt;unittest&lt;/code&gt; package will search the &lt;code&gt;tests&lt;/code&gt; directory for all tests in there.&lt;/p&gt;
+&lt;p&gt;The basic &lt;code&gt;unittest&lt;/code&gt; package is not well suited to check equality of &lt;code&gt;numpy&lt;/code&gt; arrays. Here&amp;rsquo;s a way to do it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; np
+
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MyTest&lt;/span&gt;(unittest&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;TestCase):
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;numpy_test_case&lt;/span&gt;(self):
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt;:
+            np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;testing&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;asser_array_almost_equal(
+                array1,
+                array2
+            )
+            result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; True
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;except&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;AssertionError&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; error:
+            result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; False
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;assertTrue(res, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;what happened if the test failed&amp;#34;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In PyCharm, you can set up automatic testing as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;File&lt;/code&gt; &amp;gt; &lt;code&gt;Settings&lt;/code&gt; &amp;gt; &lt;code&gt;Tools&lt;/code&gt; &amp;gt; &lt;code&gt;Python Integrated Tools&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Select &lt;code&gt;Unittests&lt;/code&gt; under &lt;code&gt;Testing&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;In the &lt;code&gt;Project&lt;/code&gt; pane (the directory), left click on the &lt;code&gt;tests&lt;/code&gt; directory and select &lt;code&gt;Craete unittest in tests&lt;/code&gt; and click &lt;code&gt;OK&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run tests once &lt;code&gt;Run&lt;/code&gt; &amp;gt; &lt;code&gt;Run Unittests in tests&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;In the &lt;code&gt;Run&lt;/code&gt; pane, click on &lt;code&gt;Toggle auto-test&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Now, any changes to files automatically triggers all tests to be run!&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
 </description>
     </item>

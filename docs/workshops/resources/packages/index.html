@@ -562,6 +562,64 @@ Notice that the output is not checked; we just want to check if there are any er
     }
 )
 </code></pre></div><h2 id="unit-testing-in-python-using-the-unittests-package">Unit Testing in <code>Python</code> using the <code>unittests</code> package</h2>
+<p><a href="https://docs.python.org/3/library/unittest.html"><code>unittest</code> documentation</a></p>
+<p>Create a simple module:</p>
+<pre><code>TestModule/
+  sqrt.py
+  test/
+    test_sqrt.py
+</code></pre><p>where</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># sqrt.py</span>
+<span style="color:#f92672">import</span> math
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sqrt</span>(x):
+	  <span style="color:#66d9ef">return</span> math<span style="color:#f92672">.</span>sqrt(x)
+<span style="color:#75715e"># test_sqrt.py</span>
+<span style="color:#f92672">import</span> unittest
+<span style="color:#f92672">import</span> sqrt
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyTestCase</span>(unittest<span style="color:#f92672">.</span>TestCase):
+	  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_something</span>(self):
+		  self<span style="color:#f92672">.</span>assertEqual(
+		      sqrt<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">1.0</span>), 
+		      <span style="color:#ae81ff">1.0</span>,
+		      <span style="color:#e6db74">&#34;what happened if the test failed&#34;</span>
+		  )
+
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+	  unittest<span style="color:#f92672">.</span>main()
+
+</code></pre></div><p>Run tests using</p>
+<pre><code>python -m unittest tests/test_sqrt.py
+python -m unittest discover tests
+</code></pre><p>The <code>discover tests</code> implies that the <code>unittest</code> package will search the <code>tests</code> directory for all tests in there.</p>
+<p>The basic <code>unittest</code> package is not well suited to check equality of <code>numpy</code> arrays. Here&rsquo;s a way to do it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyTest</span>(unittest<span style="color:#f92672">.</span>TestCase):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">numpy_test_case</span>(self):
+        <span style="color:#66d9ef">try</span>:
+            np<span style="color:#f92672">.</span>testing<span style="color:#f92672">.</span>asser_array_almost_equal(
+                array1,
+                array2
+            )
+            result <span style="color:#f92672">=</span> True
+        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">AssertionError</span> <span style="color:#66d9ef">as</span> error:
+            result <span style="color:#f92672">=</span> False
+        self<span style="color:#f92672">.</span>assertTrue(res, <span style="color:#e6db74">&#34;what happened if the test failed&#34;</span>)
+</code></pre></div><p>In PyCharm, you can set up automatic testing as follows:</p>
+<ul>
+<li><code>File</code> &gt; <code>Settings</code> &gt; <code>Tools</code> &gt; <code>Python Integrated Tools</code></li>
+<li>Select <code>Unittests</code> under <code>Testing</code></li>
+<li>In the <code>Project</code> pane (the directory), left click on the <code>tests</code> directory and select <code>Craete unittest in tests</code> and click <code>OK</code></li>
+<li>Run tests once <code>Run</code> &gt; <code>Run Unittests in tests</code></li>
+<li>In the <code>Run</code> pane, click on <code>Toggle auto-test</code></li>
+<li>Now, any changes to files automatically triggers all tests to be run!</li>
+</ul>
 <h2 id="resources">Resources</h2>
 
           </div>
