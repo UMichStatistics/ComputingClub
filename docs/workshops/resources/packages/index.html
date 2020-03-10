@@ -30,7 +30,7 @@
   
   <meta name="description" content="Smoke Testing Wikipedia
 Smoke testing is a quick and easy way to check if code works. If your program can&rsquo;t even run without crashing, there&rsquo;s no point to performing more fine-grained testing procedures.
-sqrt_1 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;- (-x)^(0.5) &#43; &quot;i&quot; } return(ret) } sqrt_2 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;- paste0((-x)^(0.">
+sqrt_1 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;- (-x)^(0.5) &#43; &#34;i&#34; } return(ret) } sqrt_2 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;- paste0((-x)^(0.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://UMichStatistics.github.io/ComputingClub/workshops/resources/packages/">
@@ -114,7 +114,7 @@ sqrt_1 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;-
   <meta property="og:title" content="Package Development | UM Statistics Computing Club">
   <meta property="og:description" content="Smoke Testing Wikipedia
 Smoke testing is a quick and easy way to check if code works. If your program can&rsquo;t even run without crashing, there&rsquo;s no point to performing more fine-grained testing procedures.
-sqrt_1 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;- (-x)^(0.5) &#43; &quot;i&quot; } return(ret) } sqrt_2 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;- paste0((-x)^(0."><meta property="og:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png">
+sqrt_1 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;- (-x)^(0.5) &#43; &#34;i&#34; } return(ret) } sqrt_2 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;- paste0((-x)^(0."><meta property="og:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png">
   <meta property="twitter:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png"><meta property="og:locale" content="en-us">
   
     
@@ -422,7 +422,15 @@ sqrt_1 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;-
       <nav id="TableOfContents">
   <ul>
     <li><a href="#smoke-testing">Smoke Testing</a></li>
-    <li><a href="#unit-testing">Unit Testing</a></li>
+    <li><a href="#the-unit-testing-paradigm">The Unit Testing paradigm</a>
+      <ul>
+        <li><a href="#optimal-workflow-with-an-example">Optimal workflow with an example</a></li>
+        <li><a href="#another-approach">Another approach</a></li>
+        <li><a href="#what-to-test">What to test</a></li>
+      </ul>
+    </li>
+    <li><a href="#unit-testing-in-r-using-the-testthat-package">Unit Testing in <code>R</code> using the <code>testthat</code> package</a></li>
+    <li><a href="#unit-testing-in-python-using-the-unittests-package">Unit Testing in <code>Python</code> using the <code>unittests</code> package</a></li>
     <li><a href="#resources">Resources</a></li>
   </ul>
 </nav>
@@ -443,36 +451,112 @@ sqrt_1 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;-
 <p><a href="https://en.wikipedia.org/wiki/Smoke_testing_(software)">Wikipedia</a></p>
 <p>Smoke testing is a quick and easy way to check if code works.
 If your program can&rsquo;t even run without crashing, there&rsquo;s no point to performing more fine-grained testing procedures.</p>
-<pre><code>sqrt_1 &lt;- function(x) {
-    if (x &gt;= 0) {
-        ret &lt;- x^(0.5)
-    } else {
-        ret &lt;- (-x)^(0.5) + &quot;i&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">    sqrt_1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(x) {
+        <span style="color:#a6e22e">if </span>(x <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>) {
+            ret <span style="color:#f92672">&lt;-</span> x<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">0.5</span>)
+        } else {
+            ret <span style="color:#f92672">&lt;-</span> (<span style="color:#f92672">-</span>x)<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">0.5</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;i&#34;</span>
+        }
+        <span style="color:#a6e22e">return</span>(ret)
     }
-    return(ret)
-}
 
-sqrt_2 &lt;- function(x) {
-    if (x &gt;= 0) {
-        ret &lt;- x^(0.5)
-    } else {
-        ret &lt;- paste0((-x)^(0.5), &quot;i&quot;)
+    sqrt_2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(x) {
+        <span style="color:#a6e22e">if </span>(x <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>) {
+            ret <span style="color:#f92672">&lt;-</span> x<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">0.5</span>)
+        } else {
+            ret <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">paste0</span>((<span style="color:#f92672">-</span>x)<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">0.5</span>), <span style="color:#e6db74">&#34;i&#34;</span>)
+        }
+        <span style="color:#a6e22e">return</span>(ret)
     }
-    return(ret)
-}
-</code></pre>
-<p>Here is the smoke-test we might right.
+</code></pre></div><p>Here is the smoke-test we might right.
 Notice that the output is not checked; we just want to check if there are any errors.</p>
-<pre><code>smoke_test &lt;- function(test_input) {
-    sqrt_1(test_input) # will raise an error
-    sqrt_2(test_input) # will not raise an error, but is problematic
-}
-
-smoke_test(2)
-smoke_test(3.14)
-smoke_test(-2)
-</code></pre>
-<h2 id="unit-testing">Unit Testing</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">    smoke_test <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(test_input) {
+        <span style="color:#a6e22e">sqrt_1</span>(test_input) <span style="color:#75715e"># will raise an error</span>
+        <span style="color:#a6e22e">sqrt_2</span>(test_input) <span style="color:#75715e"># will not raise an error, but is problematic</span>
+    }
+    
+    <span style="color:#a6e22e">smoke_test</span>(<span style="color:#ae81ff">2</span>)
+    <span style="color:#a6e22e">smoke_test</span>(<span style="color:#ae81ff">3.14</span>)
+    <span style="color:#a6e22e">smoke_test</span>(<span style="color:#ae81ff">-2</span>)
+</code></pre></div><h2 id="the-unit-testing-paradigm">The Unit Testing paradigm</h2>
+<p><a href="https://en.wikipedia.org/wiki/Test-driven_development">Test-driven development</a></p>
+<h3 id="optimal-workflow-with-an-example">Optimal workflow with an example</h3>
+<p>We want to implement a square root function with the following behaviour:</p>
+<ul>
+<li>returns the square root for positive input</li>
+<li>returns the complex square root for negative input</li>
+<li>is vectorized and return vectors/matrices with the same dimension</li>
+<li>if one input is negative, all outputs are in complex form</li>
+<li>raises an appropriate error if the input is not numeric (or any element of the input is not numeric)</li>
+</ul>
+<p>Before writing the function, we could write the following tests:</p>
+<ul>
+<li><code>sqrt(1) = 1</code></li>
+<li><code>sqrt(-1) = 0+1i</code> (depends on how complex numbers are implemented)</li>
+<li><code>sqrt([0, 1]) = [0, 1]</code></li>
+<li><code>sqrt([[0], [-1]]) = [[0+0i], [0+1i]]</code></li>
+<li><code>sqrt(&quot;a&quot;)</code> raises an error</li>
+<li><code>sqrt([0, &quot;A&quot;])</code> raises an error</li>
+</ul>
+<p>Then, we implement our function checking tests constantly until all criterions are satisfied.</p>
+<p>Some (most) IDEs can automatically run all your tests in the background when any file is saved: this checks the current function your are implementing and also that you did not break any prior developments. This constant checking enable you to quickly diagnose the problem as only your latest edits change the result of tests.</p>
+<h3 id="another-approach">Another approach</h3>
+<p>In practice, before writing a specific function, we might not know exactly what it&rsquo;s behaviour will be so it is not clear what tests to write beforehand. (I often get excited about implementing something and writing tests is boring&hellip;)</p>
+<p>So, instead of writing the tests before the function, we can wait until we are satisfied with the behaviour of a function and <em>protect</em> it with tests. Then, interactions with future functions will have some safeguards against bad input or output. Also, any further changes you perform on the function will have to satisfy the tests you previously wrote so any functions depending on the current function should not break.</p>
+<p>Furthermore, the creation of tests <em>after</em> the function may tell you that you have to refactor some parts of your function. When first writing it, you might not have thought of some edge case and the time spent wirting tests may uncover those cases.</p>
+<h3 id="what-to-test">What to test</h3>
+<ul>
+<li>Known output (e.g., simple cases you can compute by hand)</li>
+<li>In/out typing (behaviour under bad input, correct output given input)</li>
+<li>Output dimensions (column vs row vector, do you drop a dimension if it has length 1, etc.)</li>
+<li>Expected errors</li>
+</ul>
+<h2 id="unit-testing-in-r-using-the-testthat-package">Unit Testing in <code>R</code> using the <code>testthat</code> package</h2>
+<p>Let&rsquo;s create a simple <code>R</code> package in <code>RStudio</code>:</p>
+<ul>
+<li><code>New Project</code></li>
+<li><code>R Package</code></li>
+<li><code>New Project</code></li>
+<li>Put in some name</li>
+<li>Check <code>Open in new session</code></li>
+</ul>
+<p>Let&rsquo;s add the above defined functions in the <code>hello.R</code> file.</p>
+<p>Let&rsquo;s create some tests:</p>
+<ul>
+<li>Run <code>devtools::test()</code> and type in <code>1</code> to create the <code>tests</code> directory, which contains a <code>testthat.R</code> file managing imports and helps in running all tests at once, and a sub-directory <code>testthat</code> where we will add some test;</li>
+<li>Run test using <code>Build</code> &gt; <code>Test Package</code> or simply type <code>Ctrl+Shift+T</code> or run <code>devtools::test()</code>. You should see an output saying there are no tests in the <code>testthat</code> directory (as expected).</li>
+<li>Create a <code>test_sqrt_1.R</code> file in <code>tests/testthat</code> (NB: all test file must start with <code>test</code> so it can be discovered by the <code>testthat</code> package.)</li>
+<li>At the head of the file, add `context(&ldquo;Test sqrt functions&rdquo;) which will yield a more verbose output.</li>
+<li>Add a first test (note the near-grammarly syntax: the first argument is what we are <em>testing that <code>sqrt_1()</code> works on positive input</em>):</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">test_that</span>(
+    <span style="color:#e6db74">&#34;sqrt_1() works on positive input&#34;</span>, <span style="color:#75715e"># what we are testing</span>
+    { <span style="color:#75715e"># the test itself, using expect statements</span>
+        <span style="color:#a6e22e">expect_equal</span>(<span style="color:#a6e22e">sqrt_1</span>(<span style="color:#ae81ff">1.0</span>), <span style="color:#ae81ff">1.0</span>)
+        <span style="color:#a6e22e">expect_equal</span>(<span style="color:#a6e22e">sqrt_1</span>(<span style="color:#ae81ff">0.0</span>), <span style="color:#ae81ff">0.0</span>)
+    }
+)
+</code></pre></div><ul>
+<li>Run tests again and observe that our function passes all tests so far.</li>
+<li>Let&rsquo;s add another succeding test, but on an expected non-successfull call:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">test_that</span>(
+    <span style="color:#e6db74">&#34;sqrt_1 raises an error with negative inputs&#34;</span>,
+    {
+        <span style="color:#a6e22e">expect_error</span>(<span style="color:#a6e22e">sqrt_1</span>(<span style="color:#ae81ff">-1.0</span>), <span style="color:#e6db74">&#34;non-numeric argument&#34;</span>)
+    }
+)
+</code></pre></div><ul>
+<li>Running all tests should again suceed.</li>
+<li>Now, let&rsquo;s add a test which fails:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">test_that</span>(
+    <span style="color:#e6db74">&#34;sqrt_1 returns imaginary numbers for negative inputs&#34;</span>,
+    {
+        <span style="color:#a6e22e">expect_match</span>(<span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">-1.0</span>), <span style="color:#e6db74">&#34;1i&#34;</span>)
+    }
+)
+</code></pre></div><h2 id="unit-testing-in-python-using-the-unittests-package">Unit Testing in <code>Python</code> using the <code>unittests</code> package</h2>
 <h2 id="resources">Resources</h2>
 
           </div>

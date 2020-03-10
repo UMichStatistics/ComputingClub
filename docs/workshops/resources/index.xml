@@ -116,36 +116,112 @@
 &lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Smoke_testing_(software)&#34;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Smoke testing is a quick and easy way to check if code works.
 If your program can&amp;rsquo;t even run without crashing, there&amp;rsquo;s no point to performing more fine-grained testing procedures.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sqrt_1 &amp;lt;- function(x) {
-    if (x &amp;gt;= 0) {
-        ret &amp;lt;- x^(0.5)
-    } else {
-        ret &amp;lt;- (-x)^(0.5) + &amp;quot;i&amp;quot;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;    sqrt_1 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(x) {
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;if &lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) {
+            ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; x&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;)
+        } else {
+            ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; (&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;x)&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;i&amp;#34;&lt;/span&gt;
+        }
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;return&lt;/span&gt;(ret)
     }
-    return(ret)
-}
 
-sqrt_2 &amp;lt;- function(x) {
-    if (x &amp;gt;= 0) {
-        ret &amp;lt;- x^(0.5)
-    } else {
-        ret &amp;lt;- paste0((-x)^(0.5), &amp;quot;i&amp;quot;)
+    sqrt_2 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(x) {
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;if &lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) {
+            ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; x&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;)
+        } else {
+            ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;paste0&lt;/span&gt;((&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;x)&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;i&amp;#34;&lt;/span&gt;)
+        }
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;return&lt;/span&gt;(ret)
     }
-    return(ret)
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Here is the smoke-test we might right.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here is the smoke-test we might right.
 Notice that the output is not checked; we just want to check if there are any errors.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;smoke_test &amp;lt;- function(test_input) {
-    sqrt_1(test_input) # will raise an error
-    sqrt_2(test_input) # will not raise an error, but is problematic
-}
-
-smoke_test(2)
-smoke_test(3.14)
-smoke_test(-2)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;unit-testing&#34;&gt;Unit Testing&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;    smoke_test &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(test_input) {
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(test_input) &lt;span style=&#34;color:#75715e&#34;&gt;# will raise an error&lt;/span&gt;
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_2&lt;/span&gt;(test_input) &lt;span style=&#34;color:#75715e&#34;&gt;# will not raise an error, but is problematic&lt;/span&gt;
+    }
+    
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;smoke_test&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;smoke_test&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;3.14&lt;/span&gt;)
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;smoke_test&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;-2&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;the-unit-testing-paradigm&#34;&gt;The Unit Testing paradigm&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Test-driven_development&#34;&gt;Test-driven development&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;optimal-workflow-with-an-example&#34;&gt;Optimal workflow with an example&lt;/h3&gt;
+&lt;p&gt;We want to implement a square root function with the following behaviour:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;returns the square root for positive input&lt;/li&gt;
+&lt;li&gt;returns the complex square root for negative input&lt;/li&gt;
+&lt;li&gt;is vectorized and return vectors/matrices with the same dimension&lt;/li&gt;
+&lt;li&gt;if one input is negative, all outputs are in complex form&lt;/li&gt;
+&lt;li&gt;raises an appropriate error if the input is not numeric (or any element of the input is not numeric)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Before writing the function, we could write the following tests:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sqrt(1) = 1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sqrt(-1) = 0+1i&lt;/code&gt; (depends on how complex numbers are implemented)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sqrt([0, 1]) = [0, 1]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sqrt([[0], [-1]]) = [[0+0i], [0+1i]]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sqrt(&amp;quot;a&amp;quot;)&lt;/code&gt; raises an error&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sqrt([0, &amp;quot;A&amp;quot;])&lt;/code&gt; raises an error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then, we implement our function checking tests constantly until all criterions are satisfied.&lt;/p&gt;
+&lt;p&gt;Some (most) IDEs can automatically run all your tests in the background when any file is saved: this checks the current function your are implementing and also that you did not break any prior developments. This constant checking enable you to quickly diagnose the problem as only your latest edits change the result of tests.&lt;/p&gt;
+&lt;h3 id=&#34;another-approach&#34;&gt;Another approach&lt;/h3&gt;
+&lt;p&gt;In practice, before writing a specific function, we might not know exactly what it&amp;rsquo;s behaviour will be so it is not clear what tests to write beforehand. (I often get excited about implementing something and writing tests is boring&amp;hellip;)&lt;/p&gt;
+&lt;p&gt;So, instead of writing the tests before the function, we can wait until we are satisfied with the behaviour of a function and &lt;em&gt;protect&lt;/em&gt; it with tests. Then, interactions with future functions will have some safeguards against bad input or output. Also, any further changes you perform on the function will have to satisfy the tests you previously wrote so any functions depending on the current function should not break.&lt;/p&gt;
+&lt;p&gt;Furthermore, the creation of tests &lt;em&gt;after&lt;/em&gt; the function may tell you that you have to refactor some parts of your function. When first writing it, you might not have thought of some edge case and the time spent wirting tests may uncover those cases.&lt;/p&gt;
+&lt;h3 id=&#34;what-to-test&#34;&gt;What to test&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Known output (e.g., simple cases you can compute by hand)&lt;/li&gt;
+&lt;li&gt;In/out typing (behaviour under bad input, correct output given input)&lt;/li&gt;
+&lt;li&gt;Output dimensions (column vs row vector, do you drop a dimension if it has length 1, etc.)&lt;/li&gt;
+&lt;li&gt;Expected errors&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;unit-testing-in-r-using-the-testthat-package&#34;&gt;Unit Testing in &lt;code&gt;R&lt;/code&gt; using the &lt;code&gt;testthat&lt;/code&gt; package&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s create a simple &lt;code&gt;R&lt;/code&gt; package in &lt;code&gt;RStudio&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;New Project&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;R Package&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;New Project&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Put in some name&lt;/li&gt;
+&lt;li&gt;Check &lt;code&gt;Open in new session&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let&amp;rsquo;s add the above defined functions in the &lt;code&gt;hello.R&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s create some tests:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Run &lt;code&gt;devtools::test()&lt;/code&gt; and type in &lt;code&gt;1&lt;/code&gt; to create the &lt;code&gt;tests&lt;/code&gt; directory, which contains a &lt;code&gt;testthat.R&lt;/code&gt; file managing imports and helps in running all tests at once, and a sub-directory &lt;code&gt;testthat&lt;/code&gt; where we will add some test;&lt;/li&gt;
+&lt;li&gt;Run test using &lt;code&gt;Build&lt;/code&gt; &amp;gt; &lt;code&gt;Test Package&lt;/code&gt; or simply type &lt;code&gt;Ctrl+Shift+T&lt;/code&gt; or run &lt;code&gt;devtools::test()&lt;/code&gt;. You should see an output saying there are no tests in the &lt;code&gt;testthat&lt;/code&gt; directory (as expected).&lt;/li&gt;
+&lt;li&gt;Create a &lt;code&gt;test_sqrt_1.R&lt;/code&gt; file in &lt;code&gt;tests/testthat&lt;/code&gt; (NB: all test file must start with &lt;code&gt;test&lt;/code&gt; so it can be discovered by the &lt;code&gt;testthat&lt;/code&gt; package.)&lt;/li&gt;
+&lt;li&gt;At the head of the file, add `context(&amp;ldquo;Test sqrt functions&amp;rdquo;) which will yield a more verbose output.&lt;/li&gt;
+&lt;li&gt;Add a first test (note the near-grammarly syntax: the first argument is what we are &lt;em&gt;testing that &lt;code&gt;sqrt_1()&lt;/code&gt; works on positive input&lt;/em&gt;):&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sqrt_1() works on positive input&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#75715e&#34;&gt;# what we are testing&lt;/span&gt;
+    { &lt;span style=&#34;color:#75715e&#34;&gt;# the test itself, using expect statements&lt;/span&gt;
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_equal&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;)
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_equal&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.0&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0&lt;/span&gt;)
+    }
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Run tests again and observe that our function passes all tests so far.&lt;/li&gt;
+&lt;li&gt;Let&amp;rsquo;s add another succeding test, but on an expected non-successfull call:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sqrt_1 raises an error with negative inputs&amp;#34;&lt;/span&gt;,
+    {
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_error&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;-1.0&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;non-numeric argument&amp;#34;&lt;/span&gt;)
+    }
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Running all tests should again suceed.&lt;/li&gt;
+&lt;li&gt;Now, let&amp;rsquo;s add a test which fails:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sqrt_1 returns imaginary numbers for negative inputs&amp;#34;&lt;/span&gt;,
+    {
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_match&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;-1.0&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1i&amp;#34;&lt;/span&gt;)
+    }
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;unit-testing-in-python-using-the-unittests-package&#34;&gt;Unit Testing in &lt;code&gt;Python&lt;/code&gt; using the &lt;code&gt;unittests&lt;/code&gt; package&lt;/h2&gt;
 &lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
 </description>
     </item>
