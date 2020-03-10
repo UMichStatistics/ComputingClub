@@ -94,6 +94,10 @@ Furthermore, the creation of tests *after* the function may tell you that you ha
 - Output dimensions (column vs row vector, do you drop a dimension if it has length 1, etc.)
 - Expected errors
 
+### Some notes
+
+- Unit testing is great for interactive languages to detect if you are inadvertantly using global variables (defined outside the scope of a function). The test suite runs outside your scripts so tests will fail if you do so.
+
 ## Unit Testing in `R` using the `testthat` package
 
 Let's create a simple `R` package in `RStudio`:

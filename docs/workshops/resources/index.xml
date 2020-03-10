@@ -176,6 +176,10 @@ Notice that the output is not checked; we just want to check if there are any er
 &lt;li&gt;Output dimensions (column vs row vector, do you drop a dimension if it has length 1, etc.)&lt;/li&gt;
 &lt;li&gt;Expected errors&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&#34;some-notes&#34;&gt;Some notes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Unit testing is great for interactive languages to detect if you are inadvertantly using global variables (defined outside the scope of a function). The test suite runs outside your scripts so tests will fail if you do so.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;unit-testing-in-r-using-the-testthat-package&#34;&gt;Unit Testing in &lt;code&gt;R&lt;/code&gt; using the &lt;code&gt;testthat&lt;/code&gt; package&lt;/h2&gt;
 &lt;p&gt;Let&amp;rsquo;s create a simple &lt;code&gt;R&lt;/code&gt; package in &lt;code&gt;RStudio&lt;/code&gt;:&lt;/p&gt;
 &lt;ul&gt;
