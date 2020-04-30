@@ -37,7 +37,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;create-your-author-profile&#34;&gt;Create your author profile&lt;/h2&gt;
-&lt;p&gt;First things first, you need to create an &lt;code&gt;authors&lt;/code&gt; profile in order to associate multiple content to the same author. Unfortunately, Hugo does not provide a command to create a new author from command line, so the fastest way to go is to copy the &lt;code&gt;blank&lt;/code&gt; author folder and give it a name representing your&amp;rsquo;s (say &lt;code&gt;username&lt;/code&gt; from now on). Then, edit the &lt;code&gt;_index.md&lt;/code&gt; contained in the new &lt;code&gt;username&lt;/code&gt; folder and edit its content. It should be documented well enough for you to complete.&lt;/p&gt;
+&lt;p&gt;First things first, you need to create an &lt;code&gt;authors&lt;/code&gt; profile in order to associate multiple content to the same author. Unfortunately, Hugo does not provide a command to create a new author from command line, so the fastest way to go is to copy the &lt;code&gt;blank&lt;/code&gt; author folder and give it a name representing your&#39;s (say &lt;code&gt;username&lt;/code&gt; from now on). Then, edit the &lt;code&gt;_index.md&lt;/code&gt; contained in the new &lt;code&gt;username&lt;/code&gt; folder and edit its content. It should be documented well enough for you to complete.&lt;/p&gt;
 &lt;p&gt;If you want to add a picture of yourself, place it in the &lt;code&gt;username&lt;/code&gt; folder with the name &lt;code&gt;avatar.jpg/.png&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;create-a-meeting&#34;&gt;Create a meeting&lt;/h2&gt;
 &lt;h2 id=&#34;create-a-workshop&#34;&gt;Create a workshop&lt;/h2&gt;
@@ -64,7 +64,7 @@
 &lt;li&gt;Have a local copy of the website on your machine.&lt;/li&gt;
 &lt;li&gt;Update your local version.&lt;/li&gt;
 &lt;li&gt;Deploy your local version to your localhost using Hugo in order to update the &lt;code&gt;docs&lt;/code&gt; contents.&lt;/li&gt;
-&lt;li&gt;Push your changes, including both the source and the updated &lt;code&gt;docs&lt;/code&gt; to the site&amp;rsquo;s repository.&lt;/li&gt;
+&lt;li&gt;Push your changes, including both the source and the updated &lt;code&gt;docs&lt;/code&gt; to the site&#39;s repository.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;With the workflow, your changes will instantaneously update the public website. Also, since you first deploy on your local machine, you are able to see the results of your changes before them becoming public. Finally, pushing both the source and the updated &lt;code&gt;docs&lt;/code&gt; prevents conflicts in future updates.&lt;/p&gt;
 &lt;h3 id=&#34;requirements&#34;&gt;Requirements&lt;/h3&gt;
@@ -85,7 +85,7 @@
 &lt;h3 id=&#34;create-your-content&#34;&gt;Create your content&lt;/h3&gt;
 &lt;p&gt;Create your specific content by producing the necessary Markdown files and place them in the correct folders. See &lt;a href=&#34;create/&#34;&gt;Creating content&lt;/a&gt; for details on how to do so.&lt;/p&gt;
 &lt;h3 id=&#34;deploy-your-local-website&#34;&gt;Deploy your local website&lt;/h3&gt;
-&lt;p&gt;Now that your local repository contains updated content, it is time to deploy it to your local &lt;code&gt;docs&lt;/code&gt; folder. To do so, open a command prompt and run hugo at the root of the site&amp;rsquo;s local repository and type in:&lt;/p&gt;
+&lt;p&gt;Now that your local repository contains updated content, it is time to deploy it to your local &lt;code&gt;docs&lt;/code&gt; folder. To do so, open a command prompt and run hugo at the root of the site&#39;s local repository and type in:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;which will compile the content into the static &lt;code&gt;html&lt;/code&gt; pages. Unless your code does not compile, you should get an output such as (possibly containing warnings)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;Building sites … WARN 2019/09/24 17:08:23 In the next Hugo version &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;0.58.0&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.

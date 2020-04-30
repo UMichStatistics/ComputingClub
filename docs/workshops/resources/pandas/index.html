@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.6.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Statistics Computing Club">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="General Many methods have an inplace argument which performs the operation inplace when set to True so that you do not need to overwrite the original DataFrame. It produces cleaner code as well as saves time and memory! Note that method chaining does not work with inplace=True since nothing is returned.
+Rows and columns behave in the exact same way. Indeed, they are both implemented using pandas.Index or pandas.MultiIndex objects. The main difference is that columns can be indexed in an additional way since pandas.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://UMichStatistics.github.io/ComputingClub/workshops/resources/pandas/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="hsl(48, 100%, 51%)">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700%7CFauna+One&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/ComputingClub/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/ComputingClub/index.webmanifest">
+  <link rel="icon" type="image/png" href="/ComputingClub/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/ComputingClub/img/icon-192.png">
+
+  <link rel="canonical" href="https://UMichStatistics.github.io/ComputingClub/workshops/resources/pandas/">
+
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="UM Statistics Computing Club">
+  <meta property="og:url" content="https://UMichStatistics.github.io/ComputingClub/workshops/resources/pandas/">
+  <meta property="og:title" content="Data Manipulation using Pandas and Scikit-learn | UM Statistics Computing Club">
+  <meta property="og:description" content="General Many methods have an inplace argument which performs the operation inplace when set to True so that you do not need to overwrite the original DataFrame. It produces cleaner code as well as saves time and memory! Note that method chaining does not work with inplace=True since nothing is returned.
+Rows and columns behave in the exact same way. Indeed, they are both implemented using pandas.Index or pandas.MultiIndex objects. The main difference is that columns can be indexed in an additional way since pandas."><meta property="og:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png">
+  <meta property="twitter:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-04-29T00:00:00&#43;01:00">
+    
+    <meta property="article:modified_time" content="2020-04-29T00:00:00&#43;01:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Data Manipulation using Pandas and Scikit-learn | UM Statistics Computing Club</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    
+    
+      <a class="navbar-brand" href="/ComputingClub/">UM Statistics Computing Club</a>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/ComputingClub/post"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/ComputingClub/talk"><span>Meetings</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/ComputingClub/workshops"><span>Workshops</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/ComputingClub/workshops/resources"><span>Resources</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/ComputingClub/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item">
+        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/ComputingClub/workshops/resources/">Resources</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/ComputingClub/workshops/resources/hpc/">High Performance Computing</a>
+      </li>
+      
+      <li >
+        <a href="/ComputingClub/workshops/resources/latex/">LaTeX</a>
+      </li>
+      
+      <li >
+        <a href="/ComputingClub/workshops/resources/macos/">MacOS</a>
+      </li>
+      
+      <li >
+        <a href="/ComputingClub/workshops/resources/packages/">Packages</a>
+      </li>
+      
+      <li >
+        <a href="/ComputingClub/workshops/resources/versioncontrol/">Version Control</a>
+      </li>
+      
+      <li >
+        <a href="/ComputingClub/workshops/resources/r/">All things R</a>
+      </li>
+      
+      <li class="active">
+        <a href="/ComputingClub/workshops/resources/pandas/">Data Manipulation using Pandas and Scikit-learn</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#general">General</a></li>
+    <li><a href="#data-importation">Data Importation</a></li>
+    <li><a href="#data-exportation">Data Exportation</a></li>
+    <li><a href="#accessing-values">Accessing Values</a></li>
+    <li><a href="#setting-values">Setting Values</a></li>
+    <li><a href="#subsetting-data">Subsetting Data</a></li>
+    <li><a href="#reshaping-dataframes">Reshaping DataFrames</a></li>
+    <li><a href="#wide-to-long-format">Wide to long format</a></li>
+    <li><a href="#long-to-wide">Long to wide</a></li>
+    <li><a href="#merging-dataframes">Merging DataFrames</a></li>
+    <li><a href="#concatenate">Concatenate</a></li>
+    <li><a href="#merging">Merging</a></li>
+    <li><a href="#iterating-through-dataframes-a-classanchor-iditera">Iterating through DataFrames </a></li>
+    <li><a href="#functions-and-aggregation">Functions and Aggregation</a></li>
+    <li><a href="#multiindex-dataframes">MultiIndex DataFrames</a></li>
+    <li><a href="#scikit-learn-transformations">Scikit-learn Transformations</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>Data Manipulation using Pandas and Scikit-learn</h1>
+
+          <div class="article-style">
+            <h2 id="general">General</h2>
+<p>Many methods have an <code>inplace</code> argument which performs the operation inplace when set to <code>True</code> so that you do not need to overwrite the original <code>DataFrame</code>. It produces cleaner code as well as saves time and memory! Note that method chaining does not work with <code>inplace=True</code> since nothing is returned.</p>
+<p>Rows and columns behave in the exact same way. Indeed, they are both implemented using <code>pandas.Index</code> or <code>pandas.MultiIndex</code> objects. The main difference is that columns can be indexed in an additional way since <code>pandas.DataFrame</code> objects can be access through the native <code>python</code> indexing, i.e., <code>df[column]</code>. Otherwise, most (all?) operations can be perform along any of the two axes. (If not, there is the <code>.T</code> or <code>.transpose()</code> methods to flip the <code>DataFrame</code>.)</p>
+<h2 id="data-importation">Data Importation</h2>
+<p>You probably all know about <code>pandas.read_csv</code> to load text files into <code>pandas</code> <code>DataFrame</code>s. Here are some interesting options you might not know about:</p>
+<ul>
+<li>You can overwrite the column names directly using <code>names=[...]</code> and <code>header=0</code>;</li>
+<li>You can set the <code>index</code> automatically using <code>index_col=&quot;column_name&quot;</code>;</li>
+<li>You can drop columns or rows before loading using <code>usecols=[...]</code> or <code>skiprows=[...]</code>, respectively;</li>
+<li>If <code>NA</code>s are encoded in a particular way, you can specify it using <code>na_values=[...]</code>;</li>
+<li><code>encoding</code> might be useful to fix some problems related to encoding;</li>
+<li><code>delim_whitespace</code> can be useful when the separator is a variable number of whitespaces instead of a given character (<code>,</code>, <code>\t</code>, etc.);</li>
+</ul>
+<p>Most of these operations can be done in separate steps after loading(for example, you could do a <code>.replace(..., inplace=True)</code> to change some values to <code>NaN</code>), but it might be better to do them in one step to improve legibility, speed and memory consumption.</p>
+<h2 id="data-exportation">Data Exportation</h2>
+<p>You are probably aware of the <code>.to_csv</code> method to write a <code>pandas</code> <code>DataFrame</code> to a text file. Here are some interesting options:</p>
+<ul>
+<li><code>na_rep</code> to encode <code>NA</code>s in a particular way;</li>
+<li><code>columns</code> to only write specific columns;</li>
+<li><code>index</code>, <code>index_label</code> and <code>header</code> to control the output.</li>
+</ul>
+<p>TODO: to_latex, apply(.format)</p>
+<h2 id="accessing-values">Accessing Values</h2>
+<p>There are multiple ways to access the contents in a <code>pandas</code> <code>DataFrame</code> (most also work for <code>Series</code> as well).</p>
+<p>Using <code>python</code> indexing (a <code>DataFrame</code> behaves as a dictionary of columns):</p>
+<ul>
+<li><code>df[columns]</code>: return all columns in <code>columns</code>;
+<ul>
+<li><code>columns</code> can be string (one column is returned) or a list of string.</li>
+</ul>
+</li>
+</ul>
+<p>Using <code>.loc</code>:</p>
+<ul>
+<li><code>df.loc[index_values]</code>: returns the rows corresponding to <code>index_values</code>;
+<ul>
+<li><code>index_values</code> can be a single index value, a list of index values, a slice of values <code>startrow:endrow</code> or even a Boolean of the same length as <code>df</code>;</li>
+</ul>
+</li>
+<li><code>df.loc[index_values, columns]</code>: returns the specified columns of the specified rows;</li>
+<li><code>df.loc[:, columns]</code>: does the same as <code>df[columns]</code>;</li>
+<li><code>df.loc[index_values, :]</code>: does the same as <code>df.loc[index_values]</code>.</li>
+</ul>
+<p>Using <code>.iloc</code>:</p>
+<ul>
+<li><code>df.iloc[index]</code>: return the rows corresponding to <code>index</code> using integer indexing;
+<ul>
+<li><code>index</code> can be a single integer, a list of integers or even a range of integer <code>startnum:endnum</code>;</li>
+</ul>
+</li>
+<li><code>df.iloc[row_index, col_index]</code>: returns the specified rows and columns.</li>
+</ul>
+<p>Using <code>.at</code> to access a single value:</p>
+<ul>
+<li>similar indexing as <code>.loc</code>.</li>
+</ul>
+<p>Using <code>.iat</code>:</p>
+<ul>
+<li>similar indexing as <code>.iloc</code>.</li>
+</ul>
+<p>Using <code>.query()</code> can be used to select rows on some truth value defined by a string statement similar to that of SQL.</p>
+<p>Here are some interesting methods to create Boolean arrays to use in <code>.loc[]</code>:</p>
+<ul>
+<li><code>.isna()</code>, <code>.notna()</code> checks whether values are <code>NaN</code>;</li>
+<li><code>.isin()</code> corresponds to elementwise native <code>in</code>;</li>
+<li><code>.le</code>, <code>.lt</code>, <code>.ge</code>, <code>.gt</code>, <code>.eq</code> and <code>.ne</code> are equivalent to <code>&lt;=</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&gt;</code>, <code>==</code> and <code>!=</code>, respectively;</li>
+<li><code>.between_time()</code> when dealing with <code>datetime</code> format;</li>
+<li>Any <code>Series</code> methods:
+<ul>
+<li><code>.between()</code> is a nice shorthand for two comparisons;</li>
+<li><code>.str.&lt;method&gt;</code> when dealing with strings</li>
+<li><code>.dt.&lt;method&gt;</code> when dealing with datetime formats</li>
+<li><code>.cat.&lt;method&gt;</code> when dealing with categorical values</li>
+</ul>
+</li>
+</ul>
+<h2 id="setting-values">Setting Values</h2>
+<p>To set values in a existing <code>DataFrame</code>, you can use all previous indexing methods:</p>
+<ul>
+<li>Use <code>df[columns]</code> or <code>df.loc[:, columns]</code> or <code>df.iloc[:, columns]</code> to set or add columns;</li>
+<li>Use <code>df.loc[index]</code> or <code>df.loc[index, :]</code> or <code>df.iloc[index, :]</code> to set or add rows;</li>
+<li>Use <code>df.loc[index, columns]</code> or <code>df.iloc[index, columns]</code> to set specific entries:</li>
+<li>same with <code>.at</code> and <code>.iat</code> to fill a specific cell.</li>
+</ul>
+<p>Note that new rows and columns might be added if <code>index</code> or <code>columns</code> contains values not in the current <code>df</code>. The <code>.iloc</code> and <code>iat</code> indexing generally does not support adding new rows and columns and raises an out-of-bound error when trying to set values outside the current <code>df</code>.</p>
+<p>For any of these methods the syntax is through assignment where the right-hand side can be various things:</p>
+<ul>
+<li>a list of list (e.g. a <code>numpy</code> array),</li>
+<li>a dict <code>column: values</code>,</li>
+<li>a single value copied for all cells,</li>
+<li>a <code>pandas</code> <code>Series</code> or <code>Dataframe</code> object,</li>
+<li>and many more combinations!</li>
+</ul>
+<p>To add new rows to a <code>DataFrame</code>, you can use one of the following:</p>
+<ul>
+<li><code>df.loc[index] = row</code></li>
+<li>merging two <code>DataFrame</code>s with same columns (see <a href="#merging">Merging DataFrames</a>)</li>
+</ul>
+<p>To add new columns:</p>
+<ul>
+<li>Use <code>df[columns] = values</code> (multiple columns)</li>
+<li>Use <code>df.insert(loc, column, values)</code> (single column)</li>
+<li>merging two <code>DataFrame</code>s with same indices (see <a href="#merging">Merging DataFrames</a>)</li>
+</ul>
+<p>Other interesting methods:</p>
+<ul>
+<li>The <code>df.where()</code> method can also be used to replace values where some condition is false;</li>
+<li>The <code>df.mask()</code> method is the converse to <code>.where</code>: it replaces values where the condition is true;</li>
+<li>The <code>df.replace()</code> replaces values;</li>
+<li>The <code>df.filter()</code> method can select some rows/columns based on their content (<code>like</code> or a <code>regex</code>).</li>
+<li>Using <code>df.take()</code> performs similarly as <code>.iloc[]</code>;</li>
+<li>Using <code>df.fillna()</code> does what its name indicates;</li>
+<li>The <code>df.update(other_df)</code> can be useful in some cases (see <a href="#merging">Merging DataFrames</a> for more details);</li>
+<li>The <code>df.eval(str, inplace=True)</code> method lets you compute a new column using a string description;</li>
+</ul>
+<h2 id="subsetting-data">Subsetting Data</h2>
+<p>Subsetting data can be viewed in two ways: selecting rows/columns or dropping rows/data.</p>
+<p>To select rows or columns, refer to <a href="#access">Accessing data</a>.</p>
+<p>To drop rows or columns, you can:</p>
+<ul>
+<li>Select your subset and overwrite the <code>DataFrame</code> as in <code>df = df.loc[...]</code>;</li>
+<li>Use the <code>df.drop(..., inplace=True)</code> method to drop rows or columns;</li>
+</ul>
+<p>For more specific use cases:</p>
+<ul>
+<li>Use <code>df.drop_duplicates(..., inplace=True)</code> to drop repeated rows</li>
+<li>Use <code>df.dropna(..., inplace=True)</code> to drop rows or columns if they contain <code>NaN</code> values.</li>
+<li>Use <code>df.truncate()</code> when the condition is a range of indices.</li>
+</ul>
+<h2 id="reshaping-dataframes">Reshaping DataFrames</h2>
+<p>Transpose:</p>
+<ul>
+<li>The method s <code>.T</code> and <code>.transpose()</code> do the same thing</li>
+</ul>
+<h2 id="wide-to-long-format">Wide to long format</h2>
+<ul>
+<li>The method <code>df.melt()</code>: take multiple columns into (column name, value);</li>
+<li>The method <code>df.stack()</code>: similar to melt, but less general; puts the original column names into a <code>MultiIndex</code> rather than new columns;</li>
+<li>The method <code>df.explode()</code>: when cells contains lists, this methods expand the dataframe for each element of the list.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+df_wide <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">A</span><span style="color:#e6db74">&#34;</span>: range(<span style="color:#ae81ff">5</span>), <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">B</span><span style="color:#e6db74">&#34;</span>: range(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>), <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C</span><span style="color:#e6db74">&#34;</span>: range(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">15</span>)}, index<span style="color:#f92672">=</span>list(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">abcde</span><span style="color:#e6db74">&#34;</span>))
+<span style="color:#66d9ef">print</span>(df_wide)
+</code></pre></div><pre><code>   A  B   C
+a  0  5  10
+b  1  6  11
+c  2  7  12
+d  3  8  13
+e  4  9  14
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(df_wide<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">A</span><span style="color:#e6db74">&#34;</span>, value_vars<span style="color:#f92672">=</span>list(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">BC</span><span style="color:#e6db74">&#34;</span>)))
+</code></pre></div><pre><code>   A variable  value
+0  0        B      5
+1  1        B      6
+2  2        B      7
+3  3        B      8
+4  4        B      9
+5  0        C     10
+6  1        C     11
+7  2        C     12
+8  3        C     13
+9  4        C     14
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(df_wide<span style="color:#f92672">.</span>stack())
+</code></pre></div><pre><code>a  A     0
+   B     5
+   C    10
+b  A     1
+   B     6
+   C    11
+c  A     2
+   B     7
+   C    12
+d  A     3
+   B     8
+   C    13
+e  A     4
+   B     9
+   C    14
+dtype: int64
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_wide <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series([range(<span style="color:#ae81ff">3</span>), range(<span style="color:#ae81ff">1</span>), range(<span style="color:#ae81ff">10</span>)])
+<span style="color:#66d9ef">print</span>(df_wide)
+</code></pre></div><pre><code>0                         (0, 1, 2)
+1                               (0)
+2    (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+dtype: object
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(df_wide<span style="color:#f92672">.</span>explode())
+</code></pre></div><pre><code>0    0
+0    1
+0    2
+1    0
+2    0
+2    1
+2    2
+2    3
+2    4
+2    5
+2    6
+2    7
+2    8
+2    9
+dtype: object
+</code></pre>
+<h2 id="long-to-wide">Long to wide</h2>
+<ul>
+<li>The method <code>df.pivot()</code> creates columns based on unique levels of a given column filled with the corresponding values;</li>
+<li>The method <code>df.pivot_table()</code> generalizes <code>.pivot</code> to more complex situations where there may be duplicate entries which have to be aggregated. This is related to performing <code>.groupby()</code> chained with <code>.agg()</code>, but may have different output format;</li>
+<li>The method <code>df.unstack()</code> pivots a DataFrame using its index (useful for MultiIndex DataFrames mostly).</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_long <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">id</span><span style="color:#e6db74">&#34;</span>: list(range(<span style="color:#ae81ff">4</span>))<span style="color:#f92672">*</span><span style="color:#ae81ff">3</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">type</span><span style="color:#e6db74">&#34;</span>: [<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">A</span><span style="color:#e6db74">&#34;</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">4</span> <span style="color:#f92672">+</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">B</span><span style="color:#e6db74">&#34;</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">4</span> <span style="color:#f92672">+</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C</span><span style="color:#e6db74">&#34;</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">4</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">value</span><span style="color:#e6db74">&#34;</span>:range(<span style="color:#ae81ff">12</span>)})
+<span style="color:#66d9ef">print</span>(df_long)
+</code></pre></div><pre><code>    id type  value
+0    0    A      0
+1    1    A      1
+2    2    A      2
+3    3    A      3
+4    0    B      4
+5    1    B      5
+6    2    B      6
+7    3    B      7
+8    0    C      8
+9    1    C      9
+10   2    C     10
+11   3    C     11
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(df_long<span style="color:#f92672">.</span>pivot(index<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">id</span><span style="color:#e6db74">&#34;</span>, columns<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">type</span><span style="color:#e6db74">&#34;</span>, values<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">value</span><span style="color:#e6db74">&#34;</span>))
+</code></pre></div><pre><code>type  A  B   C
+id            
+0     0  4   8
+1     1  5   9
+2     2  6  10
+3     3  7  11
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(df_long<span style="color:#f92672">.</span>pivot_table(index<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">type</span><span style="color:#e6db74">&#34;</span>, aggfunc<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">min</span><span style="color:#e6db74">&#34;</span>))
+</code></pre></div><pre><code>      id  value
+type           
+A      0      0
+B      0      4
+C      0      8
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># equivalent groupby+agg</span>
+<span style="color:#66d9ef">print</span>(df_long<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">type</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>agg({<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">value</span><span style="color:#e6db74">&#34;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">min</span><span style="color:#e6db74">&#34;</span>}))
+</code></pre></div><pre><code>      value
+type       
+A         0
+B         4
+C         8
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(df_long<span style="color:#f92672">.</span>set_index([<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">type</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">id</span><span style="color:#e6db74">&#34;</span>]))
+</code></pre></div><pre><code>         value
+type id       
+A    0       0
+     1       1
+     2       2
+     3       3
+B    0       4
+     1       5
+     2       6
+     3       7
+C    0       8
+     1       9
+     2      10
+     3      11
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(df_long<span style="color:#f92672">.</span>set_index([<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">type</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">id</span><span style="color:#e6db74">&#34;</span>])<span style="color:#f92672">.</span>unstack())
+</code></pre></div><pre><code>     value           
+id       0  1   2   3
+type                 
+A        0  1   2   3
+B        4  5   6   7
+C        8  9  10  11
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(df_long<span style="color:#f92672">.</span>set_index([<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">id</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">type</span><span style="color:#e6db74">&#34;</span>])<span style="color:#f92672">.</span>unstack())
+</code></pre></div><pre><code>     value       
+type     A  B   C
+id               
+0        0  4   8
+1        1  5   9
+2        2  6  10
+3        3  7  11
+</code></pre>
+<h2 id="merging-dataframes">Merging DataFrames</h2>
+<p>Here are a few options on how to merge multiple <code>DataFrame</code>s together. See <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html?highlight=concatenate">Merge, join, and concatenate</a> for more details.</p>
+<h2 id="concatenate">Concatenate</h2>
+<p>The function <code>pd.concat([df1, df2])</code> lets you litteraly concatenate multiple <code>DataFrame</code>s along some axis. This function works either as an <em>inner join</em> or an <em>outer join</em> on the multiple dataframes indices.</p>
+<p>The function <code>df.append(other_df)</code> does concatenation on the index axis (i.e., add rows)</p>
+<p>Using <code>ignore_index=True</code> can be useful when you don't want to join on the indices and only really concatenate the dataframes. (This is most likely the way you want to use <code>.append()</code>.)</p>
+<h2 id="merging">Merging</h2>
+<p>The function <code>pd.merge</code> lets you perform four types of joins: <code>left</code>, <code>right</code>, <code>outer</code> and <code>inner</code> which are closely related to their SQL equivalents. It generalizes <code>pd.concat</code> as you can use columns, instead of the index, to perform the join.</p>
+<p>The inline version of <code>pd.merge</code> is to use the method <code>.join</code> on some pre-existing dataframe.</p>
+<h2 id="iterating-through-dataframes-a-classanchor-iditera">Iterating through DataFrames <!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p>If you need to traverse a <code>DataFrame</code> row by row, you can use:</p>
+<ul>
+<li><code>.iterrows()</code> to return (index, row as <code>Series</code>);</li>
+<li><code>.itertuple()</code> to return (index, named tuple);</li>
+</ul>
+<p>In both cases, you can use multiple assignment to catch each element.</p>
+<p>Another, possibly better, way to do something to each row is through <code>df.apply(fun)</code>. Thus, the manipulation you would do when iterating across rows could be wrapped into a function <code>fun</code> applied to each row. This also allows to apply a function by columns using <code>axis=1</code>. To apply a function to each cell, you can use <code>.applymap(fun)</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> i, (a, b, c, d) <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>iterrows():
+    <span style="color:#66d9ef">print</span>(a, b, c, d)
+<span style="color:#66d9ef">for</span> i, a, b, c, d <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>itertuples():
+    <span style="color:#66d9ef">print</span>(a, b, c, d)
+<span style="color:#66d9ef">print</span>(df<span style="color:#f92672">.</span>apply(sum, <span style="color:#ae81ff">1</span>))
+</code></pre></div><pre><code>0.0 0 20.0 30.0
+1.0 1 21.0 31.0
+2.0 2 22.0 32.0
+3.0 3 23.0 33.0
+100 4 102 103
+100 5 nan nan
+0.0 0 20.0 30.0
+1.0 1 21.0 31.0
+2.0 2 22.0 32.0
+3.0 3 23.0 33.0
+100 4 102 103
+100 5 nan nan
+a     50.0
+b     54.0
+c     58.0
+d     62.0
+e    309.0
+f      NaN
+dtype: float64
+</code></pre>
+<h2 id="functions-and-aggregation">Functions and Aggregation</h2>
+<p>We have seen <code>.apply</code> and <code>.applymap</code> to apply a function row/column-wise or element-wise. The method <code>.pipe</code> allows you to chain and control multiple functions. Note that there exists <em>many</em> pre-defined functions which can be performed along axes by specifying <code>axis=0/1/None</code> for rows/columns/all.</p>
+<p>Often, functions applied to rows or columns are aggregation functions. The <code>.agg</code>, a.k.a. <code>.aggregate</code>, method lets you perform multiple aggregation functions and produce a well-formated output.</p>
+<p>The <code>.agg</code> methods is particularly useful for grouped dataframes. The <code>.groupby</code> method splits a dataframe into many subsets defined by the arguments passed. Then, applying <code>.agg</code> to the grouped dataframe applies it to each subset and produces a dataframe where the index defines the subset and the columns define the aggregation functions.</p>
+<p>The <code>.describe</code> function works as an <code>.agg</code> call acting on numerical columns only. This can be particularly useful when computing summary statistics on a dataset. Also, this can be chained with a <code>groupby</code> to perform description by subgroups of the data!</p>
+<h2 id="multiindex-dataframes">MultiIndex DataFrames</h2>
+<p><code>MultiIndex</code> works just like regular indices except that they have a structure using levels: instead of a single key, each row has a tuple of values acting as a key. Playing with <code>MultiIndex</code> can be cumbersome sometimes so a nice trick to keep in mind is the <code>.reset_index(inplace=True)</code> method which moves the MultiIndex to new columns and creates a dummy index in its place.</p>
+<h2 id="scikit-learn-transformations">Scikit-learn Transformations</h2>
+<p>If you need to scale the data (say to mean 0 and variance 1), I suggest to use the <code>StandardScaler</code> from <code>sklearn</code>. It internally stores the mean and standard deviation used for standardization. Then, if you need to apply the same transformation to another matrix, you can do it easily. Also, if you need to recover the original matrix, you can!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> StandardScaler
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+X <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>uniform(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>))
+scaler <span style="color:#f92672">=</span> StandardScaler()<span style="color:#f92672">.</span>fit(X)
+<span style="color:#66d9ef">print</span>(X)
+Xstd <span style="color:#f92672">=</span> scaler<span style="color:#f92672">.</span>transform(X)
+<span style="color:#66d9ef">print</span>(Xstd)
+<span style="color:#66d9ef">print</span>(scaler<span style="color:#f92672">.</span>inverse_transform(Xstd))
+</code></pre></div><pre><code>[[0.27355506 0.52822275 0.51469633 0.06545488]
+ [0.44123359 0.69095683 0.52764392 0.44219493]
+ [0.61651989 0.99101129 0.12910797 0.3453753 ]]
+[[-1.21558928 -1.0877613   0.6718045  -1.3702373 ]
+ [-0.01811033 -0.23879521  0.74183104  0.98816536]
+ [ 1.23369961  1.32655652 -1.41363554  0.38207193]]
+[[0.27355506 0.52822275 0.51469633 0.06545488]
+ [0.44123359 0.69095683 0.52764392 0.44219493]
+ [0.61651989 0.99101129 0.12910797 0.3453753 ]]
+</code></pre>
+<p>Typically, categorical data is not encoded using integers. You can always produce a map to integer yourself but you need to keep track of the map. The <code>LabelBinarizer</code> can do that for you! Then, this uniformizes all encoding and ensures you can recover the correct original categories.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelBinarizer
+y <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">A</span><span style="color:#e6db74">&#34;</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">4</span> <span style="color:#f92672">+</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">B</span><span style="color:#e6db74">&#34;</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">6</span>)
+<span style="color:#66d9ef">print</span>(y)
+label_encoder <span style="color:#f92672">=</span> LabelBinarizer(neg_label<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, pos_label<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+y_01 <span style="color:#f92672">=</span> label_encoder<span style="color:#f92672">.</span>fit_transform(y)
+<span style="color:#66d9ef">print</span>(y_01)
+<span style="color:#66d9ef">print</span>(label_encoder<span style="color:#f92672">.</span>inverse_transform(np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>])))
+</code></pre></div><pre><code>['A' 'A' 'A' 'A' 'B' 'B' 'B' 'B' 'B' 'B']
+[[0]
+ [0]
+ [0]
+ [0]
+ [1]
+ [1]
+ [1]
+ [1]
+ [1]
+ [1]]
+['A' 'B' 'A' 'B' 'B' 'A' 'B']
+</code></pre>
+<p>Some other interesting transformations (see <a href="https://scikit-learn.org/stable/modules/classes.html#module-sklearn.preprocessing">Preprocessing and Normalization</a> for many more):</p>
+<ul>
+<li><code>LabelEncoder</code> for more than two categories (one-hot)</li>
+<li><code>MultiLabelBinarizer</code> for multiple labels to 0/1 encoding</li>
+</ul>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/ComputingClub/workshops/resources/hpc/" rel="prev">High Performance Computing</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Apr 29, 2020</p>
+
+          
+
+
+
+
+          
+<section id="comments">
+  
+    
+<div id="disqus_thread"></div>
+<script>
+  let disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "umichstatisticscomputingclub" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
+</section>
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2020 UM Statistics PhD Student Council Computing Committee &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+    <script src="/ComputingClub/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.3.1/mermaid.min.js" integrity="sha256-vOIuDSYDirTfyr+S2MjFnhOz6Rgiz4ODFAHATG0rFxw=" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/shell.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/markdown.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/ComputingClub/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    <script id="dsq-count-scr" src="https://umichstatisticscomputingclub.disqus.com/count.js" async></script>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/ComputingClub/js/academic.min.96cf4c3dc37ea60dbbd03c13a455f1f7.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

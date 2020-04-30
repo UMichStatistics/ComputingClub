@@ -5,12 +5,398 @@
     <link>https://UMichStatistics.github.io/ComputingClub/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/index.xml" rel="self" type="application/rss+xml" />
     <description>UM Statistics Computing Club</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Tue, 10 Mar 2020 13:00:00 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Wed, 29 Apr 2020 00:00:00 +0100</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>UM Statistics Computing Club</title>
       <link>https://UMichStatistics.github.io/ComputingClub/</link>
     </image>
+    
+    <item>
+      <title>Data Manipulation using Pandas and Scikit-learn</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/pandas/</link>
+      <pubDate>Wed, 29 Apr 2020 00:00:00 +0100</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/pandas/</guid>
+      <description>&lt;h2 id=&#34;general&#34;&gt;General&lt;/h2&gt;
+&lt;p&gt;Many methods have an &lt;code&gt;inplace&lt;/code&gt; argument which performs the operation inplace when set to &lt;code&gt;True&lt;/code&gt; so that you do not need to overwrite the original &lt;code&gt;DataFrame&lt;/code&gt;. It produces cleaner code as well as saves time and memory! Note that method chaining does not work with &lt;code&gt;inplace=True&lt;/code&gt; since nothing is returned.&lt;/p&gt;
+&lt;p&gt;Rows and columns behave in the exact same way. Indeed, they are both implemented using &lt;code&gt;pandas.Index&lt;/code&gt; or &lt;code&gt;pandas.MultiIndex&lt;/code&gt; objects. The main difference is that columns can be indexed in an additional way since &lt;code&gt;pandas.DataFrame&lt;/code&gt; objects can be access through the native &lt;code&gt;python&lt;/code&gt; indexing, i.e., &lt;code&gt;df[column]&lt;/code&gt;. Otherwise, most (all?) operations can be perform along any of the two axes. (If not, there is the &lt;code&gt;.T&lt;/code&gt; or &lt;code&gt;.transpose()&lt;/code&gt; methods to flip the &lt;code&gt;DataFrame&lt;/code&gt;.)&lt;/p&gt;
+&lt;h2 id=&#34;data-importation&#34;&gt;Data Importation&lt;/h2&gt;
+&lt;p&gt;You probably all know about &lt;code&gt;pandas.read_csv&lt;/code&gt; to load text files into &lt;code&gt;pandas&lt;/code&gt; &lt;code&gt;DataFrame&lt;/code&gt;s. Here are some interesting options you might not know about:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can overwrite the column names directly using &lt;code&gt;names=[...]&lt;/code&gt; and &lt;code&gt;header=0&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;You can set the &lt;code&gt;index&lt;/code&gt; automatically using &lt;code&gt;index_col=&amp;quot;column_name&amp;quot;&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;You can drop columns or rows before loading using &lt;code&gt;usecols=[...]&lt;/code&gt; or &lt;code&gt;skiprows=[...]&lt;/code&gt;, respectively;&lt;/li&gt;
+&lt;li&gt;If &lt;code&gt;NA&lt;/code&gt;s are encoded in a particular way, you can specify it using &lt;code&gt;na_values=[...]&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;encoding&lt;/code&gt; might be useful to fix some problems related to encoding;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;delim_whitespace&lt;/code&gt; can be useful when the separator is a variable number of whitespaces instead of a given character (&lt;code&gt;,&lt;/code&gt;, &lt;code&gt;\t&lt;/code&gt;, etc.);&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Most of these operations can be done in separate steps after loading(for example, you could do a &lt;code&gt;.replace(..., inplace=True)&lt;/code&gt; to change some values to &lt;code&gt;NaN&lt;/code&gt;), but it might be better to do them in one step to improve legibility, speed and memory consumption.&lt;/p&gt;
+&lt;h2 id=&#34;data-exportation&#34;&gt;Data Exportation&lt;/h2&gt;
+&lt;p&gt;You are probably aware of the &lt;code&gt;.to_csv&lt;/code&gt; method to write a &lt;code&gt;pandas&lt;/code&gt; &lt;code&gt;DataFrame&lt;/code&gt; to a text file. Here are some interesting options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;na_rep&lt;/code&gt; to encode &lt;code&gt;NA&lt;/code&gt;s in a particular way;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;columns&lt;/code&gt; to only write specific columns;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;index&lt;/code&gt;, &lt;code&gt;index_label&lt;/code&gt; and &lt;code&gt;header&lt;/code&gt; to control the output.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TODO: to_latex, apply(.format)&lt;/p&gt;
+&lt;h2 id=&#34;accessing-values&#34;&gt;Accessing Values&lt;/h2&gt;
+&lt;p&gt;There are multiple ways to access the contents in a &lt;code&gt;pandas&lt;/code&gt; &lt;code&gt;DataFrame&lt;/code&gt; (most also work for &lt;code&gt;Series&lt;/code&gt; as well).&lt;/p&gt;
+&lt;p&gt;Using &lt;code&gt;python&lt;/code&gt; indexing (a &lt;code&gt;DataFrame&lt;/code&gt; behaves as a dictionary of columns):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;df[columns]&lt;/code&gt;: return all columns in &lt;code&gt;columns&lt;/code&gt;;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;columns&lt;/code&gt; can be string (one column is returned) or a list of string.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Using &lt;code&gt;.loc&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;df.loc[index_values]&lt;/code&gt;: returns the rows corresponding to &lt;code&gt;index_values&lt;/code&gt;;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;index_values&lt;/code&gt; can be a single index value, a list of index values, a slice of values &lt;code&gt;startrow:endrow&lt;/code&gt; or even a Boolean of the same length as &lt;code&gt;df&lt;/code&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;df.loc[index_values, columns]&lt;/code&gt;: returns the specified columns of the specified rows;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;df.loc[:, columns]&lt;/code&gt;: does the same as &lt;code&gt;df[columns]&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;df.loc[index_values, :]&lt;/code&gt;: does the same as &lt;code&gt;df.loc[index_values]&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Using &lt;code&gt;.iloc&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;df.iloc[index]&lt;/code&gt;: return the rows corresponding to &lt;code&gt;index&lt;/code&gt; using integer indexing;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;index&lt;/code&gt; can be a single integer, a list of integers or even a range of integer &lt;code&gt;startnum:endnum&lt;/code&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;df.iloc[row_index, col_index]&lt;/code&gt;: returns the specified rows and columns.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Using &lt;code&gt;.at&lt;/code&gt; to access a single value:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;similar indexing as &lt;code&gt;.loc&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Using &lt;code&gt;.iat&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;similar indexing as &lt;code&gt;.iloc&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Using &lt;code&gt;.query()&lt;/code&gt; can be used to select rows on some truth value defined by a string statement similar to that of SQL.&lt;/p&gt;
+&lt;p&gt;Here are some interesting methods to create Boolean arrays to use in &lt;code&gt;.loc[]&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.isna()&lt;/code&gt;, &lt;code&gt;.notna()&lt;/code&gt; checks whether values are &lt;code&gt;NaN&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.isin()&lt;/code&gt; corresponds to elementwise native &lt;code&gt;in&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.le&lt;/code&gt;, &lt;code&gt;.lt&lt;/code&gt;, &lt;code&gt;.ge&lt;/code&gt;, &lt;code&gt;.gt&lt;/code&gt;, &lt;code&gt;.eq&lt;/code&gt; and &lt;code&gt;.ne&lt;/code&gt; are equivalent to &lt;code&gt;&amp;lt;=&lt;/code&gt;, &lt;code&gt;&amp;lt;&lt;/code&gt;, &lt;code&gt;&amp;gt;=&lt;/code&gt;, &lt;code&gt;&amp;gt;&lt;/code&gt;, &lt;code&gt;==&lt;/code&gt; and &lt;code&gt;!=&lt;/code&gt;, respectively;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.between_time()&lt;/code&gt; when dealing with &lt;code&gt;datetime&lt;/code&gt; format;&lt;/li&gt;
+&lt;li&gt;Any &lt;code&gt;Series&lt;/code&gt; methods:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.between()&lt;/code&gt; is a nice shorthand for two comparisons;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.str.&amp;lt;method&amp;gt;&lt;/code&gt; when dealing with strings&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.dt.&amp;lt;method&amp;gt;&lt;/code&gt; when dealing with datetime formats&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.cat.&amp;lt;method&amp;gt;&lt;/code&gt; when dealing with categorical values&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;setting-values&#34;&gt;Setting Values&lt;/h2&gt;
+&lt;p&gt;To set values in a existing &lt;code&gt;DataFrame&lt;/code&gt;, you can use all previous indexing methods:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;df[columns]&lt;/code&gt; or &lt;code&gt;df.loc[:, columns]&lt;/code&gt; or &lt;code&gt;df.iloc[:, columns]&lt;/code&gt; to set or add columns;&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;df.loc[index]&lt;/code&gt; or &lt;code&gt;df.loc[index, :]&lt;/code&gt; or &lt;code&gt;df.iloc[index, :]&lt;/code&gt; to set or add rows;&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;df.loc[index, columns]&lt;/code&gt; or &lt;code&gt;df.iloc[index, columns]&lt;/code&gt; to set specific entries:&lt;/li&gt;
+&lt;li&gt;same with &lt;code&gt;.at&lt;/code&gt; and &lt;code&gt;.iat&lt;/code&gt; to fill a specific cell.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note that new rows and columns might be added if &lt;code&gt;index&lt;/code&gt; or &lt;code&gt;columns&lt;/code&gt; contains values not in the current &lt;code&gt;df&lt;/code&gt;. The &lt;code&gt;.iloc&lt;/code&gt; and &lt;code&gt;iat&lt;/code&gt; indexing generally does not support adding new rows and columns and raises an out-of-bound error when trying to set values outside the current &lt;code&gt;df&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;For any of these methods the syntax is through assignment where the right-hand side can be various things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a list of list (e.g. a &lt;code&gt;numpy&lt;/code&gt; array),&lt;/li&gt;
+&lt;li&gt;a dict &lt;code&gt;column: values&lt;/code&gt;,&lt;/li&gt;
+&lt;li&gt;a single value copied for all cells,&lt;/li&gt;
+&lt;li&gt;a &lt;code&gt;pandas&lt;/code&gt; &lt;code&gt;Series&lt;/code&gt; or &lt;code&gt;Dataframe&lt;/code&gt; object,&lt;/li&gt;
+&lt;li&gt;and many more combinations!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To add new rows to a &lt;code&gt;DataFrame&lt;/code&gt;, you can use one of the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;df.loc[index] = row&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;merging two &lt;code&gt;DataFrame&lt;/code&gt;s with same columns (see &lt;a href=&#34;#merging&#34;&gt;Merging DataFrames&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To add new columns:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;df[columns] = values&lt;/code&gt; (multiple columns)&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;df.insert(loc, column, values)&lt;/code&gt; (single column)&lt;/li&gt;
+&lt;li&gt;merging two &lt;code&gt;DataFrame&lt;/code&gt;s with same indices (see &lt;a href=&#34;#merging&#34;&gt;Merging DataFrames&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Other interesting methods:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;code&gt;df.where()&lt;/code&gt; method can also be used to replace values where some condition is false;&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;df.mask()&lt;/code&gt; method is the converse to &lt;code&gt;.where&lt;/code&gt;: it replaces values where the condition is true;&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;df.replace()&lt;/code&gt; replaces values;&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;df.filter()&lt;/code&gt; method can select some rows/columns based on their content (&lt;code&gt;like&lt;/code&gt; or a &lt;code&gt;regex&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Using &lt;code&gt;df.take()&lt;/code&gt; performs similarly as &lt;code&gt;.iloc[]&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;Using &lt;code&gt;df.fillna()&lt;/code&gt; does what its name indicates;&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;df.update(other_df)&lt;/code&gt; can be useful in some cases (see &lt;a href=&#34;#merging&#34;&gt;Merging DataFrames&lt;/a&gt; for more details);&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;df.eval(str, inplace=True)&lt;/code&gt; method lets you compute a new column using a string description;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;subsetting-data&#34;&gt;Subsetting Data&lt;/h2&gt;
+&lt;p&gt;Subsetting data can be viewed in two ways: selecting rows/columns or dropping rows/data.&lt;/p&gt;
+&lt;p&gt;To select rows or columns, refer to &lt;a href=&#34;#access&#34;&gt;Accessing data&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To drop rows or columns, you can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Select your subset and overwrite the &lt;code&gt;DataFrame&lt;/code&gt; as in &lt;code&gt;df = df.loc[...]&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;Use the &lt;code&gt;df.drop(..., inplace=True)&lt;/code&gt; method to drop rows or columns;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more specific use cases:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;df.drop_duplicates(..., inplace=True)&lt;/code&gt; to drop repeated rows&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;df.dropna(..., inplace=True)&lt;/code&gt; to drop rows or columns if they contain &lt;code&gt;NaN&lt;/code&gt; values.&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;df.truncate()&lt;/code&gt; when the condition is a range of indices.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reshaping-dataframes&#34;&gt;Reshaping DataFrames&lt;/h2&gt;
+&lt;p&gt;Transpose:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The method s &lt;code&gt;.T&lt;/code&gt; and &lt;code&gt;.transpose()&lt;/code&gt; do the same thing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;wide-to-long-format&#34;&gt;Wide to long format&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The method &lt;code&gt;df.melt()&lt;/code&gt;: take multiple columns into (column name, value);&lt;/li&gt;
+&lt;li&gt;The method &lt;code&gt;df.stack()&lt;/code&gt;: similar to melt, but less general; puts the original column names into a &lt;code&gt;MultiIndex&lt;/code&gt; rather than new columns;&lt;/li&gt;
+&lt;li&gt;The method &lt;code&gt;df.explode()&lt;/code&gt;: when cells contains lists, this methods expand the dataframe for each element of the list.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; pd
+df_wide &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame({&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;: range(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;B&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;: range(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;C&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;: range(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;)}, index&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;list(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;abcde&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;))
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_wide)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;   A  B   C
+a  0  5  10
+b  1  6  11
+c  2  7  12
+d  3  8  13
+e  4  9  14
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_wide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, value_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;list(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;BC&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;   A variable  value
+0  0        B      5
+1  1        B      6
+2  2        B      7
+3  3        B      8
+4  4        B      9
+5  0        C     10
+6  1        C     11
+7  2        C     12
+8  3        C     13
+9  4        C     14
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_wide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;stack())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;a  A     0
+   B     5
+   C    10
+b  A     1
+   B     6
+   C    11
+c  A     2
+   B     7
+   C    12
+d  A     3
+   B     8
+   C    13
+e  A     4
+   B     9
+   C    14
+dtype: int64
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df_wide &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Series([range(&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;), range(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;), range(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)])
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_wide)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;0                         (0, 1, 2)
+1                               (0)
+2    (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+dtype: object
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_wide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;explode())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;0    0
+0    1
+0    2
+1    0
+2    0
+2    1
+2    2
+2    3
+2    4
+2    5
+2    6
+2    7
+2    8
+2    9
+dtype: object
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;long-to-wide&#34;&gt;Long to wide&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The method &lt;code&gt;df.pivot()&lt;/code&gt; creates columns based on unique levels of a given column filled with the corresponding values;&lt;/li&gt;
+&lt;li&gt;The method &lt;code&gt;df.pivot_table()&lt;/code&gt; generalizes &lt;code&gt;.pivot&lt;/code&gt; to more complex situations where there may be duplicate entries which have to be aggregated. This is related to performing &lt;code&gt;.groupby()&lt;/code&gt; chained with &lt;code&gt;.agg()&lt;/code&gt;, but may have different output format;&lt;/li&gt;
+&lt;li&gt;The method &lt;code&gt;df.unstack()&lt;/code&gt; pivots a DataFrame using its index (useful for MultiIndex DataFrames mostly).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df_long &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame({&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;: list(range(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;))&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;B&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;C&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;:range(&lt;span style=&#34;color:#ae81ff&#34;&gt;12&lt;/span&gt;)})
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_long)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;    id type  value
+0    0    A      0
+1    1    A      1
+2    2    A      2
+3    3    A      3
+4    0    B      4
+5    1    B      5
+6    2    B      6
+7    3    B      7
+8    0    C      8
+9    1    C      9
+10   2    C     10
+11   3    C     11
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pivot(index&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, values&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;type  A  B   C
+id            
+0     0  4   8
+1     1  5   9
+2     2  6  10
+3     3  7  11
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pivot_table(index&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, aggfunc&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;min&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;      id  value
+type           
+A      0      0
+B      0      4
+C      0      8
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# equivalent groupby+agg&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;groupby(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;agg({&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;min&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;}))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;      value
+type       
+A         0
+B         4
+C         8
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_index([&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;         value
+type id       
+A    0       0
+     1       1
+     2       2
+     3       3
+B    0       4
+     1       5
+     2       6
+     3       7
+C    0       8
+     1       9
+     2      10
+     3      11
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_index([&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;unstack())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;     value           
+id       0  1   2   3
+type                 
+A        0  1   2   3
+B        4  5   6   7
+C        8  9  10  11
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_index([&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;unstack())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;     value       
+type     A  B   C
+id               
+0        0  4   8
+1        1  5   9
+2        2  6  10
+3        3  7  11
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;merging-dataframes&#34;&gt;Merging DataFrames&lt;/h2&gt;
+&lt;p&gt;Here are a few options on how to merge multiple &lt;code&gt;DataFrame&lt;/code&gt;s together. See &lt;a href=&#34;https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html?highlight=concatenate&#34;&gt;Merge, join, and concatenate&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;h2 id=&#34;concatenate&#34;&gt;Concatenate&lt;/h2&gt;
+&lt;p&gt;The function &lt;code&gt;pd.concat([df1, df2])&lt;/code&gt; lets you litteraly concatenate multiple &lt;code&gt;DataFrame&lt;/code&gt;s along some axis. This function works either as an &lt;em&gt;inner join&lt;/em&gt; or an &lt;em&gt;outer join&lt;/em&gt; on the multiple dataframes indices.&lt;/p&gt;
+&lt;p&gt;The function &lt;code&gt;df.append(other_df)&lt;/code&gt; does concatenation on the index axis (i.e., add rows)&lt;/p&gt;
+&lt;p&gt;Using &lt;code&gt;ignore_index=True&lt;/code&gt; can be useful when you don&#39;t want to join on the indices and only really concatenate the dataframes. (This is most likely the way you want to use &lt;code&gt;.append()&lt;/code&gt;.)&lt;/p&gt;
+&lt;h2 id=&#34;merging&#34;&gt;Merging&lt;/h2&gt;
+&lt;p&gt;The function &lt;code&gt;pd.merge&lt;/code&gt; lets you perform four types of joins: &lt;code&gt;left&lt;/code&gt;, &lt;code&gt;right&lt;/code&gt;, &lt;code&gt;outer&lt;/code&gt; and &lt;code&gt;inner&lt;/code&gt; which are closely related to their SQL equivalents. It generalizes &lt;code&gt;pd.concat&lt;/code&gt; as you can use columns, instead of the index, to perform the join.&lt;/p&gt;
+&lt;p&gt;The inline version of &lt;code&gt;pd.merge&lt;/code&gt; is to use the method &lt;code&gt;.join&lt;/code&gt; on some pre-existing dataframe.&lt;/p&gt;
+&lt;h2 id=&#34;iterating-through-dataframes-a-classanchor-iditera&#34;&gt;Iterating through DataFrames &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;If you need to traverse a &lt;code&gt;DataFrame&lt;/code&gt; row by row, you can use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.iterrows()&lt;/code&gt; to return (index, row as &lt;code&gt;Series&lt;/code&gt;);&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.itertuple()&lt;/code&gt; to return (index, named tuple);&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In both cases, you can use multiple assignment to catch each element.&lt;/p&gt;
+&lt;p&gt;Another, possibly better, way to do something to each row is through &lt;code&gt;df.apply(fun)&lt;/code&gt;. Thus, the manipulation you would do when iterating across rows could be wrapped into a function &lt;code&gt;fun&lt;/code&gt; applied to each row. This also allows to apply a function by columns using &lt;code&gt;axis=1&lt;/code&gt;. To apply a function to each cell, you can use &lt;code&gt;.applymap(fun)&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i, (a, b, c, d) &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iterrows():
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(a, b, c, d)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i, a, b, c, d &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;itertuples():
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(a, b, c, d)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(sum, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;0.0 0 20.0 30.0
+1.0 1 21.0 31.0
+2.0 2 22.0 32.0
+3.0 3 23.0 33.0
+100 4 102 103
+100 5 nan nan
+0.0 0 20.0 30.0
+1.0 1 21.0 31.0
+2.0 2 22.0 32.0
+3.0 3 23.0 33.0
+100 4 102 103
+100 5 nan nan
+a     50.0
+b     54.0
+c     58.0
+d     62.0
+e    309.0
+f      NaN
+dtype: float64
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;functions-and-aggregation&#34;&gt;Functions and Aggregation&lt;/h2&gt;
+&lt;p&gt;We have seen &lt;code&gt;.apply&lt;/code&gt; and &lt;code&gt;.applymap&lt;/code&gt; to apply a function row/column-wise or element-wise. The method &lt;code&gt;.pipe&lt;/code&gt; allows you to chain and control multiple functions. Note that there exists &lt;em&gt;many&lt;/em&gt; pre-defined functions which can be performed along axes by specifying &lt;code&gt;axis=0/1/None&lt;/code&gt; for rows/columns/all.&lt;/p&gt;
+&lt;p&gt;Often, functions applied to rows or columns are aggregation functions. The &lt;code&gt;.agg&lt;/code&gt;, a.k.a. &lt;code&gt;.aggregate&lt;/code&gt;, method lets you perform multiple aggregation functions and produce a well-formated output.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;.agg&lt;/code&gt; methods is particularly useful for grouped dataframes. The &lt;code&gt;.groupby&lt;/code&gt; method splits a dataframe into many subsets defined by the arguments passed. Then, applying &lt;code&gt;.agg&lt;/code&gt; to the grouped dataframe applies it to each subset and produces a dataframe where the index defines the subset and the columns define the aggregation functions.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;.describe&lt;/code&gt; function works as an &lt;code&gt;.agg&lt;/code&gt; call acting on numerical columns only. This can be particularly useful when computing summary statistics on a dataset. Also, this can be chained with a &lt;code&gt;groupby&lt;/code&gt; to perform description by subgroups of the data!&lt;/p&gt;
+&lt;h2 id=&#34;multiindex-dataframes&#34;&gt;MultiIndex DataFrames&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;MultiIndex&lt;/code&gt; works just like regular indices except that they have a structure using levels: instead of a single key, each row has a tuple of values acting as a key. Playing with &lt;code&gt;MultiIndex&lt;/code&gt; can be cumbersome sometimes so a nice trick to keep in mind is the &lt;code&gt;.reset_index(inplace=True)&lt;/code&gt; method which moves the MultiIndex to new columns and creates a dummy index in its place.&lt;/p&gt;
+&lt;h2 id=&#34;scikit-learn-transformations&#34;&gt;Scikit-learn Transformations&lt;/h2&gt;
+&lt;p&gt;If you need to scale the data (say to mean 0 and variance 1), I suggest to use the &lt;code&gt;StandardScaler&lt;/code&gt; from &lt;code&gt;sklearn&lt;/code&gt;. It internally stores the mean and standard deviation used for standardization. Then, if you need to apply the same transformation to another matrix, you can do it easily. Also, if you need to recover the original matrix, you can!&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; sklearn.preprocessing &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; StandardScaler
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; np
+X &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;random&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;uniform(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, (&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;))
+scaler &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; StandardScaler()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fit(X)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(X)
+Xstd &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; scaler&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;transform(X)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(Xstd)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(scaler&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;inverse_transform(Xstd))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[[0.27355506 0.52822275 0.51469633 0.06545488]
+ [0.44123359 0.69095683 0.52764392 0.44219493]
+ [0.61651989 0.99101129 0.12910797 0.3453753 ]]
+[[-1.21558928 -1.0877613   0.6718045  -1.3702373 ]
+ [-0.01811033 -0.23879521  0.74183104  0.98816536]
+ [ 1.23369961  1.32655652 -1.41363554  0.38207193]]
+[[0.27355506 0.52822275 0.51469633 0.06545488]
+ [0.44123359 0.69095683 0.52764392 0.44219493]
+ [0.61651989 0.99101129 0.12910797 0.3453753 ]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Typically, categorical data is not encoded using integers. You can always produce a map to integer yourself but you need to keep track of the map. The &lt;code&gt;LabelBinarizer&lt;/code&gt; can do that for you! Then, this uniformizes all encoding and ensures you can recover the correct original categories.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; sklearn.preprocessing &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; LabelBinarizer
+y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;array([&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;A&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;B&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(y)
+label_encoder &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; LabelBinarizer(neg_label&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, pos_label&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+y_01 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; label_encoder&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fit_transform(y)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(y_01)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(label_encoder&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;inverse_transform(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;array([&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;])))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[&#39;A&#39; &#39;A&#39; &#39;A&#39; &#39;A&#39; &#39;B&#39; &#39;B&#39; &#39;B&#39; &#39;B&#39; &#39;B&#39; &#39;B&#39;]
+[[0]
+ [0]
+ [0]
+ [0]
+ [1]
+ [1]
+ [1]
+ [1]
+ [1]
+ [1]]
+[&#39;A&#39; &#39;B&#39; &#39;A&#39; &#39;B&#39; &#39;B&#39; &#39;A&#39; &#39;B&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Some other interesting transformations (see &lt;a href=&#34;https://scikit-learn.org/stable/modules/classes.html#module-sklearn.preprocessing&#34;&gt;Preprocessing and Normalization&lt;/a&gt; for many more):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;LabelEncoder&lt;/code&gt; for more than two categories (one-hot)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;MultiLabelBinarizer&lt;/code&gt; for multiple labels to 0/1 encoding&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Creating content</title>
@@ -37,7 +423,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;create-your-author-profile&#34;&gt;Create your author profile&lt;/h2&gt;
-&lt;p&gt;First things first, you need to create an &lt;code&gt;authors&lt;/code&gt; profile in order to associate multiple content to the same author. Unfortunately, Hugo does not provide a command to create a new author from command line, so the fastest way to go is to copy the &lt;code&gt;blank&lt;/code&gt; author folder and give it a name representing your&amp;rsquo;s (say &lt;code&gt;username&lt;/code&gt; from now on). Then, edit the &lt;code&gt;_index.md&lt;/code&gt; contained in the new &lt;code&gt;username&lt;/code&gt; folder and edit its content. It should be documented well enough for you to complete.&lt;/p&gt;
+&lt;p&gt;First things first, you need to create an &lt;code&gt;authors&lt;/code&gt; profile in order to associate multiple content to the same author. Unfortunately, Hugo does not provide a command to create a new author from command line, so the fastest way to go is to copy the &lt;code&gt;blank&lt;/code&gt; author folder and give it a name representing your&#39;s (say &lt;code&gt;username&lt;/code&gt; from now on). Then, edit the &lt;code&gt;_index.md&lt;/code&gt; contained in the new &lt;code&gt;username&lt;/code&gt; folder and edit its content. It should be documented well enough for you to complete.&lt;/p&gt;
 &lt;p&gt;If you want to add a picture of yourself, place it in the &lt;code&gt;username&lt;/code&gt; folder with the name &lt;code&gt;avatar.jpg/.png&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;create-a-meeting&#34;&gt;Create a meeting&lt;/h2&gt;
 &lt;h2 id=&#34;create-a-workshop&#34;&gt;Create a workshop&lt;/h2&gt;
@@ -79,8 +465,8 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;initialize-and-first-deploy&#34;&gt;Initialize and first deploy&lt;/h2&gt;
 &lt;p&gt;(Based on &lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-git&#34;&gt;Academic theme documentation: Install with Git&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;The Academic theme is hosted in a &lt;a href=&#34;https://github.com/gcushen/hugo-academic&#34;&gt;GitHub repository&lt;/a&gt;, but we don&amp;rsquo;t want to build the website from scratch.&lt;/p&gt;
-&lt;p&gt;In order to initialize the website with some things already done for us, we&amp;rsquo;ll use the &lt;a href=&#34;https://github.com/sourcethemes/academic-kickstart#fork-destination-box&#34;&gt;Academic kickstart website&lt;/a&gt;. You need to &lt;strong&gt;fork the  repository&lt;/strong&gt; into a repository in your own account. Then, the Academic theme is only linked to the kickstart site we are cloning and we need to keep the dependencies alive.&lt;/p&gt;
+&lt;p&gt;The Academic theme is hosted in a &lt;a href=&#34;https://github.com/gcushen/hugo-academic&#34;&gt;GitHub repository&lt;/a&gt;, but we don&#39;t want to build the website from scratch.&lt;/p&gt;
+&lt;p&gt;In order to initialize the website with some things already done for us, we&#39;ll use the &lt;a href=&#34;https://github.com/sourcethemes/academic-kickstart#fork-destination-box&#34;&gt;Academic kickstart website&lt;/a&gt;. You need to &lt;strong&gt;fork the  repository&lt;/strong&gt; into a repository in your own account. Then, the Academic theme is only linked to the kickstart site we are cloning and we need to keep the dependencies alive.&lt;/p&gt;
 &lt;p&gt;Now that your GitHub account contains the Academic kickstart clone, clone that repository on your local machine:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git clone https://github.com/&amp;lt;your-github-account&amp;gt;/academic-kickstart.git DemoWebsite
 cd DemoWebsite
@@ -93,7 +479,7 @@ cd DemoWebsite
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The output should contain a line like&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;Web Server is available at http://localhost:1313/ &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;bind address 127.0.0.1&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;which means that your new website is now accessible at the local address http://localhost:1313/.&lt;/p&gt;
-&lt;p&gt;Something interesting about &lt;code&gt;hugo server&lt;/code&gt; is that it will rebuild your website anytime you make a change to the &lt;code&gt;DemoWebsite&lt;/code&gt; directory. That is, it runs a &lt;code&gt;FastRender&lt;/code&gt; version of the &lt;code&gt;hugo&lt;/code&gt; command. So, if you make changes to a file, then you can see its effect directly (most web browser have some sort of auto-refresh so you don&amp;rsquo;t have to refresh the page yourselves!) Note that deeper changes (e.g. new pages) won&amp;rsquo;t appear in that &lt;code&gt;FastRender&lt;/code&gt; mode so you will need to exit the server (&lt;code&gt;Ctrl+C&lt;/code&gt;) and restart it (alternatively, you can deactivate the &lt;code&gt;FastRender&lt;/code&gt; mode using &lt;code&gt;hugo server --disableFastRender&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Something interesting about &lt;code&gt;hugo server&lt;/code&gt; is that it will rebuild your website anytime you make a change to the &lt;code&gt;DemoWebsite&lt;/code&gt; directory. That is, it runs a &lt;code&gt;FastRender&lt;/code&gt; version of the &lt;code&gt;hugo&lt;/code&gt; command. So, if you make changes to a file, then you can see its effect directly (most web browser have some sort of auto-refresh so you don&#39;t have to refresh the page yourselves!) Note that deeper changes (e.g. new pages) won&#39;t appear in that &lt;code&gt;FastRender&lt;/code&gt; mode so you will need to exit the server (&lt;code&gt;Ctrl+C&lt;/code&gt;) and restart it (alternatively, you can deactivate the &lt;code&gt;FastRender&lt;/code&gt; mode using &lt;code&gt;hugo server --disableFastRender&lt;/code&gt;).&lt;/p&gt;
 &lt;h2 id=&#34;content-and-first-edits&#34;&gt;Content and first edits&lt;/h2&gt;
 &lt;p&gt;Now that we have successfully deployed the Academic kickstart site, it is time to take a look at the specifics of it. Your &lt;code&gt;DemoWebsite&lt;/code&gt; directory should now contain numerous files and folders. The one of interest to us is the &lt;code&gt;content&lt;/code&gt; folder which, as the name indicates, contains all the content of the website.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;content
@@ -271,7 +657,7 @@ cd DemoWebsite
       <description>&lt;h2 id=&#34;smoke-testing&#34;&gt;Smoke Testing&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Smoke_testing_(software)&#34;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Smoke testing is a quick and easy way to check if code works.
-If your program can&amp;rsquo;t even run without crashing, there&amp;rsquo;s no point to performing more fine-grained testing procedures.&lt;/p&gt;
+If your program can&#39;t even run without crashing, there&#39;s no point to performing more fine-grained testing procedures.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;sqrt_1 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(x) {
     &lt;span style=&#34;color:#a6e22e&#34;&gt;if &lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) {
         ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; x&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;)
@@ -322,7 +708,7 @@ Notice that the output is not checked; we just want to check if there are any er
 &lt;p&gt;Then, we implement our function checking tests constantly until all criterions are satisfied.&lt;/p&gt;
 &lt;p&gt;Some (most) IDEs can automatically run all your tests in the background when any file is saved: this checks the current function your are implementing and also that you did not break any prior developments. This constant checking enable you to quickly diagnose the problem as only your latest edits change the result of tests.&lt;/p&gt;
 &lt;h3 id=&#34;another-approach&#34;&gt;Another approach&lt;/h3&gt;
-&lt;p&gt;In practice, before writing a specific function, we might not know exactly what it&amp;rsquo;s behaviour will be so it is not clear what tests to write beforehand. (I often get excited about implementing something and writing tests is boring&amp;hellip;)&lt;/p&gt;
+&lt;p&gt;In practice, before writing a specific function, we might not know exactly what it&#39;s behaviour will be so it is not clear what tests to write beforehand. (I often get excited about implementing something and writing tests is boring&amp;hellip;)&lt;/p&gt;
 &lt;p&gt;So, instead of writing the tests before the function, we can wait until we are satisfied with the behaviour of a function and &lt;em&gt;protect&lt;/em&gt; it with tests. Then, interactions with future functions will have some safeguards against bad input or output. Also, any further changes you perform on the function will have to satisfy the tests you previously wrote so any functions depending on the current function should not break.&lt;/p&gt;
 &lt;p&gt;Furthermore, the creation of tests &lt;em&gt;after&lt;/em&gt; the function may tell you that you have to refactor some parts of your function. When first writing it, you might not have thought of some edge case and the time spent wirting tests may uncover those cases.&lt;/p&gt;
 &lt;h3 id=&#34;what-to-test&#34;&gt;What to test&lt;/h3&gt;
@@ -337,7 +723,7 @@ Notice that the output is not checked; we just want to check if there are any er
 &lt;li&gt;Unit testing is great for interactive languages to detect if you are inadvertantly using global variables (defined outside the scope of a function). The test suite runs outside your scripts so tests will fail if you do so.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;unit-testing-in-r-using-the-testthat-package&#34;&gt;Unit Testing in &lt;code&gt;R&lt;/code&gt; using the &lt;code&gt;testthat&lt;/code&gt; package&lt;/h2&gt;
-&lt;p&gt;Let&amp;rsquo;s create a simple &lt;code&gt;R&lt;/code&gt; package in &lt;code&gt;RStudio&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Let&#39;s create a simple &lt;code&gt;R&lt;/code&gt; package in &lt;code&gt;RStudio&lt;/code&gt;:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;New Project&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;R Package&lt;/code&gt;&lt;/li&gt;
@@ -345,8 +731,8 @@ Notice that the output is not checked; we just want to check if there are any er
 &lt;li&gt;Put in some name&lt;/li&gt;
 &lt;li&gt;Check &lt;code&gt;Open in new session&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Let&amp;rsquo;s add the above defined functions in the &lt;code&gt;hello.R&lt;/code&gt; file.&lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s create some tests:&lt;/p&gt;
+&lt;p&gt;Let&#39;s add the above defined functions in the &lt;code&gt;hello.R&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;Let&#39;s create some tests:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Run &lt;code&gt;devtools::test()&lt;/code&gt; and type in &lt;code&gt;1&lt;/code&gt; to create the &lt;code&gt;tests&lt;/code&gt; directory, which contains a &lt;code&gt;testthat.R&lt;/code&gt; file managing imports and helps in running all tests at once, and a sub-directory &lt;code&gt;testthat&lt;/code&gt; where we will add some test;&lt;/li&gt;
 &lt;li&gt;Run test using &lt;code&gt;Build&lt;/code&gt; &amp;gt; &lt;code&gt;Test Package&lt;/code&gt; or simply type &lt;code&gt;Ctrl+Shift+T&lt;/code&gt; or run &lt;code&gt;devtools::test()&lt;/code&gt;. You should see an output saying there are no tests in the &lt;code&gt;testthat&lt;/code&gt; directory (as expected).&lt;/li&gt;
@@ -363,7 +749,7 @@ Notice that the output is not checked; we just want to check if there are any er
 )
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Run tests again and observe that our function passes all tests so far.&lt;/li&gt;
-&lt;li&gt;Let&amp;rsquo;s add another succeding test, but on an expected non-successfull call:&lt;/li&gt;
+&lt;li&gt;Let&#39;s add another succeding test, but on an expected non-successfull call:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
     &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;sqrt_1 raises an error with negative inputs&amp;#34;&lt;/span&gt;,
@@ -373,7 +759,7 @@ Notice that the output is not checked; we just want to check if there are any er
 )
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Running all tests should again suceed.&lt;/li&gt;
-&lt;li&gt;Now, let&amp;rsquo;s add a test which fails:&lt;/li&gt;
+&lt;li&gt;Now, let&#39;s add a test which fails:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
     &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;sqrt_1 returns imaginary numbers for negative inputs&amp;#34;&lt;/span&gt;,
@@ -416,7 +802,7 @@ Notice that the output is not checked; we just want to check if there are any er
 &lt;pre&gt;&lt;code&gt;python -m unittest tests/test_sqrt.py
 python -m unittest discover tests
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;discover tests&lt;/code&gt; implies that the &lt;code&gt;unittest&lt;/code&gt; package will search the &lt;code&gt;tests&lt;/code&gt; directory for all tests in there.&lt;/p&gt;
-&lt;p&gt;The basic &lt;code&gt;unittest&lt;/code&gt; package is not well suited to check equality of &lt;code&gt;numpy&lt;/code&gt; arrays. Here&amp;rsquo;s a way to do it:&lt;/p&gt;
+&lt;p&gt;The basic &lt;code&gt;unittest&lt;/code&gt; package is not well suited to check equality of &lt;code&gt;numpy&lt;/code&gt; arrays. Here&#39;s a way to do it:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; np
 
 
@@ -500,7 +886,7 @@ Z&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt; &lt;span style=&#34;col
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_github/</guid>
       <description>&lt;p&gt;Now that you are happy with your local website, it is time to deploy it on the internet. Here is the methodology for GitHub Pages hosting.&lt;/p&gt;
 &lt;h2 id=&#34;a-note-on-the-academic-theme&#34;&gt;A note on the Academic theme&lt;/h2&gt;
-&lt;p&gt;If you build your website using Hugo and the Academic theme, here&amp;rsquo;s how to ensure the static website falls in the correct folder. In the &lt;code&gt;config/_default/config.toml&lt;/code&gt; file change the following line:&lt;/p&gt;
+&lt;p&gt;If you build your website using Hugo and the Academic theme, here&#39;s how to ensure the static website falls in the correct folder. In the &lt;code&gt;config/_default/config.toml&lt;/code&gt; file change the following line:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;publishDir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;docs&amp;#34;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To ensure links consistency within your website you need to tell Hugo what will be your base URL. In the case of GitHub hosting, change the following line in &lt;code&gt;config/_default/config.toml&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;baseurl &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://your-github-account.github.io/academic-kickstart/&amp;#34;&lt;/span&gt;
@@ -517,7 +903,7 @@ git commit -m &#39;First deploy&#39;
 &lt;p&gt;At this point, the &lt;code&gt;docs&lt;/code&gt; folder of your repository contains the necessary files to have a functioning website. However, you need to activate the hosting feature of your repository for GitHub to start hosting the contents of &lt;code&gt;docs&lt;/code&gt;. In the &lt;em&gt;Settings&lt;/em&gt; tabs of your repository, scroll down to the &lt;em&gt;GitHub Pages&lt;/em&gt; section. There, use the drop-down menu under &lt;em&gt;Source&lt;/em&gt; to &lt;code&gt;master branch /docs folder&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Wait a few seconds and check out your awesome website!&lt;/p&gt;
 &lt;h2 id=&#34;modifying-your-website&#34;&gt;Modifying your website&lt;/h2&gt;
-&lt;p&gt;You will most likely want to add or edit content to your website. To do this, you only need to alter the &lt;code&gt;docs&lt;/code&gt; folder accordingly to trigger redeployment. Each update may not be instantaneous, so don&amp;rsquo;t worry if it takes a few seconds before your changes become effective.&lt;/p&gt;
+&lt;p&gt;You will most likely want to add or edit content to your website. To do this, you only need to alter the &lt;code&gt;docs&lt;/code&gt; folder accordingly to trigger redeployment. Each update may not be instantaneous, so don&#39;t worry if it takes a few seconds before your changes become effective.&lt;/p&gt;
 </description>
     </item>
     
@@ -539,7 +925,7 @@ git commit -m &#39;First deploy&#39;
 &lt;li&gt;Have a local copy of the website on your machine.&lt;/li&gt;
 &lt;li&gt;Update your local version.&lt;/li&gt;
 &lt;li&gt;Deploy your local version to your localhost using Hugo in order to update the &lt;code&gt;docs&lt;/code&gt; contents.&lt;/li&gt;
-&lt;li&gt;Push your changes, including both the source and the updated &lt;code&gt;docs&lt;/code&gt; to the site&amp;rsquo;s repository.&lt;/li&gt;
+&lt;li&gt;Push your changes, including both the source and the updated &lt;code&gt;docs&lt;/code&gt; to the site&#39;s repository.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;With the workflow, your changes will instantaneously update the public website. Also, since you first deploy on your local machine, you are able to see the results of your changes before them becoming public. Finally, pushing both the source and the updated &lt;code&gt;docs&lt;/code&gt; prevents conflicts in future updates.&lt;/p&gt;
 &lt;h3 id=&#34;requirements&#34;&gt;Requirements&lt;/h3&gt;
@@ -560,7 +946,7 @@ git commit -m &#39;First deploy&#39;
 &lt;h3 id=&#34;create-your-content&#34;&gt;Create your content&lt;/h3&gt;
 &lt;p&gt;Create your specific content by producing the necessary Markdown files and place them in the correct folders. See &lt;a href=&#34;create/&#34;&gt;Creating content&lt;/a&gt; for details on how to do so.&lt;/p&gt;
 &lt;h3 id=&#34;deploy-your-local-website&#34;&gt;Deploy your local website&lt;/h3&gt;
-&lt;p&gt;Now that your local repository contains updated content, it is time to deploy it to your local &lt;code&gt;docs&lt;/code&gt; folder. To do so, open a command prompt and run hugo at the root of the site&amp;rsquo;s local repository and type in:&lt;/p&gt;
+&lt;p&gt;Now that your local repository contains updated content, it is time to deploy it to your local &lt;code&gt;docs&lt;/code&gt; folder. To do so, open a command prompt and run hugo at the root of the site&#39;s local repository and type in:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;which will compile the content into the static &lt;code&gt;html&lt;/code&gt; pages. Unless your code does not compile, you should get an output such as (possibly containing warnings)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;Building sites … WARN 2019/09/24 17:08:23 In the next Hugo version &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;0.58.0&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
@@ -763,7 +1149,7 @@ sftp&amp;gt; put -r *
       <guid>https://UMichStatistics.github.io/ComputingClub/post/welcome/</guid>
       <description>&lt;p&gt;With the recent creation of the Statistics Computing Club, having a platform to share news, contents and resources was a priority.&lt;/p&gt;
 &lt;p&gt;The site is functionnal but still under construction, so please &lt;a href=&#34;https://github.com/UMichStatistics/ComputingClub/issues&#34;&gt;report issues&lt;/a&gt; to the GitHub repository to help us improve the site. Also, your comments and suggestions are more than welcome, so feel free to &lt;a href=&#34;#contact&#34;&gt;contact&lt;/a&gt; us!&lt;/p&gt;
-&lt;p&gt;The Committee is still looking for presenters for this fall&amp;rsquo;s meetings. You don&amp;rsquo;t need to be an expert of the topic you&amp;rsquo;ll present; providing exposure to a tool you find useful, to a package you think may help others or to some research methodology may be relevant to many other members! If you feel like presenting, we invite you to complete this &lt;a href=&#34;https://forms.gle/XMtKfjhJTuaaHdLU7&#34;&gt;form&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Committee is still looking for presenters for this fall&#39;s meetings. You don&#39;t need to be an expert of the topic you&#39;ll present; providing exposure to a tool you find useful, to a package you think may help others or to some research methodology may be relevant to many other members! If you feel like presenting, we invite you to complete this &lt;a href=&#34;https://forms.gle/XMtKfjhJTuaaHdLU7&#34;&gt;form&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
