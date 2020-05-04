@@ -1,6 +1,6 @@
 ---
-title: Data Manipulation using Pandas and Scikit-learn
-linktitle: Data Manipulation using Pandas and Scikit-learn
+title: Data Manipulation using Python
+linktitle: Data Manipulation using Python
 toc: true
 type: docs
 date: "2020-04-29T00:00:00+01:00"
@@ -8,7 +8,7 @@ draft: false
 menu:
   resources:
     parent: Resources
-    name: Data Manipulation using Pandas and Scikit-learn
+    name: Data Manipulation using Python
     weight: 10
 
 # Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
@@ -41,7 +41,13 @@ You are probably aware of the `.to_csv` method to write a `pandas` `DataFrame` t
 - `columns` to only write specific columns;
 - `index`, `index_label` and `header` to control the output.
 
-TODO: to_latex, apply(.format)
+The `.to_latex()` method offers a convenient way to export a `pandas` DataFrame to LaTeX format. I have found that the column formatting does not work very well sometimes; you can perform the formatting by hand before using `to_latex` using commands such as:
+
+```python
+df["column"] = df["column"].apply("{:.2f}".format) # float formatting
+df["column"] = df["column"].apply("{:.2f} %".format) # add a percentage sign
+df["ci"] = df[["lower", "upper"]].apply(lambda x: "[{:.2f}, {:.2f}]".format(x["lower"], x["upper"]), axis=0) # to converct CI bounds to an interval
+```
 
 ## Accessing Values
 
@@ -112,8 +118,6 @@ Other interesting methods:
 - The `df.where()` method can also be used to replace values where some condition is false;
 - The `df.mask()` method is the converse to `.where`: it replaces values where the condition is true;
 - The `df.replace()` replaces values;
-- The `df.filter()` method can select some rows/columns based on their content (`like` or a `regex`).
-- Using `df.take()` performs similarly as `.iloc[]`;
 - Using `df.fillna()` does what its name indicates;
 - The `df.update(other_df)` can be useful in some cases (see [Merging DataFrames](#merging) for more details);
 - The `df.eval(str, inplace=True)` method lets you compute a new column using a string description;
@@ -122,11 +126,13 @@ Other interesting methods:
 
 Subsetting data can be viewed in two ways: selecting rows/columns or dropping rows/data.
 
-To select rows or columns, refer to [Accessing data](#access). 
+To select rows or columns, refer to [Accessing data](#accessing-values). 
 
 To drop rows or columns, you can:
 - Select your subset and overwrite the `DataFrame` as in `df = df.loc[...]`;
 - Use the `df.drop(..., inplace=True)` method to drop rows or columns;
+- The `df.filter()` method can select some rows/columns based on their content (`like` or a `regex`).
+- Using `df.take()` performs similarly as `.iloc[]`;
 
 For more specific use cases:
 - Use `df.drop_duplicates(..., inplace=True)` to drop repeated rows
@@ -135,10 +141,12 @@ For more specific use cases:
 
 ## Reshaping DataFrames
 
-Transpose:
+**Transpose:**
+
 - The method s `.T` and `.transpose()` do the same thing
 
-## Wide to long format
+**Wide to long format**
+
 - The method `df.melt()`: take multiple columns into (column name, value);
 - The method `df.stack()`: similar to melt, but less general; puts the original column names into a `MultiIndex` rather than new columns;
 - The method `df.explode()`: when cells contains lists, this methods expand the dataframe for each element of the list.
@@ -233,7 +241,8 @@ print(df_wide.explode())
     dtype: object
 
 
-## Long to wide
+**Long to wide**
+
 - The method `df.pivot()` creates columns based on unique levels of a given column filled with the corresponding values;
 - The method `df.pivot_table()` generalizes `.pivot` to more complex situations where there may be duplicate entries which have to be aggregated. This is related to performing `.groupby()` chained with `.agg()`, but may have different output format;
 - The method `df.unstack()` pivots a DataFrame using its index (useful for MultiIndex DataFrames mostly).
@@ -344,12 +353,15 @@ print(df_long.set_index(["id", "type"]).unstack())
     2        2  6  10
     3        3  7  11
 
+**Cross Tabulation**
+
+The `pd.crosstab()` function allows you to compute frequency tables along multiple groupings.
 
 ## Merging DataFrames
 
 Here are a few options on how to merge multiple `DataFrame`s together. See [Merge, join, and concatenate](https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html?highlight=concatenate) for more details.
 
-## Concatenate
+**Concatenate**
 
 The function `pd.concat([df1, df2])` lets you litteraly concatenate multiple `DataFrame`s along some axis. This function works either as an *inner join* or an *outer join* on the multiple dataframes indices.
 
@@ -357,13 +369,15 @@ The function `df.append(other_df)` does concatenation on the index axis (i.e., a
 
 Using `ignore_index=True` can be useful when you don't want to join on the indices and only really concatenate the dataframes. (This is most likely the way you want to use `.append()`.)
 
-## Merging
+**Merging**
 
 The function `pd.merge` lets you perform four types of joins: `left`, `right`, `outer` and `inner` which are closely related to their SQL equivalents. It generalizes `pd.concat` as you can use columns, instead of the index, to perform the join.
 
 The inline version of `pd.merge` is to use the method `.join` on some pre-existing dataframe. 
 
-## Iterating through DataFrames <a class="anchor" id="iter"></a>
+The method `df.update(other)` performs a *left join* by replacing the values of `df` using those in `other`. It replaces on non-NA values in the original `df` so this can be use to add values to a `df`; no new rows or columns can be created by `.update`.
+
+## Iterating through DataFrames
 
 If you need to traverse a `DataFrame` row by row, you can use:
 - `.iterrows()` to return (index, row as `Series`);
@@ -417,7 +431,15 @@ The `.describe` function works as an `.agg` call acting on numerical columns onl
 
 `MultiIndex` works just like regular indices except that they have a structure using levels: instead of a single key, each row has a tuple of values acting as a key. Playing with `MultiIndex` can be cumbersome sometimes so a nice trick to keep in mind is the `.reset_index(inplace=True)` method which moves the MultiIndex to new columns and creates a dummy index in its place. 
 
-## Scikit-learn Transformations
+## Transformations
+
+**Using pandas**
+
+To encode categorical variables using integer indexing, you can use the function `pd.factorize(array)` or the method version `series.factorize()`. It returns the encoding as well as the encoded values. To get one-hot encoding, you can use `pd.get_dummies()`.
+
+To bin numerical variables, you can use `pd.cut()`.
+
+**Using Scikit-learn**
 
 If you need to scale the data (say to mean 0 and variance 1), I suggest to use the `StandardScaler` from `sklearn`. It internally stores the mean and standard deviation used for standardization. Then, if you need to apply the same transformation to another matrix, you can do it easily. Also, if you need to recover the original matrix, you can!
 
@@ -474,3 +496,5 @@ print(label_encoder.inverse_transform(np.array([0, 1, 0, 1, 1, 0, 1])))
 Some other interesting transformations (see [Preprocessing and Normalization](https://scikit-learn.org/stable/modules/classes.html#module-sklearn.preprocessing) for many more):
 - `LabelEncoder` for more than two categories (one-hot)
 - `MultiLabelBinarizer` for multiple labels to 0/1 encoding
+
+

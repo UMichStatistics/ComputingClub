@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.6.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Statistics Computing Club">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="General comments R equivalents
+ glmnet: pyglmnet lme4: pymer4 and a sklearn wrapper sklearn-lmer  Scikit-learn (sklearn)
+ Mostly produces predictive models (fit, predict and score); no built-in inference mechanisms Easy to perform CV for parameter selection (.GridSearchCV) Many metrics implemented  Classification, Regression, Clustering, Distances and kernels   Many preprocessing tools:  Label encoding, scaling, standardization, transformations, etc.   Many related packages:  Related Projects SciKits    Statsmodels (statsmodels)">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://UMichStatistics.github.io/ComputingClub/workshops/resources/python_models/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="hsl(48, 100%, 51%)">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700%7CFauna+One&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/ComputingClub/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/ComputingClub/index.webmanifest">
+  <link rel="icon" type="image/png" href="/ComputingClub/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/ComputingClub/img/icon-192.png">
+
+  <link rel="canonical" href="https://UMichStatistics.github.io/ComputingClub/workshops/resources/python_models/">
+
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="UM Statistics Computing Club">
+  <meta property="og:url" content="https://UMichStatistics.github.io/ComputingClub/workshops/resources/python_models/">
+  <meta property="og:title" content="Modeling using Python | UM Statistics Computing Club">
+  <meta property="og:description" content="General comments R equivalents
+ glmnet: pyglmnet lme4: pymer4 and a sklearn wrapper sklearn-lmer  Scikit-learn (sklearn)
+ Mostly produces predictive models (fit, predict and score); no built-in inference mechanisms Easy to perform CV for parameter selection (.GridSearchCV) Many metrics implemented  Classification, Regression, Clustering, Distances and kernels   Many preprocessing tools:  Label encoding, scaling, standardization, transformations, etc.   Many related packages:  Related Projects SciKits    Statsmodels (statsmodels)"><meta property="og:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png">
+  <meta property="twitter:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-04-29T00:00:00&#43;01:00">
+    
+    <meta property="article:modified_time" content="2020-04-29T00:00:00&#43;01:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Modeling using Python | UM Statistics Computing Club</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    
+    
+      <a class="navbar-brand" href="/ComputingClub/">UM Statistics Computing Club</a>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/ComputingClub/post"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/ComputingClub/talk"><span>Meetings</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/ComputingClub/workshops"><span>Workshops</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/ComputingClub/workshops/resources"><span>Resources</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/ComputingClub/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item">
+        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/ComputingClub/workshops/resources/">Resources</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/ComputingClub/workshops/resources/hpc/">High Performance Computing</a>
+      </li>
+      
+      <li >
+        <a href="/ComputingClub/workshops/resources/latex/">LaTeX</a>
+      </li>
+      
+      <li >
+        <a href="/ComputingClub/workshops/resources/macos/">MacOS</a>
+      </li>
+      
+      <li >
+        <a href="/ComputingClub/workshops/resources/packages/">Packages</a>
+      </li>
+      
+      <li >
+        <a href="/ComputingClub/workshops/resources/versioncontrol/">Version Control</a>
+      </li>
+      
+      <li >
+        <a href="/ComputingClub/workshops/resources/r/">All things R</a>
+      </li>
+      
+      <li >
+        <a href="/ComputingClub/workshops/resources/pandas/">Data Manipulation using Python</a>
+      </li>
+      
+      <li class="active">
+        <a href="/ComputingClub/workshops/resources/python_models/">Modeling using Python</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#general-comments">General comments</a></li>
+    <li><a href="#categorical-data">Categorical Data</a></li>
+    <li><a href="#numerical-data">Numerical Data</a></li>
+    <li><a href="#unsupervised-learning">Unsupervised Learning</a></li>
+    <li><a href="#dimensionality-reduction">Dimensionality Reduction</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>Modeling using Python</h1>
+
+          <div class="article-style">
+            <h2 id="general-comments">General comments</h2>
+<p><strong>R equivalents</strong></p>
+<ul>
+<li><code>glmnet</code>: <a href="https://glm-tools.github.io/pyglmnet/index.html"><code>pyglmnet</code></a></li>
+<li><code>lme4</code>: <a href="http://eshinjolly.com/pymer4/"><code>pymer4</code></a> and a <code>sklearn</code> wrapper <a href="https://github.com/nimh-mbdu/sklearn-lmer"><code>sklearn-lmer</code></a></li>
+</ul>
+<p><strong><a href="https://scikit-learn.org">Scikit-learn</a> (<code>sklearn</code>)</strong></p>
+<ul>
+<li>Mostly produces <em>predictive</em> models (<code>fit</code>, <code>predict</code> and <code>score</code>); no built-in inference mechanisms</li>
+<li>Easy to perform CV for parameter selection (<code>.GridSearchCV</code>)</li>
+<li>Many <a href="https://scikit-learn.org/stable/modules/model_evaluation.html#classification-metrics">metrics</a> implemented
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/model_evaluation.html#classification-metrics">Classification</a>, <a href="https://scikit-learn.org/stable/modules/model_evaluation.html#regression-metrics">Regression</a>, <a href="https://scikit-learn.org/stable/modules/clustering.html#clustering-evaluation">Clustering</a>, <a href="https://scikit-learn.org/stable/modules/metrics.html#metrics">Distances and kernels</a></li>
+</ul>
+</li>
+<li>Many <a href="https://scikit-learn.org/stable/modules/preprocessing.html#preprocessing">preprocessing</a> tools:
+<ul>
+<li>Label encoding, scaling, standardization, transformations, etc.</li>
+</ul>
+</li>
+<li>Many related packages:
+<ul>
+<li><a href="https://scikit-learn.org/stable/related_projects.html">Related Projects</a></li>
+<li><a href="http://scikits.appspot.com/scikits">SciKits</a></li>
+</ul>
+</li>
+</ul>
+<p><strong><a href="https://www.statsmodels.org">Statsmodels</a> (<code>statsmodels</code>)</strong></p>
+<ul>
+<li>Classical statistical techniques with inference
+<ul>
+<li>ANOVAs, LMM, GLM, hypothesis testing, etc.</li>
+<li>Regularization (Elastic net, Rigde, LASSO)</li>
+<li>Rich family of GLM distributions</li>
+</ul>
+</li>
+<li>Uses <code>R</code>-like formulas to describe models</li>
+</ul>
+<p><strong><a href="https://docs.scipy.org/doc/scipy-0.15.1/reference/stats.html">Scipy stats module</a> (<code>scipy.stats</code>)</strong></p>
+<ul>
+<li>Implements some basic statistical functions:
+<ul>
+<li>Distributions</li>
+<li>Estimators</li>
+<li>Hypothesis tests</li>
+<li>Transformations</li>
+<li>Gaussian KDE</li>
+</ul>
+</li>
+</ul>
+<h2 id="categorical-data">Categorical Data</h2>
+<p><strong>Logistic Regression</strong></p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression"><code>sklearn.linear_model.LogisticRegression</code></a>:
+<ul>
+<li>L1, L2 and elastic net penalties</li>
+<li>For multi-class problems: one-vs-all and multinomial</li>
+</ul>
+</li>
+<li><a href="https://glm-tools.github.io/pyglmnet/api.html"><code>pyglmnet.GLM(distr=&quot;binomial&quot;)</code></a>
+<ul>
+<li>Elastic net regularization (LASSO and Ridge)</li>
+<li>Cross-validation</li>
+<li>Group regularization</li>
+</ul>
+</li>
+<li><a href="http://eshinjolly.com/pymer4/"><code>pymer4.Lmer(family=&quot;binomial&quot;)</code></a>
+<ul>
+<li>Mixed effect models</li>
+</ul>
+</li>
+<li><a href="https://pygam.readthedocs.io/en/latest/api/logisticgam.html"><code>pyGAM.LogisticGAM</code></a>:
+<ul>
+<li>GAM (with interactions), Cross-validation, similar to <code>sklearn</code>'s API</li>
+</ul>
+</li>
+<li><code>statsmodels</code>:
+<ul>
+<li><a href="https://www.statsmodels.org/dev/glm.html">Binomial GLM</a></li>
+<li><a href="https://www.statsmodels.org/dev/gam.html">Binomial GLM GAM</a></li>
+<li><a href="https://www.statsmodels.org/dev/mixed_linear.html">Binomial GLM LMM</a></li>
+<li><a href="https://www.statsmodels.org/stable/discretemod.html">Multinomial GLM</a></li>
+</ul>
+</li>
+</ul>
+<p><strong>Other GLM</strong></p>
+<ul>
+<li>Probit:
+<ul>
+<li><a href="https://glm-tools.github.io/pyglmnet/api.html"><code>pyglmnet.GLM(distr=&quot;probit&quot;)</code></a>
+<ul>
+<li>Elastic net regularization (LASSO and Ridge)</li>
+<li>Cross-validation</li>
+<li>Group regularization</li>
+</ul>
+</li>
+<li><code>statsmodels</code>:
+<ul>
+<li><a href="https://www.statsmodels.org/stable/discretemod.html">Probit GLM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Ridge Classifier</strong> (Ridge regression on -1/+1 responses)</p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeClassifier.html#sklearn.linear_model.RidgeClassifier"><code>sklearn.linear_model.RidgeClassifier</code></a>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html#sklearn.linear_model.LogisticRegressionCV"><code>sklearn.linear_model.RidgeClassifierCV</code></a> performs CV on a solution path</li>
+</ul>
+</li>
+</ul>
+<p><strong>Discriminant analysis</strong></p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/classes.html#module-sklearn.discriminant_analysis"><code>sklearn.discriminant_analysis</code></a>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis">LDA</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis">QDA</a></li>
+</ul>
+</li>
+</ul>
+<p><strong>Ensemble and Tree-based Methods</strong></p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/classes.html#module-sklearn.ensemble"><code>sklearn.ensemble</code></a>:
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier">AdaBoost</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingClassifier">Bagging</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier">Gradient Boosting</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier">Random Forest</a></li>
+</ul>
+</li>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier"><code>sklearn.trees.DecisionTreeClassifier</code></a></li>
+</ul>
+<p><strong>Gaussian Process</strong></p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessClassifier"><code>sklearn.gaussian_process.GaussianProcessClassifier</code></a></li>
+</ul>
+<p><strong>Naive Bayes</strong></p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/classes.html#module-sklearn.naive_bayes"><code>sklearn.naive_bayes</code></a></li>
+</ul>
+<p><strong>K-Nearest-Neighbors</strong></p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier"><code>sklearn.neighbors.KNearestNeighborsClassifier</code></a>
+<ul>
+<li>uniform weights, distance weights, custom weights</li>
+<li>multiple <a href="https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.DistanceMetric.html?highlight=distancemetric#sklearn.neighbors.DistanceMetric">distance metrics</a></li>
+</ul>
+</li>
+</ul>
+<p><strong>Neural Networks</strong></p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Perceptron.html#sklearn.linear_model.Perceptron"><code>sklearn.linear_model.Perceptron</code></a></li>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html#sklearn.neural_network.MLPClassifier"><code>sklearn.neural_network.MLPClassifier</code></a>
+<ul>
+<li>multiple layers</li>
+<li>activations: identity, logistic (sigmoid), ReLU, tanh</li>
+<li>weight decay</li>
+</ul>
+</li>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.BernoulliRBM.html#sklearn.neural_network.BernoulliRBM"><code>sklearn.neural_network.BernoulliRBM</code></a></li>
+<li><a href="https://scikit-neuralnetwork.readthedocs.io/en/latest/guide_model.html"><code>sknn.nlp.Classifier</code></a>
+<ul>
+<li>Compatible with <code>sklearn</code></li>
+<li>Many more types of layers and activations</li>
+</ul>
+</li>
+<li><a href="https://pytorch.org/docs/stable/nn.html">pyTorch</a>, <a href="https://www.tensorflow.org/api_docs/python/">TensorFlow</a> (see also <a href="https://keras.io/">Keras</a>)</li>
+</ul>
+<p><strong>Support Vector Machines</strong></p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/classes.html#module-sklearn.svm"><code>sklearn.svm</code></a>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC">Linear</a></li>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC">Kernel</a>: linear, polynomial, Gaussian, etc.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Multiclass and Multilabel Data</strong></p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/classes.html#module-sklearn.multiclass"><code>sklearn.multiclass</code></a>
+<ul>
+<li>meta-estimator for one-vs-one and one-vs-rest (one-vs-all)</li>
+</ul>
+</li>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.MultiOutputClassifier"><code>sklearn.multioutput.MultiOutputClassifier</code></a>
+<ul>
+<li>to apply binary classifiers to multiple outputs</li>
+</ul>
+</li>
+</ul>
+<h2 id="numerical-data">Numerical Data</h2>
+<p><strong>Linear Regression, ANOVA and Linear Mixed Models</strong></p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression"><code>sklearn.linear_model.LinearRegression</code></a>
+<ul>
+<li>Regularizations: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html#sklearn.linear_model.Ridge">Ridge</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html#sklearn.linear_model.Lasso">LASSO</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html#sklearn.linear_model.ElasticNet">Elastic net</a></li>
+<li>Multi-task/multi-output: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.MultiTaskElasticNet.html#sklearn.linear_model.MultiTaskElasticNet">Elastic net</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.MultiTaskLasso.html#sklearn.linear_model.MultiTaskLasso">LASSO</a></li>
+</ul>
+</li>
+<li><a href="http://eshinjolly.com/pymer4/"><code>pymer4</code></a>
+<ul>
+<li>Mixed effect models</li>
+<li><a href="https://github.com/nimh-mbdu/sklearn-lmer"><code>sklearn-lmer</code></a>: a <code>sklearn</code> wrapper with CV</li>
+</ul>
+</li>
+<li><a href="https://glm-tools.github.io/pyglmnet/api.html"><code>pyglmnet.GLM(distr=&quot;gaussian&quot;)</code></a>
+<ul>
+<li>Elastic net regularization (LASSO and Ridge)</li>
+<li>Cross-validation</li>
+<li>Group regularization</li>
+</ul>
+</li>
+<li><a href="https://pygam.readthedocs.io/en/latest/api/lineargam.html"><code>pyGAM.LinearGAM</code></a>:
+<ul>
+<li>GAM (with interactions), Cross-validation, similar to <code>sklearn</code>'s API</li>
+</ul>
+</li>
+<li><a href="https://www.statsmodels.org/dev/user-guide.html#regression-and-linear-models"><code>statsmodels</code></a>
+<ul>
+<li><a href="https://www.statsmodels.org/dev/regression.html">Linear Regression</a></li>
+<li><a href="https://www.statsmodels.org/dev/gam.html">GAM</a></li>
+<li><a href="https://www.statsmodels.org/dev/mixed_linear.html">Linear Mixed Effect Models</a></li>
+<li><a href="https://www.statsmodels.org/dev/anova.html">ANOVA</a></li>
+<li><a href="https://www.statsmodels.org/dev/generated/statsmodels.multivariate.manova.MANOVA.html#statsmodels.multivariate.manova.MANOVA">MANOVA</a></li>
+</ul>
+</li>
+</ul>
+<p><strong>GLM</strong></p>
+<ul>
+<li>Count data (Poisson)
+<ul>
+<li><a href="https://glm-tools.github.io/pyglmnet/api.html"><code>pyglmnet.GLM(distr=&quot;poisson&quot;)</code></a>
+<ul>
+<li>Elastic net regularization (LASSO and Ridge)</li>
+<li>Cross-validation</li>
+<li>Group regularization</li>
+</ul>
+</li>
+<li><a href="http://eshinjolly.com/pymer4/"><code>pymer4.Lmer(family=&quot;poisson&quot;)</code></a>
+<ul>
+<li>Mixed effect models</li>
+</ul>
+</li>
+<li><a href="https://pygam.readthedocs.io/en/latest/api/poissongam.html"><code>pyGAM.PoissonGAM</code></a>:
+<ul>
+<li>GAM (with interactions), Cross-validation, similar to <code>sklearn</code>'s API</li>
+</ul>
+</li>
+<li><code>statsmodels</code>:
+<ul>
+<li><a href="https://www.statsmodels.org/dev/contingency_tables.html">Contingency Tables</a></li>
+<li><a href="https://www.statsmodels.org/dev/glm.html">Poisson GLM</a></li>
+<li><a href="https://www.statsmodels.org/dev/gam.html">Poisson GLM GAM</a></li>
+<li><a href="https://www.statsmodels.org/dev/mixed_linear.html">Poisson GLM LMM</a></li>
+<li><a href="https://www.statsmodels.org/stable/discretemod.html">Generalized Poisson GLM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Count data (Binomial)
+<ul>
+<li><code>statsmodels</code>:
+<ul>
+<li><a href="https://www.statsmodels.org/dev/glm.html">Binomial GLM</a></li>
+<li><a href="https://www.statsmodels.org/dev/gam.html">Binomial GLM GAM</a></li>
+<li><a href="https://www.statsmodels.org/dev/mixed_linear.html">Binomial GLM LMM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Count data (Negative Binomial)
+<ul>
+<li><code>statsmodels</code>:
+<ul>
+<li><a href="https://www.statsmodels.org/dev/glm.html">Negative Binomial GLM</a></li>
+<li><a href="https://www.statsmodels.org/dev/gam.html">Poisson GLM GAM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Count data (Zero-Inflated Models)
+<ul>
+<li><code>statsmodels</code>:
+<ul>
+<li><a href="https://www.statsmodels.org/stable/discretemod.html">Zero-Inflated Poisson GLM</a></li>
+<li><a href="https://www.statsmodels.org/stable/discretemod.html">Zero-Inflated NegativeBinomial GLM</a></li>
+<li><a href="https://www.statsmodels.org/stable/discretemod.html">Zero-Inflated Generalized Poisson GLM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Right-continuous Data (Gamma)
+<ul>
+<li><a href="https://glm-tools.github.io/pyglmnet/api.html"><code>pyglmnet.GLM(distr=&quot;gamma&quot;)</code></a>
+<ul>
+<li>Elastic net regularization (LASSO and Ridge)</li>
+<li>Cross-validation</li>
+<li>Group regularization</li>
+</ul>
+</li>
+<li><a href="http://eshinjolly.com/pymer4/"><code>pymer4.Lmer(family=&quot;gamma&quot;)</code></a>
+<ul>
+<li>Mixed effect models</li>
+</ul>
+</li>
+<li><a href="https://pygam.readthedocs.io/en/latest/api/gammagam.html"><code>pyGAM.GammaGAM</code></a>:
+<ul>
+<li>GAM (with interactions), Cross-validation, similar to <code>sklearn</code>'s API</li>
+</ul>
+</li>
+<li><code>statsmodels</code>:
+<ul>
+<li><a href="https://www.statsmodels.org/dev/glm.html">Gamma GLM</a></li>
+<li><a href="https://www.statsmodels.org/dev/gam.html">Gamma GLM GAM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Right-continuous Data (Inverse Gaussian)
+<ul>
+<li><a href="http://eshinjolly.com/pymer4/"><code>pymer4.Lmer(family=&quot;inverse_gaussian&quot;)</code></a>
+<ul>
+<li>Mixed effect models</li>
+</ul>
+</li>
+<li><a href="https://pygam.readthedocs.io/en/latest/api/invgaussgam.html"><code>pyGAM.InvGaussGAM</code></a>:
+<ul>
+<li>GAM (with interactions), Cross-validation, similar to <code>sklearn</code>'s API</li>
+</ul>
+</li>
+<li><code>statsmodels</code>:
+<ul>
+<li><a href="https://www.statsmodels.org/dev/glm.html">Inverse Gaussian GLM</a></li>
+<li><a href="https://www.statsmodels.org/dev/gam.html">Inverse Gaussian GLM GAM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Right-continuous with Excess Zero Data (Tweedie with $p\in(1,2)$)
+<ul>
+<li><code>statsmodels</code>:
+<ul>
+<li><a href="https://www.statsmodels.org/dev/glm.html">Tweedie GLM</a></li>
+<li><a href="https://www.statsmodels.org/dev/gam.html">Tweedie GLM GAM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Kernel Linear Regression</strong></p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.kernel_ridge.KernelRidge.html#sklearn.kernel_ridge.KernelRidge"><code>sklearn.kernel_ridge.KernelRidge</code></a>
+<ul>
+<li>Kernels: linear, polynomial, Gaussian, etc.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Ensemble and Tree-based Methods</strong></p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/classes.html#module-sklearn.ensemble"><code>sklearn.ensemble</code></a>:
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostRegressor.html#sklearn.ensemble.AdaBoostRegressor">AdaBoost</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingRegressor.html#sklearn.ensemble.BaggingRegressor">Bagging</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html#sklearn.ensemble.GradientBoostingRegressor">Gradient Boosting</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html#sklearn.ensemble.RandomForestRegressor">Random Forest</a></li>
+</ul>
+</li>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor"><code>sklearn.trees.DecisionTreeRegressor</code></a></li>
+</ul>
+<p><strong>Gaussian Process</strong></p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessRegressor.html#sklearn.gaussian_process.GaussianProcessRegressor"><code>sklearn.gaussian_process.GaussianProcessRegressor</code></a></li>
+</ul>
+<p><strong>K-Nearest-Neighbors</strong></p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsRegressor.html#sklearn.neighbors.KNeighborsRegressor"><code>sklearn.neighbors.KNearestNeighborsRegressor</code></a>
+<ul>
+<li>uniform weights, distance weights, custom weights</li>
+<li>multiple <a href="https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.DistanceMetric.html?highlight=distancemetric#sklearn.neighbors.DistanceMetric">distance metrics</a></li>
+</ul>
+</li>
+</ul>
+<p><strong>Neural Networks</strong></p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html#sklearn.neural_network.MLPRegressor"><code>sklearn.neural_network.MLPRegressor</code></a>
+<ul>
+<li>multiple layers</li>
+<li>activations: identity, logistic (sigmoid), ReLU, tanh</li>
+<li>weight decay</li>
+</ul>
+</li>
+<li><a href="https://scikit-neuralnetwork.readthedocs.io/en/latest/guide_model.html"><code>sknn.nlp.Regressor</code></a>
+<ul>
+<li>Compatible with <code>sklearn</code></li>
+<li>Many more types of layers and activations</li>
+</ul>
+</li>
+<li><a href="https://pytorch.org/docs/stable/nn.html">pyTorch</a>, <a href="https://www.tensorflow.org/api_docs/python/">TensorFlow</a> (see also <a href="https://keras.io/">Keras</a>)</li>
+</ul>
+<p><strong>Support Vector Machines</strong></p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/classes.html#module-sklearn.svm"><code>sklearn.svm</code></a>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVR.html#sklearn.svm.LinearSVR">Linear</a></li>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html#sklearn.svm.SVR">Kernel</a>: linear, polynomial, Gaussian, etc.</li>
+</ul>
+</li>
+</ul>
+<h2 id="unsupervised-learning">Unsupervised Learning</h2>
+<p><strong>Clustering</strong></p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/classes.html#module-sklearn.cluster"><code>sklearn.cluster</code></a>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html#sklearn.cluster.KMeans">K-means</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html#sklearn.cluster.AgglomerativeClustering">Agglomerative clustering</a></li>
+</ul>
+</li>
+</ul>
+<p><strong>Gaussian Mixture Model</strong></p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html#sklearn.mixture.GaussianMixture"><code>sklearn.mixture.GaussianMixture</code></a></li>
+</ul>
+<h2 id="dimensionality-reduction">Dimensionality Reduction</h2>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/classes.html#module-sklearn.decomposition"><code>sklearn.decomposition</code></a>:
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.KernelPCA.html#sklearn.decomposition.KernelPCA">Kernel PCA</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html#sklearn.decomposition.PCA">PCA</a></li>
+</ul>
+</li>
+<li><a href="https://scikit-learn.org/stable/modules/manifold.html#manifold"><code>sklearn.manifold</code></a>:
+<ul>
+<li>Isomap, t-SNE, eetc.</li>
+</ul>
+</li>
+<li><a href="https://scikit-neuralnetwork.readthedocs.io/en/latest/module_ae.html"><code>sknn.ae.AutoEncoder</code></a>
+<ul>
+<li>Neural network autoencoder</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/ComputingClub/workshops/resources/pandas/" rel="next">Data Manipulation using Python</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/ComputingClub/workshops/resources/hpc/" rel="prev">High Performance Computing</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Apr 29, 2020</p>
+
+          
+
+
+
+
+          
+<section id="comments">
+  
+    
+<div id="disqus_thread"></div>
+<script>
+  let disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "umichstatisticscomputingclub" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
+</section>
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2020 UM Statistics PhD Student Council Computing Committee &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+    <script src="/ComputingClub/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.3.1/mermaid.min.js" integrity="sha256-vOIuDSYDirTfyr+S2MjFnhOz6Rgiz4ODFAHATG0rFxw=" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/shell.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/markdown.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/ComputingClub/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    <script id="dsq-count-scr" src="https://umichstatisticscomputingclub.disqus.com/count.js" async></script>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/ComputingClub/js/academic.min.96cf4c3dc37ea60dbbd03c13a455f1f7.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

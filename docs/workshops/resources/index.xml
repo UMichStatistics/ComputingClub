@@ -13,7 +13,7 @@
     </image>
     
     <item>
-      <title>Data Manipulation using Pandas and Scikit-learn</title>
+      <title>Data Manipulation using Python</title>
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/pandas/</link>
       <pubDate>Wed, 29 Apr 2020 00:00:00 +0100</pubDate>
       <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/pandas/</guid>
@@ -38,8 +38,11 @@
 &lt;li&gt;&lt;code&gt;columns&lt;/code&gt; to only write specific columns;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;index&lt;/code&gt;, &lt;code&gt;index_label&lt;/code&gt; and &lt;code&gt;header&lt;/code&gt; to control the output.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;TODO: to_latex, apply(.format)&lt;/p&gt;
-&lt;h2 id=&#34;accessing-values&#34;&gt;Accessing Values&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;.to_latex()&lt;/code&gt; method offers a convenient way to export a &lt;code&gt;pandas&lt;/code&gt; DataFrame to LaTeX format. I have found that the column formatting does not work very well sometimes; you can perform the formatting by hand before using &lt;code&gt;to_latex&lt;/code&gt; using commands such as:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;column&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;column&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:.2f}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format) &lt;span style=&#34;color:#75715e&#34;&gt;# float formatting&lt;/span&gt;
+df[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;column&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;column&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:.2f} &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format) &lt;span style=&#34;color:#75715e&#34;&gt;# add a percentage sign&lt;/span&gt;
+df[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;ci&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;lower&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;upper&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(&lt;span style=&#34;color:#66d9ef&#34;&gt;lambda&lt;/span&gt; x: &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;[{:.2f}, {:.2f}]&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(x[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;lower&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;], x[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;upper&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]), axis&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;# to converct CI bounds to an interval&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;accessing-values&#34;&gt;Accessing Values&lt;/h2&gt;
 &lt;p&gt;There are multiple ways to access the contents in a &lt;code&gt;pandas&lt;/code&gt; &lt;code&gt;DataFrame&lt;/code&gt; (most also work for &lt;code&gt;Series&lt;/code&gt; as well).&lt;/p&gt;
 &lt;p&gt;Using &lt;code&gt;python&lt;/code&gt; indexing (a &lt;code&gt;DataFrame&lt;/code&gt; behaves as a dictionary of columns):&lt;/p&gt;
 &lt;ul&gt;
@@ -126,19 +129,19 @@
 &lt;li&gt;The &lt;code&gt;df.where()&lt;/code&gt; method can also be used to replace values where some condition is false;&lt;/li&gt;
 &lt;li&gt;The &lt;code&gt;df.mask()&lt;/code&gt; method is the converse to &lt;code&gt;.where&lt;/code&gt;: it replaces values where the condition is true;&lt;/li&gt;
 &lt;li&gt;The &lt;code&gt;df.replace()&lt;/code&gt; replaces values;&lt;/li&gt;
-&lt;li&gt;The &lt;code&gt;df.filter()&lt;/code&gt; method can select some rows/columns based on their content (&lt;code&gt;like&lt;/code&gt; or a &lt;code&gt;regex&lt;/code&gt;).&lt;/li&gt;
-&lt;li&gt;Using &lt;code&gt;df.take()&lt;/code&gt; performs similarly as &lt;code&gt;.iloc[]&lt;/code&gt;;&lt;/li&gt;
 &lt;li&gt;Using &lt;code&gt;df.fillna()&lt;/code&gt; does what its name indicates;&lt;/li&gt;
 &lt;li&gt;The &lt;code&gt;df.update(other_df)&lt;/code&gt; can be useful in some cases (see &lt;a href=&#34;#merging&#34;&gt;Merging DataFrames&lt;/a&gt; for more details);&lt;/li&gt;
 &lt;li&gt;The &lt;code&gt;df.eval(str, inplace=True)&lt;/code&gt; method lets you compute a new column using a string description;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;subsetting-data&#34;&gt;Subsetting Data&lt;/h2&gt;
 &lt;p&gt;Subsetting data can be viewed in two ways: selecting rows/columns or dropping rows/data.&lt;/p&gt;
-&lt;p&gt;To select rows or columns, refer to &lt;a href=&#34;#access&#34;&gt;Accessing data&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To select rows or columns, refer to &lt;a href=&#34;#accessing-values&#34;&gt;Accessing data&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;To drop rows or columns, you can:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Select your subset and overwrite the &lt;code&gt;DataFrame&lt;/code&gt; as in &lt;code&gt;df = df.loc[...]&lt;/code&gt;;&lt;/li&gt;
 &lt;li&gt;Use the &lt;code&gt;df.drop(..., inplace=True)&lt;/code&gt; method to drop rows or columns;&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;df.filter()&lt;/code&gt; method can select some rows/columns based on their content (&lt;code&gt;like&lt;/code&gt; or a &lt;code&gt;regex&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Using &lt;code&gt;df.take()&lt;/code&gt; performs similarly as &lt;code&gt;.iloc[]&lt;/code&gt;;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;For more specific use cases:&lt;/p&gt;
 &lt;ul&gt;
@@ -147,11 +150,11 @@
 &lt;li&gt;Use &lt;code&gt;df.truncate()&lt;/code&gt; when the condition is a range of indices.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;reshaping-dataframes&#34;&gt;Reshaping DataFrames&lt;/h2&gt;
-&lt;p&gt;Transpose:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Transpose:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The method s &lt;code&gt;.T&lt;/code&gt; and &lt;code&gt;.transpose()&lt;/code&gt; do the same thing&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;wide-to-long-format&#34;&gt;Wide to long format&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Wide to long format&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The method &lt;code&gt;df.melt()&lt;/code&gt;: take multiple columns into (column name, value);&lt;/li&gt;
 &lt;li&gt;The method &lt;code&gt;df.stack()&lt;/code&gt;: similar to melt, but less general; puts the original column names into a &lt;code&gt;MultiIndex&lt;/code&gt; rather than new columns;&lt;/li&gt;
@@ -222,7 +225,7 @@ dtype: object
 2    9
 dtype: object
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;long-to-wide&#34;&gt;Long to wide&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Long to wide&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The method &lt;code&gt;df.pivot()&lt;/code&gt; creates columns based on unique levels of a given column filled with the corresponding values;&lt;/li&gt;
 &lt;li&gt;The method &lt;code&gt;df.pivot_table()&lt;/code&gt; generalizes &lt;code&gt;.pivot&lt;/code&gt; to more complex situations where there may be duplicate entries which have to be aggregated. This is related to performing &lt;code&gt;.groupby()&lt;/code&gt; chained with &lt;code&gt;.agg()&lt;/code&gt;, but may have different output format;&lt;/li&gt;
@@ -300,16 +303,19 @@ id
 2        2  6  10
 3        3  7  11
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Cross Tabulation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;pd.crosstab()&lt;/code&gt; function allows you to compute frequency tables along multiple groupings.&lt;/p&gt;
 &lt;h2 id=&#34;merging-dataframes&#34;&gt;Merging DataFrames&lt;/h2&gt;
 &lt;p&gt;Here are a few options on how to merge multiple &lt;code&gt;DataFrame&lt;/code&gt;s together. See &lt;a href=&#34;https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html?highlight=concatenate&#34;&gt;Merge, join, and concatenate&lt;/a&gt; for more details.&lt;/p&gt;
-&lt;h2 id=&#34;concatenate&#34;&gt;Concatenate&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Concatenate&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The function &lt;code&gt;pd.concat([df1, df2])&lt;/code&gt; lets you litteraly concatenate multiple &lt;code&gt;DataFrame&lt;/code&gt;s along some axis. This function works either as an &lt;em&gt;inner join&lt;/em&gt; or an &lt;em&gt;outer join&lt;/em&gt; on the multiple dataframes indices.&lt;/p&gt;
 &lt;p&gt;The function &lt;code&gt;df.append(other_df)&lt;/code&gt; does concatenation on the index axis (i.e., add rows)&lt;/p&gt;
 &lt;p&gt;Using &lt;code&gt;ignore_index=True&lt;/code&gt; can be useful when you don&#39;t want to join on the indices and only really concatenate the dataframes. (This is most likely the way you want to use &lt;code&gt;.append()&lt;/code&gt;.)&lt;/p&gt;
-&lt;h2 id=&#34;merging&#34;&gt;Merging&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Merging&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The function &lt;code&gt;pd.merge&lt;/code&gt; lets you perform four types of joins: &lt;code&gt;left&lt;/code&gt;, &lt;code&gt;right&lt;/code&gt;, &lt;code&gt;outer&lt;/code&gt; and &lt;code&gt;inner&lt;/code&gt; which are closely related to their SQL equivalents. It generalizes &lt;code&gt;pd.concat&lt;/code&gt; as you can use columns, instead of the index, to perform the join.&lt;/p&gt;
 &lt;p&gt;The inline version of &lt;code&gt;pd.merge&lt;/code&gt; is to use the method &lt;code&gt;.join&lt;/code&gt; on some pre-existing dataframe.&lt;/p&gt;
-&lt;h2 id=&#34;iterating-through-dataframes-a-classanchor-iditera&#34;&gt;Iterating through DataFrames &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;The method &lt;code&gt;df.update(other)&lt;/code&gt; performs a &lt;em&gt;left join&lt;/em&gt; by replacing the values of &lt;code&gt;df&lt;/code&gt; using those in &lt;code&gt;other&lt;/code&gt;. It replaces on non-NA values in the original &lt;code&gt;df&lt;/code&gt; so this can be use to add values to a &lt;code&gt;df&lt;/code&gt;; no new rows or columns can be created by &lt;code&gt;.update&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;iterating-through-dataframes&#34;&gt;Iterating through DataFrames&lt;/h2&gt;
 &lt;p&gt;If you need to traverse a &lt;code&gt;DataFrame&lt;/code&gt; row by row, you can use:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;.iterrows()&lt;/code&gt; to return (index, row as &lt;code&gt;Series&lt;/code&gt;);&lt;/li&gt;
@@ -349,7 +355,11 @@ dtype: float64
 &lt;p&gt;The &lt;code&gt;.describe&lt;/code&gt; function works as an &lt;code&gt;.agg&lt;/code&gt; call acting on numerical columns only. This can be particularly useful when computing summary statistics on a dataset. Also, this can be chained with a &lt;code&gt;groupby&lt;/code&gt; to perform description by subgroups of the data!&lt;/p&gt;
 &lt;h2 id=&#34;multiindex-dataframes&#34;&gt;MultiIndex DataFrames&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;MultiIndex&lt;/code&gt; works just like regular indices except that they have a structure using levels: instead of a single key, each row has a tuple of values acting as a key. Playing with &lt;code&gt;MultiIndex&lt;/code&gt; can be cumbersome sometimes so a nice trick to keep in mind is the &lt;code&gt;.reset_index(inplace=True)&lt;/code&gt; method which moves the MultiIndex to new columns and creates a dummy index in its place.&lt;/p&gt;
-&lt;h2 id=&#34;scikit-learn-transformations&#34;&gt;Scikit-learn Transformations&lt;/h2&gt;
+&lt;h2 id=&#34;transformations&#34;&gt;Transformations&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Using pandas&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To encode categorical variables using integer indexing, you can use the function &lt;code&gt;pd.factorize(array)&lt;/code&gt; or the method version &lt;code&gt;series.factorize()&lt;/code&gt;. It returns the encoding as well as the encoded values. To get one-hot encoding, you can use &lt;code&gt;pd.get_dummies()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;To bin numerical variables, you can use &lt;code&gt;pd.cut()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Using Scikit-learn&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;If you need to scale the data (say to mean 0 and variance 1), I suggest to use the &lt;code&gt;StandardScaler&lt;/code&gt; from &lt;code&gt;sklearn&lt;/code&gt;. It internally stores the mean and standard deviation used for standardization. Then, if you need to apply the same transformation to another matrix, you can do it easily. Also, if you need to recover the original matrix, you can!&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; sklearn.preprocessing &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; StandardScaler
 &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; np
@@ -394,6 +404,447 @@ y_01 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; label_encoder&lt;s
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;LabelEncoder&lt;/code&gt; for more than two categories (one-hot)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;MultiLabelBinarizer&lt;/code&gt; for multiple labels to 0/1 encoding&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Modeling using Python</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/python_models/</link>
+      <pubDate>Wed, 29 Apr 2020 00:00:00 +0100</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/python_models/</guid>
+      <description>&lt;h2 id=&#34;general-comments&#34;&gt;General comments&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;R equivalents&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;glmnet&lt;/code&gt;: &lt;a href=&#34;https://glm-tools.github.io/pyglmnet/index.html&#34;&gt;&lt;code&gt;pyglmnet&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lme4&lt;/code&gt;: &lt;a href=&#34;http://eshinjolly.com/pymer4/&#34;&gt;&lt;code&gt;pymer4&lt;/code&gt;&lt;/a&gt; and a &lt;code&gt;sklearn&lt;/code&gt; wrapper &lt;a href=&#34;https://github.com/nimh-mbdu/sklearn-lmer&#34;&gt;&lt;code&gt;sklearn-lmer&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://scikit-learn.org&#34;&gt;Scikit-learn&lt;/a&gt; (&lt;code&gt;sklearn&lt;/code&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mostly produces &lt;em&gt;predictive&lt;/em&gt; models (&lt;code&gt;fit&lt;/code&gt;, &lt;code&gt;predict&lt;/code&gt; and &lt;code&gt;score&lt;/code&gt;); no built-in inference mechanisms&lt;/li&gt;
+&lt;li&gt;Easy to perform CV for parameter selection (&lt;code&gt;.GridSearchCV&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Many &lt;a href=&#34;https://scikit-learn.org/stable/modules/model_evaluation.html#classification-metrics&#34;&gt;metrics&lt;/a&gt; implemented
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/model_evaluation.html#classification-metrics&#34;&gt;Classification&lt;/a&gt;, &lt;a href=&#34;https://scikit-learn.org/stable/modules/model_evaluation.html#regression-metrics&#34;&gt;Regression&lt;/a&gt;, &lt;a href=&#34;https://scikit-learn.org/stable/modules/clustering.html#clustering-evaluation&#34;&gt;Clustering&lt;/a&gt;, &lt;a href=&#34;https://scikit-learn.org/stable/modules/metrics.html#metrics&#34;&gt;Distances and kernels&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Many &lt;a href=&#34;https://scikit-learn.org/stable/modules/preprocessing.html#preprocessing&#34;&gt;preprocessing&lt;/a&gt; tools:
+&lt;ul&gt;
+&lt;li&gt;Label encoding, scaling, standardization, transformations, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Many related packages:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/related_projects.html&#34;&gt;Related Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://scikits.appspot.com/scikits&#34;&gt;SciKits&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://www.statsmodels.org&#34;&gt;Statsmodels&lt;/a&gt; (&lt;code&gt;statsmodels&lt;/code&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Classical statistical techniques with inference
+&lt;ul&gt;
+&lt;li&gt;ANOVAs, LMM, GLM, hypothesis testing, etc.&lt;/li&gt;
+&lt;li&gt;Regularization (Elastic net, Rigde, LASSO)&lt;/li&gt;
+&lt;li&gt;Rich family of GLM distributions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Uses &lt;code&gt;R&lt;/code&gt;-like formulas to describe models&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://docs.scipy.org/doc/scipy-0.15.1/reference/stats.html&#34;&gt;Scipy stats module&lt;/a&gt; (&lt;code&gt;scipy.stats&lt;/code&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Implements some basic statistical functions:
+&lt;ul&gt;
+&lt;li&gt;Distributions&lt;/li&gt;
+&lt;li&gt;Estimators&lt;/li&gt;
+&lt;li&gt;Hypothesis tests&lt;/li&gt;
+&lt;li&gt;Transformations&lt;/li&gt;
+&lt;li&gt;Gaussian KDE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;categorical-data&#34;&gt;Categorical Data&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Logistic Regression&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression&#34;&gt;&lt;code&gt;sklearn.linear_model.LogisticRegression&lt;/code&gt;&lt;/a&gt;:
+&lt;ul&gt;
+&lt;li&gt;L1, L2 and elastic net penalties&lt;/li&gt;
+&lt;li&gt;For multi-class problems: one-vs-all and multinomial&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://glm-tools.github.io/pyglmnet/api.html&#34;&gt;&lt;code&gt;pyglmnet.GLM(distr=&amp;quot;binomial&amp;quot;)&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Elastic net regularization (LASSO and Ridge)&lt;/li&gt;
+&lt;li&gt;Cross-validation&lt;/li&gt;
+&lt;li&gt;Group regularization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://eshinjolly.com/pymer4/&#34;&gt;&lt;code&gt;pymer4.Lmer(family=&amp;quot;binomial&amp;quot;)&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Mixed effect models&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pygam.readthedocs.io/en/latest/api/logisticgam.html&#34;&gt;&lt;code&gt;pyGAM.LogisticGAM&lt;/code&gt;&lt;/a&gt;:
+&lt;ul&gt;
+&lt;li&gt;GAM (with interactions), Cross-validation, similar to &lt;code&gt;sklearn&lt;/code&gt;&#39;s API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;statsmodels&lt;/code&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/glm.html&#34;&gt;Binomial GLM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/gam.html&#34;&gt;Binomial GLM GAM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/mixed_linear.html&#34;&gt;Binomial GLM LMM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/stable/discretemod.html&#34;&gt;Multinomial GLM&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Other GLM&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Probit:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://glm-tools.github.io/pyglmnet/api.html&#34;&gt;&lt;code&gt;pyglmnet.GLM(distr=&amp;quot;probit&amp;quot;)&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Elastic net regularization (LASSO and Ridge)&lt;/li&gt;
+&lt;li&gt;Cross-validation&lt;/li&gt;
+&lt;li&gt;Group regularization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;statsmodels&lt;/code&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/stable/discretemod.html&#34;&gt;Probit GLM&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Ridge Classifier&lt;/strong&gt; (Ridge regression on -1/+1 responses)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeClassifier.html#sklearn.linear_model.RidgeClassifier&#34;&gt;&lt;code&gt;sklearn.linear_model.RidgeClassifier&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html#sklearn.linear_model.LogisticRegressionCV&#34;&gt;&lt;code&gt;sklearn.linear_model.RidgeClassifierCV&lt;/code&gt;&lt;/a&gt; performs CV on a solution path&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Discriminant analysis&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/classes.html#module-sklearn.discriminant_analysis&#34;&gt;&lt;code&gt;sklearn.discriminant_analysis&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis&#34;&gt;LDA&lt;/a&gt;, &lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis&#34;&gt;QDA&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Ensemble and Tree-based Methods&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/classes.html#module-sklearn.ensemble&#34;&gt;&lt;code&gt;sklearn.ensemble&lt;/code&gt;&lt;/a&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier&#34;&gt;AdaBoost&lt;/a&gt;, &lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingClassifier&#34;&gt;Bagging&lt;/a&gt;, &lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier&#34;&gt;Gradient Boosting&lt;/a&gt;, &lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier&#34;&gt;Random Forest&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier&#34;&gt;&lt;code&gt;sklearn.trees.DecisionTreeClassifier&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Gaussian Process&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessClassifier&#34;&gt;&lt;code&gt;sklearn.gaussian_process.GaussianProcessClassifier&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Naive Bayes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/classes.html#module-sklearn.naive_bayes&#34;&gt;&lt;code&gt;sklearn.naive_bayes&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;K-Nearest-Neighbors&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier&#34;&gt;&lt;code&gt;sklearn.neighbors.KNearestNeighborsClassifier&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;uniform weights, distance weights, custom weights&lt;/li&gt;
+&lt;li&gt;multiple &lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.DistanceMetric.html?highlight=distancemetric#sklearn.neighbors.DistanceMetric&#34;&gt;distance metrics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Neural Networks&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Perceptron.html#sklearn.linear_model.Perceptron&#34;&gt;&lt;code&gt;sklearn.linear_model.Perceptron&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html#sklearn.neural_network.MLPClassifier&#34;&gt;&lt;code&gt;sklearn.neural_network.MLPClassifier&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;multiple layers&lt;/li&gt;
+&lt;li&gt;activations: identity, logistic (sigmoid), ReLU, tanh&lt;/li&gt;
+&lt;li&gt;weight decay&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.BernoulliRBM.html#sklearn.neural_network.BernoulliRBM&#34;&gt;&lt;code&gt;sklearn.neural_network.BernoulliRBM&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-neuralnetwork.readthedocs.io/en/latest/guide_model.html&#34;&gt;&lt;code&gt;sknn.nlp.Classifier&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Compatible with &lt;code&gt;sklearn&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Many more types of layers and activations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pytorch.org/docs/stable/nn.html&#34;&gt;pyTorch&lt;/a&gt;, &lt;a href=&#34;https://www.tensorflow.org/api_docs/python/&#34;&gt;TensorFlow&lt;/a&gt; (see also &lt;a href=&#34;https://keras.io/&#34;&gt;Keras&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Support Vector Machines&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/classes.html#module-sklearn.svm&#34;&gt;&lt;code&gt;sklearn.svm&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC&#34;&gt;Linear&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC&#34;&gt;Kernel&lt;/a&gt;: linear, polynomial, Gaussian, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Multiclass and Multilabel Data&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/classes.html#module-sklearn.multiclass&#34;&gt;&lt;code&gt;sklearn.multiclass&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;meta-estimator for one-vs-one and one-vs-rest (one-vs-all)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.multioutput.MultiOutputClassifier&#34;&gt;&lt;code&gt;sklearn.multioutput.MultiOutputClassifier&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;to apply binary classifiers to multiple outputs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;numerical-data&#34;&gt;Numerical Data&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Linear Regression, ANOVA and Linear Mixed Models&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression&#34;&gt;&lt;code&gt;sklearn.linear_model.LinearRegression&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Regularizations: &lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html#sklearn.linear_model.Ridge&#34;&gt;Ridge&lt;/a&gt;, &lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html#sklearn.linear_model.Lasso&#34;&gt;LASSO&lt;/a&gt;, &lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html#sklearn.linear_model.ElasticNet&#34;&gt;Elastic net&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Multi-task/multi-output: &lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.MultiTaskElasticNet.html#sklearn.linear_model.MultiTaskElasticNet&#34;&gt;Elastic net&lt;/a&gt;, &lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.MultiTaskLasso.html#sklearn.linear_model.MultiTaskLasso&#34;&gt;LASSO&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://eshinjolly.com/pymer4/&#34;&gt;&lt;code&gt;pymer4&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Mixed effect models&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/nimh-mbdu/sklearn-lmer&#34;&gt;&lt;code&gt;sklearn-lmer&lt;/code&gt;&lt;/a&gt;: a &lt;code&gt;sklearn&lt;/code&gt; wrapper with CV&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://glm-tools.github.io/pyglmnet/api.html&#34;&gt;&lt;code&gt;pyglmnet.GLM(distr=&amp;quot;gaussian&amp;quot;)&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Elastic net regularization (LASSO and Ridge)&lt;/li&gt;
+&lt;li&gt;Cross-validation&lt;/li&gt;
+&lt;li&gt;Group regularization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pygam.readthedocs.io/en/latest/api/lineargam.html&#34;&gt;&lt;code&gt;pyGAM.LinearGAM&lt;/code&gt;&lt;/a&gt;:
+&lt;ul&gt;
+&lt;li&gt;GAM (with interactions), Cross-validation, similar to &lt;code&gt;sklearn&lt;/code&gt;&#39;s API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/user-guide.html#regression-and-linear-models&#34;&gt;&lt;code&gt;statsmodels&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/regression.html&#34;&gt;Linear Regression&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/gam.html&#34;&gt;GAM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/mixed_linear.html&#34;&gt;Linear Mixed Effect Models&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/anova.html&#34;&gt;ANOVA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/generated/statsmodels.multivariate.manova.MANOVA.html#statsmodels.multivariate.manova.MANOVA&#34;&gt;MANOVA&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;GLM&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Count data (Poisson)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://glm-tools.github.io/pyglmnet/api.html&#34;&gt;&lt;code&gt;pyglmnet.GLM(distr=&amp;quot;poisson&amp;quot;)&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Elastic net regularization (LASSO and Ridge)&lt;/li&gt;
+&lt;li&gt;Cross-validation&lt;/li&gt;
+&lt;li&gt;Group regularization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://eshinjolly.com/pymer4/&#34;&gt;&lt;code&gt;pymer4.Lmer(family=&amp;quot;poisson&amp;quot;)&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Mixed effect models&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pygam.readthedocs.io/en/latest/api/poissongam.html&#34;&gt;&lt;code&gt;pyGAM.PoissonGAM&lt;/code&gt;&lt;/a&gt;:
+&lt;ul&gt;
+&lt;li&gt;GAM (with interactions), Cross-validation, similar to &lt;code&gt;sklearn&lt;/code&gt;&#39;s API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;statsmodels&lt;/code&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/contingency_tables.html&#34;&gt;Contingency Tables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/glm.html&#34;&gt;Poisson GLM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/gam.html&#34;&gt;Poisson GLM GAM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/mixed_linear.html&#34;&gt;Poisson GLM LMM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/stable/discretemod.html&#34;&gt;Generalized Poisson GLM&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Count data (Binomial)
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;statsmodels&lt;/code&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/glm.html&#34;&gt;Binomial GLM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/gam.html&#34;&gt;Binomial GLM GAM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/mixed_linear.html&#34;&gt;Binomial GLM LMM&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Count data (Negative Binomial)
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;statsmodels&lt;/code&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/glm.html&#34;&gt;Negative Binomial GLM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/gam.html&#34;&gt;Poisson GLM GAM&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Count data (Zero-Inflated Models)
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;statsmodels&lt;/code&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/stable/discretemod.html&#34;&gt;Zero-Inflated Poisson GLM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/stable/discretemod.html&#34;&gt;Zero-Inflated NegativeBinomial GLM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/stable/discretemod.html&#34;&gt;Zero-Inflated Generalized Poisson GLM&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Right-continuous Data (Gamma)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://glm-tools.github.io/pyglmnet/api.html&#34;&gt;&lt;code&gt;pyglmnet.GLM(distr=&amp;quot;gamma&amp;quot;)&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Elastic net regularization (LASSO and Ridge)&lt;/li&gt;
+&lt;li&gt;Cross-validation&lt;/li&gt;
+&lt;li&gt;Group regularization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://eshinjolly.com/pymer4/&#34;&gt;&lt;code&gt;pymer4.Lmer(family=&amp;quot;gamma&amp;quot;)&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Mixed effect models&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pygam.readthedocs.io/en/latest/api/gammagam.html&#34;&gt;&lt;code&gt;pyGAM.GammaGAM&lt;/code&gt;&lt;/a&gt;:
+&lt;ul&gt;
+&lt;li&gt;GAM (with interactions), Cross-validation, similar to &lt;code&gt;sklearn&lt;/code&gt;&#39;s API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;statsmodels&lt;/code&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/glm.html&#34;&gt;Gamma GLM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/gam.html&#34;&gt;Gamma GLM GAM&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Right-continuous Data (Inverse Gaussian)
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://eshinjolly.com/pymer4/&#34;&gt;&lt;code&gt;pymer4.Lmer(family=&amp;quot;inverse_gaussian&amp;quot;)&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Mixed effect models&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pygam.readthedocs.io/en/latest/api/invgaussgam.html&#34;&gt;&lt;code&gt;pyGAM.InvGaussGAM&lt;/code&gt;&lt;/a&gt;:
+&lt;ul&gt;
+&lt;li&gt;GAM (with interactions), Cross-validation, similar to &lt;code&gt;sklearn&lt;/code&gt;&#39;s API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;statsmodels&lt;/code&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/glm.html&#34;&gt;Inverse Gaussian GLM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/gam.html&#34;&gt;Inverse Gaussian GLM GAM&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Right-continuous with Excess Zero Data (Tweedie with $p\in(1,2)$)
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;statsmodels&lt;/code&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/glm.html&#34;&gt;Tweedie GLM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statsmodels.org/dev/gam.html&#34;&gt;Tweedie GLM GAM&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Kernel Linear Regression&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.kernel_ridge.KernelRidge.html#sklearn.kernel_ridge.KernelRidge&#34;&gt;&lt;code&gt;sklearn.kernel_ridge.KernelRidge&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Kernels: linear, polynomial, Gaussian, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Ensemble and Tree-based Methods&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/classes.html#module-sklearn.ensemble&#34;&gt;&lt;code&gt;sklearn.ensemble&lt;/code&gt;&lt;/a&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostRegressor.html#sklearn.ensemble.AdaBoostRegressor&#34;&gt;AdaBoost&lt;/a&gt;, &lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingRegressor.html#sklearn.ensemble.BaggingRegressor&#34;&gt;Bagging&lt;/a&gt;, &lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html#sklearn.ensemble.GradientBoostingRegressor&#34;&gt;Gradient Boosting&lt;/a&gt;, &lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html#sklearn.ensemble.RandomForestRegressor&#34;&gt;Random Forest&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor&#34;&gt;&lt;code&gt;sklearn.trees.DecisionTreeRegressor&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Gaussian Process&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessRegressor.html#sklearn.gaussian_process.GaussianProcessRegressor&#34;&gt;&lt;code&gt;sklearn.gaussian_process.GaussianProcessRegressor&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;K-Nearest-Neighbors&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsRegressor.html#sklearn.neighbors.KNeighborsRegressor&#34;&gt;&lt;code&gt;sklearn.neighbors.KNearestNeighborsRegressor&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;uniform weights, distance weights, custom weights&lt;/li&gt;
+&lt;li&gt;multiple &lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.DistanceMetric.html?highlight=distancemetric#sklearn.neighbors.DistanceMetric&#34;&gt;distance metrics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Neural Networks&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html#sklearn.neural_network.MLPRegressor&#34;&gt;&lt;code&gt;sklearn.neural_network.MLPRegressor&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;multiple layers&lt;/li&gt;
+&lt;li&gt;activations: identity, logistic (sigmoid), ReLU, tanh&lt;/li&gt;
+&lt;li&gt;weight decay&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-neuralnetwork.readthedocs.io/en/latest/guide_model.html&#34;&gt;&lt;code&gt;sknn.nlp.Regressor&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Compatible with &lt;code&gt;sklearn&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Many more types of layers and activations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pytorch.org/docs/stable/nn.html&#34;&gt;pyTorch&lt;/a&gt;, &lt;a href=&#34;https://www.tensorflow.org/api_docs/python/&#34;&gt;TensorFlow&lt;/a&gt; (see also &lt;a href=&#34;https://keras.io/&#34;&gt;Keras&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Support Vector Machines&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/classes.html#module-sklearn.svm&#34;&gt;&lt;code&gt;sklearn.svm&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVR.html#sklearn.svm.LinearSVR&#34;&gt;Linear&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html#sklearn.svm.SVR&#34;&gt;Kernel&lt;/a&gt;: linear, polynomial, Gaussian, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;unsupervised-learning&#34;&gt;Unsupervised Learning&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Clustering&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/classes.html#module-sklearn.cluster&#34;&gt;&lt;code&gt;sklearn.cluster&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html#sklearn.cluster.KMeans&#34;&gt;K-means&lt;/a&gt;, &lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html#sklearn.cluster.AgglomerativeClustering&#34;&gt;Agglomerative clustering&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Gaussian Mixture Model&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html#sklearn.mixture.GaussianMixture&#34;&gt;&lt;code&gt;sklearn.mixture.GaussianMixture&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;dimensionality-reduction&#34;&gt;Dimensionality Reduction&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/classes.html#module-sklearn.decomposition&#34;&gt;&lt;code&gt;sklearn.decomposition&lt;/code&gt;&lt;/a&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.KernelPCA.html#sklearn.decomposition.KernelPCA&#34;&gt;Kernel PCA&lt;/a&gt;, &lt;a href=&#34;https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html#sklearn.decomposition.PCA&#34;&gt;PCA&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/manifold.html#manifold&#34;&gt;&lt;code&gt;sklearn.manifold&lt;/code&gt;&lt;/a&gt;:
+&lt;ul&gt;
+&lt;li&gt;Isomap, t-SNE, eetc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://scikit-neuralnetwork.readthedocs.io/en/latest/module_ae.html&#34;&gt;&lt;code&gt;sknn.ae.AutoEncoder&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Neural network autoencoder&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

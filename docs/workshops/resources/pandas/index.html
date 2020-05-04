@@ -110,7 +110,7 @@ Rows and columns behave in the exact same way. Indeed, they are both implemented
   
   <meta property="og:site_name" content="UM Statistics Computing Club">
   <meta property="og:url" content="https://UMichStatistics.github.io/ComputingClub/workshops/resources/pandas/">
-  <meta property="og:title" content="Data Manipulation using Pandas and Scikit-learn | UM Statistics Computing Club">
+  <meta property="og:title" content="Data Manipulation using Python | UM Statistics Computing Club">
   <meta property="og:description" content="General Many methods have an inplace argument which performs the operation inplace when set to True so that you do not need to overwrite the original DataFrame. It produces cleaner code as well as saves time and memory! Note that method chaining does not work with inplace=True since nothing is returned.
 Rows and columns behave in the exact same way. Indeed, they are both implemented using pandas.Index or pandas.MultiIndex objects. The main difference is that columns can be indexed in an additional way since pandas."><meta property="og:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png">
   <meta property="twitter:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png"><meta property="og:locale" content="en-us">
@@ -118,7 +118,7 @@ Rows and columns behave in the exact same way. Indeed, they are both implemented
     
       <meta property="article:published_time" content="2020-04-29T00:00:00&#43;01:00">
     
-    <meta property="article:modified_time" content="2020-04-29T00:00:00&#43;01:00">
+    <meta property="article:modified_time" content="2020-04-29T21:21:03-04:00">
   
 
   
@@ -137,7 +137,7 @@ Rows and columns behave in the exact same way. Indeed, they are both implemented
 
 
 
-  <title>Data Manipulation using Pandas and Scikit-learn | UM Statistics Computing Club</title>
+  <title>Data Manipulation using Python | UM Statistics Computing Club</title>
 
 </head>
 
@@ -402,7 +402,11 @@ Rows and columns behave in the exact same way. Indeed, they are both implemented
       </li>
       
       <li class="active">
-        <a href="/ComputingClub/workshops/resources/pandas/">Data Manipulation using Pandas and Scikit-learn</a>
+        <a href="/ComputingClub/workshops/resources/pandas/">Data Manipulation using Python</a>
+      </li>
+      
+      <li >
+        <a href="/ComputingClub/workshops/resources/python_models/">Modeling using Python</a>
       </li>
       
     </ul>
@@ -430,15 +434,11 @@ Rows and columns behave in the exact same way. Indeed, they are both implemented
     <li><a href="#setting-values">Setting Values</a></li>
     <li><a href="#subsetting-data">Subsetting Data</a></li>
     <li><a href="#reshaping-dataframes">Reshaping DataFrames</a></li>
-    <li><a href="#wide-to-long-format">Wide to long format</a></li>
-    <li><a href="#long-to-wide">Long to wide</a></li>
     <li><a href="#merging-dataframes">Merging DataFrames</a></li>
-    <li><a href="#concatenate">Concatenate</a></li>
-    <li><a href="#merging">Merging</a></li>
-    <li><a href="#iterating-through-dataframes-a-classanchor-iditera">Iterating through DataFrames </a></li>
+    <li><a href="#iterating-through-dataframes">Iterating through DataFrames</a></li>
     <li><a href="#functions-and-aggregation">Functions and Aggregation</a></li>
     <li><a href="#multiindex-dataframes">MultiIndex DataFrames</a></li>
-    <li><a href="#scikit-learn-transformations">Scikit-learn Transformations</a></li>
+    <li><a href="#transformations">Transformations</a></li>
   </ul>
 </nav>
 
@@ -451,7 +451,7 @@ Rows and columns behave in the exact same way. Indeed, they are both implemented
       <article class="article">
 
         <div class="docs-article-container">
-          <h1>Data Manipulation using Pandas and Scikit-learn</h1>
+          <h1>Data Manipulation using Python</h1>
 
           <div class="article-style">
             <h2 id="general">General</h2>
@@ -475,8 +475,11 @@ Rows and columns behave in the exact same way. Indeed, they are both implemented
 <li><code>columns</code> to only write specific columns;</li>
 <li><code>index</code>, <code>index_label</code> and <code>header</code> to control the output.</li>
 </ul>
-<p>TODO: to_latex, apply(.format)</p>
-<h2 id="accessing-values">Accessing Values</h2>
+<p>The <code>.to_latex()</code> method offers a convenient way to export a <code>pandas</code> DataFrame to LaTeX format. I have found that the column formatting does not work very well sometimes; you can perform the formatting by hand before using <code>to_latex</code> using commands such as:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">column</span><span style="color:#e6db74">&#34;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">column</span><span style="color:#e6db74">&#34;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{:.2f}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format) <span style="color:#75715e"># float formatting</span>
+df[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">column</span><span style="color:#e6db74">&#34;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">column</span><span style="color:#e6db74">&#34;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{:.2f} </span><span style="color:#e6db74">%</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format) <span style="color:#75715e"># add a percentage sign</span>
+df[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">ci</span><span style="color:#e6db74">&#34;</span>] <span style="color:#f92672">=</span> df[[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">lower</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">upper</span><span style="color:#e6db74">&#34;</span>]]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">[{:.2f}, {:.2f}]</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(x[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">lower</span><span style="color:#e6db74">&#34;</span>], x[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">upper</span><span style="color:#e6db74">&#34;</span>]), axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>) <span style="color:#75715e"># to converct CI bounds to an interval</span>
+</code></pre></div><h2 id="accessing-values">Accessing Values</h2>
 <p>There are multiple ways to access the contents in a <code>pandas</code> <code>DataFrame</code> (most also work for <code>Series</code> as well).</p>
 <p>Using <code>python</code> indexing (a <code>DataFrame</code> behaves as a dictionary of columns):</p>
 <ul>
@@ -563,19 +566,19 @@ Rows and columns behave in the exact same way. Indeed, they are both implemented
 <li>The <code>df.where()</code> method can also be used to replace values where some condition is false;</li>
 <li>The <code>df.mask()</code> method is the converse to <code>.where</code>: it replaces values where the condition is true;</li>
 <li>The <code>df.replace()</code> replaces values;</li>
-<li>The <code>df.filter()</code> method can select some rows/columns based on their content (<code>like</code> or a <code>regex</code>).</li>
-<li>Using <code>df.take()</code> performs similarly as <code>.iloc[]</code>;</li>
 <li>Using <code>df.fillna()</code> does what its name indicates;</li>
 <li>The <code>df.update(other_df)</code> can be useful in some cases (see <a href="#merging">Merging DataFrames</a> for more details);</li>
 <li>The <code>df.eval(str, inplace=True)</code> method lets you compute a new column using a string description;</li>
 </ul>
 <h2 id="subsetting-data">Subsetting Data</h2>
 <p>Subsetting data can be viewed in two ways: selecting rows/columns or dropping rows/data.</p>
-<p>To select rows or columns, refer to <a href="#access">Accessing data</a>.</p>
+<p>To select rows or columns, refer to <a href="#accessing-values">Accessing data</a>.</p>
 <p>To drop rows or columns, you can:</p>
 <ul>
 <li>Select your subset and overwrite the <code>DataFrame</code> as in <code>df = df.loc[...]</code>;</li>
 <li>Use the <code>df.drop(..., inplace=True)</code> method to drop rows or columns;</li>
+<li>The <code>df.filter()</code> method can select some rows/columns based on their content (<code>like</code> or a <code>regex</code>).</li>
+<li>Using <code>df.take()</code> performs similarly as <code>.iloc[]</code>;</li>
 </ul>
 <p>For more specific use cases:</p>
 <ul>
@@ -584,11 +587,11 @@ Rows and columns behave in the exact same way. Indeed, they are both implemented
 <li>Use <code>df.truncate()</code> when the condition is a range of indices.</li>
 </ul>
 <h2 id="reshaping-dataframes">Reshaping DataFrames</h2>
-<p>Transpose:</p>
+<p><strong>Transpose:</strong></p>
 <ul>
 <li>The method s <code>.T</code> and <code>.transpose()</code> do the same thing</li>
 </ul>
-<h2 id="wide-to-long-format">Wide to long format</h2>
+<p><strong>Wide to long format</strong></p>
 <ul>
 <li>The method <code>df.melt()</code>: take multiple columns into (column name, value);</li>
 <li>The method <code>df.stack()</code>: similar to melt, but less general; puts the original column names into a <code>MultiIndex</code> rather than new columns;</li>
@@ -659,7 +662,7 @@ dtype: object
 2    9
 dtype: object
 </code></pre>
-<h2 id="long-to-wide">Long to wide</h2>
+<p><strong>Long to wide</strong></p>
 <ul>
 <li>The method <code>df.pivot()</code> creates columns based on unique levels of a given column filled with the corresponding values;</li>
 <li>The method <code>df.pivot_table()</code> generalizes <code>.pivot</code> to more complex situations where there may be duplicate entries which have to be aggregated. This is related to performing <code>.groupby()</code> chained with <code>.agg()</code>, but may have different output format;</li>
@@ -737,16 +740,19 @@ id
 2        2  6  10
 3        3  7  11
 </code></pre>
+<p><strong>Cross Tabulation</strong></p>
+<p>The <code>pd.crosstab()</code> function allows you to compute frequency tables along multiple groupings.</p>
 <h2 id="merging-dataframes">Merging DataFrames</h2>
 <p>Here are a few options on how to merge multiple <code>DataFrame</code>s together. See <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html?highlight=concatenate">Merge, join, and concatenate</a> for more details.</p>
-<h2 id="concatenate">Concatenate</h2>
+<p><strong>Concatenate</strong></p>
 <p>The function <code>pd.concat([df1, df2])</code> lets you litteraly concatenate multiple <code>DataFrame</code>s along some axis. This function works either as an <em>inner join</em> or an <em>outer join</em> on the multiple dataframes indices.</p>
 <p>The function <code>df.append(other_df)</code> does concatenation on the index axis (i.e., add rows)</p>
 <p>Using <code>ignore_index=True</code> can be useful when you don't want to join on the indices and only really concatenate the dataframes. (This is most likely the way you want to use <code>.append()</code>.)</p>
-<h2 id="merging">Merging</h2>
+<p><strong>Merging</strong></p>
 <p>The function <code>pd.merge</code> lets you perform four types of joins: <code>left</code>, <code>right</code>, <code>outer</code> and <code>inner</code> which are closely related to their SQL equivalents. It generalizes <code>pd.concat</code> as you can use columns, instead of the index, to perform the join.</p>
 <p>The inline version of <code>pd.merge</code> is to use the method <code>.join</code> on some pre-existing dataframe.</p>
-<h2 id="iterating-through-dataframes-a-classanchor-iditera">Iterating through DataFrames <!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p>The method <code>df.update(other)</code> performs a <em>left join</em> by replacing the values of <code>df</code> using those in <code>other</code>. It replaces on non-NA values in the original <code>df</code> so this can be use to add values to a <code>df</code>; no new rows or columns can be created by <code>.update</code>.</p>
+<h2 id="iterating-through-dataframes">Iterating through DataFrames</h2>
 <p>If you need to traverse a <code>DataFrame</code> row by row, you can use:</p>
 <ul>
 <li><code>.iterrows()</code> to return (index, row as <code>Series</code>);</li>
@@ -786,7 +792,11 @@ dtype: float64
 <p>The <code>.describe</code> function works as an <code>.agg</code> call acting on numerical columns only. This can be particularly useful when computing summary statistics on a dataset. Also, this can be chained with a <code>groupby</code> to perform description by subgroups of the data!</p>
 <h2 id="multiindex-dataframes">MultiIndex DataFrames</h2>
 <p><code>MultiIndex</code> works just like regular indices except that they have a structure using levels: instead of a single key, each row has a tuple of values acting as a key. Playing with <code>MultiIndex</code> can be cumbersome sometimes so a nice trick to keep in mind is the <code>.reset_index(inplace=True)</code> method which moves the MultiIndex to new columns and creates a dummy index in its place.</p>
-<h2 id="scikit-learn-transformations">Scikit-learn Transformations</h2>
+<h2 id="transformations">Transformations</h2>
+<p><strong>Using pandas</strong></p>
+<p>To encode categorical variables using integer indexing, you can use the function <code>pd.factorize(array)</code> or the method version <code>series.factorize()</code>. It returns the encoding as well as the encoded values. To get one-hot encoding, you can use <code>pd.get_dummies()</code>.</p>
+<p>To bin numerical variables, you can use <code>pd.cut()</code>.</p>
+<p><strong>Using Scikit-learn</strong></p>
 <p>If you need to scale the data (say to mean 0 and variance 1), I suggest to use the <code>StandardScaler</code> from <code>sklearn</code>. It internally stores the mean and standard deviation used for standardization. Then, if you need to apply the same transformation to another matrix, you can do it easily. Also, if you need to recover the original matrix, you can!</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> StandardScaler
 <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
@@ -848,7 +858,7 @@ y_01 <span style="color:#f92672">=</span> label_encoder<span style="color:#f9267
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/ComputingClub/workshops/resources/hpc/" rel="prev">High Performance Computing</a>
+    <a href="/ComputingClub/workshops/resources/python_models/" rel="prev">Modeling using Python</a>
   </div>
   
 </div>
