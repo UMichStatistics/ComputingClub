@@ -5,7 +5,7 @@
     <link>https://UMichStatistics.github.io/ComputingClub/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/index.xml" rel="self" type="application/rss+xml" />
     <description>UM Statistics Computing Club</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Wed, 29 Apr 2020 00:00:00 +0100</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Thu, 08 Oct 2020 10:30:00 -0200</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>UM Statistics Computing Club</title>
@@ -1519,6 +1519,14 @@ sftp&amp;gt; put -r *
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo version
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The output should contain the &lt;code&gt;extended&lt;/code&gt; word somewhere (depends on the OS).&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Git&#39;s a Wonderful Life</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/</link>
+      <pubDate>Thu, 08 Oct 2020 10:30:00 -0200</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/</guid>
+      <description></description>
     </item>
     
     <item>

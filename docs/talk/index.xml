@@ -13,6 +13,14 @@
     </image>
     
     <item>
+      <title>Git&#39;s a Wonderful Life</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/</link>
+      <pubDate>Thu, 08 Oct 2020 10:30:00 -0200</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Package development and testing in R</title>
       <link>https://UMichStatistics.github.io/ComputingClub/talk/packages/</link>
       <pubDate>Tue, 10 Mar 2020 13:00:00 -0500</pubDate>

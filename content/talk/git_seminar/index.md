@@ -1,0 +1,63 @@
+---
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+
+title: "Git's a Wonderful Life"
+event: "Student Seminar "
+event_url:
+location: "Remote"
+summary: ""
+abstract: "Whether you're analyzing data, developing an R package, or even writing your dissertation, chances are you're editing text files. Effective version control of these files can provide protection against data loss and mistakes, improve your efficiency, help you isolate bugs, and facilitate collaboration with others. Git is a leading tool for version control, but many statisticians have at best a shallow understanding of how it works. In this talk, I'll present Git in a way that you may not have seen before. Rather than giving you a cookbook of steps to memorize, I'll be explicating some of its underlying architecture. This will help you to understand how to use git effectively in a variety of situations. This presentation is designed to be very \"hands on\" and frequent questions from the audience are encouraged. Please ensure that you have git installed on our computer so that you can follow along."
+
+# Talk start and end times.
+#   End time can optionally be hidden by prefixing the line with `#`.
+date: 2020-10-08T10:30:00-02:00
+date_end: 2020-10-08T11:30:00-05:00
+all_day: false
+
+# Schedule page publish date (NOT talk date).
+publishDate: 2020-10-01T15:16:15-04:00
+
+authors: [dan]
+tags: []
+
+# Is this a featured talk? (true/false)
+featured: true
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder. 
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: false
+
+# Custom links (optional).
+#   Uncomment and edit lines below to show custom links.
+# links:
+# - name: Follow
+#   url: https://twitter.com
+#   icon_pack: fab
+#   icon: twitter
+# Optional filename of your slides within your talk's folder or a URL.
+url_slides: 
+
+url_code:
+url_pdf:
+url_video:
+
+
+
+# Markdown Slides (optional).
+#   Associate this talk with Markdown slides.
+#   Simply enter your slide deck's filename without extension.
+#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
+#   Otherwise, set `slides = ""`.
+slides: ""
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---

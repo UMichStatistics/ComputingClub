@@ -5,12 +5,20 @@
     <link>https://UMichStatistics.github.io/ComputingClub/authors/dan/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/dan/index.xml" rel="self" type="application/rss+xml" />
     <description>Dan Kessler</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Wed, 02 Oct 2019 14:30:00 -0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Thu, 08 Oct 2020 10:30:00 -0200</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Dan Kessler</title>
       <link>https://UMichStatistics.github.io/ComputingClub/authors/dan/</link>
     </image>
+    
+    <item>
+      <title>Git&#39;s a Wonderful Life</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/</link>
+      <pubDate>Thu, 08 Oct 2020 10:30:00 -0200</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Git: a deeper perspective</title>

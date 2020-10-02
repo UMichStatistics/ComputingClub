@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Department of Statistics">
+  <meta name="description" content="Whether you&#39;re analyzing data, developing an R package, or even writing your dissertation, chances are you&#39;re editing text files. Effective version control of these files can provide protection against data loss and mistakes, improve your efficiency, help you isolate bugs, and facilitate collaboration with others. Git is a leading tool for version control, but many statisticians have at best a shallow understanding of how it works. In this talk, I&#39;ll present Git in a way that you may not have seen before. Rather than giving you a cookbook of steps to memorize, I&#39;ll be explicating some of its underlying architecture. This will help you to understand how to use git effectively in a variety of situations. This presentation is designed to be very &#34;hands on&#34; and frequent questions from the audience are encouraged. Please ensure that you have git installed on our computer so that you can follow along.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://UMichStatistics.github.io/ComputingClub/authors/dan/">
+  <link rel="alternate" hreflang="en-us" href="https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/">
 
   
 
@@ -91,14 +91,12 @@
 
 
   
-  <link rel="alternate" href="/ComputingClub/authors/dan/index.xml" type="application/rss+xml" title="UM Statistics Computing Club">
-  
 
   <link rel="manifest" href="/ComputingClub/index.webmanifest">
   <link rel="icon" type="image/png" href="/ComputingClub/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/ComputingClub/img/icon-192.png">
 
-  <link rel="canonical" href="https://UMichStatistics.github.io/ComputingClub/authors/dan/">
+  <link rel="canonical" href="https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/">
 
   
   
@@ -110,18 +108,56 @@
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="UM Statistics Computing Club">
-  <meta property="og:url" content="https://UMichStatistics.github.io/ComputingClub/authors/dan/">
-  <meta property="og:title" content="Dan Kessler | UM Statistics Computing Club">
-  <meta property="og:description" content="Department of Statistics"><meta property="og:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png">
+  <meta property="og:url" content="https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/">
+  <meta property="og:title" content="Git&#39;s a Wonderful Life | UM Statistics Computing Club">
+  <meta property="og:description" content="Whether you&#39;re analyzing data, developing an R package, or even writing your dissertation, chances are you&#39;re editing text files. Effective version control of these files can provide protection against data loss and mistakes, improve your efficiency, help you isolate bugs, and facilitate collaboration with others. Git is a leading tool for version control, but many statisticians have at best a shallow understanding of how it works. In this talk, I&#39;ll present Git in a way that you may not have seen before. Rather than giving you a cookbook of steps to memorize, I&#39;ll be explicating some of its underlying architecture. This will help you to understand how to use git effectively in a variety of situations. This presentation is designed to be very &#34;hands on&#34; and frequent questions from the audience are encouraged. Please ensure that you have git installed on our computer so that you can follow along."><meta property="og:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png">
   <meta property="twitter:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2020-10-08T10:30:00-02:00">
+    
+      <meta property="article:published_time" content="2020-10-01T15:16:15-04:00">
+    
+    <meta property="article:modified_time" content="2020-10-08T10:30:00-02:00">
   
 
   
 
 
 
+  
+    
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/"
+  },
+  "name": "Git's a Wonderful Life",
+  
+  "location": {
+    "@type": "Place",
+    "name": "Remote"
+  },
+  
+  
+  "startDate": "2020-10-08T10:30:00-02:00",
+  
+  "endDate": "2020-10-08T11:30:00-05:00",
+  
+  
+  "performer": {
+    "@type": "Person",
+    "name": "Dan Kessler"
+  },
+  
+  "description": "Whether you're analyzing data, developing an R package, or even writing your dissertation, chances are you're editing text files. Effective version control of these files can provide protection against data loss and mistakes, improve your efficiency, help you isolate bugs, and facilitate collaboration with others. Git is a leading tool for version control, but many statisticians have at best a shallow understanding of how it works. In this talk, I'll present Git in a way that you may not have seen before. Rather than giving you a cookbook of steps to memorize, I'll be explicating some of its underlying architecture. This will help you to understand how to use git effectively in a variety of situations. This presentation is designed to be very \"hands on\" and frequent questions from the audience are encouraged. Please ensure that you have git installed on our computer so that you can follow along."
+}
+</script>
 
   
 
@@ -129,10 +165,13 @@
   
 
 
+  
 
 
 
-  <title>Dan Kessler | UM Statistics Computing Club</title>
+
+
+  <title>Git&#39;s a Wonderful Life | UM Statistics Computing Club</title>
 
 </head>
 
@@ -229,7 +268,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/ComputingClub/talk"><span>Meetings</span></a>
+          <a class="nav-link  active" href="/ComputingClub/talk"><span>Meetings</span></a>
         </li>
 
         
@@ -335,20 +374,7 @@
 </nav>
 
 
-  
-
-
-<section id="profile-page" class="pt-5">
-  <div class="container">
-    
-    
-      
-      
-      
-      
-
-
-
+  <div class="pub">
 
   
 
@@ -360,74 +386,317 @@
 
 
 
-<div class="row">
-  <div class="col-12 col-lg-4">
-    <div id="profile">
 
-      
-      
-      <img class="portrait" src="/ComputingClub/authors/dan/avatar_hu352e7e772324d4d6c43ab4ce7aad3a0d_11469_250x250_fill_q90_lanczos_center.jpg" alt="Avatar">
-      
 
-      <div class="portrait-title">
-        <h2>Dan Kessler</h2>
-        
 
-        
-        <h3>
-          <a href="https://lsa.umich.edu/stats" target="_blank" rel="noopener">
-          <span>University of Michigan</span>
-          </a>
-        </h3>
-        
-      </div>
+  
 
-      <ul class="network-icon" aria-hidden="true">
-        
-      </ul>
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Git&#39;s a Wonderful Life</h1>
 
-    </div>
-  </div>
-  <div class="col-12 col-lg-8">
+  
 
-    
+  
     
 
-    <h1 id="about-me">About me</h1>
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
 
 
-    <div class="row">
 
-      
+  
+  <span><a href="/ComputingClub/authors/dan/">Dan Kessler</a></span>
 
-      
-
-    </div>
   </div>
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/ComputingClub/talk/git_seminar/#disqus_thread"></a>
+  
+
+  
+  
+
 </div>
 
     
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
     
+      <h3>Abstract</h3>
+      <p class="pub-abstract">Whether you're analyzing data, developing an R package, or even writing your dissertation, chances are you're editing text files. Effective version control of these files can provide protection against data loss and mistakes, improve your efficiency, help you isolate bugs, and facilitate collaboration with others. Git is a leading tool for version control, but many statisticians have at best a shallow understanding of how it works. In this talk, I'll present Git in a way that you may not have seen before. Rather than giving you a cookbook of steps to memorize, I'll be explicating some of its underlying architecture. This will help you to understand how to use git effectively in a variety of situations. This presentation is designed to be very &ldquo;hands on&rdquo; and frequent questions from the audience are encouraged. Please ensure that you have git installed on our computer so that you can follow along.</p>
     
-    
-    <div class="article-widget content-widget-hr">
-      <h3>Latest</h3>
-      <ul>
-        
-        <li>
-          <a href="/ComputingClub/talk/git_seminar/">Git&#39;s a Wonderful Life</a>
-        </li>
-        
-        <li>
-          <a href="/ComputingClub/talk/git/">Git: a deeper perspective</a>
-        </li>
-        
-      </ul>
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Date</div>
+          <div class="col-12 col-md-9">
+            Oct 8, 2020 10:30 AM &mdash; 11:30 AM
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
     </div>
+    <div class="d-md-none space-below"></div>
+
     
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Event</div>
+          <div class="col-12 col-md-9">
+            
+            Student Seminar
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Location</div>
+          <div class="col-12 col-md-9">Remote</div>
+          
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style">
+      
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/&amp;text=Git&amp;#39;s%20a%20Wonderful%20Life" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/&amp;t=Git&amp;#39;s%20a%20Wonderful%20Life" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Git&amp;#39;s%20a%20Wonderful%20Life&amp;body=https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/&amp;title=Git&amp;#39;s%20a%20Wonderful%20Life" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Git&amp;#39;s%20a%20Wonderful%20Life%20https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/&amp;title=Git&amp;#39;s%20a%20Wonderful%20Life" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="portrait mr-3" src="/ComputingClub/authors/dan/avatar_hu352e7e772324d4d6c43ab4ce7aad3a0d_11469_250x250_fill_q90_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/ComputingClub/authors/dan/">Dan Kessler</a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+</ul>
+
+    </div>
   </div>
+
+
+
+
+<section id="comments">
+  
+    
+<div id="disqus_thread"></div>
+<script>
+  let disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "umichstatisticscomputingclub" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
 </section>
+
+
+
+
+
+
+  
+  
+
+
+
+  </div>
+</div>
 
       
 
