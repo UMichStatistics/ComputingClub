@@ -28,12 +28,11 @@
   
     
   
-  <meta name="description" content="With the recent creation of the Statistics Computing Club, having a platform to share news, contents and resources was a priority.
-The site is functionnal but still under construction, so please report issues to the GitHub repository to help us improve the site. Also, your comments and suggestions are more than welcome, so feel free to contact us!
-The Committee is still looking for presenters for this fall&rsquo;s meetings. You don&rsquo;t need to be an expert of the topic you&rsquo;ll present; providing exposure to a tool you find useful, to a package you think may help others or to some research methodology may be relevant to many other members!">
+  <meta name="description" content="R is a great language for statisticians because of its interactivity, simple syntax and access to multiple libraries produced by the community. These features also allow rapid prototyping, testing and debugging of new methods; however, the short implementation time is often outweighed by long execution times. To produce more efficient code and libraries, R possess simple interfaces to other languages such as C&#43;&#43; and Fortran, enabling efficient runtime with limited additional implementation. Indeed, executing the core calculations of a method in a compiled language can produce speed-ups in the order of 10-100x and up to 1000x in some cases. We will consider a few examples to showcase the increase in efficiency of compiled code compared to interpreted R code and build a simple R package from scratch to exhibit the simplicity of the process.
+The second part of the presentation will be of the workshop type: if you wish to follow along, you will need to have the R packages “Rcpp” and “devtools” installed. ">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://UMichStatistics.github.io/ComputingClub/post/welcome/">
+  <link rel="alternate" hreflang="en-us" href="https://UMichStatistics.github.io/ComputingClub/talk/fastr/">
 
   
 
@@ -98,7 +97,7 @@ The Committee is still looking for presenters for this fall&rsquo;s meetings. Yo
   <link rel="icon" type="image/png" href="/ComputingClub/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/ComputingClub/img/icon-192.png">
 
-  <link rel="canonical" href="https://UMichStatistics.github.io/ComputingClub/post/welcome/">
+  <link rel="canonical" href="https://UMichStatistics.github.io/ComputingClub/talk/fastr/">
 
   
   
@@ -110,32 +109,24 @@ The Committee is still looking for presenters for this fall&rsquo;s meetings. Yo
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="UM Statistics Computing Club">
-  <meta property="og:url" content="https://UMichStatistics.github.io/ComputingClub/post/welcome/">
-  <meta property="og:title" content="Welcome to the Computing club&#39;s new website | UM Statistics Computing Club">
-  <meta property="og:description" content="With the recent creation of the Statistics Computing Club, having a platform to share news, contents and resources was a priority.
-The site is functionnal but still under construction, so please report issues to the GitHub repository to help us improve the site. Also, your comments and suggestions are more than welcome, so feel free to contact us!
-The Committee is still looking for presenters for this fall&rsquo;s meetings. You don&rsquo;t need to be an expert of the topic you&rsquo;ll present; providing exposure to a tool you find useful, to a package you think may help others or to some research methodology may be relevant to many other members!"><meta property="og:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png">
+  <meta property="og:url" content="https://UMichStatistics.github.io/ComputingClub/talk/fastr/">
+  <meta property="og:title" content="Speeding up R with C/C&#43;&#43;/Fortran | UM Statistics Computing Club">
+  <meta property="og:description" content="R is a great language for statisticians because of its interactivity, simple syntax and access to multiple libraries produced by the community. These features also allow rapid prototyping, testing and debugging of new methods; however, the short implementation time is often outweighed by long execution times. To produce more efficient code and libraries, R possess simple interfaces to other languages such as C&#43;&#43; and Fortran, enabling efficient runtime with limited additional implementation. Indeed, executing the core calculations of a method in a compiled language can produce speed-ups in the order of 10-100x and up to 1000x in some cases. We will consider a few examples to showcase the increase in efficiency of compiled code compared to interpreted R code and build a simple R package from scratch to exhibit the simplicity of the process.
+The second part of the presentation will be of the workshop type: if you wish to follow along, you will need to have the R packages “Rcpp” and “devtools” installed. "><meta property="og:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png">
   <meta property="twitter:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2019-09-23T22:06:16-04:00">
+      <meta property="article:published_time" content="2020-10-01T15:16:15-04:00">
     
-    <meta property="article:modified_time" content="2019-09-25T15:26:41-04:00">
+    <meta property="article:modified_time" content="2020-12-02T10:30:00-02:00">
   
 
   
 
 
+
+  
     
-
-
-
-
-
-
-  
-
-
 
 
 
@@ -143,37 +134,35 @@ The Committee is still looking for presenters for this fall&rsquo;s meetings. Yo
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
+  "@type": "Event",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://UMichStatistics.github.io/ComputingClub/post/welcome/"
+    "@id": "https://UMichStatistics.github.io/ComputingClub/talk/fastr/"
   },
-  "headline": "Welcome to the Computing club's new website",
+  "name": "Speeding up R with C/C++/Fortran",
   
-  "datePublished": "2019-09-23T22:06:16-04:00",
-  "dateModified": "2019-09-25T15:26:41-04:00",
+  "location": {
+    "@type": "Place",
+    "name": "Remote"
+  },
   
-  "author": {
+  
+  "startDate": "2020-12-02T10:30:00-02:00",
+  
+  "endDate": "2020-12-02T11:30:00-05:00",
+  
+  
+  "performer": {
     "@type": "Person",
     "name": "Simon Fontaine"
   },
   
-  "publisher": {
-    "@type": "Organization",
-    "name": "UM Statistics Computing Club",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://UMichStatistics.github.io/ComputingClub/img/icon-512.png"
-    }
-  },
-  "description": "With the recent creation of the Statistics Computing Club, having a platform to share news, contents and resources was a priority.\nThe site is functionnal but still under construction, so please report issues to the GitHub repository to help us improve the site. Also, your comments and suggestions are more than welcome, so feel free to contact us!\nThe Committee is still looking for presenters for this fall\u0026rsquo;s meetings. You don\u0026rsquo;t need to be an expert of the topic you\u0026rsquo;ll present; providing exposure to a tool you find useful, to a package you think may help others or to some research methodology may be relevant to many other members!"
+  "description": "R is a great language for statisticians because of its interactivity, simple syntax and access to multiple libraries produced by the community. These features also allow rapid prototyping, testing and debugging of new methods; however, the short implementation time is often outweighed by long execution times. To produce more efficient code and libraries, R possess simple interfaces to other languages such as C++ and Fortran, enabling efficient runtime with limited additional implementation. Indeed, executing the core calculations of a method in a compiled language can produce speed-ups in the order of 10-100x and up to 1000x in some cases. We will consider a few examples to showcase the increase in efficiency of compiled code compared to interpreted R code and build a simple R package from scratch to exhibit the simplicity of the process.\nThe second part of the presentation will be of the workshop type: if you wish to follow along, you will need to have the R packages “Rcpp” and “devtools” installed. "
 }
 </script>
 
   
 
-  
-
 
   
 
@@ -184,7 +173,7 @@ The Committee is still looking for presenters for this fall&rsquo;s meetings. Yo
 
 
 
-  <title>Welcome to the Computing club&#39;s new website | UM Statistics Computing Club</title>
+  <title>Speeding up R with C/C&#43;&#43;/Fortran | UM Statistics Computing Club</title>
 
 </head>
 
@@ -261,7 +250,7 @@ The Committee is still looking for presenters for this fall&rsquo;s meetings. Yo
         
 
         <li class="nav-item">
-          <a class="nav-link  active" href="/ComputingClub/post"><span>Posts</span></a>
+          <a class="nav-link " href="/ComputingClub/post"><span>Posts</span></a>
         </li>
 
         
@@ -281,7 +270,7 @@ The Committee is still looking for presenters for this fall&rsquo;s meetings. Yo
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/ComputingClub/talk"><span>Meetings</span></a>
+          <a class="nav-link  active" href="/ComputingClub/talk"><span>Meetings</span></a>
         </li>
 
         
@@ -387,7 +376,7 @@ The Committee is still looking for presenters for this fall&rsquo;s meetings. Yo
 </nav>
 
 
-  <article class="article">
+  <div class="pub">
 
   
 
@@ -408,7 +397,7 @@ The Committee is still looking for presenters for this fall&rsquo;s meetings. Yo
   
   
 <div class="article-container pt-3">
-  <h1>Welcome to the Computing club&#39;s new website</h1>
+  <h1>Speeding up R with C/C&#43;&#43;/Fortran</h1>
 
   
 
@@ -435,31 +424,16 @@ The Committee is still looking for presenters for this fall&rsquo;s meetings. Yo
   
 
   
-  <span class="article-date">
-    
-    
-      
-          Last updated on
-      
-    
-    Sep 25, 2019
-  </span>
-  
 
   
 
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
   
 
   
   
   
   <span class="middot-divider"></span>
-  <a href="/ComputingClub/post/welcome/#disqus_thread"></a>
+  <a href="/ComputingClub/talk/fastr/#disqus_thread"></a>
   
 
   
@@ -476,10 +450,65 @@ The Committee is still looking for presenters for this fall&rsquo;s meetings. Yo
 
 
 
+  
 
 
 
 
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="/ComputingClub/talk/fastr/fastR.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/fontaine618/fastR" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="/ComputingClub/talk/fastr/fastR.pdf" target="_blank" rel="noopener">
+  Slides
+</a>
+
+
+
+
+
+
+
+</div>
 
 
   
@@ -489,11 +518,63 @@ The Committee is still looking for presenters for this fall&rsquo;s meetings. Yo
 
   <div class="article-container">
 
-    <div class="article-style">
-      <p>With the recent creation of the Statistics Computing Club, having a platform to share news, contents and resources was a priority.</p>
-<p>The site is functionnal but still under construction, so please <a href="https://github.com/UMichStatistics/ComputingClub/issues">report issues</a> to the GitHub repository to help us improve the site. Also, your comments and suggestions are more than welcome, so feel free to <a href="#contact">contact</a> us!</p>
-<p>The Committee is still looking for presenters for this fall&rsquo;s meetings. You don&rsquo;t need to be an expert of the topic you&rsquo;ll present; providing exposure to a tool you find useful, to a package you think may help others or to some research methodology may be relevant to many other members! If you feel like presenting, we invite you to complete this <a href="https://forms.gle/XMtKfjhJTuaaHdLU7">form</a>.</p>
+    
+      <h3>Abstract</h3>
+      <p class="pub-abstract">R is a great language for statisticians because of its interactivity, simple syntax and access to multiple libraries produced by the community. These features also allow rapid prototyping, testing and debugging of new methods; however, the short implementation time is often outweighed by long execution times. To produce more efficient code and libraries, R possess simple interfaces to other languages such as C++ and Fortran, enabling efficient runtime with limited additional implementation. Indeed, executing the core calculations of a method in a compiled language can produce speed-ups in the order of 10-100x and up to 1000x in some cases. We will consider a few examples to showcase the increase in efficiency of compiled code compared to interpreted R code and build a simple R package from scratch to exhibit the simplicity of the process.
+The second part of the presentation will be of the workshop type: if you wish to follow along, you will need to have the R packages “Rcpp” and “devtools” installed.</p>
+    
 
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Date</div>
+          <div class="col-12 col-md-9">
+            Dec 2, 2020 10:30 AM &mdash; 11:30 AM
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Event</div>
+          <div class="col-12 col-md-9">
+            
+            Student Seminar
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Location</div>
+          <div class="col-12 col-md-9">Remote</div>
+          
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style">
+      
     </div>
 
     
@@ -501,12 +582,6 @@ The Committee is still looking for presenters for this fall&rsquo;s meetings. Yo
 
 
 
-
-<div class="article-tags">
-  
-  <a class="badge badge-light" href="/ComputingClub/tags/club/">Club</a>
-  
-</div>
 
 
 
@@ -521,7 +596,7 @@ The Committee is still looking for presenters for this fall&rsquo;s meetings. Yo
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://UMichStatistics.github.io/ComputingClub/post/welcome/&amp;text=Welcome%20to%20the%20Computing%20club&amp;#39;s%20new%20website" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://UMichStatistics.github.io/ComputingClub/talk/fastr/&amp;text=Speeding%20up%20R%20with%20C/C&#43;&#43;/Fortran" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -534,7 +609,7 @@ The Committee is still looking for presenters for this fall&rsquo;s meetings. Yo
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://UMichStatistics.github.io/ComputingClub/post/welcome/&amp;t=Welcome%20to%20the%20Computing%20club&amp;#39;s%20new%20website" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://UMichStatistics.github.io/ComputingClub/talk/fastr/&amp;t=Speeding%20up%20R%20with%20C/C&#43;&#43;/Fortran" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook-f"></i>
         </a>
       </li>
@@ -547,7 +622,7 @@ The Committee is still looking for presenters for this fall&rsquo;s meetings. Yo
       
       
       <li>
-        <a href="mailto:?subject=Welcome%20to%20the%20Computing%20club&amp;#39;s%20new%20website&amp;body=https://UMichStatistics.github.io/ComputingClub/post/welcome/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Speeding%20up%20R%20with%20C/C&#43;&#43;/Fortran&amp;body=https://UMichStatistics.github.io/ComputingClub/talk/fastr/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -560,7 +635,7 @@ The Committee is still looking for presenters for this fall&rsquo;s meetings. Yo
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://UMichStatistics.github.io/ComputingClub/post/welcome/&amp;title=Welcome%20to%20the%20Computing%20club&amp;#39;s%20new%20website" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://UMichStatistics.github.io/ComputingClub/talk/fastr/&amp;title=Speeding%20up%20R%20with%20C/C&#43;&#43;/Fortran" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -573,7 +648,7 @@ The Committee is still looking for presenters for this fall&rsquo;s meetings. Yo
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Welcome%20to%20the%20Computing%20club&amp;#39;s%20new%20website%20https://UMichStatistics.github.io/ComputingClub/post/welcome/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Speeding%20up%20R%20with%20C/C&#43;&#43;/Fortran%20https://UMichStatistics.github.io/ComputingClub/talk/fastr/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -586,7 +661,7 @@ The Committee is still looking for presenters for this fall&rsquo;s meetings. Yo
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://UMichStatistics.github.io/ComputingClub/post/welcome/&amp;title=Welcome%20to%20the%20Computing%20club&amp;#39;s%20new%20website" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://UMichStatistics.github.io/ComputingClub/talk/fastr/&amp;title=Speeding%20up%20R%20with%20C/C&#43;&#43;/Fortran" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -728,7 +803,7 @@ The Committee is still looking for presenters for this fall&rsquo;s meetings. Yo
 
 
   </div>
-</article>
+</div>
 
       
 

@@ -104,12 +104,17 @@
   
   <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/authors/</loc>
-    <lastmod>2020-10-01T20:33:22-04:00</lastmod>
+    <lastmod>2020-12-02T10:30:00-02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/authors/dan/</loc>
-    <lastmod>2020-10-01T20:33:22-04:00</lastmod>
+    <loc>https://UMichStatistics.github.io/ComputingClub/talk/fastr/</loc>
+    <lastmod>2020-12-02T10:30:00-02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/</loc>
+    <lastmod>2020-12-02T10:30:00-02:00</lastmod>
   </url>
   
   <url>
@@ -118,17 +123,7 @@
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/</loc>
-    <lastmod>2020-10-01T20:33:22-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/talk/packages/</loc>
-    <lastmod>2020-03-09T15:27:58-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/authors/admin/</loc>
     <lastmod>2020-03-09T15:27:58-04:00</lastmod>
   </url>
   
@@ -140,11 +135,6 @@
   <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/talk/latex/</loc>
     <lastmod>2020-02-26T20:36:24-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/authors/rob/</loc>
-    <lastmod>2020-02-04T11:17:46-05:00</lastmod>
   </url>
   
   <url>
@@ -163,16 +153,6 @@
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/authors/ziping/</loc>
-    <lastmod>2020-02-04T11:17:46-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/authors/jregier/</loc>
-    <lastmod>2020-02-04T11:17:46-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/talk/julia/</loc>
     <lastmod>2020-02-04T11:17:46-05:00</lastmod>
   </url>
@@ -184,11 +164,6 @@
   
   <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/tags/markdown/</loc>
-    <lastmod>2020-02-04T11:17:46-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/authors/simon/</loc>
     <lastmod>2020-02-04T11:17:46-05:00</lastmod>
   </url>
   
@@ -218,11 +193,6 @@
   </url>
   
   <url>
-    <loc>https://UMichStatistics.github.io/ComputingClub/authors/derek/</loc>
-    <lastmod>2020-02-04T11:17:46-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/tags/functional-programming/</loc>
     <lastmod>2020-02-04T11:17:46-05:00</lastmod>
   </url>
@@ -239,6 +209,21 @@
   
   <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/authors/dan/</loc>
+    <lastmod>2020-01-21T22:35:10-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/authors/derek/</loc>
+    <lastmod>2020-01-21T22:35:10-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/authors/jregier/</loc>
+    <lastmod>2019-10-03T00:53:55-04:00</lastmod>
   </url>
   
   <url>
@@ -266,6 +251,21 @@
   </url>
   
   <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/authors/rob/</loc>
+    <lastmod>2020-01-21T22:35:10-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/authors/simon/</loc>
+    <lastmod>2020-01-21T22:35:10-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/authors/admin/</loc>
+    <lastmod>2019-10-03T00:53:55-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/workshops/</loc>
     <lastmod>2019-10-04T23:24:03-04:00</lastmod>
   </url>
@@ -273,6 +273,11 @@
   <url>
     <loc>https://UMichStatistics.github.io/ComputingClub/authors/blank/</loc>
     <lastmod>2019-10-04T13:25:32-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://UMichStatistics.github.io/ComputingClub/authors/ziping/</loc>
+    <lastmod>2019-10-03T00:53:55-04:00</lastmod>
   </url>
   
 </urlset>

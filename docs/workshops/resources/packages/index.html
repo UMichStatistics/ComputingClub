@@ -29,7 +29,7 @@
     
   
   <meta name="description" content="Smoke Testing Wikipedia
-Smoke testing is a quick and easy way to check if code works. If your program can&#39;t even run without crashing, there&#39;s no point to performing more fine-grained testing procedures.
+Smoke testing is a quick and easy way to check if code works. If your program can&rsquo;t even run without crashing, there&rsquo;s no point to performing more fine-grained testing procedures.
 sqrt_1 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;- (-x)^(0.5) &#43; &#34;i&#34; } return(ret) } sqrt_2 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;- paste0((-x)^(0.">
 
   
@@ -113,7 +113,7 @@ sqrt_1 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;-
   <meta property="og:url" content="https://UMichStatistics.github.io/ComputingClub/workshops/resources/packages/">
   <meta property="og:title" content="Package Development | UM Statistics Computing Club">
   <meta property="og:description" content="Smoke Testing Wikipedia
-Smoke testing is a quick and easy way to check if code works. If your program can&#39;t even run without crashing, there&#39;s no point to performing more fine-grained testing procedures.
+Smoke testing is a quick and easy way to check if code works. If your program can&rsquo;t even run without crashing, there&rsquo;s no point to performing more fine-grained testing procedures.
 sqrt_1 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;- (-x)^(0.5) &#43; &#34;i&#34; } return(ret) } sqrt_2 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;- paste0((-x)^(0."><meta property="og:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png">
   <meta property="twitter:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png"><meta property="og:locale" content="en-us">
   
@@ -438,8 +438,8 @@ sqrt_1 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;-
         <li><a href="#some-notes">Some notes</a></li>
       </ul>
     </li>
-    <li><a href="#unit-testing-in-r-using-the-testthat-package">Unit Testing in R using the testthat package</a></li>
-    <li><a href="#unit-testing-in-python-using-the-unittests-package">Unit Testing in Python using the unittests package</a></li>
+    <li><a href="#unit-testing-in-r-using-the-testthat-package">Unit Testing in <code>R</code> using the <code>testthat</code> package</a></li>
+    <li><a href="#unit-testing-in-python-using-the-unittests-package">Unit Testing in <code>Python</code> using the <code>unittests</code> package</a></li>
     <li><a href="#unit-testing-in-julia">Unit Testing in Julia</a></li>
     <li><a href="#resources">Resources</a></li>
   </ul>
@@ -460,12 +460,12 @@ sqrt_1 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;-
             <h2 id="smoke-testing">Smoke Testing</h2>
 <p><a href="https://en.wikipedia.org/wiki/Smoke_testing_(software)">Wikipedia</a></p>
 <p>Smoke testing is a quick and easy way to check if code works.
-If your program can't even run without crashing, there's no point to performing more fine-grained testing procedures.</p>
+If your program can&rsquo;t even run without crashing, there&rsquo;s no point to performing more fine-grained testing procedures.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">sqrt_1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(x) {
     <span style="color:#a6e22e">if </span>(x <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>) {
         ret <span style="color:#f92672">&lt;-</span> x<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">0.5</span>)
     } else {
-        ret <span style="color:#f92672">&lt;-</span> (<span style="color:#f92672">-</span>x)<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">0.5</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">i&#34;</span>
+        ret <span style="color:#f92672">&lt;-</span> (<span style="color:#f92672">-</span>x)<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">0.5</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;i&#34;</span>
     }
     <span style="color:#a6e22e">return</span>(ret)
 }
@@ -474,7 +474,7 @@ sqrt_2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">func
     <span style="color:#a6e22e">if </span>(x <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>) {
         ret <span style="color:#f92672">&lt;-</span> x<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">0.5</span>)
     } else {
-        ret <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">paste0</span>((<span style="color:#f92672">-</span>x)<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">0.5</span>), <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">i&#34;</span>)
+        ret <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">paste0</span>((<span style="color:#f92672">-</span>x)<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">0.5</span>), <span style="color:#e6db74">&#34;i&#34;</span>)
     }
     <span style="color:#a6e22e">return</span>(ret)
 }
@@ -511,7 +511,7 @@ Notice that the output is not checked; we just want to check if there are any er
 <p>Then, we implement our function checking tests constantly until all criterions are satisfied.</p>
 <p>Some (most) IDEs can automatically run all your tests in the background when any file is saved: this checks the current function your are implementing and also that you did not break any prior developments. This constant checking enable you to quickly diagnose the problem as only your latest edits change the result of tests.</p>
 <h3 id="another-approach">Another approach</h3>
-<p>In practice, before writing a specific function, we might not know exactly what it's behaviour will be so it is not clear what tests to write beforehand. (I often get excited about implementing something and writing tests is boring&hellip;)</p>
+<p>In practice, before writing a specific function, we might not know exactly what it&rsquo;s behaviour will be so it is not clear what tests to write beforehand. (I often get excited about implementing something and writing tests is boring&hellip;)</p>
 <p>So, instead of writing the tests before the function, we can wait until we are satisfied with the behaviour of a function and <em>protect</em> it with tests. Then, interactions with future functions will have some safeguards against bad input or output. Also, any further changes you perform on the function will have to satisfy the tests you previously wrote so any functions depending on the current function should not break.</p>
 <p>Furthermore, the creation of tests <em>after</em> the function may tell you that you have to refactor some parts of your function. When first writing it, you might not have thought of some edge case and the time spent wirting tests may uncover those cases.</p>
 <h3 id="what-to-test">What to test</h3>
@@ -526,7 +526,7 @@ Notice that the output is not checked; we just want to check if there are any er
 <li>Unit testing is great for interactive languages to detect if you are inadvertantly using global variables (defined outside the scope of a function). The test suite runs outside your scripts so tests will fail if you do so.</li>
 </ul>
 <h2 id="unit-testing-in-r-using-the-testthat-package">Unit Testing in <code>R</code> using the <code>testthat</code> package</h2>
-<p>Let's create a simple <code>R</code> package in <code>RStudio</code>:</p>
+<p>Let&rsquo;s create a simple <code>R</code> package in <code>RStudio</code>:</p>
 <ul>
 <li><code>New Project</code></li>
 <li><code>R Package</code></li>
@@ -534,8 +534,8 @@ Notice that the output is not checked; we just want to check if there are any er
 <li>Put in some name</li>
 <li>Check <code>Open in new session</code></li>
 </ul>
-<p>Let's add the above defined functions in the <code>hello.R</code> file.</p>
-<p>Let's create some tests:</p>
+<p>Let&rsquo;s add the above defined functions in the <code>hello.R</code> file.</p>
+<p>Let&rsquo;s create some tests:</p>
 <ul>
 <li>Run <code>devtools::test()</code> and type in <code>1</code> to create the <code>tests</code> directory, which contains a <code>testthat.R</code> file managing imports and helps in running all tests at once, and a sub-directory <code>testthat</code> where we will add some test;</li>
 <li>Run test using <code>Build</code> &gt; <code>Test Package</code> or simply type <code>Ctrl+Shift+T</code> or run <code>devtools::test()</code>. You should see an output saying there are no tests in the <code>testthat</code> directory (as expected).</li>
@@ -544,7 +544,7 @@ Notice that the output is not checked; we just want to check if there are any er
 <li>Add a first test (note the near-grammarly syntax: the first argument is what we are <em>testing that <code>sqrt_1()</code> works on positive input</em>):</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">test_that</span>(
-    <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">sqrt_1() works on positive input&#34;</span>, <span style="color:#75715e"># what we are testing</span>
+    <span style="color:#e6db74">&#34;sqrt_1() works on positive input&#34;</span>, <span style="color:#75715e"># what we are testing</span>
     { <span style="color:#75715e"># the test itself, using expect statements</span>
         <span style="color:#a6e22e">expect_equal</span>(<span style="color:#a6e22e">sqrt_1</span>(<span style="color:#ae81ff">1.0</span>), <span style="color:#ae81ff">1.0</span>)
         <span style="color:#a6e22e">expect_equal</span>(<span style="color:#a6e22e">sqrt_1</span>(<span style="color:#ae81ff">0.0</span>), <span style="color:#ae81ff">0.0</span>)
@@ -552,22 +552,22 @@ Notice that the output is not checked; we just want to check if there are any er
 )
 </code></pre></div><ul>
 <li>Run tests again and observe that our function passes all tests so far.</li>
-<li>Let's add another succeding test, but on an expected non-successfull call:</li>
+<li>Let&rsquo;s add another succeding test, but on an expected non-successfull call:</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">test_that</span>(
-    <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">sqrt_1 raises an error with negative inputs&#34;</span>,
+    <span style="color:#e6db74">&#34;sqrt_1 raises an error with negative inputs&#34;</span>,
     {
-        <span style="color:#a6e22e">expect_error</span>(<span style="color:#a6e22e">sqrt_1</span>(<span style="color:#ae81ff">-1.0</span>), <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">non-numeric argument&#34;</span>)
+        <span style="color:#a6e22e">expect_error</span>(<span style="color:#a6e22e">sqrt_1</span>(<span style="color:#ae81ff">-1.0</span>), <span style="color:#e6db74">&#34;non-numeric argument&#34;</span>)
     }
 )
 </code></pre></div><ul>
 <li>Running all tests should again suceed.</li>
-<li>Now, let's add a test which fails:</li>
+<li>Now, let&rsquo;s add a test which fails:</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">test_that</span>(
-    <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">sqrt_1 returns imaginary numbers for negative inputs&#34;</span>,
+    <span style="color:#e6db74">&#34;sqrt_1 returns imaginary numbers for negative inputs&#34;</span>,
     {
-        <span style="color:#a6e22e">expect_match</span>(<span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">-1.0</span>), <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">1i&#34;</span>)
+        <span style="color:#a6e22e">expect_match</span>(<span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">-1.0</span>), <span style="color:#e6db74">&#34;1i&#34;</span>)
     }
 )
 </code></pre></div><h2 id="unit-testing-in-python-using-the-unittests-package">Unit Testing in <code>Python</code> using the <code>unittests</code> package</h2>
@@ -594,18 +594,18 @@ Notice that the output is not checked; we just want to check if there are any er
 		  self<span style="color:#f92672">.</span>assertEqual(
 		      sqrt<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">1.0</span>), 
 		      <span style="color:#ae81ff">1.0</span>,
-		      <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">what happened if the test failed</span><span style="color:#e6db74">&#34;</span>
+		      <span style="color:#e6db74">&#34;what happened if the test failed&#34;</span>
 		  )
 
 
-<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">__main__</span><span style="color:#e6db74">&#39;</span>:
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
 	  unittest<span style="color:#f92672">.</span>main()
 
 </code></pre></div><p>Run tests using</p>
 <pre><code>python -m unittest tests/test_sqrt.py
 python -m unittest discover tests
 </code></pre><p>The <code>discover tests</code> implies that the <code>unittest</code> package will search the <code>tests</code> directory for all tests in there.</p>
-<p>The basic <code>unittest</code> package is not well suited to check equality of <code>numpy</code> arrays. Here's a way to do it:</p>
+<p>The basic <code>unittest</code> package is not well suited to check equality of <code>numpy</code> arrays. Here&rsquo;s a way to do it:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 
 
@@ -619,7 +619,7 @@ python -m unittest discover tests
             result <span style="color:#f92672">=</span> True
         <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">AssertionError</span> <span style="color:#66d9ef">as</span> error:
             result <span style="color:#f92672">=</span> False
-        self<span style="color:#f92672">.</span>assertTrue(res, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">what happened if the test failed</span><span style="color:#e6db74">&#34;</span>)
+        self<span style="color:#f92672">.</span>assertTrue(res, <span style="color:#e6db74">&#34;what happened if the test failed&#34;</span>)
 </code></pre></div><p>In PyCharm, you can set up automatic testing as follows:</p>
 <ul>
 <li><code>File</code> &gt; <code>Settings</code> &gt; <code>Tools</code> &gt; <code>Python Integrated Tools</code></li>
@@ -632,35 +632,35 @@ python -m unittest discover tests
 <h2 id="unit-testing-in-julia">Unit Testing in Julia</h2>
 <p>This <a href="https://julia.quantecon.org/more_julia/testing.html">guide</a> gives a nice, detailed walkthrough on how to set up a package in Julia with tests and integrate it with Travis and Codecov.</p>
 <p>Julia comes with the &lsquo;Test&rsquo; module built-in which offers basic unit tests.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Julia" data-lang="Julia">sqrt_im<span style="color:#f92672"></span>(x<span style="color:#f92672"></span><span style="color:#f92672">:</span><span style="color:#f92672">:</span><span style="color:#66d9ef">Real</span>) <span style="color:#f92672">=</span> sqrt<span style="color:#f92672"></span>(complex<span style="color:#f92672"></span>(x<span style="color:#f92672"></span>))
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Julia" data-lang="Julia">sqrt_im(x<span style="color:#f92672">::</span><span style="color:#66d9ef">Real</span>) <span style="color:#f92672">=</span> sqrt(complex(x))
 
-<span style="color:#66d9ef">using</span> Test<span style="color:#f92672"></span>
+<span style="color:#66d9ef">using</span> Test
 <span style="color:#75715e"># Unit tests (check for right value in both cases)</span>
-<span style="color:#a6e22e">@test</span><span style="color:#f92672"></span> sqrt_im<span style="color:#f92672"></span>(<span style="color:#ae81ff">2.0</span>)  ≈<span style="color:#f92672"></span> <span style="color:#ae81ff">1.4142135623730951</span>
-<span style="color:#a6e22e">@test</span><span style="color:#f92672"></span> sqrt_im<span style="color:#f92672"></span>(<span style="color:#ae81ff">5.0</span>)  ≈<span style="color:#f92672"></span> <span style="color:#ae81ff">1.4142135623730951</span>
-<span style="color:#a6e22e">@test</span><span style="color:#f92672"></span> sqrt_im<span style="color:#f92672"></span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>) ≈<span style="color:#f92672"></span> <span style="color:#ae81ff">1.4142135623730951</span>im
+<span style="color:#a6e22e">@test</span> sqrt_im(<span style="color:#ae81ff">2.0</span>)  ≈ <span style="color:#ae81ff">1.4142135623730951</span>
+<span style="color:#a6e22e">@test</span> sqrt_im(<span style="color:#ae81ff">5.0</span>)  ≈ <span style="color:#ae81ff">1.4142135623730951</span>
+<span style="color:#a6e22e">@test</span> sqrt_im(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>) ≈ <span style="color:#ae81ff">1.4142135623730951</span>im
 
 <span style="color:#75715e"># Random input</span>
-<span style="color:#66d9ef">using</span> Random<span style="color:#f92672"></span>
-Z<span style="color:#f92672"></span> <span style="color:#f92672">=</span> randn<span style="color:#f92672"></span>(<span style="color:#66d9ef">MersenneTwister</span>(<span style="color:#ae81ff">555</span>), <span style="color:#ae81ff">10</span>)
-<span style="color:#a6e22e">@test</span><span style="color:#f92672"></span> (sqrt_im<span style="color:#f92672"></span><span style="color:#f92672">.</span>(Z<span style="color:#f92672"></span>))<span style="color:#f92672">.^</span><span style="color:#ae81ff">2</span> ≈<span style="color:#f92672"></span> Z<span style="color:#f92672"></span>
+<span style="color:#66d9ef">using</span> Random
+Z <span style="color:#f92672">=</span> randn(<span style="color:#66d9ef">MersenneTwister</span>(<span style="color:#ae81ff">555</span>), <span style="color:#ae81ff">10</span>)
+<span style="color:#a6e22e">@test</span> (sqrt_im<span style="color:#f92672">.</span>(Z))<span style="color:#f92672">.^</span><span style="color:#ae81ff">2</span> ≈ Z
 
-<span style="color:#a6e22e">@test</span><span style="color:#f92672"></span> sqrt<span style="color:#f92672"></span>(<span style="color:#ae81ff">2.0</span>) ≈<span style="color:#f92672"></span> <span style="color:#ae81ff">1.4142135623730951</span>
-<span style="color:#a6e22e">@test</span><span style="color:#f92672"></span> sqrt<span style="color:#f92672"></span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>) ≈<span style="color:#f92672"></span> <span style="color:#ae81ff">1.414213562373095</span>im
+<span style="color:#a6e22e">@test</span> sqrt(<span style="color:#ae81ff">2.0</span>) ≈ <span style="color:#ae81ff">1.4142135623730951</span>
+<span style="color:#a6e22e">@test</span> sqrt(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>) ≈ <span style="color:#ae81ff">1.414213562373095</span>im
 <span style="color:#75715e"># &#34;test_broken&#34; lets us mark tests we know give the wrong answer or raise an error</span>
-<span style="color:#a6e22e">@test_broken</span><span style="color:#f92672"></span> sqrt<span style="color:#f92672"></span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>) ≈<span style="color:#f92672"></span> <span style="color:#ae81ff">1.414213562373095</span>im
+<span style="color:#a6e22e">@test_broken</span> sqrt(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>) ≈ <span style="color:#ae81ff">1.414213562373095</span>im
 <span style="color:#75715e"># &#34;test_broken&#34; will return an Error testing value if the expression passes</span>
-<span style="color:#a6e22e">@test_broken</span><span style="color:#f92672"></span> sqrt<span style="color:#f92672"></span>(<span style="color:#ae81ff">2.0</span>) ≈<span style="color:#f92672"></span> <span style="color:#ae81ff">1.4142135623730951</span>
+<span style="color:#a6e22e">@test_broken</span> sqrt(<span style="color:#ae81ff">2.0</span>) ≈ <span style="color:#ae81ff">1.4142135623730951</span>
 
 <span style="color:#75715e"># Julia requires a boolean result to pass; for smoke testing this can be alleviated</span>
 <span style="color:#75715e"># by just always returning true</span>
-<span style="color:#a6e22e">@test</span><span style="color:#f92672"></span> <span style="color:#66d9ef">begin</span>
-  sqrt_im<span style="color:#f92672"></span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>)
+<span style="color:#a6e22e">@test</span> <span style="color:#66d9ef">begin</span>
+  sqrt_im(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>)
   <span style="color:#66d9ef">true</span>
 <span style="color:#66d9ef">end</span>
 
-<span style="color:#a6e22e">@test</span><span style="color:#f92672"></span> <span style="color:#66d9ef">begin</span>
-  sqrt<span style="color:#f92672"></span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>)
+<span style="color:#a6e22e">@test</span> <span style="color:#66d9ef">begin</span>
+  sqrt(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>)
   <span style="color:#66d9ef">true</span>
 <span style="color:#66d9ef">end</span>
 
