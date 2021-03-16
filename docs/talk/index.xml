@@ -5,12 +5,20 @@
     <link>https://UMichStatistics.github.io/ComputingClub/talk/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Meetings</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 UM Statistics PhD Student Council Computing Committee</copyright>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 UM Statistics PhD Student Council Computing Committee</copyright>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Meetings</title>
       <link>https://UMichStatistics.github.io/ComputingClub/talk/</link>
     </image>
+    
+    <item>
+      <title>A Discussion of Advanced GitHub Usage, Including Actions</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/github/</link>
+      <pubDate>Thu, 18 Mar 2021 13:00:00 -0200</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/github/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Speeding up R with C/C&#43;&#43;/Fortran</title>
