@@ -445,34 +445,34 @@ A note on the Academic theme To ensure links consistency within your website you
 <p>See <a href="http://www.umich.edu/~umweb/how-to/homepage.html">Web Hosting Tutorial from ITS</a> for more details.</p>
 <h2 id="a-note-on-the-academic-theme">A note on the Academic theme</h2>
 <p>To ensure links consistency within your website you need to tell Hugo what will be your base URL. In the case of GitHub hosting, change the following line in <code>config/_default/config.toml</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">baseurl <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://www-personal.umich.edu/~uniqname/&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">baseurl <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://www-personal.umich.edu/~uniqname/&#34;</span>
 </code></pre></div><p>Run <code>hugo</code> to make your changes effective.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>First, you will need access to the <a href="https://mfile.umich.edu/">MFile</a> system. There, ensure you have access to your <code>Public/html/</code> folder which is where we will dump our website.</p>
 <p>You may need to <a href="https://mfile.umich.edu/make-webspace/">use the make-website tool</a>.</p>
 <h2 id="local-version-control">Local version control</h2>
 <p>While version control is not necessary for this type of hosting, I highly recommend you do it locally:</p>
-<pre><code class="language-git" data-lang="git">git add -all
+<pre tabindex="0"><code class="language-git" data-lang="git">git add -all
 git commit -m 'First deploy'
 </code></pre><h2 id="deployment-with-scp">Deployment with SCP</h2>
 <p>The deployment to your personal space can be done in one command line (should work on any platform, Windows users may require <a href="https://putty.org/">PuTTY</a>):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">scp -r &lt;path-to-local-website&gt;/public/. uniqname@login.itd.umich.edu:Public/html/
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">scp -r &lt;path-to-local-website&gt;/public/. uniqname@login.itd.umich.edu:Public/html/
 </code></pre></div><p>You should be prompted to enter your password. SCP (Secure Copy Protocol) can only copy files to and from a remote server. It is sufficient to push your website, but you cannot remove files using that protocol. This line basically copies everything from <code>&lt;path-to-local-website&gt;/public/</code> (recursively with the <code>-r</code> option) to your personal space <code>uniqname@login.itd.umich.edu:Public/html/</code> which is where websites are hosted.</p>
 <h3 id="sftp-and-sftp-with-a-gui">SFTP and SFTP With a GUI</h3>
 <p><code>sftp</code> (Secure File Transfer Protocol) offer an interactive session and is therefore more flexible than SCP (see thig <a href="https://www.jscape.com/blog/using-sftp-on-command-line">guide</a>).</p>
 <p>Open a terminal in the <code>public</code> folder of your website (or the one where Hugo produces the <code>html</code> files). Connection to the remote server is done via</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sftp uniqname@sftp.itd.umich.edu
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sftp uniqname@sftp.itd.umich.edu
 </code></pre></div><p>You should be prompted to enter your password. You can navigate your personal space usin <code>ls</code> and <code>cd</code> as usual. Move to <code>Public/html</code> and push all the files of <code>public</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sftp&gt; cd Public/html/
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sftp&gt; cd Public/html/
 sftp&gt; put -r *
 </code></pre></div><p>The same can be done using a FTP client GUI (e.g. WinSCP or FileZilla). The server is called</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sftp.itd.umich.edu
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sftp.itd.umich.edu
 </code></pre></div><p>with port 22. You should need to input your username and password at some point.</p>
 <h3 id="viewing-your-website">Viewing your website</h3>
 <p>Your new website will be available at</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">http://www-personal.umich.edu/~uniqname/
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">http://www-personal.umich.edu/~uniqname/
 </code></pre></div><p>which is also available by symply typing</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">umich.edu/~uniqname/
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">umich.edu/~uniqname/
 </code></pre></div><p>If you are creating a website for some organization, consider getting some space for your organization instead of using your own space: check <a href="http://www.umich.edu/~umweb/how-to/homepage.html">this tutorial (Special services section)</a>.</p>
 
           </div>
@@ -685,7 +685,7 @@ sftp&gt; put -r *
     
     
     
-    <script src="/ComputingClub/js/academic.min.96cf4c3dc37ea60dbbd03c13a455f1f7.js"></script>
+    <script src="/ComputingClub/js/academic.min.e3cb3c6a637c3ff60a801ec2b623f195.js"></script>
 
     
 

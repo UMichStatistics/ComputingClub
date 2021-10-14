@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.6.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Statistics Computing Club">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Creating and hosting your personal website">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://UMichStatistics.github.io/ComputingClub/workshops/website/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="hsl(48, 100%, 51%)">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700%7CFauna+One&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/ComputingClub/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  <link rel="alternate" href="/ComputingClub/workshops/website/index.xml" type="application/rss+xml" title="UM Statistics Computing Club">
+  
+
+  <link rel="manifest" href="/ComputingClub/index.webmanifest">
+  <link rel="icon" type="image/png" href="/ComputingClub/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/ComputingClub/img/icon-192.png">
+
+  <link rel="canonical" href="https://UMichStatistics.github.io/ComputingClub/workshops/website/">
+
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="UM Statistics Computing Club">
+  <meta property="og:url" content="https://UMichStatistics.github.io/ComputingClub/workshops/website/">
+  <meta property="og:title" content="Creating and hosting your personal website | UM Statistics Computing Club">
+  <meta property="og:description" content="Creating and hosting your personal website"><meta property="og:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png">
+  <meta property="twitter:image" content="https://UMichStatistics.github.io/ComputingClub/img/icon_512.png"><meta property="og:locale" content="en-us">
+  
+    <meta property="og:updated_time" content="2018-09-09T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Creating and hosting your personal website | UM Statistics Computing Club</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    
+    
+      <a class="navbar-brand" href="/ComputingClub/">UM Statistics Computing Club</a>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/ComputingClub/post"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/ComputingClub/talk"><span>Meetings</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/ComputingClub/workshops"><span>Workshops</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/ComputingClub/workshops/resources"><span>Resources</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/ComputingClub/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item">
+        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item active">
+    <a class="docs-toc-link" href="/ComputingClub/workshops/website/">Creating and hosting your personal website</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/ComputingClub/workshops/purrr/">Functional Programming in R with purrr</a>
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#setting-up-hugo">Setting up Hugo</a></li>
+    <li><a href="#setting-up-git-github-and-local-repository">Setting up Git, GitHub and local repository</a></li>
+    <li><a href="#first-build">First build</a></li>
+    <li><a href="#deploy-to-github">Deploy to GitHub</a></li>
+    <li><a href="#update-workflow">Update workflow</a>
+      <ul>
+        <li><a href="#local-build-push-both">Local build, push both</a></li>
+        <li><a href="#automatic-deployment">Automatic deployment</a></li>
+      </ul>
+    </li>
+    <li><a href="#hugo-academic-and-bibtex">Hugo Academic and BibTeX</a></li>
+    <li><a href="#customization">Customization</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#preparation">Preparation</a></li>
+    <li><a href="#local-build">Local build</a></li>
+    <li><a href="#deploy-on-github-pages">Deploy on GitHub Pages</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>Creating and hosting your personal website</h1>
+
+          <div class="article-style">
+            <p><strong>Goal</strong></p>
+<ul>
+<li>Personal websites that are <strong>easy to create and maintain</strong></li>
+<li>Yet <strong>flexible and beautiful</strong></li>
+<li>Free</li>
+</ul>
+<p><strong>Two frameworks</strong></p>
+<ul>
+<li><code>hugo</code> and <code>jekyll</code></li>
+<li>Static sites generators</li>
+<li>Content written in <code>Markdown</code>, some configuration in <code>YAML</code></li>
+<li>Build the corresponding <code>html</code> pages</li>
+<li>Various themes for your applications
+<ul>
+<li>blogs, portfolios, research group, résumé, project documentation, etc.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Hosting</strong></p>
+<ul>
+<li>GitHub Pages</li>
+<li>Automatic build with GitHub Actions</li>
+</ul>
+<p><strong>We want to avoid</strong></p>
+<ul>
+<li>writing html</li>
+<li>lots of manipulations to update your website</li>
+</ul>
+<h1 id="hugo-and-academic-theme-with-github-actions">Hugo and Academic theme with GitHub Actions</h1>
+<p>See <a href="https://academic-demo.netlify.app/">demo website</a></p>
+<p>Structure:</p>
+<ul>
+<li>front page organized in widgets</li>
+<li>excellent management for publications, talks, etc
+<ul>
+<li>tags, projects, sorting, featured, links, etc.</li>
+</ul>
+</li>
+</ul>
+<p>allows math without any work</p>
+<p>Other <a href="https://themes.gohugo.io/">themes</a>: lots for blogging, project docs; see also <a href="https://themes.gohugo.io/themes/hugo-resume/">Resume</a>, <a href="https://themes.gohugo.io/themes/avicenna/">Avicenna</a> and the Academic variations (<a href="https://github.com/wowchemy/starter-hugo-academic">Résumé</a>,  <a href="https://github.com/wowchemy/starter-hugo-research-group">Research Group</a>, <a href="https://github.com/wowchemy/starter-hugo-online-course">Online course</a>)</p>
+<h2 id="setting-up-hugo">Setting up Hugo</h2>
+<p><a href="https://wowchemy.com/docs/getting-started/install-hugo-extended/">See this guide</a></p>
+<h2 id="setting-up-git-github-and-local-repository">Setting up Git, GitHub and local repository</h2>
+<p>(<a href="https://wowchemy.com/docs/hugo-tutorials/deployment/#github-pages">Inspired from this guide</a>)</p>
+<p><a href="https://help.github.com/articles/set-up-git/">Install git</a></p>
+<p>We will create two repos:</p>
+<ul>
+<li><code>some-name</code>: will hold <em>content</em> (Md, YAML, reference to theme); should be a fork of the <a href="https://github.com/wowchemy/starter-hugo-academic#fork-destination-box">Academic theme</a></li>
+<li><code>&lt;your-username&gt;.github.io</code>: will hold the actual website (html, css, js)</li>
+</ul>
+<p>Clone locally and initialize submodules (reference to theme)</p>
+<pre tabindex="0"><code>git clone https://github.com/&lt;USERNAME&gt;/my-wowchemy-site.git My_Website
+cd My_Website
+git submodule update --init --recursive
+</code></pre><p>Add the build repo as a submodule to the content repo:</p>
+<pre tabindex="0"><code>git submodule add -f -b master https://github.com/&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
+</code></pre><p>You&rsquo;ll probably get some warnings, you can ignore them.</p>
+<h2 id="first-build">First build</h2>
+<p>Change base URL in <code>config/_default/config.yaml</code></p>
+<pre tabindex="0"><code>baseurl = &quot;https://&lt;USERNAME&gt;.github.io/&quot;
+</code></pre><p>Serve locally</p>
+<pre tabindex="0"><code>hugo server
+</code></pre><p>Check your website at the address privided (e.g., http://localhost:1313/)</p>
+<p>First build</p>
+<pre tabindex="0"><code>hugo
+</code></pre><p>Now check that <code>public</code> has been populated</p>
+<h2 id="deploy-to-github">Deploy to GitHub</h2>
+<p>From the content local repo, commit and push (this only pushes the content):</p>
+<pre tabindex="0"><code>git add .
+git commit -m &quot;Initial commit&quot;
+git push -u origin master
+</code></pre><p>Then push the built website</p>
+<pre tabindex="0"><code>cd public
+git add .
+git commit -m &quot;First build&quot;
+git push origin master
+cd ..
+</code></pre><p>Check out the remote repo</p>
+<p>Wait for GitHub to apply changes, and check out your new website!</p>
+<pre tabindex="0"><code>&lt;USERNAME&gt;.github.io
+</code></pre><h2 id="update-workflow">Update workflow</h2>
+<p>To get any cahnge on the website, you need to update the remote repo <code>&lt;USERNAME&gt;.github.io</code>; changing the remote content repo will do nothing. Here are two approahces:</p>
+<h3 id="local-build-push-both">Local build, push both</h3>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">sequenceDiagram
+    participant lc as Local Content 
+    participant lw as Local Website
+    participant rc as Remote Content
+    participant rw as Remote Website
+    rc -&gt;&gt; lc: pull
+    lc -&gt;&gt; lc: Update content
+    lc -&gt;&gt; lw: Build with hugo
+    lc -&gt;&gt; lc: Update content
+    lc -&gt;&gt; lw: Build with hugo
+    lc -&gt;&gt; rc: push
+    lw -&gt;&gt; rw: push
+</code></pre><h3 id="automatic-deployment">Automatic deployment</h3>
+<p>With proper automatization, updating can be as simple as:</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">sequenceDiagram
+    participant lc as Local Content 
+    participant lw as Local Website
+    participant rc as Remote Content
+    participant rw as Remote Website
+    rc -&gt;&gt; lc: pull
+    lc -&gt;&gt; lc: Update content
+    lc -&gt;&gt; rc: push
+    rc --&gt;&gt; rw: Build with hugo and push (automatic)
+</code></pre><p>In particular, you don&rsquo;t even need <code>hugo</code> on your machine, only <code>git</code>!</p>
+<p>This also allows to edit directly on GitHub (useful for typos and small updates!). Don&rsquo;t forget to pull locally, though!</p>
+<p>(<a href="https://discourse.gohugo.io/t/deploy-hugo-project-to-github-pages-with-github-actions/20725">Based on this tutorial</a>)</p>
+<p>To achieve this, we need to use GitHub Actions.</p>
+<p>First, we need to create a public/private key pair (<a href="https://github.com/marketplace/actions/github-pages-action#%EF%B8%8F-create-ssh-deploy-key">see this guide</a>)</p>
+<pre tabindex="0"><code>ssh-keygen -t rsa -b 4096 -C &quot;$(git config user.email)&quot; -f gh-pages -N &quot;&quot;
+# You will get 2 files:
+#   gh-pages.pub (public key)
+#   gh-pages     (private key)
+</code></pre><p>Go to repository settings:</p>
+<ul>
+<li>In build repo: Go to Deploy Keys and add your public key with <code>Allow write access</code></li>
+<li>In content repo: Go to Secrets and add your private key as <code>ACTIONS_DEPLOY_KEY</code></li>
+</ul>
+<p>In the <code>/.github/workflows/</code> folder of the content repo, add the following <code>gh-pages.yml</code> file (can also be done in the Actions tab on the GitHub website):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">GitHub Pages with Hugo</span>
+
+<span style="color:#f92672">on</span>:
+  <span style="color:#f92672">push</span>:
+    <span style="color:#f92672">branches</span>:
+    - <span style="color:#ae81ff">master</span>
+
+<span style="color:#f92672">jobs</span>:
+  <span style="color:#f92672">build-deploy</span>:
+    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+    <span style="color:#f92672">steps</span>:
+    - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
+
+    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup Hugo</span>
+      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v2</span>
+      <span style="color:#f92672">with</span>:
+        <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#39;latest&#39;</span>
+        <span style="color:#f92672">extended</span>: <span style="color:#66d9ef">true</span>
+
+    - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/cache@v2</span>
+      <span style="color:#f92672">with</span>:
+        <span style="color:#f92672">path</span>: <span style="color:#ae81ff">/tmp/hugo_cache</span>
+        <span style="color:#f92672">key</span>: <span style="color:#ae81ff">${{ runner.os }}-hugomod-${{ hashFiles(&#39;**/go.sum&#39;) }}</span>
+        <span style="color:#f92672">restore-keys</span>: |<span style="color:#e6db74">
+</span><span style="color:#e6db74">          </span>          <span style="color:#ae81ff">${{ runner.os }}-hugomod-</span>
+
+    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build</span>
+      <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo --minify</span>
+
+    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy</span>
+      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-gh-pages@v3</span>
+      <span style="color:#f92672">with</span>:
+        <span style="color:#f92672">deploy_key</span>: <span style="color:#ae81ff">${{ secrets.ACTIONS_DEPLOY_KEY }}</span>
+        <span style="color:#f92672">external_repository</span>: <span style="color:#ae81ff">fontaine618/fontaine618.github.io</span>
+        <span style="color:#f92672">publish_branch</span>: <span style="color:#ae81ff">main</span>
+        <span style="color:#f92672">publish_dir</span>: <span style="color:#ae81ff">./public</span>
+</code></pre></div><h2 id="hugo-academic-and-bibtex">Hugo Academic and BibTeX</h2>
+<p>Creating content may be long, especially if you have many publications (one file per publications and requires to fill in entries). Fortunately, there exist a tool taking a <code>.bib</code> file doing everything for you:</p>
+<p><a href="https://pypi.org/project/academic/">See this tutorial</a></p>
+<h2 id="customization">Customization</h2>
+<p>See the <a href="https://wowchemy.com/docs/">documentation</a></p>
+<h1 id="jekyll-and-github-pages">Jekyll and GitHub Pages</h1>
+<p>Jekyll works very similarly to hugo, but has slightly better GitHub Actions support by the community. Templates are generally simpler than Academic Hugo, however.</p>
+<h2 id="preparation">Preparation</h2>
+<ul>
+<li>Satisfy all <a href="https://jekyllrb.com/docs/installation/#requirements">requirements</a></li>
+<li>Select a <a href="https://github.com/topics/jekyll-theme">template</a>: we will use <a href="https://github.com/alshedivat/al-folio">al-folio</a> as it has a nice publications features. (see the <a href="https://github.com/alshedivat/al-folio#user-community">github repo</a> for examples and features)</li>
+<li>Fork the <a href="https://github.com/alshedivat/al-folio">repo</a></li>
+<li>Rename to <code>&lt;USERNAME&gt;.github.io</code></li>
+</ul>
+<h2 id="local-build">Local build</h2>
+<p>Clone, install and build:</p>
+<pre tabindex="0"><code>git clone https://github.com/&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git
+cd &lt;USERNAME&gt;.github.io
+bundle install
+bundle exec jekyll serve
+</code></pre><p>You can check out your <em>local</em> website at the specified address (e.g., http://127.0.0.1:4000/)</p>
+<ul>
+<li>like <code>hugo</code> the <code>serve</code> command listens to changes so it will dynamically update!</li>
+</ul>
+<h2 id="deploy-on-github-pages">Deploy on GitHub Pages</h2>
+<p>In <code>_config.yml</code>, change <code>url</code> to</p>
+<pre tabindex="0"><code>url: https://&lt;USERNAME&gt;.github.io/
+</code></pre><p>and set <code>baseurl</code> to nothing</p>
+<pre tabindex="0"><code>baseurl: 
+</code></pre><p>Commit and push your website</p>
+<p>On the GitHub website:</p>
+<ul>
+<li>Actions &gt; Enable GitHub Actions (the <code>al-folio</code> comes with Actions!)</li>
+<li>Repository settings &gt; Pages &gt; set branch to <code>gh-pages</code></li>
+</ul>
+<p>Wait for GitHub to apply changes, and check out your new website!</p>
+<pre tabindex="0"><code>&lt;USERNAME&gt;.github.io
+</code></pre><p>Other templates may not have built-in actions, you can look at  <a href="https://jekyllrb.com/docs/continuous-integration/github-actions/">this tutorial</a> (note that you no longer need to create the <code>GITHUB_TOKEN</code>).</p>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Sep 9, 2018</p>
+
+          
+
+
+
+
+          
+<section id="comments">
+  
+    
+<div id="disqus_thread"></div>
+<script>
+  let disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "umichstatisticscomputingclub" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
+</section>
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2021 UM Statistics PhD Student Council Computing Committee &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+    <script src="/ComputingClub/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.3.1/mermaid.min.js" integrity="sha256-vOIuDSYDirTfyr+S2MjFnhOz6Rgiz4ODFAHATG0rFxw=" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/shell.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/markdown.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/ComputingClub/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    <script id="dsq-count-scr" src="https://umichstatisticscomputingclub.disqus.com/count.js" async></script>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/ComputingClub/js/academic.min.e3cb3c6a637c3ff60a801ec2b623f195.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

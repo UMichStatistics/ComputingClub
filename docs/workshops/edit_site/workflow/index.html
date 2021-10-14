@@ -455,17 +455,17 @@
 <h3 id="update-the-local-version">Update the local version</h3>
 <p>First, you will need the latest version of the website stored locally on your machine.</p>
 <p>If you have not cloned the repository yet, do so:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/UMichStatistics/ComputingClub.git &lt;new-folder-name&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/UMichStatistics/ComputingClub.git &lt;new-folder-name&gt;
 </code></pre></div><p>The website relies on the Academic theme for Hugo, so you will to clone that as well. Fortunately, it is included as a submodule of the repository, so you only need to update all submodules (there is only one):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git submodule update <span style="color:#f92672">[</span>--init<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--recursive<span style="color:#f92672">]</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git submodule update <span style="color:#f92672">[</span>--init<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--recursive<span style="color:#f92672">]</span>
 </code></pre></div><p>If you already have cloned the repository, make sure your local version is up to date with the current online version to avoid merge conflicts when pushing. In a command prompt, move to the site local folder and <code>pull</code> the website (or <code>fetch</code> and <code>merge</code>).</p>
 <h3 id="create-your-content">Create your content</h3>
 <p>Create your specific content by producing the necessary Markdown files and place them in the correct folders. See <a href="create/">Creating content</a> for details on how to do so.</p>
 <h3 id="deploy-your-local-website">Deploy your local website</h3>
 <p>Now that your local repository contains updated content, it is time to deploy it to your local <code>docs</code> folder. To do so, open a command prompt and run hugo at the root of the site&rsquo;s local repository and type in:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo
 </code></pre></div><p>which will compile the content into the static <code>html</code> pages. Unless your code does not compile, you should get an output such as (possibly containing warnings)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Building sites … WARN 2019/09/24 17:08:23 In the next Hugo version <span style="color:#f92672">(</span>0.58.0<span style="color:#f92672">)</span> we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Building sites … WARN 2019/09/24 17:08:23 In the next Hugo version <span style="color:#f92672">(</span>0.58.0<span style="color:#f92672">)</span> we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
 
                    | EN
 +------------------|----+
@@ -480,9 +480,9 @@
 
 Total in <span style="color:#ae81ff">265</span> ms
 </code></pre></div><p>This means that Hugo has successfuly deployed your site to the <code>docs</code> folder. If you wish to view the website, you can host it locally using Hugo:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo server
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo server
 </code></pre></div><p>which should yield something like</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Watching <span style="color:#66d9ef">for</span> changes in /home/simon/git/ComputingClub/<span style="color:#f92672">{</span>content,data,static,themes<span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Watching <span style="color:#66d9ef">for</span> changes in /home/simon/git/ComputingClub/<span style="color:#f92672">{</span>content,data,static,themes<span style="color:#f92672">}</span>
 Watching <span style="color:#66d9ef">for</span> config changes in /home/simon/git/ComputingClub/config.toml, /home/simon/git/ComputingClub/config/_default
 Environment: <span style="color:#e6db74">&#34;development&#34;</span>
 Serving pages from memory
@@ -493,10 +493,10 @@ Press Ctrl+C to stop
 <h3 id="push-your-changes">Push your changes</h3>
 <p>Once your are satisfied with your local version, you need to push your changes to the <code>master</code> branch. In the case your Hugo server is still on, close it and run <code>hugo</code> one last time to redo the <code>docs</code> file for the online version, not the local version.</p>
 <p>Stage and commit your changes:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git add --all
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git add --all
 git commit -m <span style="color:#e6db74">&#39;some description of your changes&#39;</span>
 </code></pre></div><p>and finally push to the online repository</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git push
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git push
 </code></pre></div>
           </div>
 
@@ -702,7 +702,7 @@ git commit -m <span style="color:#e6db74">&#39;some description of your changes&
     
     
     
-    <script src="/ComputingClub/js/academic.min.96cf4c3dc37ea60dbbd03c13a455f1f7.js"></script>
+    <script src="/ComputingClub/js/academic.min.e3cb3c6a637c3ff60a801ec2b623f195.js"></script>
 
     
 

@@ -476,9 +476,9 @@ Rows and columns behave in the exact same way. Indeed, they are both implemented
 <li><code>index</code>, <code>index_label</code> and <code>header</code> to control the output.</li>
 </ul>
 <p>The <code>.to_latex()</code> method offers a convenient way to export a <code>pandas</code> DataFrame to LaTeX format. I have found that the column formatting does not work very well sometimes; you can perform the formatting by hand before using <code>to_latex</code> using commands such as:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df[<span style="color:#e6db74">&#34;column&#34;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#34;column&#34;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#e6db74">&#34;{:.2f}&#34;</span><span style="color:#f92672">.</span>format) <span style="color:#75715e"># float formatting</span>
-df[<span style="color:#e6db74">&#34;column&#34;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#34;column&#34;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#e6db74">&#34;{:.2f} %&#34;</span><span style="color:#f92672">.</span>format) <span style="color:#75715e"># add a percentage sign</span>
-df[<span style="color:#e6db74">&#34;ci&#34;</span>] <span style="color:#f92672">=</span> df[[<span style="color:#e6db74">&#34;lower&#34;</span>, <span style="color:#e6db74">&#34;upper&#34;</span>]]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: <span style="color:#e6db74">&#34;[{:.2f}, {:.2f}]&#34;</span><span style="color:#f92672">.</span>format(x[<span style="color:#e6db74">&#34;lower&#34;</span>], x[<span style="color:#e6db74">&#34;upper&#34;</span>]), axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>) <span style="color:#75715e"># to converct CI bounds to an interval</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df[<span style="color:#e6db74">&#34;column&#34;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#34;column&#34;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{:.2f}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format) <span style="color:#75715e"># float formatting</span>
+df[<span style="color:#e6db74">&#34;column&#34;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#34;column&#34;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{:.2f}</span><span style="color:#e6db74"> %&#34;</span><span style="color:#f92672">.</span>format) <span style="color:#75715e"># add a percentage sign</span>
+df[<span style="color:#e6db74">&#34;ci&#34;</span>] <span style="color:#f92672">=</span> df[[<span style="color:#e6db74">&#34;lower&#34;</span>, <span style="color:#e6db74">&#34;upper&#34;</span>]]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: <span style="color:#e6db74">&#34;[</span><span style="color:#e6db74">{:.2f}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">{:.2f}</span><span style="color:#e6db74">]&#34;</span><span style="color:#f92672">.</span>format(x[<span style="color:#e6db74">&#34;lower&#34;</span>], x[<span style="color:#e6db74">&#34;upper&#34;</span>]), axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>) <span style="color:#75715e"># to converct CI bounds to an interval</span>
 </code></pre></div><h2 id="accessing-values">Accessing Values</h2>
 <p>There are multiple ways to access the contents in a <code>pandas</code> <code>DataFrame</code> (most also work for <code>Series</code> as well).</p>
 <p>Using <code>python</code> indexing (a <code>DataFrame</code> behaves as a dictionary of columns):</p>
@@ -597,9 +597,9 @@ df[<span style="color:#e6db74">&#34;ci&#34;</span>] <span style="color:#f92672">
 <li>The method <code>df.stack()</code>: similar to melt, but less general; puts the original column names into a <code>MultiIndex</code> rather than new columns;</li>
 <li>The method <code>df.explode()</code>: when cells contains lists, this methods expand the dataframe for each element of the list.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
 df_wide <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#34;A&#34;</span>: range(<span style="color:#ae81ff">5</span>), <span style="color:#e6db74">&#34;B&#34;</span>: range(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>), <span style="color:#e6db74">&#34;C&#34;</span>: range(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">15</span>)}, index<span style="color:#f92672">=</span>list(<span style="color:#e6db74">&#34;abcde&#34;</span>))
-<span style="color:#66d9ef">print</span>(df_wide)
+print(df_wide)
 </code></pre></div><pre><code>   A  B   C
 a  0  5  10
 b  1  6  11
@@ -607,7 +607,7 @@ c  2  7  12
 d  3  8  13
 e  4  9  14
 </code></pre>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(df_wide<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;A&#34;</span>, value_vars<span style="color:#f92672">=</span>list(<span style="color:#e6db74">&#34;BC&#34;</span>)))
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(df_wide<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;A&#34;</span>, value_vars<span style="color:#f92672">=</span>list(<span style="color:#e6db74">&#34;BC&#34;</span>)))
 </code></pre></div><pre><code>   A variable  value
 0  0        B      5
 1  1        B      6
@@ -620,7 +620,7 @@ e  4  9  14
 8  3        C     13
 9  4        C     14
 </code></pre>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(df_wide<span style="color:#f92672">.</span>stack())
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(df_wide<span style="color:#f92672">.</span>stack())
 </code></pre></div><pre><code>a  A     0
    B     5
    C    10
@@ -638,14 +638,14 @@ e  A     4
    C    14
 dtype: int64
 </code></pre>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_wide <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series([range(<span style="color:#ae81ff">3</span>), range(<span style="color:#ae81ff">1</span>), range(<span style="color:#ae81ff">10</span>)])
-<span style="color:#66d9ef">print</span>(df_wide)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_wide <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series([range(<span style="color:#ae81ff">3</span>), range(<span style="color:#ae81ff">1</span>), range(<span style="color:#ae81ff">10</span>)])
+print(df_wide)
 </code></pre></div><pre><code>0                         (0, 1, 2)
 1                               (0)
 2    (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
 dtype: object
 </code></pre>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(df_wide<span style="color:#f92672">.</span>explode())
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(df_wide<span style="color:#f92672">.</span>explode())
 </code></pre></div><pre><code>0    0
 0    1
 0    2
@@ -668,8 +668,8 @@ dtype: object
 <li>The method <code>df.pivot_table()</code> generalizes <code>.pivot</code> to more complex situations where there may be duplicate entries which have to be aggregated. This is related to performing <code>.groupby()</code> chained with <code>.agg()</code>, but may have different output format;</li>
 <li>The method <code>df.unstack()</code> pivots a DataFrame using its index (useful for MultiIndex DataFrames mostly).</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_long <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#34;id&#34;</span>: list(range(<span style="color:#ae81ff">4</span>))<span style="color:#f92672">*</span><span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#34;type&#34;</span>: [<span style="color:#e6db74">&#34;A&#34;</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">4</span> <span style="color:#f92672">+</span> [<span style="color:#e6db74">&#34;B&#34;</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">4</span> <span style="color:#f92672">+</span> [<span style="color:#e6db74">&#34;C&#34;</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#34;value&#34;</span>:range(<span style="color:#ae81ff">12</span>)})
-<span style="color:#66d9ef">print</span>(df_long)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_long <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#34;id&#34;</span>: list(range(<span style="color:#ae81ff">4</span>))<span style="color:#f92672">*</span><span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#34;type&#34;</span>: [<span style="color:#e6db74">&#34;A&#34;</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">4</span> <span style="color:#f92672">+</span> [<span style="color:#e6db74">&#34;B&#34;</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">4</span> <span style="color:#f92672">+</span> [<span style="color:#e6db74">&#34;C&#34;</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#34;value&#34;</span>:range(<span style="color:#ae81ff">12</span>)})
+print(df_long)
 </code></pre></div><pre><code>    id type  value
 0    0    A      0
 1    1    A      1
@@ -684,7 +684,7 @@ dtype: object
 10   2    C     10
 11   3    C     11
 </code></pre>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(df_long<span style="color:#f92672">.</span>pivot(index<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;id&#34;</span>, columns<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;type&#34;</span>, values<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;value&#34;</span>))
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(df_long<span style="color:#f92672">.</span>pivot(index<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;id&#34;</span>, columns<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;type&#34;</span>, values<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;value&#34;</span>))
 </code></pre></div><pre><code>type  A  B   C
 id            
 0     0  4   8
@@ -692,22 +692,22 @@ id
 2     2  6  10
 3     3  7  11
 </code></pre>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(df_long<span style="color:#f92672">.</span>pivot_table(index<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;type&#34;</span>, aggfunc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;min&#34;</span>))
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(df_long<span style="color:#f92672">.</span>pivot_table(index<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;type&#34;</span>, aggfunc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;min&#34;</span>))
 </code></pre></div><pre><code>      id  value
 type           
 A      0      0
 B      0      4
 C      0      8
 </code></pre>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># equivalent groupby+agg</span>
-<span style="color:#66d9ef">print</span>(df_long<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#34;type&#34;</span>)<span style="color:#f92672">.</span>agg({<span style="color:#e6db74">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;min&#34;</span>}))
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># equivalent groupby+agg</span>
+print(df_long<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#34;type&#34;</span>)<span style="color:#f92672">.</span>agg({<span style="color:#e6db74">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;min&#34;</span>}))
 </code></pre></div><pre><code>      value
 type       
 A         0
 B         4
 C         8
 </code></pre>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(df_long<span style="color:#f92672">.</span>set_index([<span style="color:#e6db74">&#34;type&#34;</span>, <span style="color:#e6db74">&#34;id&#34;</span>]))
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(df_long<span style="color:#f92672">.</span>set_index([<span style="color:#e6db74">&#34;type&#34;</span>, <span style="color:#e6db74">&#34;id&#34;</span>]))
 </code></pre></div><pre><code>         value
 type id       
 A    0       0
@@ -723,7 +723,7 @@ C    0       8
      2      10
      3      11
 </code></pre>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(df_long<span style="color:#f92672">.</span>set_index([<span style="color:#e6db74">&#34;type&#34;</span>, <span style="color:#e6db74">&#34;id&#34;</span>])<span style="color:#f92672">.</span>unstack())
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(df_long<span style="color:#f92672">.</span>set_index([<span style="color:#e6db74">&#34;type&#34;</span>, <span style="color:#e6db74">&#34;id&#34;</span>])<span style="color:#f92672">.</span>unstack())
 </code></pre></div><pre><code>     value           
 id       0  1   2   3
 type                 
@@ -731,7 +731,7 @@ A        0  1   2   3
 B        4  5   6   7
 C        8  9  10  11
 </code></pre>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(df_long<span style="color:#f92672">.</span>set_index([<span style="color:#e6db74">&#34;id&#34;</span>, <span style="color:#e6db74">&#34;type&#34;</span>])<span style="color:#f92672">.</span>unstack())
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(df_long<span style="color:#f92672">.</span>set_index([<span style="color:#e6db74">&#34;id&#34;</span>, <span style="color:#e6db74">&#34;type&#34;</span>])<span style="color:#f92672">.</span>unstack())
 </code></pre></div><pre><code>     value       
 type     A  B   C
 id               
@@ -760,11 +760,11 @@ id
 </ul>
 <p>In both cases, you can use multiple assignment to catch each element.</p>
 <p>Another, possibly better, way to do something to each row is through <code>df.apply(fun)</code>. Thus, the manipulation you would do when iterating across rows could be wrapped into a function <code>fun</code> applied to each row. This also allows to apply a function by columns using <code>axis=1</code>. To apply a function to each cell, you can use <code>.applymap(fun)</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> i, (a, b, c, d) <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>iterrows():
-    <span style="color:#66d9ef">print</span>(a, b, c, d)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> i, (a, b, c, d) <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>iterrows():
+    print(a, b, c, d)
 <span style="color:#66d9ef">for</span> i, a, b, c, d <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>itertuples():
-    <span style="color:#66d9ef">print</span>(a, b, c, d)
-<span style="color:#66d9ef">print</span>(df<span style="color:#f92672">.</span>apply(sum, <span style="color:#ae81ff">1</span>))
+    print(a, b, c, d)
+print(df<span style="color:#f92672">.</span>apply(sum, <span style="color:#ae81ff">1</span>))
 </code></pre></div><pre><code>0.0 0 20.0 30.0
 1.0 1 21.0 31.0
 2.0 2 22.0 32.0
@@ -798,14 +798,14 @@ dtype: float64
 <p>To bin numerical variables, you can use <code>pd.cut()</code>.</p>
 <p><strong>Using Scikit-learn</strong></p>
 <p>If you need to scale the data (say to mean 0 and variance 1), I suggest to use the <code>StandardScaler</code> from <code>sklearn</code>. It internally stores the mean and standard deviation used for standardization. Then, if you need to apply the same transformation to another matrix, you can do it easily. Also, if you need to recover the original matrix, you can!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> StandardScaler
-<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> StandardScaler
+<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
 X <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>uniform(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>))
 scaler <span style="color:#f92672">=</span> StandardScaler()<span style="color:#f92672">.</span>fit(X)
-<span style="color:#66d9ef">print</span>(X)
+print(X)
 Xstd <span style="color:#f92672">=</span> scaler<span style="color:#f92672">.</span>transform(X)
-<span style="color:#66d9ef">print</span>(Xstd)
-<span style="color:#66d9ef">print</span>(scaler<span style="color:#f92672">.</span>inverse_transform(Xstd))
+print(Xstd)
+print(scaler<span style="color:#f92672">.</span>inverse_transform(Xstd))
 </code></pre></div><pre><code>[[0.27355506 0.52822275 0.51469633 0.06545488]
  [0.44123359 0.69095683 0.52764392 0.44219493]
  [0.61651989 0.99101129 0.12910797 0.3453753 ]]
@@ -817,13 +817,13 @@ Xstd <span style="color:#f92672">=</span> scaler<span style="color:#f92672">.</s
  [0.61651989 0.99101129 0.12910797 0.3453753 ]]
 </code></pre>
 <p>Typically, categorical data is not encoded using integers. You can always produce a map to integer yourself but you need to keep track of the map. The <code>LabelBinarizer</code> can do that for you! Then, this uniformizes all encoding and ensures you can recover the correct original categories.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelBinarizer
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> LabelBinarizer
 y <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#e6db74">&#34;A&#34;</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">4</span> <span style="color:#f92672">+</span> [<span style="color:#e6db74">&#34;B&#34;</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">6</span>)
-<span style="color:#66d9ef">print</span>(y)
+print(y)
 label_encoder <span style="color:#f92672">=</span> LabelBinarizer(neg_label<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, pos_label<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
 y_01 <span style="color:#f92672">=</span> label_encoder<span style="color:#f92672">.</span>fit_transform(y)
-<span style="color:#66d9ef">print</span>(y_01)
-<span style="color:#66d9ef">print</span>(label_encoder<span style="color:#f92672">.</span>inverse_transform(np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>])))
+print(y_01)
+print(label_encoder<span style="color:#f92672">.</span>inverse_transform(np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>])))
 </code></pre></div><pre><code>['A' 'A' 'A' 'A' 'B' 'B' 'B' 'B' 'B' 'B']
 [[0]
  [0]
@@ -1046,7 +1046,7 @@ y_01 <span style="color:#f92672">=</span> label_encoder<span style="color:#f9267
     
     
     
-    <script src="/ComputingClub/js/academic.min.96cf4c3dc37ea60dbbd03c13a455f1f7.js"></script>
+    <script src="/ComputingClub/js/academic.min.e3cb3c6a637c3ff60a801ec2b623f195.js"></script>
 
     
 

@@ -39,9 +39,9 @@
 &lt;li&gt;&lt;code&gt;index&lt;/code&gt;, &lt;code&gt;index_label&lt;/code&gt; and &lt;code&gt;header&lt;/code&gt; to control the output.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The &lt;code&gt;.to_latex()&lt;/code&gt; method offers a convenient way to export a &lt;code&gt;pandas&lt;/code&gt; DataFrame to LaTeX format. I have found that the column formatting does not work very well sometimes; you can perform the formatting by hand before using &lt;code&gt;to_latex&lt;/code&gt; using commands such as:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;column&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;column&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{:.2f}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format) &lt;span style=&#34;color:#75715e&#34;&gt;# float formatting&lt;/span&gt;
-df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;column&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;column&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{:.2f} %&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format) &lt;span style=&#34;color:#75715e&#34;&gt;# add a percentage sign&lt;/span&gt;
-df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ci&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;lower&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;upper&amp;#34;&lt;/span&gt;]]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(&lt;span style=&#34;color:#66d9ef&#34;&gt;lambda&lt;/span&gt; x: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[{:.2f}, {:.2f}]&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(x[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;lower&amp;#34;&lt;/span&gt;], x[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;upper&amp;#34;&lt;/span&gt;]), axis&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;# to converct CI bounds to an interval&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;column&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;column&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:.2f}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format) &lt;span style=&#34;color:#75715e&#34;&gt;# float formatting&lt;/span&gt;
+df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;column&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;column&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:.2f}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; %&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format) &lt;span style=&#34;color:#75715e&#34;&gt;# add a percentage sign&lt;/span&gt;
+df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ci&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;lower&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;upper&amp;#34;&lt;/span&gt;]]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(&lt;span style=&#34;color:#66d9ef&#34;&gt;lambda&lt;/span&gt; x: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:.2f}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;, &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:.2f}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;]&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(x[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;lower&amp;#34;&lt;/span&gt;], x[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;upper&amp;#34;&lt;/span&gt;]), axis&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;# to converct CI bounds to an interval&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;accessing-values&#34;&gt;Accessing Values&lt;/h2&gt;
 &lt;p&gt;There are multiple ways to access the contents in a &lt;code&gt;pandas&lt;/code&gt; &lt;code&gt;DataFrame&lt;/code&gt; (most also work for &lt;code&gt;Series&lt;/code&gt; as well).&lt;/p&gt;
 &lt;p&gt;Using &lt;code&gt;python&lt;/code&gt; indexing (a &lt;code&gt;DataFrame&lt;/code&gt; behaves as a dictionary of columns):&lt;/p&gt;
@@ -160,9 +160,9 @@ df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ci&amp;#34;&lt;/span&gt;] 
 &lt;li&gt;The method &lt;code&gt;df.stack()&lt;/code&gt;: similar to melt, but less general; puts the original column names into a &lt;code&gt;MultiIndex&lt;/code&gt; rather than new columns;&lt;/li&gt;
 &lt;li&gt;The method &lt;code&gt;df.explode()&lt;/code&gt;: when cells contains lists, this methods expand the dataframe for each element of the list.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; pd
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; pd
 df_wide &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame({&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;: range(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;B&amp;#34;&lt;/span&gt;: range(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C&amp;#34;&lt;/span&gt;: range(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;)}, index&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;list(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;abcde&amp;#34;&lt;/span&gt;))
-&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_wide)
+print(df_wide)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;   A  B   C
 a  0  5  10
 b  1  6  11
@@ -170,7 +170,7 @@ c  2  7  12
 d  3  8  13
 e  4  9  14
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_wide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;, value_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;list(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;BC&amp;#34;&lt;/span&gt;)))
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;print(df_wide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;, value_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;list(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;BC&amp;#34;&lt;/span&gt;)))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;   A variable  value
 0  0        B      5
 1  1        B      6
@@ -183,7 +183,7 @@ e  4  9  14
 8  3        C     13
 9  4        C     14
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_wide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;stack())
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;print(df_wide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;stack())
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;a  A     0
    B     5
    C    10
@@ -201,14 +201,14 @@ e  A     4
    C    14
 dtype: int64
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df_wide &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Series([range(&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;), range(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;), range(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)])
-&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_wide)
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df_wide &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Series([range(&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;), range(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;), range(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)])
+print(df_wide)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;0                         (0, 1, 2)
 1                               (0)
 2    (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
 dtype: object
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_wide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;explode())
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;print(df_wide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;explode())
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;0    0
 0    1
 0    2
@@ -231,8 +231,8 @@ dtype: object
 &lt;li&gt;The method &lt;code&gt;df.pivot_table()&lt;/code&gt; generalizes &lt;code&gt;.pivot&lt;/code&gt; to more complex situations where there may be duplicate entries which have to be aggregated. This is related to performing &lt;code&gt;.groupby()&lt;/code&gt; chained with &lt;code&gt;.agg()&lt;/code&gt;, but may have different output format;&lt;/li&gt;
 &lt;li&gt;The method &lt;code&gt;df.unstack()&lt;/code&gt; pivots a DataFrame using its index (useful for MultiIndex DataFrames mostly).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df_long &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame({&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: list(range(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;))&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;B&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;:range(&lt;span style=&#34;color:#ae81ff&#34;&gt;12&lt;/span&gt;)})
-&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_long)
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df_long &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame({&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: list(range(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;))&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;B&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;:range(&lt;span style=&#34;color:#ae81ff&#34;&gt;12&lt;/span&gt;)})
+print(df_long)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;    id type  value
 0    0    A      0
 1    1    A      1
@@ -247,7 +247,7 @@ dtype: object
 10   2    C     10
 11   3    C     11
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pivot(index&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;, columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;, values&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;))
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;print(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pivot(index&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;, columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;, values&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;type  A  B   C
 id            
 0     0  4   8
@@ -255,22 +255,22 @@ id
 2     2  6  10
 3     3  7  11
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pivot_table(index&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;, aggfunc&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;min&amp;#34;&lt;/span&gt;))
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;print(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pivot_table(index&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;, aggfunc&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;min&amp;#34;&lt;/span&gt;))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;      id  value
 type           
 A      0      0
 B      0      4
 C      0      8
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# equivalent groupby+agg&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;groupby(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;agg({&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;min&amp;#34;&lt;/span&gt;}))
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# equivalent groupby+agg&lt;/span&gt;
+print(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;groupby(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;agg({&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;min&amp;#34;&lt;/span&gt;}))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;      value
 type       
 A         0
 B         4
 C         8
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_index([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;]))
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;print(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_index([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;]))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;         value
 type id       
 A    0       0
@@ -286,7 +286,7 @@ C    0       8
      2      10
      3      11
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_index([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;unstack())
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;print(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_index([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;unstack())
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;     value           
 id       0  1   2   3
 type                 
@@ -294,7 +294,7 @@ A        0  1   2   3
 B        4  5   6   7
 C        8  9  10  11
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_index([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;unstack())
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;print(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_index([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;unstack())
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;     value       
 type     A  B   C
 id               
@@ -323,11 +323,11 @@ id
 &lt;/ul&gt;
 &lt;p&gt;In both cases, you can use multiple assignment to catch each element.&lt;/p&gt;
 &lt;p&gt;Another, possibly better, way to do something to each row is through &lt;code&gt;df.apply(fun)&lt;/code&gt;. Thus, the manipulation you would do when iterating across rows could be wrapped into a function &lt;code&gt;fun&lt;/code&gt; applied to each row. This also allows to apply a function by columns using &lt;code&gt;axis=1&lt;/code&gt;. To apply a function to each cell, you can use &lt;code&gt;.applymap(fun)&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i, (a, b, c, d) &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iterrows():
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(a, b, c, d)
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i, (a, b, c, d) &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iterrows():
+    print(a, b, c, d)
 &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i, a, b, c, d &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;itertuples():
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(a, b, c, d)
-&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(sum, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;))
+    print(a, b, c, d)
+print(df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(sum, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;0.0 0 20.0 30.0
 1.0 1 21.0 31.0
 2.0 2 22.0 32.0
@@ -361,14 +361,14 @@ dtype: float64
 &lt;p&gt;To bin numerical variables, you can use &lt;code&gt;pd.cut()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Using Scikit-learn&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;If you need to scale the data (say to mean 0 and variance 1), I suggest to use the &lt;code&gt;StandardScaler&lt;/code&gt; from &lt;code&gt;sklearn&lt;/code&gt;. It internally stores the mean and standard deviation used for standardization. Then, if you need to apply the same transformation to another matrix, you can do it easily. Also, if you need to recover the original matrix, you can!&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; sklearn.preprocessing &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; StandardScaler
-&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; np
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; sklearn.preprocessing &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; StandardScaler
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; np
 X &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;random&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;uniform(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, (&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;))
 scaler &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; StandardScaler()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fit(X)
-&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(X)
+print(X)
 Xstd &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; scaler&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;transform(X)
-&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(Xstd)
-&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(scaler&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;inverse_transform(Xstd))
+print(Xstd)
+print(scaler&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;inverse_transform(Xstd))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[[0.27355506 0.52822275 0.51469633 0.06545488]
  [0.44123359 0.69095683 0.52764392 0.44219493]
  [0.61651989 0.99101129 0.12910797 0.3453753 ]]
@@ -380,13 +380,13 @@ Xstd &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; scaler&lt;span sty
  [0.61651989 0.99101129 0.12910797 0.3453753 ]]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Typically, categorical data is not encoded using integers. You can always produce a map to integer yourself but you need to keep track of the map. The &lt;code&gt;LabelBinarizer&lt;/code&gt; can do that for you! Then, this uniformizes all encoding and ensures you can recover the correct original categories.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; sklearn.preprocessing &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; LabelBinarizer
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; sklearn.preprocessing &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; LabelBinarizer
 y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;array([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;B&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;)
-&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(y)
+print(y)
 label_encoder &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; LabelBinarizer(neg_label&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, pos_label&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
 y_01 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; label_encoder&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fit_transform(y)
-&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(y_01)
-&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(label_encoder&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;inverse_transform(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;array([&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;])))
+print(y_01)
+print(label_encoder&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;inverse_transform(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;array([&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;])))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[&#39;A&#39; &#39;A&#39; &#39;A&#39; &#39;A&#39; &#39;B&#39; &#39;B&#39; &#39;B&#39; &#39;B&#39; &#39;B&#39; &#39;B&#39;]
 [[0]
  [0]
@@ -895,128 +895,6 @@ y_01 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; label_encoder&lt;s
     </item>
     
     <item>
-      <title>Initialize the website</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/initialize/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/initialize/</guid>
-      <description>&lt;p&gt;This part of the workshop is about creating your website using the Hugo engine and the Academic theme. Most of the following is a summary or reinterpretation of the &lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34;&gt;Academic theme documentation&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;For more details about Hugo itself, see &lt;a href=&#34;https://gohugo.io/getting-started&#34;&gt;Hugo Getting Started&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;prerequsites&#34;&gt;Prerequsites&lt;/h2&gt;
-&lt;p&gt;In order to perform the following manipulations, you will need:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Hugo installed on your machine: see this &lt;a href=&#34;https://gohugo.io/getting-started/installing/&#34;&gt;guide&lt;/a&gt;; ( Windows users: I highly recommend &lt;a href=&#34;https://chocolatey.org/install&#34;&gt;installing Chocolatey&lt;/a&gt; and installing Hugo from command line.)
-&lt;ul&gt;
-&lt;li&gt;Make sure you install the &lt;strong&gt;Extended&lt;/strong&gt; version. In many case the default installation default to the Extended version, but some do not. To verify which one you have, just type &lt;code&gt;hugo version&lt;/code&gt; in a terminal and you should see &lt;code&gt;extended&lt;/code&gt; somewhere in the output.&lt;/li&gt;
-&lt;li&gt;For Windows users, use Chocolatey and install with &lt;code&gt;choco install hugo-extended -force -confirm&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;git installed on your machine (see this &lt;a href=&#34;https://www.atlassian.com/git/tutorials/install-git&#34;&gt;guide&lt;/a&gt;);&lt;/li&gt;
-&lt;li&gt;a &lt;a href=&#34;http://github.com&#34;&gt;GitHub&lt;/a&gt; account.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Markdown&lt;/code&gt; knowledge (see this &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;guide&lt;/a&gt; on writing content in the context of Academic &amp;amp; Hugo).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;initialize-and-first-deploy&#34;&gt;Initialize and first deploy&lt;/h2&gt;
-&lt;p&gt;(Based on &lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-git&#34;&gt;Academic theme documentation: Install with Git&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;The Academic theme is hosted in a &lt;a href=&#34;https://github.com/gcushen/hugo-academic&#34;&gt;GitHub repository&lt;/a&gt;, but we don&amp;rsquo;t want to build the website from scratch.&lt;/p&gt;
-&lt;p&gt;In order to initialize the website with some things already done for us, we&amp;rsquo;ll use the &lt;a href=&#34;https://github.com/sourcethemes/academic-kickstart#fork-destination-box&#34;&gt;Academic kickstart website&lt;/a&gt;. You need to &lt;strong&gt;fork the  repository&lt;/strong&gt; into a repository in your own account. Then, the Academic theme is only linked to the kickstart site we are cloning and we need to keep the dependencies alive.&lt;/p&gt;
-&lt;p&gt;Now that your GitHub account contains the Academic kickstart clone, clone that repository on your local machine:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git clone https://github.com/&amp;lt;your-github-account&amp;gt;/academic-kickstart.git DemoWebsite
-cd DemoWebsite
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;As mentioned, your GitHub repository only contains the link to the Academic theme, so you need to clone recursively:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git submodule update --init --recursive
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now, your &lt;code&gt;DemoWebsite&lt;/code&gt; folder contains all the neccessary to deploy the Academic kickstart website locally. First, we produce the &lt;code&gt;html&lt;/code&gt; files from the &lt;code&gt;Markdown&lt;/code&gt; source: in the &lt;code&gt;DemoWebsite&lt;/code&gt; folder, run&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;At this point, Hugo should have produced the &lt;code&gt;html&lt;/code&gt; files in a new &lt;code&gt;public&lt;/code&gt; subdirectory. Then, in order to view yhte new content as a proper website, you will need to serve the website locally. Fortunately, Hugo has a built-in feature to do that: simply run&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo server
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The output should contain a line like&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;Web Server is available at http://localhost:1313/ &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;bind address 127.0.0.1&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;which means that your new website is now accessible at the local address http://localhost:1313/.&lt;/p&gt;
-&lt;p&gt;Something interesting about &lt;code&gt;hugo server&lt;/code&gt; is that it will rebuild your website anytime you make a change to the &lt;code&gt;DemoWebsite&lt;/code&gt; directory. That is, it runs a &lt;code&gt;FastRender&lt;/code&gt; version of the &lt;code&gt;hugo&lt;/code&gt; command. So, if you make changes to a file, then you can see its effect directly (most web browser have some sort of auto-refresh so you don&amp;rsquo;t have to refresh the page yourselves!) Note that deeper changes (e.g. new pages) won&amp;rsquo;t appear in that &lt;code&gt;FastRender&lt;/code&gt; mode so you will need to exit the server (&lt;code&gt;Ctrl+C&lt;/code&gt;) and restart it (alternatively, you can deactivate the &lt;code&gt;FastRender&lt;/code&gt; mode using &lt;code&gt;hugo server --disableFastRender&lt;/code&gt;).&lt;/p&gt;
-&lt;h2 id=&#34;content-and-first-edits&#34;&gt;Content and first edits&lt;/h2&gt;
-&lt;p&gt;Now that we have successfully deployed the Academic kickstart site, it is time to take a look at the specifics of it. Your &lt;code&gt;DemoWebsite&lt;/code&gt; directory should now contain numerous files and folders. The one of interest to us is the &lt;code&gt;content&lt;/code&gt; folder which, as the name indicates, contains all the content of the website.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;content
-├── authors
-├── home
-├── post
-├── publication
-└── talk
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;authors&#34;&gt;Authors&lt;/h3&gt;
-&lt;p&gt;The &lt;code&gt;authors&lt;/code&gt; subdirectory is used to store the different authors for your website. For now, it should only contains one author named &lt;code&gt;admin&lt;/code&gt;. The &lt;code&gt;index.md&lt;/code&gt; file contained in the &lt;code&gt;admin&lt;/code&gt; folder controls the information about that author. In particular, it controls:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The profile on the homepage if that author is chosen to appear there;&lt;/li&gt;
-&lt;li&gt;The profile appearing with talks, posts and publications of that author.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;To change the information about the &lt;code&gt;admin&lt;/code&gt; author, simply go through the &lt;code&gt;index.md&lt;/code&gt; file and edit it to your needs. It is well documented so it should be clear what everything does.&lt;/p&gt;
-&lt;p&gt;The folder name, here &lt;code&gt;admin&lt;/code&gt;, will be the index used to identify posts, publications and talks to the corresponding author. If you need to add additional authors to your website, simply copy the &lt;code&gt;admin&lt;/code&gt; folder and change its content. The photo associated to the author should lie in the same folder and have name &lt;code&gt;avatar.jpg/.png&lt;/code&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;home&#34;&gt;Home&lt;/h3&gt;
-&lt;p&gt;The &lt;code&gt;home&lt;/code&gt; folder controls what appears on the home page, that is, the first page a user will land on. The way the home page is structures is through &lt;em&gt;page sections&lt;/em&gt; as known as &lt;em&gt;widgets&lt;/em&gt;. On the home page you will see alternating background; each page section is denoted by these alternating background. Thus each file in the &lt;code&gt;home&lt;/code&gt; folder determines one of those page sections.&lt;/p&gt;
-&lt;p&gt;To remove some sections, there are two ways:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Delete the corresponding &lt;code&gt;.md&lt;/code&gt; file;&lt;/li&gt;
-&lt;li&gt;Deactivate the section by setting &lt;code&gt;active = false&lt;/code&gt; in the front matter.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Let us delete the following sections to clean the current home page:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;demo&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;hero&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;people&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;slider&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;tags&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For more details on what each section does, please refer to &lt;a href=&#34;https://sourcethemes.com/academic/docs/page-builder/&#34;&gt;Getting Started with the Page Builder&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;One thing to note is how the section are ordered in the home page. It is done through the &lt;code&gt;weight&lt;/code&gt; parameter in the front matter where the lowest &lt;code&gt;weight&lt;/code&gt; value will appear first.&lt;/p&gt;
-&lt;h3 id=&#34;post-publications-and-talks&#34;&gt;Post, Publications and Talks&lt;/h3&gt;
-&lt;p&gt;Each of these folder will eventually the corresponding content. These folders are structured as follows (here we consider &lt;code&gt;post&lt;/code&gt;) :&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;post
-├── _index.md
-└── MyFirstPost
-    └── index.md
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The root &lt;code&gt;_index.md&lt;/code&gt; defines a landing page are posts are listed. Each subdirectory then defines one post and contains a &lt;code&gt;index.md&lt;/code&gt; which defines the corresponding post.&lt;/p&gt;
-&lt;p&gt;To create new content, use the following command:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo new --kind &amp;lt;post/publication/talk&amp;gt; &amp;lt;folder&amp;gt;/&amp;lt;name-of-content&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For example, to create a new publication with identifier &lt;code&gt;Publication1&lt;/code&gt;, type&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo new --kind publication publication/Publication1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Create a few posts, publications and talks and restart the server since you have now added new pages to the site (&lt;code&gt;Ctrl+c&lt;/code&gt; and &lt;code&gt;hugo server&lt;/code&gt;).&lt;/p&gt;
-&lt;p&gt;For more details and additional features, see &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/&#34;&gt;Managing content&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;courses-workshops-documentation&#34;&gt;Courses, workshops, documentation&lt;/h3&gt;
-&lt;p&gt;The methodology described in &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-a-course-or-documentation&#34;&gt;Managing content | Create a course or documentation &lt;/a&gt; is the best way to proceed.&lt;/p&gt;
-&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;config&lt;/code&gt; folder contains various &lt;code&gt;.toml&lt;/code&gt; files which define site-wide information and parameters.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;config
-└── _default
-    ├── config.toml
-    ├── languages.toml
-    ├── menus.toml
-    └── params.toml
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;All these files are fairly well-documented, so there is no reason to go over them here. One thing I would like to point out is the &lt;code&gt;menus.toml&lt;/code&gt; file. The navigation bar presently links only toward page sections of the home page. If you would like them to point toward, say, &lt;code&gt;post/_index.md&lt;/code&gt; instead of the post section, change the menu entry related to posts :&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;[[&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Posts&amp;#34;&lt;/span&gt;
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;post&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# was &amp;#34;#posts&amp;#34; before&lt;/span&gt;
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;weight&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;rest-of-repository&#34;&gt;Rest of repository&lt;/h2&gt;
-&lt;p&gt;The rest of the &lt;code&gt;DemoWebsite&lt;/code&gt; repository mostly contains file used to generate the website. You should most likely not have to touch them except:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;data&lt;/code&gt;: if you want custom color theme and fonts, you will place them here;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;static&lt;/code&gt;: you can place site-wide files here, such as a custom site icon.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;alternative-workflows&#34;&gt;Alternative workflows&lt;/h2&gt;
-&lt;p&gt;Using an IDE (e.g., RStudio), everything can be done using the interface with limited command line usage:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Fork the &lt;code&gt;academic-kickstart&lt;/code&gt; repo as above;&lt;/li&gt;
-&lt;li&gt;New Project &amp;gt; Version Control &amp;gt; Git &amp;gt; URL to your GitHub repo &amp;gt; Open in New Session;&lt;/li&gt;
-&lt;li&gt;still need to run &lt;code&gt;git submodule update --init --recursive&lt;/code&gt; in the built-in terminal;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git&lt;/code&gt; action can be done with the &lt;code&gt;Git&lt;/code&gt; Tab;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;hugo&lt;/code&gt; command need to be run in the terminal;&lt;/li&gt;
-&lt;li&gt;Look for the &lt;code&gt;R&lt;/code&gt; package &lt;code&gt;blogdown&lt;/code&gt; to do everything in &lt;code&gt;R&lt;/code&gt; console:
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34;&gt;Install with RStudio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;blogdown:::serve_site()&lt;/code&gt; acts as &lt;code&gt;hugo server&lt;/code&gt;;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>LaTeX</title>
       <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/latex/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
@@ -1109,7 +987,7 @@ cd DemoWebsite
 &lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Smoke_testing_(software)&#34;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Smoke testing is a quick and easy way to check if code works.
 If your program can&amp;rsquo;t even run without crashing, there&amp;rsquo;s no point to performing more fine-grained testing procedures.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;sqrt_1 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(x) {
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;sqrt_1 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(x) {
     &lt;span style=&#34;color:#a6e22e&#34;&gt;if &lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) {
         ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; x&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;)
     } else {
@@ -1128,7 +1006,7 @@ sqrt_2 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here is the smoke-test we might right.
 Notice that the output is not checked; we just want to check if there are any errors.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;smoke_test &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(test_input) {
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;smoke_test &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(test_input) {
     &lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(test_input) &lt;span style=&#34;color:#75715e&#34;&gt;# will raise an error&lt;/span&gt;
     &lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_2&lt;/span&gt;(test_input) &lt;span style=&#34;color:#75715e&#34;&gt;# will not raise an error, but is problematic&lt;/span&gt;
 }
@@ -1191,7 +1069,7 @@ Notice that the output is not checked; we just want to check if there are any er
 &lt;li&gt;At the head of the file, add `context(&amp;ldquo;Test sqrt functions&amp;rdquo;) which will yield a more verbose output.&lt;/li&gt;
 &lt;li&gt;Add a first test (note the near-grammarly syntax: the first argument is what we are &lt;em&gt;testing that &lt;code&gt;sqrt_1()&lt;/code&gt; works on positive input&lt;/em&gt;):&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
     &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sqrt_1() works on positive input&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#75715e&#34;&gt;# what we are testing&lt;/span&gt;
     { &lt;span style=&#34;color:#75715e&#34;&gt;# the test itself, using expect statements&lt;/span&gt;
         &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_equal&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;)
@@ -1202,7 +1080,7 @@ Notice that the output is not checked; we just want to check if there are any er
 &lt;li&gt;Run tests again and observe that our function passes all tests so far.&lt;/li&gt;
 &lt;li&gt;Let&amp;rsquo;s add another succeding test, but on an expected non-successfull call:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
     &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sqrt_1 raises an error with negative inputs&amp;#34;&lt;/span&gt;,
     {
         &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_error&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;-1.0&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;non-numeric argument&amp;#34;&lt;/span&gt;)
@@ -1212,7 +1090,7 @@ Notice that the output is not checked; we just want to check if there are any er
 &lt;li&gt;Running all tests should again suceed.&lt;/li&gt;
 &lt;li&gt;Now, let&amp;rsquo;s add a test which fails:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
     &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sqrt_1 returns imaginary numbers for negative inputs&amp;#34;&lt;/span&gt;,
     {
         &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_match&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;-1.0&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1i&amp;#34;&lt;/span&gt;)
@@ -1221,12 +1099,12 @@ Notice that the output is not checked; we just want to check if there are any er
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;unit-testing-in-python-using-the-unittests-package&#34;&gt;Unit Testing in &lt;code&gt;Python&lt;/code&gt; using the &lt;code&gt;unittests&lt;/code&gt; package&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://docs.python.org/3/library/unittest.html&#34;&gt;&lt;code&gt;unittest&lt;/code&gt; documentation&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Create a simple module:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;TestModule/
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;TestModule/
   sqrt.py
   test/
     test_sqrt.py
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;where&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# sqrt.py&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# sqrt.py&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; math
 
 
@@ -1250,11 +1128,11 @@ Notice that the output is not checked; we just want to check if there are any er
 	  unittest&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;main()
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run tests using&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;python -m unittest tests/test_sqrt.py
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;python -m unittest tests/test_sqrt.py
 python -m unittest discover tests
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;discover tests&lt;/code&gt; implies that the &lt;code&gt;unittest&lt;/code&gt; package will search the &lt;code&gt;tests&lt;/code&gt; directory for all tests in there.&lt;/p&gt;
 &lt;p&gt;The basic &lt;code&gt;unittest&lt;/code&gt; package is not well suited to check equality of &lt;code&gt;numpy&lt;/code&gt; arrays. Here&amp;rsquo;s a way to do it:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; np
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; np
 
 
 &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MyTest&lt;/span&gt;(unittest&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;TestCase):
@@ -1264,9 +1142,9 @@ python -m unittest discover tests
                 array1,
                 array2
             )
-            result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; True
+            result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;
         &lt;span style=&#34;color:#66d9ef&#34;&gt;except&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;AssertionError&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; error:
-            result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; False
+            result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt;
         self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;assertTrue(res, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;what happened if the test failed&amp;#34;&lt;/span&gt;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In PyCharm, you can set up automatic testing as follows:&lt;/p&gt;
 &lt;ul&gt;
@@ -1280,36 +1158,36 @@ python -m unittest discover tests
 &lt;h2 id=&#34;unit-testing-in-julia&#34;&gt;Unit Testing in Julia&lt;/h2&gt;
 &lt;p&gt;This &lt;a href=&#34;https://julia.quantecon.org/more_julia/testing.html&#34;&gt;guide&lt;/a&gt; gives a nice, detailed walkthrough on how to set up a package in Julia with tests and integrate it with Travis and Codecov.&lt;/p&gt;
 &lt;p&gt;Julia comes with the &amp;lsquo;Test&amp;rsquo; module built-in which offers basic unit tests.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Julia&#34; data-lang=&#34;Julia&#34;&gt;sqrt_im(x&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Real&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sqrt(complex(x))
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Julia&#34; data-lang=&#34;Julia&#34;&gt;sqrt_im(x&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Real&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sqrt(complex(x))
 
 &lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; Test
 &lt;span style=&#34;color:#75715e&#34;&gt;# Unit tests (check for right value in both cases)&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt_im(&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;)  ≈ &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt_im(&lt;span style=&#34;color:#ae81ff&#34;&gt;5.0&lt;/span&gt;)  ≈ &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt_im(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) ≈ &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;im
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt_im(&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;)  &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt_im(&lt;span style=&#34;color:#ae81ff&#34;&gt;5.0&lt;/span&gt;)  &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt_im(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;im
 
 &lt;span style=&#34;color:#75715e&#34;&gt;# Random input&lt;/span&gt;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; Random
-Z &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; randn(&lt;span style=&#34;color:#66d9ef&#34;&gt;MersenneTwister&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;555&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; (sqrt_im&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;(Z))&lt;span style=&#34;color:#f92672&#34;&gt;.^&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; ≈ Z
+Z &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; randn(MersenneTwister(&lt;span style=&#34;color:#ae81ff&#34;&gt;555&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; (sqrt_im&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;(Z))&lt;span style=&#34;color:#f92672&#34;&gt;.^&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; Z
 
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt(&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) ≈ &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) ≈ &lt;span style=&#34;color:#ae81ff&#34;&gt;1.414213562373095&lt;/span&gt;im
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt(&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.414213562373095&lt;/span&gt;im
 &lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#34;test_broken&amp;#34; lets us mark tests we know give the wrong answer or raise an error&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@test_broken&lt;/span&gt; sqrt(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) ≈ &lt;span style=&#34;color:#ae81ff&#34;&gt;1.414213562373095&lt;/span&gt;im
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@test_broken&lt;/span&gt; sqrt(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.414213562373095&lt;/span&gt;im
 &lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#34;test_broken&amp;#34; will return an Error testing value if the expression passes&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@test_broken&lt;/span&gt; sqrt(&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) ≈ &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@test_broken&lt;/span&gt; sqrt(&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
 
 &lt;span style=&#34;color:#75715e&#34;&gt;# Julia requires a boolean result to pass; for smoke testing this can be alleviated&lt;/span&gt;
 &lt;span style=&#34;color:#75715e&#34;&gt;# by just always returning true&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;begin&lt;/span&gt;
   sqrt_im(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;)
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+  true
 &lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
 
 &lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;begin&lt;/span&gt;
   sqrt(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;)
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+  true
 &lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
@@ -1327,34 +1205,6 @@ Z &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; randn(&lt;span style=
 &lt;li&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain&#34;&gt;10. Git Internals&lt;/a&gt;: a deep understanding of git.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href=&#34;https://ohshitgit.com/&#34;&gt;&lt;strong&gt;Oh Shit, Git!?!&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;http://www.dangitgit.com/&#34;&gt;&lt;strong&gt;Dangit, git!&lt;/strong&gt;&lt;/a&gt;: two go-to resources when encountering git problems.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Deployment on GitHub</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_github/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_github/</guid>
-      <description>&lt;p&gt;Now that you are happy with your local website, it is time to deploy it on the internet. Here is the methodology for GitHub Pages hosting.&lt;/p&gt;
-&lt;h2 id=&#34;a-note-on-the-academic-theme&#34;&gt;A note on the Academic theme&lt;/h2&gt;
-&lt;p&gt;If you build your website using Hugo and the Academic theme, here&amp;rsquo;s how to ensure the static website falls in the correct folder. In the &lt;code&gt;config/_default/config.toml&lt;/code&gt; file change the following line:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;publishDir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;docs&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To ensure links consistency within your website you need to tell Hugo what will be your base URL. In the case of GitHub hosting, change the following line in &lt;code&gt;config/_default/config.toml&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;baseurl &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://your-github-account.github.io/academic-kickstart/&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run &lt;code&gt;hugo&lt;/code&gt; to make your changes effective.&lt;/p&gt;
-&lt;h2 id=&#34;local-version-control&#34;&gt;Local version control&lt;/h2&gt;
-&lt;p&gt;In order to eventually push your website to your GitHub repository, your local files should be staged and committed:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;git add --all
-git commit -m &#39;First deploy&#39;
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;push-your-files-to-your-repository&#34;&gt;Push your files to your repository&lt;/h2&gt;
-&lt;p&gt;Then, you need to send your files to your GitHub repository.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;git push
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;While GitHub only requires the &lt;code&gt;docs&lt;/code&gt; folder to display your website, it is best to push all the content of your website if you want to make changes from other machines.&lt;/p&gt;
-&lt;h2 id=&#34;hosting&#34;&gt;Hosting&lt;/h2&gt;
-&lt;p&gt;At this point, the &lt;code&gt;docs&lt;/code&gt; folder of your repository contains the necessary files to have a functioning website. However, you need to activate the hosting feature of your repository for GitHub to start hosting the contents of &lt;code&gt;docs&lt;/code&gt;. In the &lt;em&gt;Settings&lt;/em&gt; tabs of your repository, scroll down to the &lt;em&gt;GitHub Pages&lt;/em&gt; section. There, use the drop-down menu under &lt;em&gt;Source&lt;/em&gt; to &lt;code&gt;master branch /docs folder&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Wait a few seconds and check out your awesome website!&lt;/p&gt;
-&lt;h2 id=&#34;modifying-your-website&#34;&gt;Modifying your website&lt;/h2&gt;
-&lt;p&gt;You will most likely want to add or edit content to your website. To do this, you only need to alter the &lt;code&gt;docs&lt;/code&gt; folder accordingly to trigger redeployment. Each update may not be instantaneous, so don&amp;rsquo;t worry if it takes a few seconds before your changes become effective.&lt;/p&gt;
 </description>
     </item>
     
@@ -1390,17 +1240,17 @@ git commit -m &#39;First deploy&#39;
 &lt;h3 id=&#34;update-the-local-version&#34;&gt;Update the local version&lt;/h3&gt;
 &lt;p&gt;First, you will need the latest version of the website stored locally on your machine.&lt;/p&gt;
 &lt;p&gt;If you have not cloned the repository yet, do so:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git clone https://github.com/UMichStatistics/ComputingClub.git &amp;lt;new-folder-name&amp;gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git clone https://github.com/UMichStatistics/ComputingClub.git &amp;lt;new-folder-name&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The website relies on the Academic theme for Hugo, so you will to clone that as well. Fortunately, it is included as a submodule of the repository, so you only need to update all submodules (there is only one):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git submodule update &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;--init&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;--recursive&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git submodule update &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;--init&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;--recursive&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you already have cloned the repository, make sure your local version is up to date with the current online version to avoid merge conflicts when pushing. In a command prompt, move to the site local folder and &lt;code&gt;pull&lt;/code&gt; the website (or &lt;code&gt;fetch&lt;/code&gt; and &lt;code&gt;merge&lt;/code&gt;).&lt;/p&gt;
 &lt;h3 id=&#34;create-your-content&#34;&gt;Create your content&lt;/h3&gt;
 &lt;p&gt;Create your specific content by producing the necessary Markdown files and place them in the correct folders. See &lt;a href=&#34;create/&#34;&gt;Creating content&lt;/a&gt; for details on how to do so.&lt;/p&gt;
 &lt;h3 id=&#34;deploy-your-local-website&#34;&gt;Deploy your local website&lt;/h3&gt;
 &lt;p&gt;Now that your local repository contains updated content, it is time to deploy it to your local &lt;code&gt;docs&lt;/code&gt; folder. To do so, open a command prompt and run hugo at the root of the site&amp;rsquo;s local repository and type in:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;which will compile the content into the static &lt;code&gt;html&lt;/code&gt; pages. Unless your code does not compile, you should get an output such as (possibly containing warnings)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;Building sites … WARN 2019/09/24 17:08:23 In the next Hugo version &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;0.58.0&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;Building sites … WARN 2019/09/24 17:08:23 In the next Hugo version &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;0.58.0&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; we will change how $home.Pages behaves. If you want to list all regular pages, replace .Pages or .Data.Pages with .Site.RegularPages in your home page template.
 
                    | EN
 +------------------|----+
@@ -1415,9 +1265,9 @@ git commit -m &#39;First deploy&#39;
 
 Total in &lt;span style=&#34;color:#ae81ff&#34;&gt;265&lt;/span&gt; ms
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This means that Hugo has successfuly deployed your site to the &lt;code&gt;docs&lt;/code&gt; folder. If you wish to view the website, you can host it locally using Hugo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo server
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo server
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;which should yield something like&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;Watching &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; changes in /home/simon/git/ComputingClub/&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;content,data,static,themes&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;Watching &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; changes in /home/simon/git/ComputingClub/&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;content,data,static,themes&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 Watching &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; config changes in /home/simon/git/ComputingClub/config.toml, /home/simon/git/ComputingClub/config/_default
 Environment: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;development&amp;#34;&lt;/span&gt;
 Serving pages from memory
@@ -1428,10 +1278,10 @@ Press Ctrl+C to stop
 &lt;h3 id=&#34;push-your-changes&#34;&gt;Push your changes&lt;/h3&gt;
 &lt;p&gt;Once your are satisfied with your local version, you need to push your changes to the &lt;code&gt;master&lt;/code&gt; branch. In the case your Hugo server is still on, close it and run &lt;code&gt;hugo&lt;/code&gt; one last time to redo the &lt;code&gt;docs&lt;/code&gt; file for the online version, not the local version.&lt;/p&gt;
 &lt;p&gt;Stage and commit your changes:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git add --all
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git add --all
 git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;some description of your changes&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;and finally push to the online repository&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git push
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git push
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
@@ -1449,75 +1299,6 @@ git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;some descriptio
 &lt;p&gt;A bunch of very useful &lt;a href=&#34;https://rstudio.com/resources/cheatsheets/&#34;&gt;R and RStudio cheat sheets&lt;/a&gt;. (&lt;em&gt;Suggested by Drew Yarger&lt;/em&gt;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Deployment on UMich Space</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_umich/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/deploy_umich/</guid>
-      <description>&lt;p&gt;Now that you are happy with your local website, it is time to deploy it on the internet. Here is the methodology for UMich personal space hosting.&lt;/p&gt;
-&lt;p&gt;See &lt;a href=&#34;http://www.umich.edu/~umweb/how-to/homepage.html&#34;&gt;Web Hosting Tutorial from ITS&lt;/a&gt; for more details.&lt;/p&gt;
-&lt;h2 id=&#34;a-note-on-the-academic-theme&#34;&gt;A note on the Academic theme&lt;/h2&gt;
-&lt;p&gt;To ensure links consistency within your website you need to tell Hugo what will be your base URL. In the case of GitHub hosting, change the following line in &lt;code&gt;config/_default/config.toml&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;baseurl &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://www-personal.umich.edu/~uniqname/&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run &lt;code&gt;hugo&lt;/code&gt; to make your changes effective.&lt;/p&gt;
-&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
-&lt;p&gt;First, you will need access to the &lt;a href=&#34;https://mfile.umich.edu/&#34;&gt;MFile&lt;/a&gt; system. There, ensure you have access to your &lt;code&gt;Public/html/&lt;/code&gt; folder which is where we will dump our website.&lt;/p&gt;
-&lt;p&gt;You may need to &lt;a href=&#34;https://mfile.umich.edu/make-webspace/&#34;&gt;use the make-website tool&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;local-version-control&#34;&gt;Local version control&lt;/h2&gt;
-&lt;p&gt;While version control is not necessary for this type of hosting, I highly recommend you do it locally:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;git add -all
-git commit -m &#39;First deploy&#39;
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;deployment-with-scp&#34;&gt;Deployment with SCP&lt;/h2&gt;
-&lt;p&gt;The deployment to your personal space can be done in one command line (should work on any platform, Windows users may require &lt;a href=&#34;https://putty.org/&#34;&gt;PuTTY&lt;/a&gt;):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;scp -r &amp;lt;path-to-local-website&amp;gt;/public/. uniqname@login.itd.umich.edu:Public/html/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You should be prompted to enter your password. SCP (Secure Copy Protocol) can only copy files to and from a remote server. It is sufficient to push your website, but you cannot remove files using that protocol. This line basically copies everything from &lt;code&gt;&amp;lt;path-to-local-website&amp;gt;/public/&lt;/code&gt; (recursively with the &lt;code&gt;-r&lt;/code&gt; option) to your personal space &lt;code&gt;uniqname@login.itd.umich.edu:Public/html/&lt;/code&gt; which is where websites are hosted.&lt;/p&gt;
-&lt;h3 id=&#34;sftp-and-sftp-with-a-gui&#34;&gt;SFTP and SFTP With a GUI&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;sftp&lt;/code&gt; (Secure File Transfer Protocol) offer an interactive session and is therefore more flexible than SCP (see thig &lt;a href=&#34;https://www.jscape.com/blog/using-sftp-on-command-line&#34;&gt;guide&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;Open a terminal in the &lt;code&gt;public&lt;/code&gt; folder of your website (or the one where Hugo produces the &lt;code&gt;html&lt;/code&gt; files). Connection to the remote server is done via&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sftp uniqname@sftp.itd.umich.edu
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You should be prompted to enter your password. You can navigate your personal space usin &lt;code&gt;ls&lt;/code&gt; and &lt;code&gt;cd&lt;/code&gt; as usual. Move to &lt;code&gt;Public/html&lt;/code&gt; and push all the files of &lt;code&gt;public&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sftp&amp;gt; cd Public/html/
-sftp&amp;gt; put -r *
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The same can be done using a FTP client GUI (e.g. WinSCP or FileZilla). The server is called&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sftp.itd.umich.edu
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;with port 22. You should need to input your username and password at some point.&lt;/p&gt;
-&lt;h3 id=&#34;viewing-your-website&#34;&gt;Viewing your website&lt;/h3&gt;
-&lt;p&gt;Your new website will be available at&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;http://www-personal.umich.edu/~uniqname/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;which is also available by symply typing&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;umich.edu/~uniqname/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you are creating a website for some organization, consider getting some space for your organization instead of using your own space: check &lt;a href=&#34;http://www.umich.edu/~umweb/how-to/homepage.html&#34;&gt;this tutorial (Special services section)&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Customization and Resources</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/custom/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/custom/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/&#34;&gt;Academic documentation - Customization&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Website icon&lt;/li&gt;
-&lt;li&gt;Custom color theme&lt;/li&gt;
-&lt;li&gt;Custom fonts&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Troubleshooting</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/troubleshoot/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/hugo_academic/troubleshoot/</guid>
-      <description>&lt;h2 id=&#34;hugo-errors&#34;&gt;Hugo errors&lt;/h2&gt;
-&lt;p&gt;If you encounter the following error:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;Error: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;...\DemoWebsite\config.toml:1:1&amp;#34;&lt;/span&gt;: unmarshal failed: Near line &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;last key parsed &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;: bare keys cannot contain &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or any other error the first time you call a &lt;code&gt;hugo&lt;/code&gt; comment, make sure you have the &lt;strong&gt;Extended&lt;/strong&gt; version of Hugo installed. You can check by typing&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo version
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The output should contain the &lt;code&gt;extended&lt;/code&gt; word somewhere (depends on the OS).&lt;/p&gt;
 </description>
     </item>
     

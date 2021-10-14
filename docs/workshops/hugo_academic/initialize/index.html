@@ -467,21 +467,21 @@ Prerequsites In order to perform the following manipulations, you will need:
 <p>The Academic theme is hosted in a <a href="https://github.com/gcushen/hugo-academic">GitHub repository</a>, but we don&rsquo;t want to build the website from scratch.</p>
 <p>In order to initialize the website with some things already done for us, we&rsquo;ll use the <a href="https://github.com/sourcethemes/academic-kickstart#fork-destination-box">Academic kickstart website</a>. You need to <strong>fork the  repository</strong> into a repository in your own account. Then, the Academic theme is only linked to the kickstart site we are cloning and we need to keep the dependencies alive.</p>
 <p>Now that your GitHub account contains the Academic kickstart clone, clone that repository on your local machine:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/&lt;your-github-account&gt;/academic-kickstart.git DemoWebsite
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/&lt;your-github-account&gt;/academic-kickstart.git DemoWebsite
 cd DemoWebsite
 </code></pre></div><p>As mentioned, your GitHub repository only contains the link to the Academic theme, so you need to clone recursively:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git submodule update --init --recursive
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git submodule update --init --recursive
 </code></pre></div><p>Now, your <code>DemoWebsite</code> folder contains all the neccessary to deploy the Academic kickstart website locally. First, we produce the <code>html</code> files from the <code>Markdown</code> source: in the <code>DemoWebsite</code> folder, run</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo
 </code></pre></div><p>At this point, Hugo should have produced the <code>html</code> files in a new <code>public</code> subdirectory. Then, in order to view yhte new content as a proper website, you will need to serve the website locally. Fortunately, Hugo has a built-in feature to do that: simply run</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo server
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo server
 </code></pre></div><p>The output should contain a line like</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Web Server is available at http://localhost:1313/ <span style="color:#f92672">(</span>bind address 127.0.0.1<span style="color:#f92672">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Web Server is available at http://localhost:1313/ <span style="color:#f92672">(</span>bind address 127.0.0.1<span style="color:#f92672">)</span>
 </code></pre></div><p>which means that your new website is now accessible at the local address http://localhost:1313/.</p>
 <p>Something interesting about <code>hugo server</code> is that it will rebuild your website anytime you make a change to the <code>DemoWebsite</code> directory. That is, it runs a <code>FastRender</code> version of the <code>hugo</code> command. So, if you make changes to a file, then you can see its effect directly (most web browser have some sort of auto-refresh so you don&rsquo;t have to refresh the page yourselves!) Note that deeper changes (e.g. new pages) won&rsquo;t appear in that <code>FastRender</code> mode so you will need to exit the server (<code>Ctrl+C</code>) and restart it (alternatively, you can deactivate the <code>FastRender</code> mode using <code>hugo server --disableFastRender</code>).</p>
 <h2 id="content-and-first-edits">Content and first edits</h2>
 <p>Now that we have successfully deployed the Academic kickstart site, it is time to take a look at the specifics of it. Your <code>DemoWebsite</code> directory should now contain numerous files and folders. The one of interest to us is the <code>content</code> folder which, as the name indicates, contains all the content of the website.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">content
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">content
 ├── authors
 ├── home
 ├── post
@@ -514,29 +514,29 @@ cd DemoWebsite
 <p>One thing to note is how the section are ordered in the home page. It is done through the <code>weight</code> parameter in the front matter where the lowest <code>weight</code> value will appear first.</p>
 <h3 id="post-publications-and-talks">Post, Publications and Talks</h3>
 <p>Each of these folder will eventually the corresponding content. These folders are structured as follows (here we consider <code>post</code>) :</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">post
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">post
 ├── _index.md
 └── MyFirstPost
     └── index.md
 </code></pre></div><p>The root <code>_index.md</code> defines a landing page are posts are listed. Each subdirectory then defines one post and contains a <code>index.md</code> which defines the corresponding post.</p>
 <p>To create new content, use the following command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo new --kind &lt;post/publication/talk&gt; &lt;folder&gt;/&lt;name-of-content&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo new --kind &lt;post/publication/talk&gt; &lt;folder&gt;/&lt;name-of-content&gt;
 </code></pre></div><p>For example, to create a new publication with identifier <code>Publication1</code>, type</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo new --kind publication publication/Publication1
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo new --kind publication publication/Publication1
 </code></pre></div><p>Create a few posts, publications and talks and restart the server since you have now added new pages to the site (<code>Ctrl+c</code> and <code>hugo server</code>).</p>
 <p>For more details and additional features, see <a href="https://sourcethemes.com/academic/docs/managing-content/">Managing content</a>.</p>
 <h3 id="courses-workshops-documentation">Courses, workshops, documentation</h3>
 <p>The methodology described in <a href="https://sourcethemes.com/academic/docs/managing-content/#create-a-course-or-documentation">Managing content | Create a course or documentation </a> is the best way to proceed.</p>
 <h2 id="configuration">Configuration</h2>
 <p>The <code>config</code> folder contains various <code>.toml</code> files which define site-wide information and parameters.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">config
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">config
 └── _default
     ├── config.toml
     ├── languages.toml
     ├── menus.toml
     └── params.toml
 </code></pre></div><p>All these files are fairly well-documented, so there is no reason to go over them here. One thing I would like to point out is the <code>menus.toml</code> file. The navigation bar presently links only toward page sections of the home page. If you would like them to point toward, say, <code>post/_index.md</code> instead of the post section, change the menu entry related to posts :</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[<span style="color:#a6e22e">main</span>]]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[<span style="color:#a6e22e">main</span>]]
   <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Posts&#34;</span>
   <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;post&#34;</span> <span style="color:#75715e"># was &#34;#posts&#34; before</span>
   <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">20</span>
@@ -765,7 +765,7 @@ cd DemoWebsite
     
     
     
-    <script src="/ComputingClub/js/academic.min.96cf4c3dc37ea60dbbd03c13a455f1f7.js"></script>
+    <script src="/ComputingClub/js/academic.min.e3cb3c6a637c3ff60a801ec2b623f195.js"></script>
 
     
 
