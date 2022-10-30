@@ -11,11 +11,11 @@ authors:
 superuser: false
 
 # Role/position
-role: Site maintainer
+role: 
 
 # Organizations/Affiliations
 organizations:
-- name: University of Michigan
+- name: Department of Statistics, University of Michigan
   url: "https://lsa.umich.edu/stats"
 
 # Short bio (displayed in user profile at end of posts)
@@ -45,7 +45,7 @@ email: ""
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.  
 user_groups:
-- Computing club
+- UMSBCC Organizers
 ---
 
 # About me 

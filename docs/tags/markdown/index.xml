@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Markdown | UM Statistics Computing Club</title>
+    <title>Markdown | UMSBCC</title>
     <link>https://UMichStatistics.github.io/ComputingClub/tags/markdown/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     <description>Markdown</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 UM Statistics PhD Student Council Computing Committee</copyright><lastBuildDate>Wed, 09 Oct 2019 14:30:00 -0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2022 UM Statistics &amp; Biostatistics Computing Club</copyright><lastBuildDate>Wed, 09 Oct 2019 14:30:00 -0200</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Markdown</title>

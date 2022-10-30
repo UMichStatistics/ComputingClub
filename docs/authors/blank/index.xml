@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>YOUR-NAME-HERE | UM Statistics Computing Club</title>
+    <title>YOUR-NAME-HERE | UMSBCC</title>
     <link>https://UMichStatistics.github.io/ComputingClub/authors/blank/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/blank/index.xml" rel="self" type="application/rss+xml" />
     <description>YOUR-NAME-HERE</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 UM Statistics PhD Student Council Computing Committee</copyright>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2022 UM Statistics &amp; Biostatistics Computing Club</copyright>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>YOUR-NAME-HERE</title>

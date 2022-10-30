@@ -1,9 +1,9 @@
 {
-  "name": "UM Statistics Computing Club",
-  "short_name": "UM Statistics Computing Club",
+  "name": "UMSBCC",
+  "short_name": "UMSBCC",
   "lang": "en-us",
-  "theme_color": "hsl(48, 100%, 51%)",
-  "background_color": "hsl(48, 100%, 51%)",
+  "theme_color": "#FD971F",
+  "background_color": "#FD971F",
   "icons": [{
     "src": "../img/icon-192.png",
     "sizes": "192x192",

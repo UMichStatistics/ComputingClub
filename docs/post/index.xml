@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts | UM Statistics Computing Club</title>
+    <title>Posts | UMSBCC</title>
     <link>https://UMichStatistics.github.io/ComputingClub/post/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 UM Statistics PhD Student Council Computing Committee</copyright>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2022 UM Statistics &amp; Biostatistics Computing Club</copyright>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Posts</title>
       <link>https://UMichStatistics.github.io/ComputingClub/post/</link>
     </image>
+    
+    <item>
+      <title>Biostatistics Expansion &amp; Slack Workspace</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/post/2023/</link>
+      <pubDate>Tue, 25 Oct 2022 10:06:16 -0400</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/post/2023/</guid>
+      <description>&lt;p&gt;The Computing Club is proud to announce its expansion to the Biostatistcs department! The Club will now hold joint meetings with PhD students from both the Statistics &amp;amp; Biostatistics department. With this change, we hope to draw even more students to share their computing knowledge. We would like to use this opportunity to welcome &lt;a href=&#34;https://benbren.github.io/cv/&#34;&gt;Ben Brennan&lt;/a&gt;, who will join the organizing committee!&lt;/p&gt;
+&lt;p&gt;The Club meetings will start back with the 2023 Winter semester. Until then, we invite you to join the &lt;a href=&#34;https://mcommunity.umich.edu/#group:Computing%20Club&#34;&gt;Mcommunity&lt;/a&gt; which will automatically add you the our new &lt;strong&gt;Slack workspace&lt;/strong&gt;. This new workspace is primarily a platform for students to ask for computing help and share things with each other.&lt;/p&gt;
+&lt;p&gt;We will soon send an &lt;strong&gt;invitation to present&lt;/strong&gt; to gather a list of potential presenters and topics!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Welcome to the Computing club&#39;s new website</title>

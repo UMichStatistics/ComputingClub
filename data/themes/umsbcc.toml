@@ -1,0 +1,24 @@
+# Theme metadata
+name = "umsbcc"
+
+# Is theme light or dark?
+light = false
+
+# Primary
+primary = "#FD971F"
+primary_light = "#FD971F"
+primary_dark = "#FD971F"
+
+# Menu
+menu_primary = "#FD971F"
+menu_text = "#F8F8F2"
+menu_text_active = "#F8F8F2"
+menu_title = "#F8F8F2"
+
+# Home sections
+home_section_odd = "#3e3d32"
+home_section_even = "#272822"
+
+# Links
+link = "#FD971F"
+link_hover = "#FD971F"

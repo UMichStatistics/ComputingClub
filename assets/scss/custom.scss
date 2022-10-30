@@ -2,15 +2,37 @@
  *  Dark themed components
  **************************************************/
 
-body.dark,
+body.dark{
+  color: #F8F8F2;
+  background: #272822;
+}
+
 .dark .docs-toc-link,
 .dark .docs-sidebar .nav > li:not(.active) > a,
 .dark .modal button.close,
 .dark input,
 .dark .form-control,
-.dark .form-control:focus {
-  color: rgb(248, 248, 242);
-  background: hsl(209, 100%, 15%);// footer color is here
+.dark .form-control:focus,
+.dark footer p{
+  color: #e6db74;
+  background: #272822;
 }
 
 
+.dark .media.stream-item .article-style {
+  color: #e6db74;
+}
+
+
+.dark h1, .dark h2 {
+  color: #F8F8F2;
+}
+
+.wg-hero.dark .hero-title {
+  color: #FD971F;
+}
+
+.dark code{
+  color: #66d9ef;
+  background: none;
+}
