@@ -8,7 +8,6 @@ active = true  # Activate this widget? true/false
 weight = 9  # Order that this section will appear.
 
 title = "Upcoming Meetings"
-subtitle = "Winter 2023 Schedule to come"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
@@ -25,7 +24,7 @@ subtitle = "Winter 2023 Schedule to come"
 
   # Filter posts by a taxonomy term.
   [content.filters]
-    tag = ""
+    tag = "upcoming"
     category = ""
     publication_type = ""
     exclude_featured = false
@@ -67,3 +66,7 @@ subtitle = "Winter 2023 Schedule to come"
  # CSS class.
  css_class = ""
 +++
+
+## Winter 2023 Schedule to come
+
+[Submit your presentation & presentation ideas](https://forms.gle/ep7gRYSLsXeyuNZv9)

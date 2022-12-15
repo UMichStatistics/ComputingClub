@@ -29,8 +29,8 @@ hero_media = "logo@2x.png"
   icon = "slack"
   
 [cta_alt]
-  url = "https://forms.gle/AXYBgxeHfh9wYoYQA"
-  label = "Submit your presentation"
+  url = "https://forms.gle/ep7gRYSLsXeyuNZv9"
+  label = "Submit your presentation & presentation ideas"
   icon_pack = "fa"
   icon = "file-signature"
   
