@@ -184,7 +184,7 @@ sqrt_1 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;-
     
     
     
-      <a class="navbar-brand" href="/ComputingClub/">UMSBCC</a>
+      <a class="navbar-brand" href="/">UMSBCC</a>
     
 
     
@@ -461,34 +461,34 @@ sqrt_1 &lt;- function(x) { if (x &gt;= 0) { ret &lt;- x^(0.5) } else { ret &lt;-
 <p><a href="https://en.wikipedia.org/wiki/Smoke_testing_(software)">Wikipedia</a></p>
 <p>Smoke testing is a quick and easy way to check if code works.
 If your program can&rsquo;t even run without crashing, there&rsquo;s no point to performing more fine-grained testing procedures.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">sqrt_1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(x) {
-    <span style="color:#a6e22e">if </span>(x <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>) {
-        ret <span style="color:#f92672">&lt;-</span> x<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">0.5</span>)
-    } else {
-        ret <span style="color:#f92672">&lt;-</span> (<span style="color:#f92672">-</span>x)<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">0.5</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;i&#34;</span>
-    }
-    <span style="color:#a6e22e">return</span>(ret)
-}
-
-sqrt_2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(x) {
-    <span style="color:#a6e22e">if </span>(x <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>) {
-        ret <span style="color:#f92672">&lt;-</span> x<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">0.5</span>)
-    } else {
-        ret <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">paste0</span>((<span style="color:#f92672">-</span>x)<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">0.5</span>), <span style="color:#e6db74">&#34;i&#34;</span>)
-    }
-    <span style="color:#a6e22e">return</span>(ret)
-}
-</code></pre></div><p>Here is the smoke-test we might right.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>sqrt_1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(x) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">if </span>(x <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>        ret <span style="color:#f92672">&lt;-</span> x<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>    } else {
+</span></span><span style="display:flex;"><span>        ret <span style="color:#f92672">&lt;-</span> (<span style="color:#f92672">-</span>x)<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">0.5</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;i&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">return</span>(ret)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sqrt_2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(x) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">if </span>(x <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>        ret <span style="color:#f92672">&lt;-</span> x<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>    } else {
+</span></span><span style="display:flex;"><span>        ret <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">paste0</span>((<span style="color:#f92672">-</span>x)<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">0.5</span>), <span style="color:#e6db74">&#34;i&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">return</span>(ret)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Here is the smoke-test we might right.
 Notice that the output is not checked; we just want to check if there are any errors.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">smoke_test <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(test_input) {
-    <span style="color:#a6e22e">sqrt_1</span>(test_input) <span style="color:#75715e"># will raise an error</span>
-    <span style="color:#a6e22e">sqrt_2</span>(test_input) <span style="color:#75715e"># will not raise an error, but is problematic</span>
-}
-
-<span style="color:#a6e22e">smoke_test</span>(<span style="color:#ae81ff">2</span>)
-<span style="color:#a6e22e">smoke_test</span>(<span style="color:#ae81ff">3.14</span>)
-<span style="color:#a6e22e">smoke_test</span>(<span style="color:#ae81ff">-2</span>)
-</code></pre></div><h2 id="the-unit-testing-paradigm">The Unit Testing paradigm</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>smoke_test <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(test_input) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">sqrt_1</span>(test_input) <span style="color:#75715e"># will raise an error</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">sqrt_2</span>(test_input) <span style="color:#75715e"># will not raise an error, but is problematic</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">smoke_test</span>(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">smoke_test</span>(<span style="color:#ae81ff">3.14</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">smoke_test</span>(<span style="color:#ae81ff">-2</span>)
+</span></span></code></pre></div><h2 id="the-unit-testing-paradigm">The Unit Testing paradigm</h2>
 <p><a href="https://en.wikipedia.org/wiki/Test-driven_development">Test-driven development</a></p>
 <h3 id="optimal-workflow-with-an-example">Optimal workflow with an example</h3>
 <p>We want to implement a square root function with the following behaviour:</p>
@@ -543,34 +543,34 @@ Notice that the output is not checked; we just want to check if there are any er
 <li>At the head of the file, add `context(&ldquo;Test sqrt functions&rdquo;) which will yield a more verbose output.</li>
 <li>Add a first test (note the near-grammarly syntax: the first argument is what we are <em>testing that <code>sqrt_1()</code> works on positive input</em>):</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">test_that</span>(
-    <span style="color:#e6db74">&#34;sqrt_1() works on positive input&#34;</span>, <span style="color:#75715e"># what we are testing</span>
-    { <span style="color:#75715e"># the test itself, using expect statements</span>
-        <span style="color:#a6e22e">expect_equal</span>(<span style="color:#a6e22e">sqrt_1</span>(<span style="color:#ae81ff">1.0</span>), <span style="color:#ae81ff">1.0</span>)
-        <span style="color:#a6e22e">expect_equal</span>(<span style="color:#a6e22e">sqrt_1</span>(<span style="color:#ae81ff">0.0</span>), <span style="color:#ae81ff">0.0</span>)
-    }
-)
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">test_that</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;sqrt_1() works on positive input&#34;</span>, <span style="color:#75715e"># what we are testing</span>
+</span></span><span style="display:flex;"><span>    { <span style="color:#75715e"># the test itself, using expect statements</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">expect_equal</span>(<span style="color:#a6e22e">sqrt_1</span>(<span style="color:#ae81ff">1.0</span>), <span style="color:#ae81ff">1.0</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">expect_equal</span>(<span style="color:#a6e22e">sqrt_1</span>(<span style="color:#ae81ff">0.0</span>), <span style="color:#ae81ff">0.0</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><ul>
 <li>Run tests again and observe that our function passes all tests so far.</li>
 <li>Let&rsquo;s add another succeding test, but on an expected non-successfull call:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">test_that</span>(
-    <span style="color:#e6db74">&#34;sqrt_1 raises an error with negative inputs&#34;</span>,
-    {
-        <span style="color:#a6e22e">expect_error</span>(<span style="color:#a6e22e">sqrt_1</span>(<span style="color:#ae81ff">-1.0</span>), <span style="color:#e6db74">&#34;non-numeric argument&#34;</span>)
-    }
-)
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">test_that</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;sqrt_1 raises an error with negative inputs&#34;</span>,
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">expect_error</span>(<span style="color:#a6e22e">sqrt_1</span>(<span style="color:#ae81ff">-1.0</span>), <span style="color:#e6db74">&#34;non-numeric argument&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><ul>
 <li>Running all tests should again suceed.</li>
 <li>Now, let&rsquo;s add a test which fails:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">test_that</span>(
-    <span style="color:#e6db74">&#34;sqrt_1 returns imaginary numbers for negative inputs&#34;</span>,
-    {
-        <span style="color:#a6e22e">expect_match</span>(<span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">-1.0</span>), <span style="color:#e6db74">&#34;1i&#34;</span>)
-    }
-)
-</code></pre></div><h2 id="unit-testing-in-python-using-the-unittests-package">Unit Testing in <code>Python</code> using the <code>unittests</code> package</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">test_that</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;sqrt_1 returns imaginary numbers for negative inputs&#34;</span>,
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">expect_match</span>(<span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">-1.0</span>), <span style="color:#e6db74">&#34;1i&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h2 id="unit-testing-in-python-using-the-unittests-package">Unit Testing in <code>Python</code> using the <code>unittests</code> package</h2>
 <p><a href="https://docs.python.org/3/library/unittest.html"><code>unittest</code> documentation</a></p>
 <p>Create a simple module:</p>
 <pre tabindex="0"><code>TestModule/
@@ -578,49 +578,48 @@ Notice that the output is not checked; we just want to check if there are any er
   test/
     test_sqrt.py
 </code></pre><p>where</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># sqrt.py</span>
-<span style="color:#f92672">import</span> math
-
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sqrt</span>(x):
-	  <span style="color:#66d9ef">return</span> math<span style="color:#f92672">.</span>sqrt(x)
-<span style="color:#75715e"># test_sqrt.py</span>
-<span style="color:#f92672">import</span> unittest
-<span style="color:#f92672">import</span> sqrt
-
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyTestCase</span>(unittest<span style="color:#f92672">.</span>TestCase):
-	  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_something</span>(self):
-		  self<span style="color:#f92672">.</span>assertEqual(
-		      sqrt<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">1.0</span>), 
-		      <span style="color:#ae81ff">1.0</span>,
-		      <span style="color:#e6db74">&#34;what happened if the test failed&#34;</span>
-		  )
-
-
-<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
-	  unittest<span style="color:#f92672">.</span>main()
-
-</code></pre></div><p>Run tests using</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#75715e"># sqrt.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> math
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sqrt</span>(x):
+</span></span><span style="display:flex;"><span>	  <span style="color:#66d9ef">return</span> math<span style="color:#f92672">.</span>sqrt(x)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># test_sqrt.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> unittest
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> sqrt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyTestCase</span>(unittest<span style="color:#f92672">.</span>TestCase):
+</span></span><span style="display:flex;"><span>	  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_something</span>(self):
+</span></span><span style="display:flex;"><span>		  self<span style="color:#f92672">.</span>assertEqual(
+</span></span><span style="display:flex;"><span>		      sqrt<span style="color:#f92672">.</span>sqrt(<span style="color:#ae81ff">1.0</span>), 
+</span></span><span style="display:flex;"><span>		      <span style="color:#ae81ff">1.0</span>,
+</span></span><span style="display:flex;"><span>		      <span style="color:#e6db74">&#34;what happened if the test failed&#34;</span>
+</span></span><span style="display:flex;"><span>		  )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>	  unittest<span style="color:#f92672">.</span>main()
+</span></span></code></pre></div><p>Run tests using</p>
 <pre tabindex="0"><code>python -m unittest tests/test_sqrt.py
 python -m unittest discover tests
 </code></pre><p>The <code>discover tests</code> implies that the <code>unittest</code> package will search the <code>tests</code> directory for all tests in there.</p>
 <p>The basic <code>unittest</code> package is not well suited to check equality of <code>numpy</code> arrays. Here&rsquo;s a way to do it:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
-
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyTest</span>(unittest<span style="color:#f92672">.</span>TestCase):
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">numpy_test_case</span>(self):
-        <span style="color:#66d9ef">try</span>:
-            np<span style="color:#f92672">.</span>testing<span style="color:#f92672">.</span>asser_array_almost_equal(
-                array1,
-                array2
-            )
-            result <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
-        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">AssertionError</span> <span style="color:#66d9ef">as</span> error:
-            result <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
-        self<span style="color:#f92672">.</span>assertTrue(res, <span style="color:#e6db74">&#34;what happened if the test failed&#34;</span>)
-</code></pre></div><p>In PyCharm, you can set up automatic testing as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyTest</span>(unittest<span style="color:#f92672">.</span>TestCase):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">numpy_test_case</span>(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            np<span style="color:#f92672">.</span>testing<span style="color:#f92672">.</span>asser_array_almost_equal(
+</span></span><span style="display:flex;"><span>                array1,
+</span></span><span style="display:flex;"><span>                array2
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>            result <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">AssertionError</span> <span style="color:#66d9ef">as</span> error:
+</span></span><span style="display:flex;"><span>            result <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>assertTrue(res, <span style="color:#e6db74">&#34;what happened if the test failed&#34;</span>)
+</span></span></code></pre></div><p>In PyCharm, you can set up automatic testing as follows:</p>
 <ul>
 <li><code>File</code> &gt; <code>Settings</code> &gt; <code>Tools</code> &gt; <code>Python Integrated Tools</code></li>
 <li>Select <code>Unittests</code> under <code>Testing</code></li>
@@ -632,39 +631,38 @@ python -m unittest discover tests
 <h2 id="unit-testing-in-julia">Unit Testing in Julia</h2>
 <p>This <a href="https://julia.quantecon.org/more_julia/testing.html">guide</a> gives a nice, detailed walkthrough on how to set up a package in Julia with tests and integrate it with Travis and Codecov.</p>
 <p>Julia comes with the &lsquo;Test&rsquo; module built-in which offers basic unit tests.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Julia" data-lang="Julia">sqrt_im(x<span style="color:#f92672">::</span><span style="color:#66d9ef">Real</span>) <span style="color:#f92672">=</span> sqrt(complex(x))
-
-<span style="color:#66d9ef">using</span> Test
-<span style="color:#75715e"># Unit tests (check for right value in both cases)</span>
-<span style="color:#a6e22e">@test</span> sqrt_im(<span style="color:#ae81ff">2.0</span>)  <span style="color:#f92672">≈</span> <span style="color:#ae81ff">1.4142135623730951</span>
-<span style="color:#a6e22e">@test</span> sqrt_im(<span style="color:#ae81ff">5.0</span>)  <span style="color:#f92672">≈</span> <span style="color:#ae81ff">1.4142135623730951</span>
-<span style="color:#a6e22e">@test</span> sqrt_im(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>) <span style="color:#f92672">≈</span> <span style="color:#ae81ff">1.4142135623730951</span>im
-
-<span style="color:#75715e"># Random input</span>
-<span style="color:#66d9ef">using</span> Random
-Z <span style="color:#f92672">=</span> randn(MersenneTwister(<span style="color:#ae81ff">555</span>), <span style="color:#ae81ff">10</span>)
-<span style="color:#a6e22e">@test</span> (sqrt_im<span style="color:#f92672">.</span>(Z))<span style="color:#f92672">.^</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">≈</span> Z
-
-<span style="color:#a6e22e">@test</span> sqrt(<span style="color:#ae81ff">2.0</span>) <span style="color:#f92672">≈</span> <span style="color:#ae81ff">1.4142135623730951</span>
-<span style="color:#a6e22e">@test</span> sqrt(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>) <span style="color:#f92672">≈</span> <span style="color:#ae81ff">1.414213562373095</span>im
-<span style="color:#75715e"># &#34;test_broken&#34; lets us mark tests we know give the wrong answer or raise an error</span>
-<span style="color:#a6e22e">@test_broken</span> sqrt(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>) <span style="color:#f92672">≈</span> <span style="color:#ae81ff">1.414213562373095</span>im
-<span style="color:#75715e"># &#34;test_broken&#34; will return an Error testing value if the expression passes</span>
-<span style="color:#a6e22e">@test_broken</span> sqrt(<span style="color:#ae81ff">2.0</span>) <span style="color:#f92672">≈</span> <span style="color:#ae81ff">1.4142135623730951</span>
-
-<span style="color:#75715e"># Julia requires a boolean result to pass; for smoke testing this can be alleviated</span>
-<span style="color:#75715e"># by just always returning true</span>
-<span style="color:#a6e22e">@test</span> <span style="color:#66d9ef">begin</span>
-  sqrt_im(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>)
-  true
-<span style="color:#66d9ef">end</span>
-
-<span style="color:#a6e22e">@test</span> <span style="color:#66d9ef">begin</span>
-  sqrt(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>)
-  true
-<span style="color:#66d9ef">end</span>
-
-</code></pre></div><h2 id="resources">Resources</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Julia" data-lang="Julia"><span style="display:flex;"><span>sqrt_im(x<span style="color:#f92672">::</span><span style="color:#66d9ef">Real</span>) <span style="color:#f92672">=</span> sqrt(complex(x))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Test
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Unit tests (check for right value in both cases)</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@test</span> sqrt_im(<span style="color:#ae81ff">2.0</span>)  <span style="color:#f92672">≈</span> <span style="color:#ae81ff">1.4142135623730951</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@test</span> sqrt_im(<span style="color:#ae81ff">5.0</span>)  <span style="color:#f92672">≈</span> <span style="color:#ae81ff">1.4142135623730951</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@test</span> sqrt_im(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>) <span style="color:#f92672">≈</span> <span style="color:#ae81ff">1.4142135623730951</span>im
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Random input</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Random
+</span></span><span style="display:flex;"><span>Z <span style="color:#f92672">=</span> randn(MersenneTwister(<span style="color:#ae81ff">555</span>), <span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@test</span> (sqrt_im<span style="color:#f92672">.</span>(Z))<span style="color:#f92672">.^</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">≈</span> Z
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@test</span> sqrt(<span style="color:#ae81ff">2.0</span>) <span style="color:#f92672">≈</span> <span style="color:#ae81ff">1.4142135623730951</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@test</span> sqrt(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>) <span style="color:#f92672">≈</span> <span style="color:#ae81ff">1.414213562373095</span>im
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &#34;test_broken&#34; lets us mark tests we know give the wrong answer or raise an error</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@test_broken</span> sqrt(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>) <span style="color:#f92672">≈</span> <span style="color:#ae81ff">1.414213562373095</span>im
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &#34;test_broken&#34; will return an Error testing value if the expression passes</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@test_broken</span> sqrt(<span style="color:#ae81ff">2.0</span>) <span style="color:#f92672">≈</span> <span style="color:#ae81ff">1.4142135623730951</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Julia requires a boolean result to pass; for smoke testing this can be alleviated</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># by just always returning true</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@test</span> <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>  sqrt_im(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>)
+</span></span><span style="display:flex;"><span>  true
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@test</span> <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>  sqrt(<span style="color:#f92672">-</span><span style="color:#ae81ff">2.0</span>)
+</span></span><span style="display:flex;"><span>  true
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><h2 id="resources">Resources</h2>
 
           </div>
 
@@ -715,7 +713,7 @@ Z <span style="color:#f92672">=</span> randn(MersenneTwister(<span style="color:
   
 
   <p class="powered-by">
-    © 2022 UM Statistics &amp; Biostatistics Computing Club &middot; 
+    © 2023 UM Statistics &amp; Biostatistics Computing Club &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
@@ -786,7 +784,7 @@ Z <span style="color:#f92672">=</span> randn(MersenneTwister(<span style="color:
     
     
     <script>
-      const search_config = {"indexURI":"/ComputingClub/index.json","minLength":1,"threshold":0.3};
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
       const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
       const content_type = {
         'post': "Posts",
@@ -846,7 +844,7 @@ Z <span style="color:#f92672">=</span> randn(MersenneTwister(<span style="color:
     
     
     
-    <script src="/ComputingClub/js/academic.min.e3cb3c6a637c3ff60a801ec2b623f195.js"></script>
+    <script src="/ComputingClub/js/academic.min.a7ec7199c7a8e70f60d22e5d30c42fea.js"></script>
 
     
 

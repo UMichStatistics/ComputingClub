@@ -2,7 +2,7 @@
 # A Recent and Upcoming Talks section created with the Pages widget.
 # This section displays recent talks from `content/talk/`.
 
-widget = "featured"  # See https://sourcethemes.com/academic/docs/page-builder/
+widget = "pages"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 9  # Order that this section will appear.
@@ -14,7 +14,7 @@ title = "Upcoming Meetings"
   page_type = "talk"
   
   # Choose how much pages you would like to display (0 = all pages)
-  count = 20
+  count = 0
   
   # Choose how many pages you would like to offset by
   offset = 0
@@ -24,7 +24,7 @@ title = "Upcoming Meetings"
 
   # Filter posts by a taxonomy term.
   [content.filters]
-    tag = "upcoming"
+    tag = ""
     category = ""
     publication_type = ""
     exclude_featured = false
@@ -66,7 +66,3 @@ title = "Upcoming Meetings"
  # CSS class.
  css_class = ""
 +++
-
-## Winter 2023 Schedule to come
-
-[Submit your presentation & presentation ideas](https://forms.gle/ep7gRYSLsXeyuNZv9)

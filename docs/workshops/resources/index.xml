@@ -5,7 +5,7 @@
     <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/workshops/resources/index.xml" rel="self" type="application/rss+xml" />
     <description>Resources</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2022 UM Statistics &amp; Biostatistics Computing Club</copyright><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2023 UM Statistics &amp; Biostatistics Computing Club</copyright><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Resources</title>
@@ -39,10 +39,10 @@
 &lt;li&gt;&lt;code&gt;index&lt;/code&gt;, &lt;code&gt;index_label&lt;/code&gt; and &lt;code&gt;header&lt;/code&gt; to control the output.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The &lt;code&gt;.to_latex()&lt;/code&gt; method offers a convenient way to export a &lt;code&gt;pandas&lt;/code&gt; DataFrame to LaTeX format. I have found that the column formatting does not work very well sometimes; you can perform the formatting by hand before using &lt;code&gt;to_latex&lt;/code&gt; using commands such as:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;column&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;column&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:.2f}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format) &lt;span style=&#34;color:#75715e&#34;&gt;# float formatting&lt;/span&gt;
-df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;column&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;column&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:.2f}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; %&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format) &lt;span style=&#34;color:#75715e&#34;&gt;# add a percentage sign&lt;/span&gt;
-df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ci&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;lower&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;upper&amp;#34;&lt;/span&gt;]]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(&lt;span style=&#34;color:#66d9ef&#34;&gt;lambda&lt;/span&gt; x: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:.2f}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;, &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:.2f}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;]&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(x[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;lower&amp;#34;&lt;/span&gt;], x[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;upper&amp;#34;&lt;/span&gt;]), axis&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;# to converct CI bounds to an interval&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;accessing-values&#34;&gt;Accessing Values&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;column&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;column&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:.2f}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format) &lt;span style=&#34;color:#75715e&#34;&gt;# float formatting&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;column&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;column&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:.2f}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; %&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format) &lt;span style=&#34;color:#75715e&#34;&gt;# add a percentage sign&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ci&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;lower&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;upper&amp;#34;&lt;/span&gt;]]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(&lt;span style=&#34;color:#66d9ef&#34;&gt;lambda&lt;/span&gt; x: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:.2f}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;, &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:.2f}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;]&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(x[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;lower&amp;#34;&lt;/span&gt;], x[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;upper&amp;#34;&lt;/span&gt;]), axis&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;# to converct CI bounds to an interval&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;accessing-values&#34;&gt;Accessing Values&lt;/h2&gt;
 &lt;p&gt;There are multiple ways to access the contents in a &lt;code&gt;pandas&lt;/code&gt; &lt;code&gt;DataFrame&lt;/code&gt; (most also work for &lt;code&gt;Series&lt;/code&gt; as well).&lt;/p&gt;
 &lt;p&gt;Using &lt;code&gt;python&lt;/code&gt; indexing (a &lt;code&gt;DataFrame&lt;/code&gt; behaves as a dictionary of columns):&lt;/p&gt;
 &lt;ul&gt;
@@ -160,18 +160,18 @@ df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ci&amp;#34;&lt;/span&gt;] 
 &lt;li&gt;The method &lt;code&gt;df.stack()&lt;/code&gt;: similar to melt, but less general; puts the original column names into a &lt;code&gt;MultiIndex&lt;/code&gt; rather than new columns;&lt;/li&gt;
 &lt;li&gt;The method &lt;code&gt;df.explode()&lt;/code&gt;: when cells contains lists, this methods expand the dataframe for each element of the list.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; pd
-df_wide &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame({&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;: range(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;B&amp;#34;&lt;/span&gt;: range(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C&amp;#34;&lt;/span&gt;: range(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;)}, index&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;list(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;abcde&amp;#34;&lt;/span&gt;))
-print(df_wide)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;   A  B   C
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; pd
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;df_wide &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame({&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;: range(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;B&amp;#34;&lt;/span&gt;: range(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C&amp;#34;&lt;/span&gt;: range(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;)}, index&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;list(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;abcde&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(df_wide)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;   A  B   C
 a  0  5  10
 b  1  6  11
 c  2  7  12
 d  3  8  13
 e  4  9  14
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;print(df_wide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;, value_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;list(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;BC&amp;#34;&lt;/span&gt;)))
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;   A variable  value
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(df_wide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;, value_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;list(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;BC&amp;#34;&lt;/span&gt;)))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;   A variable  value
 0  0        B      5
 1  1        B      6
 2  2        B      7
@@ -183,8 +183,8 @@ e  4  9  14
 8  3        C     13
 9  4        C     14
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;print(df_wide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;stack())
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;a  A     0
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(df_wide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;stack())
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;a  A     0
    B     5
    C    10
 b  A     1
@@ -201,15 +201,15 @@ e  A     4
    C    14
 dtype: int64
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df_wide &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Series([range(&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;), range(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;), range(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)])
-print(df_wide)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;0                         (0, 1, 2)
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;df_wide &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Series([range(&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;), range(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;), range(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(df_wide)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;0                         (0, 1, 2)
 1                               (0)
 2    (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
 dtype: object
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;print(df_wide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;explode())
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;0    0
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(df_wide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;explode())
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;0    0
 0    1
 0    2
 1    0
@@ -231,9 +231,9 @@ dtype: object
 &lt;li&gt;The method &lt;code&gt;df.pivot_table()&lt;/code&gt; generalizes &lt;code&gt;.pivot&lt;/code&gt; to more complex situations where there may be duplicate entries which have to be aggregated. This is related to performing &lt;code&gt;.groupby()&lt;/code&gt; chained with &lt;code&gt;.agg()&lt;/code&gt;, but may have different output format;&lt;/li&gt;
 &lt;li&gt;The method &lt;code&gt;df.unstack()&lt;/code&gt; pivots a DataFrame using its index (useful for MultiIndex DataFrames mostly).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df_long &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame({&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: list(range(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;))&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;B&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;:range(&lt;span style=&#34;color:#ae81ff&#34;&gt;12&lt;/span&gt;)})
-print(df_long)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;    id type  value
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;df_long &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame({&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: list(range(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;))&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;B&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;:range(&lt;span style=&#34;color:#ae81ff&#34;&gt;12&lt;/span&gt;)})
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(df_long)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;    id type  value
 0    0    A      0
 1    1    A      1
 2    2    A      2
@@ -247,31 +247,31 @@ print(df_long)
 10   2    C     10
 11   3    C     11
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;print(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pivot(index&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;, columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;, values&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;))
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;type  A  B   C
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pivot(index&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;, columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;, values&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;type  A  B   C
 id            
 0     0  4   8
 1     1  5   9
 2     2  6  10
 3     3  7  11
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;print(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pivot_table(index&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;, aggfunc&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;min&amp;#34;&lt;/span&gt;))
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;      id  value
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pivot_table(index&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;, aggfunc&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;min&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;      id  value
 type           
 A      0      0
 B      0      4
 C      0      8
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# equivalent groupby+agg&lt;/span&gt;
-print(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;groupby(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;agg({&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;min&amp;#34;&lt;/span&gt;}))
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;      value
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# equivalent groupby+agg&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;groupby(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;agg({&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;min&amp;#34;&lt;/span&gt;}))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;      value
 type       
 A         0
 B         4
 C         8
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;print(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_index([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;]))
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;         value
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_index([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;]))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;         value
 type id       
 A    0       0
      1       1
@@ -286,16 +286,16 @@ C    0       8
      2      10
      3      11
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;print(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_index([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;unstack())
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;     value           
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_index([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;unstack())
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;     value           
 id       0  1   2   3
 type                 
 A        0  1   2   3
 B        4  5   6   7
 C        8  9  10  11
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;print(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_index([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;unstack())
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;     value       
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(df_long&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_index([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;unstack())
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;     value       
 type     A  B   C
 id               
 0        0  4   8
@@ -323,12 +323,12 @@ id
 &lt;/ul&gt;
 &lt;p&gt;In both cases, you can use multiple assignment to catch each element.&lt;/p&gt;
 &lt;p&gt;Another, possibly better, way to do something to each row is through &lt;code&gt;df.apply(fun)&lt;/code&gt;. Thus, the manipulation you would do when iterating across rows could be wrapped into a function &lt;code&gt;fun&lt;/code&gt; applied to each row. This also allows to apply a function by columns using &lt;code&gt;axis=1&lt;/code&gt;. To apply a function to each cell, you can use &lt;code&gt;.applymap(fun)&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i, (a, b, c, d) &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iterrows():
-    print(a, b, c, d)
-&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i, a, b, c, d &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;itertuples():
-    print(a, b, c, d)
-print(df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(sum, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;))
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;0.0 0 20.0 30.0
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i, (a, b, c, d) &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iterrows():
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(a, b, c, d)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i, a, b, c, d &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;itertuples():
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(a, b, c, d)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;apply(sum, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;0.0 0 20.0 30.0
 1.0 1 21.0 31.0
 2.0 2 22.0 32.0
 3.0 3 23.0 33.0
@@ -361,15 +361,15 @@ dtype: float64
 &lt;p&gt;To bin numerical variables, you can use &lt;code&gt;pd.cut()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Using Scikit-learn&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;If you need to scale the data (say to mean 0 and variance 1), I suggest to use the &lt;code&gt;StandardScaler&lt;/code&gt; from &lt;code&gt;sklearn&lt;/code&gt;. It internally stores the mean and standard deviation used for standardization. Then, if you need to apply the same transformation to another matrix, you can do it easily. Also, if you need to recover the original matrix, you can!&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; sklearn.preprocessing &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; StandardScaler
-&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; np
-X &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;random&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;uniform(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, (&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;))
-scaler &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; StandardScaler()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fit(X)
-print(X)
-Xstd &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; scaler&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;transform(X)
-print(Xstd)
-print(scaler&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;inverse_transform(Xstd))
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[[0.27355506 0.52822275 0.51469633 0.06545488]
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; sklearn.preprocessing &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; StandardScaler
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; np
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;X &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;random&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;uniform(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, (&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;scaler &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; StandardScaler()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fit(X)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(X)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Xstd &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; scaler&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;transform(X)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(Xstd)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(scaler&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;inverse_transform(Xstd))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[[0.27355506 0.52822275 0.51469633 0.06545488]
  [0.44123359 0.69095683 0.52764392 0.44219493]
  [0.61651989 0.99101129 0.12910797 0.3453753 ]]
 [[-1.21558928 -1.0877613   0.6718045  -1.3702373 ]
@@ -380,14 +380,14 @@ print(scaler&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;inverse_tran
  [0.61651989 0.99101129 0.12910797 0.3453753 ]]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Typically, categorical data is not encoded using integers. You can always produce a map to integer yourself but you need to keep track of the map. The &lt;code&gt;LabelBinarizer&lt;/code&gt; can do that for you! Then, this uniformizes all encoding and ensures you can recover the correct original categories.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; sklearn.preprocessing &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; LabelBinarizer
-y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;array([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;B&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;)
-print(y)
-label_encoder &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; LabelBinarizer(neg_label&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, pos_label&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
-y_01 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; label_encoder&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fit_transform(y)
-print(y_01)
-print(label_encoder&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;inverse_transform(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;array([&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;])))
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[&#39;A&#39; &#39;A&#39; &#39;A&#39; &#39;A&#39; &#39;B&#39; &#39;B&#39; &#39;B&#39; &#39;B&#39; &#39;B&#39; &#39;B&#39;]
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; sklearn.preprocessing &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; LabelBinarizer
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;array([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;B&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(y)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;label_encoder &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; LabelBinarizer(neg_label&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, pos_label&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;y_01 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; label_encoder&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fit_transform(y)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(y_01)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(label_encoder&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;inverse_transform(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;array([&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;])))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[&#39;A&#39; &#39;A&#39; &#39;A&#39; &#39;A&#39; &#39;B&#39; &#39;B&#39; &#39;B&#39; &#39;B&#39; &#39;B&#39; &#39;B&#39;]
 [[0]
  [0]
  [0]
@@ -953,34 +953,34 @@ print(label_encoder&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;inver
 &lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Smoke_testing_(software)&#34;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Smoke testing is a quick and easy way to check if code works.
 If your program can&amp;rsquo;t even run without crashing, there&amp;rsquo;s no point to performing more fine-grained testing procedures.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;sqrt_1 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(x) {
-    &lt;span style=&#34;color:#a6e22e&#34;&gt;if &lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) {
-        ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; x&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;)
-    } else {
-        ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; (&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;x)&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;i&amp;#34;&lt;/span&gt;
-    }
-    &lt;span style=&#34;color:#a6e22e&#34;&gt;return&lt;/span&gt;(ret)
-}
-
-sqrt_2 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(x) {
-    &lt;span style=&#34;color:#a6e22e&#34;&gt;if &lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) {
-        ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; x&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;)
-    } else {
-        ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;paste0&lt;/span&gt;((&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;x)&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;i&amp;#34;&lt;/span&gt;)
-    }
-    &lt;span style=&#34;color:#a6e22e&#34;&gt;return&lt;/span&gt;(ret)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here is the smoke-test we might right.
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sqrt_1 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(x) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;if &lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; x&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    } else {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; (&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;x)&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;i&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;return&lt;/span&gt;(ret)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sqrt_2 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(x) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;if &lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; x&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    } else {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ret &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;paste0&lt;/span&gt;((&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;x)&lt;span style=&#34;color:#a6e22e&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;i&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;return&lt;/span&gt;(ret)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here is the smoke-test we might right.
 Notice that the output is not checked; we just want to check if there are any errors.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;smoke_test &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(test_input) {
-    &lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(test_input) &lt;span style=&#34;color:#75715e&#34;&gt;# will raise an error&lt;/span&gt;
-    &lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_2&lt;/span&gt;(test_input) &lt;span style=&#34;color:#75715e&#34;&gt;# will not raise an error, but is problematic&lt;/span&gt;
-}
-
-&lt;span style=&#34;color:#a6e22e&#34;&gt;smoke_test&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
-&lt;span style=&#34;color:#a6e22e&#34;&gt;smoke_test&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;3.14&lt;/span&gt;)
-&lt;span style=&#34;color:#a6e22e&#34;&gt;smoke_test&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;-2&lt;/span&gt;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;the-unit-testing-paradigm&#34;&gt;The Unit Testing paradigm&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;smoke_test &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;function&lt;/span&gt;(test_input) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(test_input) &lt;span style=&#34;color:#75715e&#34;&gt;# will raise an error&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_2&lt;/span&gt;(test_input) &lt;span style=&#34;color:#75715e&#34;&gt;# will not raise an error, but is problematic&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;smoke_test&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;smoke_test&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;3.14&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;smoke_test&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;-2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;the-unit-testing-paradigm&#34;&gt;The Unit Testing paradigm&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Test-driven_development&#34;&gt;Test-driven development&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;optimal-workflow-with-an-example&#34;&gt;Optimal workflow with an example&lt;/h3&gt;
 &lt;p&gt;We want to implement a square root function with the following behaviour:&lt;/p&gt;
@@ -1035,34 +1035,34 @@ Notice that the output is not checked; we just want to check if there are any er
 &lt;li&gt;At the head of the file, add `context(&amp;ldquo;Test sqrt functions&amp;rdquo;) which will yield a more verbose output.&lt;/li&gt;
 &lt;li&gt;Add a first test (note the near-grammarly syntax: the first argument is what we are &lt;em&gt;testing that &lt;code&gt;sqrt_1()&lt;/code&gt; works on positive input&lt;/em&gt;):&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
-    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sqrt_1() works on positive input&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#75715e&#34;&gt;# what we are testing&lt;/span&gt;
-    { &lt;span style=&#34;color:#75715e&#34;&gt;# the test itself, using expect statements&lt;/span&gt;
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_equal&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;)
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_equal&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.0&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0&lt;/span&gt;)
-    }
-)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sqrt_1() works on positive input&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#75715e&#34;&gt;# what we are testing&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    { &lt;span style=&#34;color:#75715e&#34;&gt;# the test itself, using expect statements&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_equal&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_equal&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.0&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Run tests again and observe that our function passes all tests so far.&lt;/li&gt;
 &lt;li&gt;Let&amp;rsquo;s add another succeding test, but on an expected non-successfull call:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
-    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sqrt_1 raises an error with negative inputs&amp;#34;&lt;/span&gt;,
-    {
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_error&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;-1.0&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;non-numeric argument&amp;#34;&lt;/span&gt;)
-    }
-)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sqrt_1 raises an error with negative inputs&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_error&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt_1&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;-1.0&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;non-numeric argument&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Running all tests should again suceed.&lt;/li&gt;
 &lt;li&gt;Now, let&amp;rsquo;s add a test which fails:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
-    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sqrt_1 returns imaginary numbers for negative inputs&amp;#34;&lt;/span&gt;,
-    {
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_match&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;-1.0&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1i&amp;#34;&lt;/span&gt;)
-    }
-)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;unit-testing-in-python-using-the-unittests-package&#34;&gt;Unit Testing in &lt;code&gt;Python&lt;/code&gt; using the &lt;code&gt;unittests&lt;/code&gt; package&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test_that&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sqrt_1 returns imaginary numbers for negative inputs&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;expect_match&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;-1.0&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1i&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;unit-testing-in-python-using-the-unittests-package&#34;&gt;Unit Testing in &lt;code&gt;Python&lt;/code&gt; using the &lt;code&gt;unittests&lt;/code&gt; package&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://docs.python.org/3/library/unittest.html&#34;&gt;&lt;code&gt;unittest&lt;/code&gt; documentation&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Create a simple module:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;TestModule/
@@ -1070,49 +1070,48 @@ Notice that the output is not checked; we just want to check if there are any er
   test/
     test_sqrt.py
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;where&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# sqrt.py&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; math
-
-
-&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt&lt;/span&gt;(x):
-	  &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; math&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sqrt(x)
-&lt;span style=&#34;color:#75715e&#34;&gt;# test_sqrt.py&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; unittest
-&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; sqrt
-
-
-&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MyTestCase&lt;/span&gt;(unittest&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;TestCase):
-	  &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test_something&lt;/span&gt;(self):
-		  self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;assertEqual(
-		      sqrt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sqrt(&lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;), 
-		      &lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;,
-		      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;what happened if the test failed&amp;#34;&lt;/span&gt;
-		  )
-
-
-&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;:
-	  unittest&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;main()
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run tests using&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# sqrt.py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; math
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;sqrt&lt;/span&gt;(x):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	  &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; math&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sqrt(x)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# test_sqrt.py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; unittest
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; sqrt
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MyTestCase&lt;/span&gt;(unittest&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;TestCase):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	  &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test_something&lt;/span&gt;(self):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		  self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;assertEqual(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		      sqrt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sqrt(&lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;), 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		      &lt;span style=&#34;color:#ae81ff&#34;&gt;1.0&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;what happened if the test failed&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		  )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	  unittest&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;main()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run tests using&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;python -m unittest tests/test_sqrt.py
 python -m unittest discover tests
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;discover tests&lt;/code&gt; implies that the &lt;code&gt;unittest&lt;/code&gt; package will search the &lt;code&gt;tests&lt;/code&gt; directory for all tests in there.&lt;/p&gt;
 &lt;p&gt;The basic &lt;code&gt;unittest&lt;/code&gt; package is not well suited to check equality of &lt;code&gt;numpy&lt;/code&gt; arrays. Here&amp;rsquo;s a way to do it:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; np
-
-
-&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MyTest&lt;/span&gt;(unittest&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;TestCase):
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;numpy_test_case&lt;/span&gt;(self):
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt;:
-            np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;testing&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;asser_array_almost_equal(
-                array1,
-                array2
-            )
-            result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;except&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;AssertionError&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; error:
-            result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt;
-        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;assertTrue(res, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;what happened if the test failed&amp;#34;&lt;/span&gt;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In PyCharm, you can set up automatic testing as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; np
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MyTest&lt;/span&gt;(unittest&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;TestCase):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;numpy_test_case&lt;/span&gt;(self):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;testing&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;asser_array_almost_equal(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                array1,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                array2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;except&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;AssertionError&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; error:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;assertTrue(res, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;what happened if the test failed&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In PyCharm, you can set up automatic testing as follows:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;File&lt;/code&gt; &amp;gt; &lt;code&gt;Settings&lt;/code&gt; &amp;gt; &lt;code&gt;Tools&lt;/code&gt; &amp;gt; &lt;code&gt;Python Integrated Tools&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Select &lt;code&gt;Unittests&lt;/code&gt; under &lt;code&gt;Testing&lt;/code&gt;&lt;/li&gt;
@@ -1124,39 +1123,38 @@ python -m unittest discover tests
 &lt;h2 id=&#34;unit-testing-in-julia&#34;&gt;Unit Testing in Julia&lt;/h2&gt;
 &lt;p&gt;This &lt;a href=&#34;https://julia.quantecon.org/more_julia/testing.html&#34;&gt;guide&lt;/a&gt; gives a nice, detailed walkthrough on how to set up a package in Julia with tests and integrate it with Travis and Codecov.&lt;/p&gt;
 &lt;p&gt;Julia comes with the &amp;lsquo;Test&amp;rsquo; module built-in which offers basic unit tests.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Julia&#34; data-lang=&#34;Julia&#34;&gt;sqrt_im(x&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Real&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sqrt(complex(x))
-
-&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; Test
-&lt;span style=&#34;color:#75715e&#34;&gt;# Unit tests (check for right value in both cases)&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt_im(&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;)  &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt_im(&lt;span style=&#34;color:#ae81ff&#34;&gt;5.0&lt;/span&gt;)  &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt_im(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;im
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# Random input&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; Random
-Z &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; randn(MersenneTwister(&lt;span style=&#34;color:#ae81ff&#34;&gt;555&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; (sqrt_im&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;(Z))&lt;span style=&#34;color:#f92672&#34;&gt;.^&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; Z
-
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt(&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.414213562373095&lt;/span&gt;im
-&lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#34;test_broken&amp;#34; lets us mark tests we know give the wrong answer or raise an error&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@test_broken&lt;/span&gt; sqrt(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.414213562373095&lt;/span&gt;im
-&lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#34;test_broken&amp;#34; will return an Error testing value if the expression passes&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@test_broken&lt;/span&gt; sqrt(&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# Julia requires a boolean result to pass; for smoke testing this can be alleviated&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# by just always returning true&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;begin&lt;/span&gt;
-  sqrt_im(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;)
-  true
-&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
-
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;begin&lt;/span&gt;
-  sqrt(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;)
-  true
-&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-Julia&#34; data-lang=&#34;Julia&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sqrt_im(x&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Real&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sqrt(complex(x))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; Test
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Unit tests (check for right value in both cases)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt_im(&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;)  &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt_im(&lt;span style=&#34;color:#ae81ff&#34;&gt;5.0&lt;/span&gt;)  &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt_im(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;im
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Random input&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; Random
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Z &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; randn(MersenneTwister(&lt;span style=&#34;color:#ae81ff&#34;&gt;555&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; (sqrt_im&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;(Z))&lt;span style=&#34;color:#f92672&#34;&gt;.^&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; Z
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt(&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; sqrt(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.414213562373095&lt;/span&gt;im
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#34;test_broken&amp;#34; lets us mark tests we know give the wrong answer or raise an error&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@test_broken&lt;/span&gt; sqrt(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.414213562373095&lt;/span&gt;im
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#34;test_broken&amp;#34; will return an Error testing value if the expression passes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@test_broken&lt;/span&gt; sqrt(&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;≈&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.4142135623730951&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Julia requires a boolean result to pass; for smoke testing this can be alleviated&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# by just always returning true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;begin&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  sqrt_im(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@test&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;begin&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  sqrt(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
 </description>
     </item>
     

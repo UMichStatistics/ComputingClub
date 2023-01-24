@@ -5,12 +5,20 @@
     <link>https://UMichStatistics.github.io/ComputingClub/authors/simon/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/simon/index.xml" rel="self" type="application/rss+xml" />
     <description>Simon Fontaine</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2022 UM Statistics &amp; Biostatistics Computing Club</copyright>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2023 UM Statistics &amp; Biostatistics Computing Club</copyright>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Simon Fontaine</title>
       <link>https://UMichStatistics.github.io/ComputingClub/authors/simon/</link>
     </image>
+    
+    <item>
+      <title>Experiment Management with batchtools (R) and pypet (Python)</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/experiment/</link>
+      <pubDate>Mon, 30 Jan 2023 12:00:00 -0500</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/experiment/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Biostatistics Expansion &amp; Slack Workspace</title>

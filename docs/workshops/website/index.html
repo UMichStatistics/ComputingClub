@@ -177,7 +177,7 @@
     
     
     
-      <a class="navbar-brand" href="/ComputingClub/">UMSBCC</a>
+      <a class="navbar-brand" href="/">UMSBCC</a>
     
 
     
@@ -479,7 +479,7 @@ git submodule update --init --recursive
 </code></pre><p>You&rsquo;ll probably get some warnings, you can ignore them.</p>
 <h2 id="first-build">First build</h2>
 <p>Change base URL in <code>config/_default/config.yaml</code></p>
-<pre tabindex="0"><code>baseurl = &quot;https://&lt;USERNAME&gt;.github.io/&quot;
+<pre tabindex="0"><code>baseurl = &#34;https://&lt;USERNAME&gt;.github.io/&#34;
 </code></pre><p>Serve locally</p>
 <pre tabindex="0"><code>hugo server
 </code></pre><p>Check your website at the address privided (e.g., http://localhost:1313/)</p>
@@ -489,12 +489,12 @@ git submodule update --init --recursive
 <h2 id="deploy-to-github">Deploy to GitHub</h2>
 <p>From the content local repo, commit and push (this only pushes the content):</p>
 <pre tabindex="0"><code>git add .
-git commit -m &quot;Initial commit&quot;
+git commit -m &#34;Initial commit&#34;
 git push -u origin master
 </code></pre><p>Then push the built website</p>
 <pre tabindex="0"><code>cd public
 git add .
-git commit -m &quot;First build&quot;
+git commit -m &#34;First build&#34;
 git push origin master
 cd ..
 </code></pre><p>Check out the remote repo</p>
@@ -531,7 +531,7 @@ cd ..
 <p>(<a href="https://discourse.gohugo.io/t/deploy-hugo-project-to-github-pages-with-github-actions/20725">Based on this tutorial</a>)</p>
 <p>To achieve this, we need to use GitHub Actions.</p>
 <p>First, we need to create a public/private key pair (<a href="https://github.com/marketplace/actions/github-pages-action#%EF%B8%8F-create-ssh-deploy-key">see this guide</a>)</p>
-<pre tabindex="0"><code>ssh-keygen -t rsa -b 4096 -C &quot;$(git config user.email)&quot; -f gh-pages -N &quot;&quot;
+<pre tabindex="0"><code>ssh-keygen -t rsa -b 4096 -C &#34;$(git config user.email)&#34; -f gh-pages -N &#34;&#34;
 # You will get 2 files:
 #   gh-pages.pub (public key)
 #   gh-pages     (private key)
@@ -541,43 +541,43 @@ cd ..
 <li>In content repo: Go to Secrets and add your private key as <code>ACTIONS_DEPLOY_KEY</code></li>
 </ul>
 <p>In the <code>/.github/workflows/</code> folder of the content repo, add the following <code>gh-pages.yml</code> file (can also be done in the Actions tab on the GitHub website):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">GitHub Pages with Hugo</span>
-
-<span style="color:#f92672">on</span>:
-  <span style="color:#f92672">push</span>:
-    <span style="color:#f92672">branches</span>:
-    - <span style="color:#ae81ff">master</span>
-
-<span style="color:#f92672">jobs</span>:
-  <span style="color:#f92672">build-deploy</span>:
-    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
-    <span style="color:#f92672">steps</span>:
-    - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
-
-    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup Hugo</span>
-      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v2</span>
-      <span style="color:#f92672">with</span>:
-        <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#39;latest&#39;</span>
-        <span style="color:#f92672">extended</span>: <span style="color:#66d9ef">true</span>
-
-    - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/cache@v2</span>
-      <span style="color:#f92672">with</span>:
-        <span style="color:#f92672">path</span>: <span style="color:#ae81ff">/tmp/hugo_cache</span>
-        <span style="color:#f92672">key</span>: <span style="color:#ae81ff">${{ runner.os }}-hugomod-${{ hashFiles(&#39;**/go.sum&#39;) }}</span>
-        <span style="color:#f92672">restore-keys</span>: |<span style="color:#e6db74">
-</span><span style="color:#e6db74">          </span>          <span style="color:#ae81ff">${{ runner.os }}-hugomod-</span>
-
-    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build</span>
-      <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo --minify</span>
-
-    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy</span>
-      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-gh-pages@v3</span>
-      <span style="color:#f92672">with</span>:
-        <span style="color:#f92672">deploy_key</span>: <span style="color:#ae81ff">${{ secrets.ACTIONS_DEPLOY_KEY }}</span>
-        <span style="color:#f92672">external_repository</span>: <span style="color:#ae81ff">fontaine618/fontaine618.github.io</span>
-        <span style="color:#f92672">publish_branch</span>: <span style="color:#ae81ff">main</span>
-        <span style="color:#f92672">publish_dir</span>: <span style="color:#ae81ff">./public</span>
-</code></pre></div><h2 id="hugo-academic-and-bibtex">Hugo Academic and BibTeX</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">GitHub Pages with Hugo</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">master</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">build-deploy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup Hugo</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v2</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#39;latest&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">extended</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/cache@v2</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">path</span>: <span style="color:#ae81ff">/tmp/hugo_cache</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">key</span>: <span style="color:#ae81ff">${{ runner.os }}-hugomod-${{ hashFiles(&#39;**/go.sum&#39;) }}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">restore-keys</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          </span>          <span style="color:#ae81ff">${{ runner.os }}-hugomod-</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo --minify</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-gh-pages@v3</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">deploy_key</span>: <span style="color:#ae81ff">${{ secrets.ACTIONS_DEPLOY_KEY }}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">external_repository</span>: <span style="color:#ae81ff">fontaine618/fontaine618.github.io</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">publish_branch</span>: <span style="color:#ae81ff">main</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">publish_dir</span>: <span style="color:#ae81ff">./public</span>
+</span></span></code></pre></div><h2 id="hugo-academic-and-bibtex">Hugo Academic and BibTeX</h2>
 <p>Creating content may be long, especially if you have many publications (one file per publications and requires to fill in entries). Fortunately, there exist a tool taking a <code>.bib</code> file doing everything for you:</p>
 <p><a href="https://pypi.org/project/academic/">See this tutorial</a></p>
 <h2 id="customization">Customization</h2>
@@ -652,7 +652,7 @@ bundle exec jekyll serve
   
 
   <p class="powered-by">
-    © 2022 UM Statistics &amp; Biostatistics Computing Club &middot; 
+    © 2023 UM Statistics &amp; Biostatistics Computing Club &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
@@ -723,7 +723,7 @@ bundle exec jekyll serve
     
     
     <script>
-      const search_config = {"indexURI":"/ComputingClub/index.json","minLength":1,"threshold":0.3};
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
       const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
       const content_type = {
         'post': "Posts",
@@ -783,7 +783,7 @@ bundle exec jekyll serve
     
     
     
-    <script src="/ComputingClub/js/academic.min.e3cb3c6a637c3ff60a801ec2b623f195.js"></script>
+    <script src="/ComputingClub/js/academic.min.a7ec7199c7a8e70f60d22e5d30c42fea.js"></script>
 
     
 

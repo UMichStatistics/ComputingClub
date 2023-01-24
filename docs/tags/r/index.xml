@@ -5,12 +5,20 @@
     <link>https://UMichStatistics.github.io/ComputingClub/tags/r/</link>
       <atom:link href="https://UMichStatistics.github.io/ComputingClub/tags/r/index.xml" rel="self" type="application/rss+xml" />
     <description>R</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2022 UM Statistics &amp; Biostatistics Computing Club</copyright><lastBuildDate>Wed, 18 Sep 2019 14:30:00 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2023 UM Statistics &amp; Biostatistics Computing Club</copyright><lastBuildDate>Mon, 30 Jan 2023 12:00:00 -0500</lastBuildDate>
     <image>
       <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>R</title>
       <link>https://UMichStatistics.github.io/ComputingClub/tags/r/</link>
     </image>
+    
+    <item>
+      <title>Experiment Management with batchtools (R) and pypet (Python)</title>
+      <link>https://UMichStatistics.github.io/ComputingClub/talk/experiment/</link>
+      <pubDate>Mon, 30 Jan 2023 12:00:00 -0500</pubDate>
+      <guid>https://UMichStatistics.github.io/ComputingClub/talk/experiment/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Informational meeting &amp; Functional Programming in R with purrr</title>
