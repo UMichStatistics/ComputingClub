@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dan Kessler | UMSBCC</title>
-    <link>https://UMichStatistics.github.io/ComputingClub/authors/dan/</link>
-      <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/dan/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://umichstatistics.github.io/ComputingClub/authors/dan/</link>
+      <atom:link href="https://umichstatistics.github.io/ComputingClub/authors/dan/index.xml" rel="self" type="application/rss+xml" />
     <description>Dan Kessler</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2023 UM Statistics &amp; Biostatistics Computing Club</copyright>
     <image>
-      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <url>https://umichstatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Dan Kessler</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/authors/dan/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/authors/dan/</link>
     </image>
     
     <item>
       <title>Git&#39;s a Wonderful Life</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/git_seminar/</link>
       <pubDate>Thu, 08 Oct 2020 10:30:00 -0200</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/git_seminar/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Git: a deeper perspective</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/git/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/git/</link>
       <pubDate>Wed, 02 Oct 2019 14:30:00 -0200</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/git/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/git/</guid>
       <description></description>
     </item>
     

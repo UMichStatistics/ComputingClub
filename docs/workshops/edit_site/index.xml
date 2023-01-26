@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Editing the Club&#39;s website | UMSBCC</title>
-    <link>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/</link>
-      <atom:link href="https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://umichstatistics.github.io/ComputingClub/workshops/edit_site/</link>
+      <atom:link href="https://umichstatistics.github.io/ComputingClub/workshops/edit_site/index.xml" rel="self" type="application/rss+xml" />
     <description>Editing the Club&#39;s website</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2023 UM Statistics &amp; Biostatistics Computing Club</copyright><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <url>https://umichstatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Editing the Club&#39;s website</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/workshops/edit_site/</link>
     </image>
     
     <item>
       <title>Creating content</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/createcontent/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/workshops/edit_site/createcontent/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/createcontent/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/workshops/edit_site/createcontent/</guid>
       <description>&lt;h2 id=&#34;overview-of-the-academic-theme-layouts&#34;&gt;Overview of the Academic theme layouts&lt;/h2&gt;
 &lt;p&gt;The content of this website rely on two different &lt;code&gt;type&lt;/code&gt; defined by the Academic theme. Each &lt;code&gt;.Md&lt;/code&gt; must specify, in its header, what &lt;code&gt;type&lt;/code&gt; it is based on in order for Hugo to produce the correct &lt;code&gt;html&lt;/code&gt; page.&lt;/p&gt;
 &lt;ul&gt;
@@ -48,9 +48,9 @@
     
     <item>
       <title>Update workflow</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/workflow/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/workshops/edit_site/workflow/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/edit_site/workflow/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/workshops/edit_site/workflow/</guid>
       <description>&lt;h2 id=&#34;the-lazy-way&#34;&gt;The lazy way&lt;/h2&gt;
 &lt;p&gt;If you only need to add some post/meeting/workshop to the website, here is a simple way to deploy your new content to the website without much hassle.&lt;/p&gt;
 &lt;ol&gt;

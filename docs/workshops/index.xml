@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Workshops | UMSBCC</title>
-    <link>https://UMichStatistics.github.io/ComputingClub/workshops/</link>
-      <atom:link href="https://UMichStatistics.github.io/ComputingClub/workshops/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://umichstatistics.github.io/ComputingClub/workshops/</link>
+      <atom:link href="https://umichstatistics.github.io/ComputingClub/workshops/index.xml" rel="self" type="application/rss+xml" />
     <description>Workshops</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2023 UM Statistics &amp; Biostatistics Computing Club</copyright>
     <image>
-      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <url>https://umichstatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Workshops</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/workshops/</link>
     </image>
     
   </channel>

@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags | UMSBCC</title>
-    <link>https://UMichStatistics.github.io/ComputingClub/tags/</link>
-      <atom:link href="https://UMichStatistics.github.io/ComputingClub/tags/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://umichstatistics.github.io/ComputingClub/tags/</link>
+      <atom:link href="https://umichstatistics.github.io/ComputingClub/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2023 UM Statistics &amp; Biostatistics Computing Club</copyright><lastBuildDate>Mon, 30 Jan 2023 12:00:00 -0500</lastBuildDate>
     <image>
-      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <url>https://umichstatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Tags</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/tags/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/tags/</link>
     </image>
     
   </channel>

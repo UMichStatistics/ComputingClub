@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Statistics Computing Club | UMSBCC</title>
-    <link>https://UMichStatistics.github.io/ComputingClub/authors/admin/</link>
-      <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://umichstatistics.github.io/ComputingClub/authors/admin/</link>
+      <atom:link href="https://umichstatistics.github.io/ComputingClub/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     <description>Statistics Computing Club</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2023 UM Statistics &amp; Biostatistics Computing Club</copyright>
     <image>
-      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <url>https://umichstatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Statistics Computing Club</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/authors/admin/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/authors/admin/</link>
     </image>
     
     <item>
       <title>A Discussion of Advanced GitHub Usage, Including Actions</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/github/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/github/</link>
       <pubDate>Thu, 18 Mar 2021 13:00:00 -0200</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/github/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Package development and testing in R</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/packages/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/packages/</link>
       <pubDate>Tue, 10 Mar 2020 13:00:00 -0500</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/packages/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/packages/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Statistical Computing in MacOS</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/macos/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/macos/</link>
       <pubDate>Tue, 18 Feb 2020 13:00:00 -0500</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/macos/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/macos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LaTeX discussion</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/latex/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/latex/</link>
       <pubDate>Tue, 04 Feb 2020 13:00:00 -0500</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/latex/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/latex/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Navigating the Transition from Flux to Great Lakes: New tools and policy town hall</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/hpc/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/hpc/</link>
       <pubDate>Thu, 14 Nov 2019 13:00:00 -0500</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/hpc/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/hpc/</guid>
       <description></description>
     </item>
     

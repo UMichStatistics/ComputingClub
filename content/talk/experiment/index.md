@@ -6,7 +6,7 @@ event: "Computing club meeting"
 event_url:
 location: "West Hall 411"
 summary: ""
-abstract: "Statistics research often require some embarrassingly parallel computations: you might want to apply your method to a sequence of synthetic data sets, apply multiple variants of your method to the same data set, compare your method to existing method, and any combination thereof. All of these cases involve executing very similar code with just a few changes between runs. While you can manage all these parallel experiments on your own, significant development time can be saved and many headaches can be avoided by using parameter exploration tools. In this meeting, we will be discussing two such tools: `batchtools` in R and `pypet` in Python. If time allows, we will also be looking at the interaction of those tools with the Great Lakes cluster through the Slurm scheduler."
+abstract: "Statistics research often requires some embarrassingly parallel computations: you might want to apply your method to a sequence of synthetic data sets, apply multiple variants of your method to the same data set, compare your method to existing methods, and any combination thereof. All of these cases involve executing very similar code with just a few changes between runs. While you can manage all these parallel experiments on your own, significant development time can be saved and many headaches can be avoided by using parameter exploration tools. In this meeting, we will be discussing two such tools: `batchtools` in R and `pypet` in Python. If time allows, we will also be looking at the interaction of those tools with the Great Lakes cluster through the Slurm scheduler."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

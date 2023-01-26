@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Functional Programming in R with purrr | UMSBCC</title>
-    <link>https://UMichStatistics.github.io/ComputingClub/workshops/purrr/</link>
-      <atom:link href="https://UMichStatistics.github.io/ComputingClub/workshops/purrr/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://umichstatistics.github.io/ComputingClub/workshops/purrr/</link>
+      <atom:link href="https://umichstatistics.github.io/ComputingClub/workshops/purrr/index.xml" rel="self" type="application/rss+xml" />
     <description>Functional Programming in R with purrr</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2023 UM Statistics &amp; Biostatistics Computing Club</copyright><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <url>https://umichstatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Functional Programming in R with purrr</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/purrr/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/workshops/purrr/</link>
     </image>
     
   </channel>

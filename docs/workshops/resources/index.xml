@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Resources | UMSBCC</title>
-    <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/</link>
-      <atom:link href="https://UMichStatistics.github.io/ComputingClub/workshops/resources/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://umichstatistics.github.io/ComputingClub/workshops/resources/</link>
+      <atom:link href="https://umichstatistics.github.io/ComputingClub/workshops/resources/index.xml" rel="self" type="application/rss+xml" />
     <description>Resources</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2023 UM Statistics &amp; Biostatistics Computing Club</copyright><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <url>https://umichstatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Resources</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/workshops/resources/</link>
     </image>
     
     <item>
       <title>Data Manipulation using Python</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/pandas/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/workshops/resources/pandas/</link>
       <pubDate>Wed, 29 Apr 2020 00:00:00 +0100</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/pandas/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/workshops/resources/pandas/</guid>
       <description>&lt;h2 id=&#34;general&#34;&gt;General&lt;/h2&gt;
 &lt;p&gt;Many methods have an &lt;code&gt;inplace&lt;/code&gt; argument which performs the operation inplace when set to &lt;code&gt;True&lt;/code&gt; so that you do not need to overwrite the original &lt;code&gt;DataFrame&lt;/code&gt;. It produces cleaner code as well as saves time and memory! Note that method chaining does not work with &lt;code&gt;inplace=True&lt;/code&gt; since nothing is returned.&lt;/p&gt;
 &lt;p&gt;Rows and columns behave in the exact same way. Indeed, they are both implemented using &lt;code&gt;pandas.Index&lt;/code&gt; or &lt;code&gt;pandas.MultiIndex&lt;/code&gt; objects. The main difference is that columns can be indexed in an additional way since &lt;code&gt;pandas.DataFrame&lt;/code&gt; objects can be access through the native &lt;code&gt;python&lt;/code&gt; indexing, i.e., &lt;code&gt;df[column]&lt;/code&gt;. Otherwise, most (all?) operations can be perform along any of the two axes. (If not, there is the &lt;code&gt;.T&lt;/code&gt; or &lt;code&gt;.transpose()&lt;/code&gt; methods to flip the &lt;code&gt;DataFrame&lt;/code&gt;.)&lt;/p&gt;
@@ -410,9 +410,9 @@ dtype: float64
     
     <item>
       <title>Modeling using Python</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/python_models/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/workshops/resources/python_models/</link>
       <pubDate>Wed, 29 Apr 2020 00:00:00 +0100</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/python_models/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/workshops/resources/python_models/</guid>
       <description>&lt;h2 id=&#34;general-comments&#34;&gt;General comments&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;R equivalents&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -851,9 +851,9 @@ dtype: float64
     
     <item>
       <title>High Performance Computing</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/hpc/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/workshops/resources/hpc/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/hpc/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/workshops/resources/hpc/</guid>
       <description>&lt;h2 id=&#34;language-packages&#34;&gt;Language, packages&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/um-dang/conda_on_the_cluster&#34;&gt;&lt;strong&gt;Conda integration in GreatLakes&lt;/strong&gt;&lt;/a&gt;
 &lt;em&gt;by &lt;a href=&#34;https://um-dang.github.io/&#34;&gt;UMich Data Analysis Networking Group&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
@@ -862,9 +862,9 @@ dtype: float64
     
     <item>
       <title>LaTeX</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/latex/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/workshops/resources/latex/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/latex/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/workshops/resources/latex/</guid>
       <description>&lt;h2 id=&#34;editors&#34;&gt;Editors&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.lyx.org/&#34;&gt;LyX&lt;/a&gt;, a WYSIWYG LaTeX editor useful for quick math writing.&lt;/li&gt;
@@ -918,9 +918,9 @@ dtype: float64
     
     <item>
       <title>MacOS</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/macos/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/workshops/resources/macos/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/macos/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/workshops/resources/macos/</guid>
       <description>&lt;h2 id=&#34;package-and-application-manager-homebrewhttpsbrewsh&#34;&gt;Package and application manager (&lt;a href=&#34;https://brew.sh/&#34;&gt;Homebrew&lt;/a&gt;)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Installation: follow the instructions on the &lt;a href=&#34;https://brew.sh/&#34;&gt;website&lt;/a&gt;&lt;/li&gt;
@@ -946,9 +946,9 @@ dtype: float64
     
     <item>
       <title>Package Development</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/packages/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/workshops/resources/packages/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/packages/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/workshops/resources/packages/</guid>
       <description>&lt;h2 id=&#34;smoke-testing&#34;&gt;Smoke Testing&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Smoke_testing_(software)&#34;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Smoke testing is a quick and easy way to check if code works.
@@ -1160,9 +1160,9 @@ python -m unittest discover tests
     
     <item>
       <title>Version Control</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/versioncontrol/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/workshops/resources/versioncontrol/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/versioncontrol/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/workshops/resources/versioncontrol/</guid>
       <description>&lt;h2 id=&#34;git&#34;&gt;Git&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://git-scm.com/book/en/v2&#34;&gt;&lt;strong&gt;The Pro Git book&lt;/strong&gt;&lt;/a&gt; &lt;em&gt;by Scott Chacon and Ben Straub:&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1174,9 +1174,9 @@ python -m unittest discover tests
     
     <item>
       <title>All things R</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/workshops/resources/r/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/workshops/resources/r/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/workshops/resources/r/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/workshops/resources/r/</guid>
       <description>&lt;h2 id=&#34;cheat-sheets&#34;&gt;Cheat sheets&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;

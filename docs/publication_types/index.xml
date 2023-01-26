@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publication_types | UMSBCC</title>
-    <link>https://UMichStatistics.github.io/ComputingClub/publication_types/</link>
-      <atom:link href="https://UMichStatistics.github.io/ComputingClub/publication_types/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://umichstatistics.github.io/ComputingClub/publication_types/</link>
+      <atom:link href="https://umichstatistics.github.io/ComputingClub/publication_types/index.xml" rel="self" type="application/rss+xml" />
     <description>Publication_types</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2023 UM Statistics &amp; Biostatistics Computing Club</copyright>
     <image>
-      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <url>https://umichstatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Publication_types</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/publication_types/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/publication_types/</link>
     </image>
     
   </channel>

@@ -2,125 +2,125 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Meetings | UMSBCC</title>
-    <link>https://UMichStatistics.github.io/ComputingClub/talk/</link>
-      <atom:link href="https://UMichStatistics.github.io/ComputingClub/talk/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://umichstatistics.github.io/ComputingClub/talk/</link>
+      <atom:link href="https://umichstatistics.github.io/ComputingClub/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Meetings</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2023 UM Statistics &amp; Biostatistics Computing Club</copyright>
     <image>
-      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <url>https://umichstatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Meetings</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/</link>
     </image>
     
     <item>
       <title>Experiment Management with batchtools (R) and pypet (Python)</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/experiment/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/experiment/</link>
       <pubDate>Mon, 30 Jan 2023 12:00:00 -0500</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/experiment/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/experiment/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Discussion of Advanced GitHub Usage, Including Actions</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/github/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/github/</link>
       <pubDate>Thu, 18 Mar 2021 13:00:00 -0200</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/github/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Speeding up R with C/C&#43;&#43;/Fortran</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/fastr/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/fastr/</link>
       <pubDate>Wed, 02 Dec 2020 10:30:00 -0200</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/fastr/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/fastr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Git&#39;s a Wonderful Life</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/git_seminar/</link>
       <pubDate>Thu, 08 Oct 2020 10:30:00 -0200</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/git_seminar/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/git_seminar/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Package development and testing in R</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/packages/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/packages/</link>
       <pubDate>Tue, 10 Mar 2020 13:00:00 -0500</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/packages/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/packages/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Statistical Computing in MacOS</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/macos/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/macos/</link>
       <pubDate>Tue, 18 Feb 2020 13:00:00 -0500</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/macos/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/macos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LaTeX discussion</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/latex/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/latex/</link>
       <pubDate>Tue, 04 Feb 2020 13:00:00 -0500</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/latex/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/latex/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Stan</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/stan/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/stan/</link>
       <pubDate>Wed, 20 Nov 2019 14:30:00 -0200</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/stan/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/stan/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Navigating the Transition from Flux to Great Lakes: New tools and policy town hall</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/hpc/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/hpc/</link>
       <pubDate>Thu, 14 Nov 2019 13:00:00 -0500</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/hpc/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/hpc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Accelerating Python using Cython</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/cpython/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/cpython/</link>
       <pubDate>Wed, 06 Nov 2019 14:30:00 -0200</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/cpython/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/cpython/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The Julia language</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/julia/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/julia/</link>
       <pubDate>Wed, 23 Oct 2019 14:30:00 -0200</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/julia/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/julia/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Building &amp; Hosting a Simple Academic Website</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/website/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/website/</link>
       <pubDate>Wed, 09 Oct 2019 14:30:00 -0200</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/website/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/website/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Git: a deeper perspective</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/git/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/git/</link>
       <pubDate>Wed, 02 Oct 2019 14:30:00 -0200</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/git/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Informational meeting &amp; Functional Programming in R with purrr</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/intro_purr/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/intro_purr/</link>
       <pubDate>Wed, 18 Sep 2019 14:30:00 -0500</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/intro_purr/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/intro_purr/</guid>
       <description></description>
     </item>
     

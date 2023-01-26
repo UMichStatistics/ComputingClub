@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rob Trangucci | UMSBCC</title>
-    <link>https://UMichStatistics.github.io/ComputingClub/authors/rob/</link>
-      <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/rob/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://umichstatistics.github.io/ComputingClub/authors/rob/</link>
+      <atom:link href="https://umichstatistics.github.io/ComputingClub/authors/rob/index.xml" rel="self" type="application/rss+xml" />
     <description>Rob Trangucci</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2023 UM Statistics &amp; Biostatistics Computing Club</copyright>
     <image>
-      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <url>https://umichstatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Rob Trangucci</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/authors/rob/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/authors/rob/</link>
     </image>
     
     <item>
       <title>Stan</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/stan/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/stan/</link>
       <pubDate>Wed, 20 Nov 2019 14:30:00 -0200</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/stan/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/stan/</guid>
       <description></description>
     </item>
     

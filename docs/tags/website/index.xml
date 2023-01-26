@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Website | UMSBCC</title>
-    <link>https://UMichStatistics.github.io/ComputingClub/tags/website/</link>
-      <atom:link href="https://UMichStatistics.github.io/ComputingClub/tags/website/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://umichstatistics.github.io/ComputingClub/tags/website/</link>
+      <atom:link href="https://umichstatistics.github.io/ComputingClub/tags/website/index.xml" rel="self" type="application/rss+xml" />
     <description>Website</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2023 UM Statistics &amp; Biostatistics Computing Club</copyright><lastBuildDate>Wed, 09 Oct 2019 14:30:00 -0200</lastBuildDate>
     <image>
-      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <url>https://umichstatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Website</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/tags/website/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/tags/website/</link>
     </image>
     
     <item>
       <title>Building &amp; Hosting a Simple Academic Website</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/website/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/website/</link>
       <pubDate>Wed, 09 Oct 2019 14:30:00 -0200</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/website/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/website/</guid>
       <description></description>
     </item>
     

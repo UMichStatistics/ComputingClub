@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ziping Xu | UMSBCC</title>
-    <link>https://UMichStatistics.github.io/ComputingClub/authors/ziping/</link>
-      <atom:link href="https://UMichStatistics.github.io/ComputingClub/authors/ziping/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://umichstatistics.github.io/ComputingClub/authors/ziping/</link>
+      <atom:link href="https://umichstatistics.github.io/ComputingClub/authors/ziping/index.xml" rel="self" type="application/rss+xml" />
     <description>Ziping Xu</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2023 UM Statistics &amp; Biostatistics Computing Club</copyright>
     <image>
-      <url>https://UMichStatistics.github.io/ComputingClub/img/icon_512.png</url>
+      <url>https://umichstatistics.github.io/ComputingClub/img/icon_512.png</url>
       <title>Ziping Xu</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/authors/ziping/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/authors/ziping/</link>
     </image>
     
     <item>
       <title>Accelerating Python using Cython</title>
-      <link>https://UMichStatistics.github.io/ComputingClub/talk/cpython/</link>
+      <link>https://umichstatistics.github.io/ComputingClub/talk/cpython/</link>
       <pubDate>Wed, 06 Nov 2019 14:30:00 -0200</pubDate>
-      <guid>https://UMichStatistics.github.io/ComputingClub/talk/cpython/</guid>
+      <guid>https://umichstatistics.github.io/ComputingClub/talk/cpython/</guid>
       <description></description>
     </item>
     
