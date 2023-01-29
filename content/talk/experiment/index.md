@@ -38,7 +38,7 @@ image:
 #   url: workshops/experiment
 
 # Optional filename of your slides within your talk's folder or a URL.
-url_slides: 
+url_slides: https://docs.google.com/presentation/d/1yi63mZfT6yazzaprFsESmzCPrHgmlX8kFlE7fMnOfCY/edit?usp=sharing
 url_code: https://github.com/fontaine618/UMSBCC-Experiment-Management
 url_pdf:
 url_video:
